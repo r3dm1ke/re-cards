@@ -10,3 +10,7 @@ export const login = () => async (dispatch, getState) => {
   };
   dispatch(action);
 };
+
+export const logout = () => ({
+  type: types.LOGGED_OUT
+});
