@@ -2,7 +2,10 @@ import * as types from '../actions/types';
 
 const INITIAL_STATE = {
   loading: false,
-  loaders: []
+  loaders: [],
+  alert: false,
+  alertTitle: '',
+  alertDescription: ''
 };
 
 export default (state=INITIAL_STATE, action) => {
@@ -14,6 +17,20 @@ export default (state=INITIAL_STATE, action) => {
       const loaders = state.loaders.filter(e => e.handle !== action.payload);
       const loading = loaders.length > 0;
       return {...state, loaders, loading};
+    case types.SHOW_ALERT:
+      return {
+        ...state,
+        alert: true,
+        alertDescription: action.payload.description,
+        alertTitle: action.payload.title
+      };
+    case types.HIDE_ALERT:
+      return {
+        ...state,
+        alert: false,
+        alertDescription: '',
+        alertTitle: ''
+      };
     default:
       return state;
   }

@@ -5,6 +5,7 @@ import Sidebar from './Sidebar';
 import {connect} from 'react-redux';
 import {logout} from '../actions/auth';
 import {toggle_drawer} from "../actions/layout";
+import Loader from './Loader';
 
 class Scaffold extends Component {
 
@@ -44,6 +45,11 @@ class Scaffold extends Component {
     )
   }
 
+  renderContent() {
+    if (this.props.loading) return <Loader />;
+    return this.props.children;
+  }
+
   render() {
     const {classes} = this.props;
     return (
@@ -58,9 +64,9 @@ class Scaffold extends Component {
           </Container>
         </AppBar>
         {this.renderSidebar()}
-        <div className={classes.content}>
-          {this.props.children}
-        </div>
+        <Container className={classes.content}>
+          {this.renderContent()}
+        </Container>
       </div>
     )
   }
@@ -98,7 +104,8 @@ const styles = theme => ({
 
 const mapStateToProps = state => ({
   logged_in: state.auth.logged_in,
-  user: state.auth.user
+  user: state.auth.user,
+  loading: state.mics.loading
 });
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),

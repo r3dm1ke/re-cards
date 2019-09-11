@@ -4,11 +4,12 @@ import {Redirect} from 'react-router-dom';
 import SchoolIcon from '@material-ui/icons/School';
 import {login} from "../actions/auth";
 import {connect} from "react-redux";
+import {open_dashboard} from "../actions/dashboard";
 
 class LoginPage extends Component {
   render() {
     if (this.props.logged_in) {
-      return <Redirect to={'/home'} />
+      this.props.open_dashboard();
     }
 
     const {classes} = this.props;
@@ -37,7 +38,7 @@ const styles = theme => ({
     maxWidth: '25rem',
     marginTop: '20%',
     height: '20rem',
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing(2),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -55,6 +56,7 @@ const mapStateToProps = state => ({
   logged_in: state.auth.logged_in
 });
 const mapDispatchToProps = dispatch => ({
-  login: () => dispatch(login())
+  login: () => dispatch(login()),
+  open_dashboard: () => dispatch(open_dashboard())
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(LoginPage));

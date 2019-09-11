@@ -17,8 +17,12 @@ import CollectionsIcon from '@material-ui/icons/Collections';
 import SettingsIcon from '@material-ui/icons/Settings';
 import AboutIcon from '@material-ui/icons/Info';
 import HistoryIcon from '@material-ui/icons/History';
+import CardsIcon from '@material-ui/icons/FileCopy';
 import {connect} from 'react-redux';
 import {toggle_drawer} from "../actions/layout";
+import {open_decks} from "../actions/decks";
+import {open_cards} from "../actions/cards";
+import {open_dashboard} from '../actions/dashboard';
 
 class Sidebar extends Component {
 
@@ -30,19 +34,21 @@ class Sidebar extends Component {
         <div className={classes.toolbar}>
           <Divider />
           <List>
-            <ListItem button>
+            <ListItem button onClick={this.props.open_dashboard}>
               <ListItemIcon><DashboardIcon /></ListItemIcon>
               <ListItemText primary={'Dashboard'} />
             </ListItem>
           </List>
           <Divider />
           <List>
-            <Link to={'/decks'}>
-              <ListItem button>
-                <ListItemIcon><CollectionsIcon /></ListItemIcon>
-                <ListItemText primary={'My decks'} />
-              </ListItem>
-            </Link>
+            <ListItem button onClick={this.props.open_cards}>
+              <ListItemIcon><CardsIcon /></ListItemIcon>
+              <ListItemText primary={'My cards'} />
+            </ListItem>
+            <ListItem button onClick={this.props.open_decks}>
+              <ListItemIcon><CollectionsIcon /></ListItemIcon>
+              <ListItemText primary={'My decks'} />
+            </ListItem>
             <ListItem button>
               <ListItemIcon><HistoryIcon /></ListItemIcon>
               <ListItemText primary={'History'} />
@@ -118,6 +124,9 @@ const mapStateToProps = state => ({
   drawer_opened: state.layout.drawer_opened
 });
 const mapDispatchToProps = dispatch => ({
-  toggle_drawer: () => dispatch(toggle_drawer())
+  toggle_drawer: () => dispatch(toggle_drawer()),
+  open_decks: () => dispatch(open_decks()),
+  open_cards: () => dispatch(open_cards()),
+  open_dashboard: () => dispatch(open_dashboard())
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Sidebar));

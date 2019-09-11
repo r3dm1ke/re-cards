@@ -1,13 +1,13 @@
 import * as types from '../actions/types';
 
 const INITIAL_STATE = {
-  drawer_opened: false,
+  entries: []
 };
 
 export default (state=INITIAL_STATE, action) => {
   switch (action.type) {
-    case types.TOGGLE_DRAWER:
-      return {...state, drawer_opened: !state.drawer_opened}
+    case types.TRENDS_LOADED:
+      return {...state, entries: action.payload};
     default:
       return state;
   }
