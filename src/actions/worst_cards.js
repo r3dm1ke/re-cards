@@ -29,4 +29,4 @@ export const study_worst_cards = () => async (dispatch, getState) => {
   });
   dispatch(push('/study'));
   dispatch(remove_loader('worst_study'));
-}
+};

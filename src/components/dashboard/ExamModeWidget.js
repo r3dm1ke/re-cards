@@ -35,7 +35,7 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: '25rem',
+    maxHeight: '25rem',
     maxWidth: '20rem'
   },
   [theme.breakpoints.down('sm')]: {

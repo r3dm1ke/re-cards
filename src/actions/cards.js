@@ -1,6 +1,31 @@
 import * as types from '../actions/types';
 import firebase, {firestore} from '../firebase';
 import {push} from 'connected-react-router';
+import {add_loader, remove_loader} from "./mics";
+
+let unsubscribe;
+
+export const subscribe_to_cards = () => async (dispatch, getState) => {
+  const {uid} = getState().auth.user;
+  unsubscribe = firestore.collection('cards')
+    .where('uid', '==', uid)
+    .onSnapshot(query => {
+      const data = [];
+      query.forEach(q => data.push(q.data()));
+      dispatch({
+        type: types.CARDS_LOADED,
+        payload: data
+      })
+    });
+};
+
+export const unsubscribe_from_cards = () => async (dispatch, getState) => {
+  unsubscribe();
+  dispatch({
+    type: types.CARDS_LOADED,
+    payload: []
+  })
+};
 
 export const open_cards = (deck_id) => async (dispatch, getState) => {
   dispatch({
@@ -60,7 +85,7 @@ export const load_list_of_cards = async (uid, deck_id, decks) => {
     const cardData = card.data();
     const deckId = cardData.deck.id;
     const deck = decks.find(d => d.id === deckId);
-    return {...cardData, deckName: deck.name, id: card.id}
+    return {...cardData, deckName: deck ? deck.name : 'Uncategorized', id: card.id}
   });
   return cards;
 };
@@ -115,6 +140,21 @@ export const edit_card_dialog_deck_changed = deck => ({
   payload: deck
 });
 
+export const delete_card_from_dialog = () => async (dispatch, getState) => {
+  dispatch(add_loader('del_card', 'Deleting...'));
+  const state = getState();
+  const {edit_dialog_id} = state.cards;
+
+  if (edit_dialog_id !== '') {
+    const ref = firestore.collection('cards').doc(edit_dialog_id);
+    await ref.delete();
+  }
+  dispatch({
+    type: types.CLOSE_EDIT_CARD_DIALOG
+  });
+  dispatch(remove_loader('del_card'));
+};
+
 export const save_card_from_dialog = () => async (dispatch, getState) => {
   const state = getState();
   const {
@@ -142,7 +182,10 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     answer: edit_dialog_answer,
     question: edit_dialog_question,
     uid,
-    deck: deckRef
+    deck: deckRef,
+    total: 0,
+    score: 0,
+    ratio: 0
   };
 
   if (edit_dialog_id === '' || edit_dialog_id === null || edit_dialog_id === undefined) {

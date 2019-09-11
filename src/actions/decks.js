@@ -121,10 +121,25 @@ export const on_edit_deck_delete = () => async (dispatch, getState) => {
     }
   });
   dispatch(toggle_edit_deck_dialog());
-  const {edit_deck_id} = getState().decks;
-  const ref = firestore.collection('decks').doc(edit_deck_id);
-  await ref.delete();
-  dispatch(open_decks());
+  // eslint-disable-next-line no-restricted-globals
+  const confirmed = confirm('Deleting this deck will also delete all cards associated to it. Do you wish to continue?');
+  if (confirmed) {
+    const {edit_deck_id} = getState().decks;
+    const {uid} = getState().auth.user;
+    const batch = firestore.batch();
+    const ref = firestore.collection('decks').doc(edit_deck_id);
+    batch.delete(ref);
+    const cardsRef = firestore.collection('cards')
+      .where('deck', '==', ref)
+      .where('uid', '==', uid);
+
+    const cards = await cardsRef.get();
+    cards.docs.forEach(card => {
+      batch.delete(firestore.collection('cards').doc(card.id));
+    });
+    await batch.commit();
+    dispatch(open_decks());
+  }
   dispatch({
     type: types.REMOVE_LOADER,
     payload: 'delete'
@@ -139,7 +154,7 @@ export const open_edit_dialog = id => async (dispatch, getState) => {
   const deck = getState().decks.decks.find(d => d.id === id);
   dispatch({
     type: types.EDIT_DECK_NAME_CHANGED,
-    payload: deck.subject
+    payload: deck.name
   });
   dispatch({
     type: types.TOGGLE_EDIT_DECK_DIALOG

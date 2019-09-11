@@ -16,7 +16,7 @@ import {
   withStyles
 } from '@material-ui/core';
 import {
-  close_edit_card_dialog,
+  close_edit_card_dialog, delete_card_from_dialog,
   edit_card_dialog_answer_changed,
   edit_card_dialog_deck_changed,
   edit_card_dialog_question_changed, save_card_from_dialog
@@ -41,7 +41,8 @@ class EditCardDialog extends Component {
       question_changed,
       answer_changed,
       deck_changed,
-      save_card
+      save_card,
+      delete_card
     } = this.props;
 
     return (
@@ -78,7 +79,7 @@ class EditCardDialog extends Component {
         </DialogContent>
         <DialogActions>
           <Button onClick={save_card}>Save</Button>
-          <Button>Delete</Button>
+          <Button onClick={delete_card}>Delete</Button>
           <Button onClick={close_dialog}>Cancel</Button>
         </DialogActions>
       </Dialog>
@@ -99,6 +100,7 @@ const mapDispatchToProps = dispatch => ({
   question_changed: question => dispatch(edit_card_dialog_question_changed(question)),
   answer_changed: answer => dispatch(edit_card_dialog_answer_changed(answer)),
   deck_changed: deck => dispatch(edit_card_dialog_deck_changed(deck)),
-  save_card: () => dispatch(save_card_from_dialog())
+  save_card: () => dispatch(save_card_from_dialog()),
+  delete_card: () => dispatch(delete_card_from_dialog())
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(EditCardDialog));
