@@ -9,15 +9,8 @@ import {
 import {connect} from 'react-redux';
 import {LineChart} from 'react-chartkick';
 import 'chart.js';
-import {subscribe_to_trends, unsubscribe_from_trends} from "../../actions/trend";
 
 class TrendWidget extends Component {
-  componentDidMount() {
-    this.props.subscribe();
-  }
-  componentWillUnmount() {
-    this.props.unsubscribe();
-  }
 
   getData() {
     const {trends} = this.props;
@@ -60,7 +53,5 @@ const mapStateToProps = state => ({
   trends: state.trend.entries
 });
 const mapDispatchToProps = dispatch => ({
-  subscribe: () => dispatch(subscribe_to_trends()),
-  unsubscribe: () => dispatch(unsubscribe_from_trends())
 });
 export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(TrendWidget));

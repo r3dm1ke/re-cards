@@ -3,8 +3,15 @@ import * as types from './types';
 import {push} from 'connected-react-router';
 import {open_dashboard} from "./dashboard";
 
+// Subscribers
+import {subscribe_to_trends} from "./trend";
+import {subscribe_to_cards} from "./cards";
+import {subscribe_to_decks} from "./decks";
+import {subscribe_to_worst_cards} from "./worst_cards";
+
 export const init = () => async (dispatch, getState) => {
   auth.onAuthStateChanged(user => {
+    console.log(`auth state changed ${user}`);
     if (user) {
       dispatch({
         type: types.ADD_LOADER,
@@ -19,6 +26,7 @@ export const init = () => async (dispatch, getState) => {
       };
       dispatch(action);
       dispatch(open_dashboard());
+      dispatch(add_subscribers());
       dispatch({
         type: types.REMOVE_LOADER,
         payload: 'loading'
@@ -27,6 +35,13 @@ export const init = () => async (dispatch, getState) => {
   });
   await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
   await firestore.enablePersistence();
+};
+
+const add_subscribers = () => async (dispatch, getState) => {
+  dispatch(subscribe_to_decks());
+  dispatch(subscribe_to_cards());
+  dispatch(subscribe_to_trends());
+  dispatch(subscribe_to_worst_cards());
 };
 
 export const login = () => async (dispatch, getState) => {

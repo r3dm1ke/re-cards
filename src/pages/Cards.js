@@ -15,6 +15,8 @@ import EditCardDialog from '../components/EditCardDialog'
 class CardsPage extends Component {
 
   renderCards() {
+    console.log('now rendering these cards: ');
+    console.dir(this.props.cards);
     return this.props.cards
       .filter(card =>
         this.props.selected_deck === 'all' ||

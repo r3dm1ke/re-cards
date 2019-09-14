@@ -7,7 +7,7 @@ import NewDeckCard from '../components/NewItemCard';
 import NewDeckDialog from '../components/NewDeckDialog';
 import EditDeckDialog from '../components/EditDeckDialog';
 import {toggle_new_deck_dialog, open_edit_dialog} from "../actions/decks";
-import {open_cards} from '../actions/cards';
+import {open_cards_for_deck} from '../actions/cards';
 
 class DecksPage extends Component {
 
@@ -18,7 +18,7 @@ class DecksPage extends Component {
           subject={deck.name}
           onEdit={() => {this.props.open_edit_dialog(deck.id)}}
           onStart={() => {}}
-          onCards={() => {this.props.open_cards(deck.id)}}
+          onCards={() => {this.props.open_cards_for_deck(deck.id)}}
         />
       </Grow>
     ))
@@ -57,6 +57,6 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   toggle_new_deck_dialog: () => dispatch(toggle_new_deck_dialog()),
   open_edit_dialog: id => dispatch(open_edit_dialog(id)),
-  open_cards: id => dispatch(open_cards(id))
+  open_cards_for_deck: id => dispatch(open_cards_for_deck(id))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(DecksPage));

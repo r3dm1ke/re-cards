@@ -1,7 +1,23 @@
 import * as types from './types';
 import {push} from 'connected-react-router';
 import firebase, {firestore} from '../firebase';
-import {load_list_of_decks} from "./cards";
+
+export const subscribe_to_decks = () => async (dispatch, getState) => {
+  const {uid} = getState().auth.user;
+  const unsubscribe = firestore.collection('decks')
+    .where('uid', '==', uid)
+    .onSnapshot(async query => {
+      const data = [];
+      query.forEach(async q => {
+        const deck_data = q.data();
+        data.push({id: q.id, name: deck_data.subject, uid: deck_data.uid});
+      });
+      dispatch({
+        type: types.DECKS_LOADED,
+        payload: data
+      });
+    })
+}
 
 export const open_decks = () => async (dispatch, getState) => {
   dispatch({
@@ -13,13 +29,7 @@ export const open_decks = () => async (dispatch, getState) => {
   });
 
   dispatch(push('/decks'));
-  const {uid} = getState().auth.user;
-  const decks = await load_list_of_decks(uid);
 
-  dispatch({
-    type: types.DECKS_LOADED,
-    payload: decks
-  });
   dispatch({
     type: types.REMOVE_LOADER,
     payload: 'decks'
@@ -69,7 +79,6 @@ export const on_new_deck_submit = () => async (dispatch, getState) => {
       type: types.NEW_DECK_NAME_CHANGED,
       payload: ''
     });
-    dispatch(open_decks());
   }
   dispatch({
     type: types.REMOVE_LOADER,
@@ -105,7 +114,6 @@ export const on_edit_deck_submit = () => async (dispatch, getState) => {
   await ref.set({
     subject: edit_deck_dialog_name
   }, {merge: true});
-  dispatch(open_decks());
   dispatch({
     type: types.REMOVE_LOADER,
     payload: 'edit'
@@ -138,7 +146,6 @@ export const on_edit_deck_delete = () => async (dispatch, getState) => {
       batch.delete(firestore.collection('cards').doc(card.id));
     });
     await batch.commit();
-    dispatch(open_decks());
   }
   dispatch({
     type: types.REMOVE_LOADER,

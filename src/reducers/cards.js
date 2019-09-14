@@ -3,7 +3,7 @@ import * as types from '../actions/types';
 const INITIAL_STATE = {
   cards: [],
   decks: [],
-  selected_deck: '',
+  selected_deck: 'all',
   edit_dialog_opened: false,
   edit_dialog_question: '',
   edit_dialog_answer: '',

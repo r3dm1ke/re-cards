@@ -1,5 +1,4 @@
 import * as types from './types';
-import {load_list_of_cards, load_list_of_decks} from "./cards";
 import {push} from 'connected-react-router';
 import {functions} from '../firebase';
 import {add_loader, remove_loader, show_alert} from "./mics";
@@ -15,15 +14,14 @@ export const start_simple_study = () => async (dispatch, getState) => {
   const state = getState();
   const {simple_study_decks} = state.dashboard;
   const {uid} = state.auth.user;
-  const decks = await load_list_of_decks(uid);
-  let cards = await load_list_of_cards(uid, 'all', decks);
-  cards = cards.filter(card =>
+  const {cards} = state.cards;
+  const filtered_cards = cards.filter(card =>
     simple_study_decks.indexOf(card.deck.id) > -1
   );
 
   dispatch({
     type: types.CARDS_FOR_SIMPLE_STUDY_LOADED,
-    payload: cards
+    payload: filtered_cards
   });
   dispatch({
     type: types.START_SIMPLE_STUDY

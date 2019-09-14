@@ -9,9 +9,15 @@ export const subscribe_to_cards = () => async (dispatch, getState) => {
   const {uid} = getState().auth.user;
   unsubscribe = firestore.collection('cards')
     .where('uid', '==', uid)
-    .onSnapshot(query => {
+    .onSnapshot(async query => {
       const data = [];
-      query.forEach(q => data.push(q.data()));
+      query.forEach(async q => {
+        const card_data = q.data();
+        card_data.id = q.id;
+        const deck_data = await card_data.deck.get();
+        card_data.deckName = deck_data.data().subject;
+        data.push(card_data);
+      });
       dispatch({
         type: types.CARDS_LOADED,
         payload: data
@@ -19,15 +25,7 @@ export const subscribe_to_cards = () => async (dispatch, getState) => {
     });
 };
 
-export const unsubscribe_from_cards = () => async (dispatch, getState) => {
-  unsubscribe();
-  dispatch({
-    type: types.CARDS_LOADED,
-    payload: []
-  })
-};
-
-export const open_cards = (deck_id) => async (dispatch, getState) => {
+export const open_cards = () => async (dispatch, getState) => {
   dispatch({
     type: types.ADD_LOADER,
     payload: {
@@ -35,25 +33,8 @@ export const open_cards = (deck_id) => async (dispatch, getState) => {
       description: 'Loading your cards...'
     }
   });
-  dispatch(push('/cards'));
-  const {uid} = getState().auth.user;
-  const decks = await load_list_of_decks(uid);
-  let id = deck_id;
-  if (id === '' || id === null || id === undefined) id = 'all';
 
-  dispatch({
-    type: types.SELECTED_DECK,
-    payload: id
-  });
-  dispatch({
-    type: types.DECKS_LOADED,
-    payload: decks
-  });
-  const cards = await load_list_of_cards(uid, id, decks);
-  dispatch({
-    type: types.CARDS_LOADED,
-    payload: cards
-  });
+  dispatch(push('/cards'));
 
   dispatch({
     type: types.REMOVE_LOADER,
@@ -61,34 +42,13 @@ export const open_cards = (deck_id) => async (dispatch, getState) => {
   })
 };
 
-export const load_list_of_decks = async uid => {
-  const ref = firestore.collection('decks');
-  const result = await ref.where('uid', '==', uid).get();
-  return result.docs.map(deck => ({id: deck.id, name: deck.data().subject}));
-};
-
-export const load_list_of_cards = async (uid, deck_id, decks) => {
-  const ref = firestore.collection('cards');
-  let result;
-  if (true) {
-    result = await ref
-      .where('uid', '==', uid)
-      .get();
-  } else {
-    const deck = firestore.collection('decks').doc(deck_id);
-    result = await ref
-      .where('uid', '==', uid)
-      .where('deck', '==', deck)
-      .get();
-  }
-  const cards = result.docs.map(card => {
-    const cardData = card.data();
-    const deckId = cardData.deck.id;
-    const deck = decks.find(d => d.id === deckId);
-    return {...cardData, deckName: deck ? deck.name : 'Uncategorized', id: card.id}
+export const open_cards_for_deck = (deckId) => async (dispatch, getState) => {
+  dispatch({
+    type: types.SELECTED_DECK,
+    payload: deckId
   });
-  return cards;
-};
+  dispatch(open_cards());
+}
 
 export const deck_selected = deckId => async (dispatch, getState) => {
   dispatch({
@@ -196,11 +156,6 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     await ref.set(data, {merge: true})
   }
 
-  const cards = await load_list_of_cards(uid, selected_deck, decks);
-  dispatch({
-    type: types.CARDS_LOADED,
-    payload: cards
-  });
   dispatch({
     type: types.REMOVE_LOADER,
     payload: 'add_card'

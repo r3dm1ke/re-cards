@@ -3,18 +3,26 @@ import {firestore} from '../firebase';
 import {add_loader, remove_loader} from "./mics";
 import {push} from 'connected-react-router';
 
-export const load_worst_cards = () => async (dispatch, getState) => {
-  dispatch(add_loader('worst', 'Loading your worst cards...'));
+export const subscribe_to_worst_cards = () => async (dispatch, getState) => {
   const {uid} = getState().auth.user;
-  const cards_ref = firestore.collection('cards');
-  const ordered_cards_ref = cards_ref.where('uid', '==', uid).orderBy('ratio').limit(25);
-  const cards_data = await ordered_cards_ref.get();
-
-  dispatch({
-    type: types.WORST_CARDS_LOADED,
-    payload: cards_data.docs.map(card => ({...card.data(), id: card.id}))
-  });
-  dispatch(remove_loader('worst'))
+  const unsubscribe = firestore.collection('cards')
+    .where('uid', '==', uid)
+    .orderBy('ratio')
+    .limit(25)
+    .onSnapshot(async query => {
+      const data = [];
+      query.forEach(async q => {
+        const card_data = q.data();
+        card_data.id = q.id;
+        const deck_data = await card_data.deck.get();
+        card_data.deckName = deck_data.data().subject;
+        data.push(card_data);
+      });
+      dispatch({
+        type: types.WORST_CARDS_LOADED,
+        payload: data
+      });
+    });
 };
 
 export const study_worst_cards = () => async (dispatch, getState) => {
