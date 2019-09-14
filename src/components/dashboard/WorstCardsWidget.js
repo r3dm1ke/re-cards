@@ -17,7 +17,10 @@ class WorstCardsWidget extends Component {
 
   renderCards() {
     const {cards, classes} = this.props;
+    console.log('Rendering worst cards...');
+    console.log(cards);
     return cards.map(card => {
+      console.log('rendering worst card');
       const green = Math.round((card.ratio / 100) * 255);
       const red = 255 - green;
       const color = `rgb(${red}, ${green}, 0)`;

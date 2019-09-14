@@ -12,14 +12,25 @@ import {
   Button,
   withStyles
 } from "@material-ui/core";
+import {Skeleton} from "@material-ui/lab";
 import {simple_study_deck_selected} from "../../actions/dashboard";
 import {start_simple_study} from "../../actions/study";
 
 class SimpleStudyWidget extends Component {
 
+  renderSkeletons() {
+    return [
+      <Skeleton variant={'text'} width={'70%'} height={40} key={1}/>,
+      <Skeleton variant={'text'} width={'70%'} height={40} key={2}/>,
+      <Skeleton variant={'text'} width={'70%'} height={40} key={3}/>,
+    ]
+  }
+
   renderDecks() {
     const {decks, decks_selected, deck_selected} = this.props;
-
+    if (decks === undefined) {
+      return this.renderSkeletons();
+    }
     console.log(decks_selected);
     return decks.map(deck => (
       <FormControlLabel
@@ -62,7 +73,7 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: '25rem',
+    maxHeight: '25rem',
     maxWidth: '20rem'
   },
   content: {

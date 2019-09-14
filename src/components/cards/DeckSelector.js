@@ -4,7 +4,6 @@ import {
   Select,
   InputLabel,
   MenuItem,
-  OutlinedInput,
   withStyles
 } from "@material-ui/core";
 

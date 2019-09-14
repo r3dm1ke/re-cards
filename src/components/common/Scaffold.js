@@ -3,8 +3,8 @@ import {withStyles, AppBar, Toolbar, Typography, Container, Button, IconButton} 
 import MenuIcon from '@material-ui/icons/Menu';
 import Sidebar from './Sidebar';
 import {connect} from 'react-redux';
-import {logout} from '../actions/auth';
-import {toggle_drawer} from "../actions/layout";
+import {logout} from '../../actions/auth';
+import {toggle_drawer} from "../../actions/layout";
 import Loader from './Loader';
 
 class Scaffold extends Component {

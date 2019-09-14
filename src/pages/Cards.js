@@ -2,21 +2,24 @@ import React, {Component} from 'react';
 import {withStyles, Divider, Grow} from '@material-ui/core';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import CardThumbnail from "../components/CardThumbnail";
-import DeckSelector from '../components/DeckSelector';
+import CardThumbnail from "../components/cards/CardThumbnail";
+import DeckSelector from '../components/cards/DeckSelector';
 import {
   deck_selected,
   open_edit_card_dialog_for_existing_card,
   open_edit_card_dialog_for_new_card
 } from '../actions/cards';
-import NewItemCard from '../components/NewItemCard';
-import EditCardDialog from '../components/EditCardDialog'
+import NewItemCard from '../components/common/NewItemCard';
+import EditCardDialog from '../components/cards/EditCardDialog'
 
 class CardsPage extends Component {
 
   renderCards() {
     console.log('now rendering these cards: ');
     console.dir(this.props.cards);
+    if (this.props.cards === undefined) {
+      return this.renderSkeletons()
+    }
     return this.props.cards
       .filter(card =>
         this.props.selected_deck === 'all' ||
@@ -26,6 +29,7 @@ class CardsPage extends Component {
         <Grow timeout={index * 250} key={card.id} in>
           <CardThumbnail
             question={card.question}
+            question_type={card.question_type}
             answer={card.answer}
             deckName={card.deckName}
             ratio={card.ratio}
@@ -33,6 +37,13 @@ class CardsPage extends Component {
           />
         </Grow>
       ))
+  }
+
+  renderSkeletons() {
+    const ids = [1, 2, 3, 4, 5];
+    return ids.map(id => (
+      <CardThumbnail key={id} skeleton />
+    ))
   }
 
   renderDeckSelector() {
@@ -57,7 +68,7 @@ class CardsPage extends Component {
 
   render() {
     const {logged_in, classes, open_new_card, cards} = this.props;
-    const finalDelay = cards.length * 250;
+    const finalDelay = cards === undefined ? 0 : cards.length * 250;
 
     if (!logged_in) return <Redirect to={'/'} />;
     return (

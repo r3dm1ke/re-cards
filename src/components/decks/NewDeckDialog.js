@@ -10,7 +10,7 @@ import {
   DialogTitle,
   withStyles
 } from '@material-ui/core';
-import {on_new_deck_submit, on_new_deck_name_changed, toggle_new_deck_dialog} from "../actions/decks";
+import {on_new_deck_submit, on_new_deck_name_changed, toggle_new_deck_dialog} from "../../actions/decks";
 
 class NewDeckDialog extends Component {
   render() {

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Container, Paper, Typography, Divider, withStyles, Button} from "@material-ui/core";
-import {Redirect} from 'react-router-dom';
 import SchoolIcon from '@material-ui/icons/School';
 import {login} from "../actions/auth";
 import {connect} from "react-redux";

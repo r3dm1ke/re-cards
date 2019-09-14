@@ -1,5 +1,5 @@
 import * as types from '../actions/types';
-import firebase, {firestore} from '../firebase';
+import {firestore} from '../firebase';
 import {push} from 'connected-react-router';
 import {add_loader, remove_loader} from "./mics";
 
@@ -11,13 +11,13 @@ export const subscribe_to_cards = () => async (dispatch, getState) => {
     .where('uid', '==', uid)
     .onSnapshot(async query => {
       const data = [];
-      query.forEach(async q => {
+      for (const q of query.docs) {
         const card_data = q.data();
         card_data.id = q.id;
         const deck_data = await card_data.deck.get();
         card_data.deckName = deck_data.data().subject;
         data.push(card_data);
-      });
+      }
       dispatch({
         type: types.CARDS_LOADED,
         payload: data
@@ -82,6 +82,8 @@ export const open_edit_card_dialog_for_existing_card = card => async (dispatch, 
   dispatch(edit_card_dialog_deck_changed(card.deck.id));
   dispatch(edit_card_dialog_answer_changed(card.answer));
   dispatch(edit_card_dialog_question_changed(card.question));
+  dispatch(edit_dialog_validation_required_changed(card.validation_required));
+  dispatch(edit_dialog_question_type_changed(card.question_type));
   dispatch(open_edit_card_dialog());
 };
 
@@ -122,8 +124,8 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     edit_dialog_answer,
     edit_dialog_deck,
     edit_dialog_id,
-    selected_deck,
-    decks
+    edit_dialog_question_type,
+    edit_dialog_validation_required
   } = state.cards;
   const {uid} = state.auth.user;
 
@@ -145,7 +147,9 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     deck: deckRef,
     total: 0,
     score: 0,
-    ratio: 0
+    ratio: 0,
+    validation_required: edit_dialog_validation_required,
+    question_type: edit_dialog_question_type
   };
 
   if (edit_dialog_id === '' || edit_dialog_id === null || edit_dialog_id === undefined) {
@@ -161,6 +165,16 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     payload: 'add_card'
   });
 };
+
+export const edit_dialog_question_type_changed = q_type => ({
+  type: types.EDIT_CARD_DIALOG_QUESTION_TYPE_CHANGED,
+  payload: q_type
+});
+
+export const edit_dialog_validation_required_changed = validation_required => ({
+  type: types.EDIT_CARD_DIALOG_VALIDATION_REQUIRED_CHANGED,
+  payload: validation_required
+});
 
 export const close_edit_card_dialog = () => ({
   type: types.CLOSE_EDIT_CARD_DIALOG

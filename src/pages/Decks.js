@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import {withStyles, Grow} from '@material-ui/core';
-import DeckThumbnail from '../components/DeckThumbnail';
-import NewDeckCard from '../components/NewItemCard';
-import NewDeckDialog from '../components/NewDeckDialog';
-import EditDeckDialog from '../components/EditDeckDialog';
+import DeckThumbnail from '../components/decks/DeckThumbnail';
+import NewDeckCard from '../components/common/NewItemCard';
+import NewDeckDialog from '../components/decks/NewDeckDialog';
+import EditDeckDialog from '../components/decks/EditDeckDialog';
 import {toggle_new_deck_dialog, open_edit_dialog} from "../actions/decks";
 import {open_cards_for_deck} from '../actions/cards';
 

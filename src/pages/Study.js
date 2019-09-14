@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {
-  Card,
-  Typography,
   withStyles
 } from '@material-ui/core';
 import SimpleStudy from "../components/study/SimpleStudy";

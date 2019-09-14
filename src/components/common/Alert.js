@@ -8,7 +8,7 @@ import {
   DialogTitle,
   Button
 } from "@material-ui/core";
-import {hide_alert} from "../actions/mics";
+import {hide_alert} from "../../actions/mics";
 
 class Alert extends Component {
   render() {

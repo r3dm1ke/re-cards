@@ -20,6 +20,8 @@ class SmartStudy extends Component {
       <Flashcard
         question={card.question}
         answer={card.answer}
+        validation_required={card.validation_required}
+        question_type={card.question_type}
         onSuccess={() => register_answer(false)}
         onFail={() => register_answer(true)}
       />

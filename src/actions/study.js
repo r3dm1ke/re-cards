@@ -13,7 +13,6 @@ export const start_simple_study = () => async (dispatch, getState) => {
   });
   const state = getState();
   const {simple_study_decks} = state.dashboard;
-  const {uid} = state.auth.user;
   const {cards} = state.cards;
   const filtered_cards = cards.filter(card =>
     simple_study_decks.indexOf(card.deck.id) > -1
@@ -77,7 +76,7 @@ export const simple_study_teardown = () => async (dispatch, getState) => {
   dispatch(push('/dashboard'));
 };
 
-export const start_smart_study = () => async (dispatch, getState) => {
+export const start_smart_study = () => async (dispatch) => {
   dispatch(add_loader('smart_start', 'Preparing your study session...'));
   const get_smart_study_cards = functions.httpsCallable('get_smart_study_cards');
   const cards = await get_smart_study_cards();
@@ -121,8 +120,6 @@ export const smart_study_register_answer = stoopid => async (dispatch, getState)
 export const smart_study_teardown = () => async (dispatch, getState) => {
   dispatch({type: types.SMART_STUDY_FINISHED});
 
-  const state = getState();
-  const {uid} = state.auth.user;
   // TODO register smart study session in __functions__
 
   dispatch(push('/dashboard'));

@@ -10,7 +10,7 @@ import {
   DialogTitle,
   withStyles
 } from '@material-ui/core';
-import {toggle_edit_deck_dialog, edit_deck_name_changed, on_edit_deck_submit, on_edit_deck_delete} from "../actions/decks";
+import {toggle_edit_deck_dialog, edit_deck_name_changed, on_edit_deck_submit, on_edit_deck_delete} from "../../actions/decks";
 
 class EditDeckDialog extends Component {
   render() {

@@ -8,10 +8,10 @@ export const subscribe_to_decks = () => async (dispatch, getState) => {
     .where('uid', '==', uid)
     .onSnapshot(async query => {
       const data = [];
-      query.forEach(async q => {
+      for (const q of query.docs) {
         const deck_data = q.data();
         data.push({id: q.id, name: deck_data.subject, uid: deck_data.uid});
-      });
+      }
       dispatch({
         type: types.DECKS_LOADED,
         payload: data

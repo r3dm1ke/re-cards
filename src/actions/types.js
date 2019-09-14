@@ -29,6 +29,8 @@ export const EDIT_CARD_DIALOG_ID_CHANGED = 'edit_card_dialog_id_changed';
 export const EDIT_CARD_DIALOG_QUESTION_CHANGED = 'edit_card_dialog_question_changed';
 export const EDIT_CARD_DIALOG_ANSWER_CHANGED = 'edit_card_dialog_answer_changed';
 export const EDIT_CARD_DIALOG_DECK_CHANGED = 'edit_card_dialog_deck_changed';
+export const EDIT_CARD_DIALOG_VALIDATION_REQUIRED_CHANGED = 'edit_card_dialog_validation_required_changed';
+export const EDIT_CARD_DIALOG_QUESTION_TYPE_CHANGED = 'edit_card_dialog_question_type_changed';
 export const CLOSE_EDIT_CARD_DIALOG = 'close_edit_card_dialog';
 
 // DASHBOARD

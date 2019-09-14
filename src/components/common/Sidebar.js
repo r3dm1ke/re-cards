@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {
-  CssBaseline,
   Divider,
   Drawer,
   Hidden,
@@ -8,10 +7,8 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Toolbar,
   withStyles
 } from '@material-ui/core';
-import {Link} from 'react-router-dom';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import CollectionsIcon from '@material-ui/icons/Collections';
 import SettingsIcon from '@material-ui/icons/Settings';
@@ -19,10 +16,10 @@ import AboutIcon from '@material-ui/icons/Info';
 import HistoryIcon from '@material-ui/icons/History';
 import CardsIcon from '@material-ui/icons/FileCopy';
 import {connect} from 'react-redux';
-import {toggle_drawer} from "../actions/layout";
-import {open_decks} from "../actions/decks";
-import {open_cards} from "../actions/cards";
-import {open_dashboard} from '../actions/dashboard';
+import {toggle_drawer} from "../../actions/layout";
+import {open_decks} from "../../actions/decks";
+import {open_cards} from "../../actions/cards";
+import {open_dashboard} from '../../actions/dashboard';
 
 class Sidebar extends Component {
 

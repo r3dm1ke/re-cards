@@ -17,7 +17,7 @@ class SmartStudyWidget extends Component {
       <Card className={`${classes.root} ${className}`}>
         <CardContent>
           <Typography variant={'h4'}>Smart Study</Typography>
-          <Typography variant={'p'}>Spaced repetition technique will help you remember information in an easy and efficient way</Typography><br/>
+          <Typography variant={'body1'}>Spaced repetition technique will help you remember information in an easy and efficient way</Typography><br/>
           <Typography variant={'overline'}><a href={'https://en.wikipedia.org/wiki/Spaced_repetition'}>Learn more</a></Typography>
         </CardContent>
         <CardActions>

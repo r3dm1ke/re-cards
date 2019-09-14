@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {
   Card,
-  CardActions,
   CardContent,
   Typography,
   withStyles

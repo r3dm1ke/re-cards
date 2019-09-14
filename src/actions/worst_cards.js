@@ -11,13 +11,13 @@ export const subscribe_to_worst_cards = () => async (dispatch, getState) => {
     .limit(25)
     .onSnapshot(async query => {
       const data = [];
-      query.forEach(async q => {
+      for (const q of query.docs) {
         const card_data = q.data();
         card_data.id = q.id;
         const deck_data = await card_data.deck.get();
         card_data.deckName = deck_data.data().subject;
         data.push(card_data);
-      });
+      }
       dispatch({
         type: types.WORST_CARDS_LOADED,
         payload: data

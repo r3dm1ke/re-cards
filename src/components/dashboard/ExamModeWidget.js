@@ -17,7 +17,7 @@ class ExamModeWidget extends Component {
       <Card className={`${classes.root} ${className}`}>
         <CardContent>
           <Typography variant={'h4'}>Exam mode</Typography>
-          <Typography variant={'p'}>
+          <Typography variant={'body1'}>
             Clear all statistics and spaced repetition settings from all cards.
             Use when you need to study hard and revise all your cards
           </Typography>
