@@ -6,6 +6,7 @@ import DeckThumbnail from '../components/decks/DeckThumbnail';
 import NewDeckCard from '../components/common/NewItemCard';
 import NewDeckDialog from '../components/decks/NewDeckDialog';
 import EditDeckDialog from '../components/decks/EditDeckDialog';
+import Filters from "../components/decks/Filters";
 import {toggle_new_deck_dialog, open_edit_dialog} from "../actions/decks";
 import {open_cards_for_deck} from '../actions/cards';
 
@@ -31,13 +32,16 @@ class DecksPage extends Component {
     const finalTimeout = decks.length * 250;
 
     return (
-      <div className={classes.deckContainer}>
-        {this.renderDecks()}
-        <Grow timeout={finalTimeout} in>
-          <NewDeckCard onClick={this.props.toggle_new_deck_dialog}/>
-        </Grow>
-        <NewDeckDialog />
-        <EditDeckDialog />
+      <div>
+        <Filters/>
+        <div className={classes.deckContainer}>
+          {this.renderDecks()}
+          <Grow timeout={finalTimeout} in>
+            <NewDeckCard onClick={this.props.toggle_new_deck_dialog}/>
+          </Grow>
+          <NewDeckDialog />
+          <EditDeckDialog />
+        </div>
       </div>
     )
   }
@@ -52,7 +56,7 @@ const styles = theme => ({
 
 const mapStateToProps = state => ({
   logged_in: state.auth.logged_in,
-  decks: state.decks.decks
+  decks: state.decks.filtered_decks,
 });
 const mapDispatchToProps = dispatch => ({
   toggle_new_deck_dialog: () => dispatch(toggle_new_deck_dialog()),

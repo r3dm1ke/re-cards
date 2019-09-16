@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import {Skeleton} from '@material-ui/lab';
 import {Q_MATH, Q_TEXT} from "../../const/cards";
-import MathJax from 'react-mathjax2';
+import MathJaxRenderer from "../common/MathJaxRenderer";
 
 class CardThumbnail extends Component {
 
@@ -22,9 +22,7 @@ class CardThumbnail extends Component {
     } else if (question_type === Q_MATH) {
       console.log('mathjax rendered!');
       return (
-        <MathJax.Context input={'tex'}>
-          <MathJax.Node block>{question}</MathJax.Node>
-        </MathJax.Context>
+        <MathJaxRenderer block content={question} />
       )
     }
   }
@@ -48,7 +46,7 @@ class CardThumbnail extends Component {
   }
 
   render() {
-    const {answer, onEdit, classes, deckName, ratio, skeleton} = this.props;
+    const {answer, onEdit, classes, deckName, ratio, skeleton, onDelete} = this.props;
     if (skeleton) return this.renderSkeleton();
     const red_color = Math.round(((100 - ratio) / 100) * 255);
     const green_color = Math.round(((ratio) / 100) * 255);
@@ -65,6 +63,7 @@ class CardThumbnail extends Component {
           <Divider style={{backgroundColor: color}}/>
           <CardActions>
             <Button color={'inherit'} onClick={onEdit}>Edit</Button>
+            <Button color={'inherit'} onClick={onDelete}>Delete</Button>
           </CardActions>
         </div>
       </Card>

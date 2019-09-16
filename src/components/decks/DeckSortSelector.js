@@ -10,10 +10,10 @@ import {
 } from '@material-ui/core';
 import UpIcon from '@material-ui/icons/ArrowUpward';
 import DownIcon from '@material-ui/icons/ArrowDownward';
-import {cards_sort_direction_toggled, cards_sort_prop_updated} from "../../actions/cards";
-import {SORT_PROPS} from "../../const/cards";
+import {decks_sort_direction_toggled, decks_sort_prop_changed} from "../../actions/decks";
+import {SORT_PROPS} from "../../const/decks";
 
-class SortSelect extends Component {
+class DeckSortSelector extends Component {
 
   renderItems() {
     return SORT_PROPS.map(prop => (
@@ -31,7 +31,7 @@ class SortSelect extends Component {
   }
 
   render() {
-    const {classes, sort_direction_toggled, sort_prop_updated, sort_prop, sort_direction} = this.props;
+    const {classes, sort_prop_updated, sort_prop} = this.props;
     return (
       <div className={classes.root}>
         <FormControl className={classes.formControl} variant={'outlined'}>
@@ -44,6 +44,7 @@ class SortSelect extends Component {
               id: 'sort-selector',
             }}
             labelWidth={60}
+            className={classes.select}
           >
             {this.renderItems()}
           </Select>
@@ -62,6 +63,9 @@ const styles = theme => ({
   formControl: {
     flex: '1'
   },
+  select: {
+    paddingRight: theme.spacing(2)
+  },
   [theme.breakpoints.down('sm')]: {
     root: {
       width: '100%'
@@ -69,11 +73,11 @@ const styles = theme => ({
   }
 });
 const mapStateToProps = state => ({
-  sort_prop: state.cards.sort_prop,
-  sort_direction: state.cards.sort_direction
+  sort_prop: state.decks.sort_prop,
+  sort_direction: state.decks.sort_direction
 });
 const mapDispatchToProps = dispatch => ({
-  sort_prop_updated: sort_prop => dispatch(cards_sort_prop_updated(sort_prop)),
-  sort_direction_toggled: () => dispatch(cards_sort_direction_toggled())
+  sort_prop_updated: sort_prop => dispatch(decks_sort_prop_changed(sort_prop)),
+  sort_direction_toggled: () => dispatch(decks_sort_direction_toggled())
 });
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(SortSelect));
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(DeckSortSelector));

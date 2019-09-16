@@ -27,7 +27,7 @@ export default (state=INITIAL_STATE, action) => {
         cards: action.payload,
         filtered_cards: filter_cards({...state, cards: action.payload})
       };
-    case types.SELECTED_DECK:
+    case types.DECK_SELECTED:
       return {
         ...state,
         selected_deck: action.payload,
@@ -83,7 +83,13 @@ const filter_cards = (state) => {
   }
 
   if (state.search_term !== '') {
-    filtered = filtered.filter(card => card.question.includes(state.search_term) || card.answer.includes(state.search_term));
+    filtered = filtered.filter(card =>
+      card.question
+        .toLowerCase()
+        .includes(state.search_term.toLowerCase()) ||
+      card.answer
+        .toLowerCase()
+        .includes(state.search_term.toLowerCase()));
   }
 
   filtered.sort((card1, card2) => card1[state.sort_prop] > card2[state.sort_prop] ? -1 : 1);

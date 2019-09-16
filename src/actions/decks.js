@@ -167,3 +167,17 @@ export const open_edit_dialog = id => async (dispatch, getState) => {
     type: types.TOGGLE_EDIT_DECK_DIALOG
   });
 };
+
+export const decks_search_term_updated = search_term => ({
+  type: types.DECKS_SEARCH_TERM_UPDATED,
+  payload: search_term
+});
+
+export const decks_sort_prop_changed = sort_prop => ({
+  type: types.DECKS_SORT_PROP_CHANGED,
+  payload: sort_prop
+});
+
+export const decks_sort_direction_toggled = () => ({
+  type: types.DECKS_SORT_DIRECTION_TOGGLED
+});

@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac262b5f-9ff6-4935-b268-aaf050590dda" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/mics.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/mics.js" afterDir="false" />
+    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Deck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/ProfileDropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/decks/DeckSearchBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/decks/DeckSortSelector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/decks/Filters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/const/decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flashcards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flashcards.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scaffold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/EditCardDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/Filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/SortSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardSortSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Scaffold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/decks.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,22 +46,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1PFRpbsN4cNeClj8w4CiLikVbaZ" />
+  <component name="ProjectId" id="1QvJGsputTs9PaF1G2PLxzTVE0j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\components\cards\edit_dialog" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -70,62 +87,25 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ac262b5f-9ff6-4935-b268-aaf050590dda" name="Default Changelist" comment="" />
-      <created>1565369762870</created>
+      <changelist id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="" />
+      <created>1568642032098</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1565369762870</updated>
-      <workItem from="1565369764048" duration="5124000" />
-      <workItem from="1565464831309" duration="1006000" />
-    </task>
-    <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6130000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33355394" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
-      <workItem from="1565464831309" duration="599000" />
-      <workItem from="1565468044013" duration="6393000" />
-      <workItem from="1565545955512" duration="1872000" />
+      <updated>1568642032098</updated>
+      <workItem from="1568642034148" duration="114000" />
+      <workItem from="1568642151464" duration="1040000" />
+      <workItem from="1568645046741" duration="170000" />
+      <workItem from="1568645267853" duration="10832000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="WindowStateProjectService">
+    <state x="254" y="40" key="SettingsEditor" />
+    <state x="254" y="40" key="SettingsEditor/1920.1080/1680.1050" />
+    <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup" />
+    <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080/1680.1050" />
   </component>
 </project>

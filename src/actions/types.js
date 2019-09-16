@@ -20,9 +20,12 @@ export const TOGGLE_EDIT_DECK_DIALOG = 'toggle_edit_deck_dialog';
 export const EDIT_DECK_NAME_CHANGED = 'edit_deck_name_changed';
 export const EDIT_DECK_DIALOG_ERROR = 'edit_deck_dialog_error';
 export const SET_EDIT_DECK_ID = 'set_edit_deck_id';
+export const DECKS_SEARCH_TERM_UPDATED = 'decks_search_term_updated';
+export const DECKS_SORT_PROP_CHANGED = 'decks_sort_prop_updated';
+export const DECKS_SORT_DIRECTION_TOGGLED = 'decks_sort_direction_triggered';
 
 // CARDS
-export const SELECTED_DECK = 'deck_selected';
+export const DECK_SELECTED = 'deck_selected';
 export const CARDS_LOADED = 'cards_loaded';
 export const OPEN_EDIT_CARD_DIALOG = 'open_edit_card_dialog';
 export const EDIT_CARD_DIALOG_ID_CHANGED = 'edit_card_dialog_id_changed';

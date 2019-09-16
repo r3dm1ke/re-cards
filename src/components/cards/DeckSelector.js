@@ -30,6 +30,7 @@ class DeckSelector extends Component {
             id: 'deck-selector',
           }}
           labelWidth={40}
+          className={classes.select}
         >
           {this.renderItems()}
           <MenuItem value={'all'}>All</MenuItem>
@@ -42,6 +43,9 @@ class DeckSelector extends Component {
 const styles = theme => ({
   formControl: {
     marginBottom: theme.spacing(2)
+  },
+  select: {
+    paddingRight: theme.spacing(2)
   },
   [theme.breakpoints.down('sm')]: {
     formControl: {

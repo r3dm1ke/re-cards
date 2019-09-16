@@ -1,7 +1,17 @@
 import React, {Component} from 'react';
-import {withStyles, AppBar, Toolbar, Typography, Container, Button, IconButton} from "@material-ui/core";
+import {
+  withStyles,
+  AppBar,
+  Toolbar,
+  Typography,
+  Container,
+  Button,
+  IconButton,
+  Avatar
+} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 import Sidebar from './Sidebar';
+import ProfileDropdown from "./ProfileDropdown";
 import {connect} from 'react-redux';
 import {logout} from '../../actions/auth';
 import {toggle_drawer} from "../../actions/layout";
@@ -14,13 +24,6 @@ class Scaffold extends Component {
       return `Welcome, ${this.props.user.displayName}`
     }
     return 'Flashcards'
-  }
-
-  renderLogoutButton() {
-    if (this.props.logged_in) {
-      return <Button onClick={this.props.logout} color={'inherit'}>Logout</Button>
-    }
-    return null;
   }
 
   renderSidebar() {
@@ -59,7 +62,7 @@ class Scaffold extends Component {
             <Toolbar disableGutters>
               {this.renderMenuButton()}
               <Typography variant={'h6'} className={classes.title}>{this.renderTitle()}</Typography>
-              {this.renderLogoutButton()}
+              <ProfileDropdown />
             </Toolbar>
           </Container>
         </AppBar>

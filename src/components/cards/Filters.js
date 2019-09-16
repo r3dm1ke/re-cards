@@ -1,7 +1,7 @@
 import React from "react";
 import CardSearchBox from "./CardSearchBox";
 import DeckSelector from "./DeckSelector";
-import SortSelect from "./SortSelect";
+import SortSelect from "./CardSortSelector";
 import {makeStyles, Divider} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({

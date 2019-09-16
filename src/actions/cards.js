@@ -44,7 +44,7 @@ export const open_cards = () => async (dispatch, getState) => {
 
 export const open_cards_for_deck = (deckId) => async (dispatch, getState) => {
   dispatch({
-    type: types.SELECTED_DECK,
+    type: types.DECK_SELECTED,
     payload: deckId
   });
   dispatch(open_cards());
@@ -52,7 +52,7 @@ export const open_cards_for_deck = (deckId) => async (dispatch, getState) => {
 
 export const deck_selected = deckId => async (dispatch, getState) => {
   dispatch({
-    type: types.SELECTED_DECK,
+    type: types.DECK_SELECTED,
     payload: deckId
   });
 };
@@ -82,8 +82,8 @@ export const open_edit_card_dialog_for_existing_card = card => async (dispatch, 
   dispatch(edit_card_dialog_deck_changed(card.deck.id));
   dispatch(edit_card_dialog_answer_changed(card.answer));
   dispatch(edit_card_dialog_question_changed(card.question));
-  dispatch(edit_dialog_validation_required_changed(card.validation_required));
-  dispatch(edit_dialog_question_type_changed(card.question_type));
+  dispatch(edit_card_dialog_validation_required_changed(card.validation_required));
+  dispatch(edit_card_dialog_question_type_changed(card.question_type));
   dispatch(open_edit_card_dialog());
 };
 
@@ -102,19 +102,11 @@ export const edit_card_dialog_deck_changed = deck => ({
   payload: deck
 });
 
-export const delete_card_from_dialog = () => async (dispatch, getState) => {
+export const delete_card = card => async (dispatch, getState) => {
   dispatch(add_loader('del_card', 'Deleting...'));
-  const state = getState();
-  const {edit_dialog_id} = state.cards;
-
-  if (edit_dialog_id !== '') {
-    const ref = firestore.collection('cards').doc(edit_dialog_id);
-    await ref.delete();
-  }
-  dispatch({
-    type: types.CLOSE_EDIT_CARD_DIALOG
-  });
-  dispatch(remove_loader('del_card'));
+  const ref = firestore.collection('cards').doc(card.id);
+  await ref.delete();
+  dispatch(remove_loader('del_card'))
 };
 
 export const save_card_from_dialog = () => async (dispatch, getState) => {
@@ -166,12 +158,12 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
   });
 };
 
-export const edit_dialog_question_type_changed = q_type => ({
+export const edit_card_dialog_question_type_changed = q_type => ({
   type: types.EDIT_CARD_DIALOG_QUESTION_TYPE_CHANGED,
   payload: q_type
 });
 
-export const edit_dialog_validation_required_changed = validation_required => ({
+export const edit_card_dialog_validation_required_changed = validation_required => ({
   type: types.EDIT_CARD_DIALOG_VALIDATION_REQUIRED_CHANGED,
   payload: validation_required
 });

@@ -5,12 +5,12 @@ import {Redirect} from 'react-router-dom';
 import CardThumbnail from "../components/cards/CardThumbnail";
 import Filters from "../components/cards/Filters";
 import {
-  deck_selected,
+  deck_selected, delete_card,
   open_edit_card_dialog_for_existing_card,
   open_edit_card_dialog_for_new_card
 } from '../actions/cards';
 import NewItemCard from '../components/common/NewItemCard';
-import EditCardDialog from '../components/cards/EditCardDialog'
+import EditCardDialog from '../components/cards/edit_dialog/EditCardDialog'
 
 class CardsPage extends Component {
 
@@ -30,6 +30,7 @@ class CardsPage extends Component {
             deckName={card.deckName}
             ratio={card.ratio}
             onEdit={() => this.props.edit_existing_card(card)}
+            onDelete={() => this.props.delete_card(card)}
           />
         </Grow>
       ))
@@ -83,6 +84,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   deck_selected: deck => dispatch(deck_selected(deck)),
   open_new_card: () => dispatch(open_edit_card_dialog_for_new_card()),
-  edit_existing_card: card => dispatch(open_edit_card_dialog_for_existing_card(card))
+  edit_existing_card: card => dispatch(open_edit_card_dialog_for_existing_card(card)),
+  delete_card: card => dispatch(delete_card(card))
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(CardsPage));
