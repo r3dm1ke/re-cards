@@ -48,7 +48,7 @@ export const open_cards_for_deck = (deckId) => async (dispatch, getState) => {
     payload: deckId
   });
   dispatch(open_cards());
-}
+};
 
 export const deck_selected = deckId => async (dispatch, getState) => {
   dispatch({
@@ -178,4 +178,18 @@ export const edit_dialog_validation_required_changed = validation_required => ({
 
 export const close_edit_card_dialog = () => ({
   type: types.CLOSE_EDIT_CARD_DIALOG
+});
+
+export const cards_search_term_updated = search_term => ({
+  type: types.CARDS_SEARCH_TERM_UPDATED,
+  payload: search_term
+});
+
+export const cards_sort_prop_updated = sort_prop => ({
+  type: types.CARDS_SORT_PROP_CHANGED,
+  payload: sort_prop
+});
+
+export const cards_sort_direction_toggled = () => ({
+  type: types.CARDS_SORT_DIRECTION_TOGGLED
 });

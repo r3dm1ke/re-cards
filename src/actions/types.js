@@ -32,6 +32,9 @@ export const EDIT_CARD_DIALOG_DECK_CHANGED = 'edit_card_dialog_deck_changed';
 export const EDIT_CARD_DIALOG_VALIDATION_REQUIRED_CHANGED = 'edit_card_dialog_validation_required_changed';
 export const EDIT_CARD_DIALOG_QUESTION_TYPE_CHANGED = 'edit_card_dialog_question_type_changed';
 export const CLOSE_EDIT_CARD_DIALOG = 'close_edit_card_dialog';
+export const CARDS_SEARCH_TERM_UPDATED = 'cards_search_term_updated';
+export const CARDS_SORT_PROP_CHANGED = 'cards_sort_prop_changed';
+export const CARDS_SORT_DIRECTION_TOGGLED = 'cards_sort_direciton_toggled';
 
 // DASHBOARD
 export const SIMPLE_STUDY_DECK_SELECTED = 'simple_study_deck_selected';

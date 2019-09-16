@@ -3,7 +3,7 @@ import {withStyles, Divider, Grow} from '@material-ui/core';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import CardThumbnail from "../components/cards/CardThumbnail";
-import DeckSelector from '../components/cards/DeckSelector';
+import Filters from "../components/cards/Filters";
 import {
   deck_selected,
   open_edit_card_dialog_for_existing_card,
@@ -21,10 +21,6 @@ class CardsPage extends Component {
       return this.renderSkeletons()
     }
     return this.props.cards
-      .filter(card =>
-        this.props.selected_deck === 'all' ||
-        this.props.selected_deck === card.deck.id
-      )
       .map((card, index) => (
         <Grow timeout={index * 250} key={card.id} in>
           <CardThumbnail
@@ -46,22 +42,6 @@ class CardsPage extends Component {
     ))
   }
 
-  renderDeckSelector() {
-    const {selected_deck, decks} = this.props;
-    const values = decks.map(deck => ({
-      value: deck.id,
-      label: deck.name
-    }));
-    values.push({value: 'all', label: 'All'});
-    return (
-      <DeckSelector
-        value={selected_deck}
-        onChange={this.handleDeckChange.bind(this)}
-        values={values}
-      />
-    )
-  }
-
   handleDeckChange(event) {
     this.props.deck_selected(event.target.value)
   }
@@ -73,10 +53,7 @@ class CardsPage extends Component {
     if (!logged_in) return <Redirect to={'/'} />;
     return (
       <div>
-        <div className={classes.selectorContainer}>
-          {this.renderDeckSelector()}
-        </div>
-        <Divider />
+        <Filters />
         <div className={classes.cardContainer}>
           {this.renderCards()}
           <Grow timeout={finalDelay} in>
@@ -94,16 +71,14 @@ const styles = theme => ({
     display: 'flex',
     flexWrap: 'wrap',
   },
-  selectorContainer: {
-    display: 'flex',
-    justifyContent: 'center'
-  }
+
 });
 const mapStateToProps = state => ({
   logged_in: state.auth.logged_in,
-  cards: state.cards.cards,
+  cards: state.cards.filtered_cards,
   selected_deck: state.cards.selected_deck,
-  decks: state.cards.decks
+  decks: state.cards.decks,
+  _: state.cards.refresh_helper
 });
 const mapDispatchToProps = dispatch => ({
   deck_selected: deck => dispatch(deck_selected(deck)),
