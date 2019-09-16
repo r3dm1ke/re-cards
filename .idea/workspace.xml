@@ -2,34 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Deck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/ProfileDropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/decks/DeckSearchBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/decks/DeckSortSelector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/decks/Filters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/const/decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flashcards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flashcards.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/EditCardDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/Filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/SortSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardSortSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Scaffold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/const/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/decks.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -95,16 +75,33 @@
       <workItem from="1568642034148" duration="114000" />
       <workItem from="1568642151464" duration="1040000" />
       <workItem from="1568645046741" duration="170000" />
-      <workItem from="1568645267853" duration="10832000" />
+      <workItem from="1568645267853" duration="11568000" />
+      <workItem from="1568675159280" duration="2642000" />
     </task>
+    <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
+      <created>1568657460460</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568657460461</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added filters to decks, refactored edit/new dialog for cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added filters to decks, refactored edit/new dialog for cards" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="254" y="40" key="SettingsEditor" />
     <state x="254" y="40" key="SettingsEditor/1920.1080/1680.1050" />
+    <state x="332" y="168" key="Vcs.Push.Dialog.v2" />
+    <state x="332" y="168" key="Vcs.Push.Dialog.v2/1920.1080/1680.1050" />
+    <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" />
+    <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/1920.1080" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080/1680.1050" />
   </component>

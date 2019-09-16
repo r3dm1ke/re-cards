@@ -82,6 +82,7 @@ export const open_edit_card_dialog_for_existing_card = card => async (dispatch, 
   dispatch(edit_card_dialog_deck_changed(card.deck.id));
   dispatch(edit_card_dialog_answer_changed(card.answer));
   dispatch(edit_card_dialog_question_changed(card.question));
+  dispatch(edit_card_dialog_answer_type_changed(card.answer_type));
   dispatch(edit_card_dialog_validation_required_changed(card.validation_required));
   dispatch(edit_card_dialog_question_type_changed(card.question_type));
   dispatch(open_edit_card_dialog());
@@ -117,7 +118,8 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     edit_dialog_deck,
     edit_dialog_id,
     edit_dialog_question_type,
-    edit_dialog_validation_required
+    edit_dialog_validation_required,
+    edit_dialog_answer_type
   } = state.cards;
   const {uid} = state.auth.user;
 
@@ -134,6 +136,7 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
 
   const data = {
     answer: edit_dialog_answer,
+    answer_type: edit_dialog_answer_type,
     question: edit_dialog_question,
     uid,
     deck: deckRef,
@@ -166,6 +169,11 @@ export const edit_card_dialog_question_type_changed = q_type => ({
 export const edit_card_dialog_validation_required_changed = validation_required => ({
   type: types.EDIT_CARD_DIALOG_VALIDATION_REQUIRED_CHANGED,
   payload: validation_required
+});
+
+export const edit_card_dialog_answer_type_changed = answer_type => ({
+  type: types.EDIT_CARD_DIALOG_ANSWER_TYPE_CHANGED,
+  payload: answer_type
 });
 
 export const close_edit_card_dialog = () => ({

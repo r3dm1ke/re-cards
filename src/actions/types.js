@@ -38,6 +38,7 @@ export const CLOSE_EDIT_CARD_DIALOG = 'close_edit_card_dialog';
 export const CARDS_SEARCH_TERM_UPDATED = 'cards_search_term_updated';
 export const CARDS_SORT_PROP_CHANGED = 'cards_sort_prop_changed';
 export const CARDS_SORT_DIRECTION_TOGGLED = 'cards_sort_direciton_toggled';
+export const EDIT_CARD_DIALOG_ANSWER_TYPE_CHANGED = 'edit_card_dialog_answer_type_changed';
 
 // DASHBOARD
 export const SIMPLE_STUDY_DECK_SELECTED = 'simple_study_deck_selected';

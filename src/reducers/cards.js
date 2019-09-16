@@ -1,5 +1,5 @@
 import * as types from '../actions/types';
-import {Q_TEXT} from "../const/cards";
+import {Q_TEXT, A_TEXT} from "../const/cards";
 
 const INITIAL_STATE = {
   cards: undefined,
@@ -12,6 +12,7 @@ const INITIAL_STATE = {
   edit_dialog_answer: '',
   edit_dialog_deck: '',
   edit_dialog_id: '',
+  edit_dialog_answer_type: A_TEXT,
   edit_dialog_question_type: Q_TEXT,
   edit_dialog_validation_required: false,
   sort_prop: 'question',
@@ -43,6 +44,8 @@ export default (state=INITIAL_STATE, action) => {
       return {...state, edit_dialog_deck: action.payload};
     case types.EDIT_CARD_DIALOG_ANSWER_CHANGED:
       return {...state, edit_dialog_answer: action.payload};
+    case types.EDIT_CARD_DIALOG_ANSWER_TYPE_CHANGED:
+      return {...state, edit_dialog_answer_type: action.payload};
     case types.EDIT_CARD_DIALOG_QUESTION_CHANGED:
       return {...state, edit_dialog_question: action.payload};
     case types.CLOSE_EDIT_CARD_DIALOG:

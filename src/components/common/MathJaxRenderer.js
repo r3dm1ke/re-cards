@@ -15,7 +15,11 @@ export default props => {
   const classes = useStyles();
   const {block, content} = props;
   return (
-    <MathJax.Context noGate input={'tex'} onLoad={() => setMathRendered(true)}>
+    <MathJax.Context
+      noGate
+      input={'tex'}
+      onLoad={() => setMathRendered(true)}
+    >
       {mathRendered ?
         <MathJax.Node block={block}>{content}</MathJax.Node> :
         <Skeleton className={classes.skeleton} height={50} width={'100%'} />
