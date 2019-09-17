@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/const/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards.js" afterDir="false" />
     </list>
@@ -76,7 +76,9 @@
       <workItem from="1568642151464" duration="1040000" />
       <workItem from="1568645046741" duration="170000" />
       <workItem from="1568645267853" duration="11568000" />
-      <workItem from="1568675159280" duration="2642000" />
+      <workItem from="1568675159280" duration="3237000" />
+      <workItem from="1568742159137" duration="3751000" />
+      <workItem from="1568748409190" duration="1380000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -85,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568657460461</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="answer types and card edit form features">
+      <created>1568677854596</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568677854596</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,16 +102,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added filters to decks, refactored edit/new dialog for cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added filters to decks, refactored edit/new dialog for cards" />
+    <MESSAGE value="answer types and card edit form features" />
+    <option name="LAST_COMMIT_MESSAGE" value="answer types and card edit form features" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="40" key="SettingsEditor" />
     <state x="254" y="40" key="SettingsEditor/1920.1080/1680.1050" />
-    <state x="332" y="168" key="Vcs.Push.Dialog.v2" />
+    <state x="332" y="152" key="Vcs.Push.Dialog.v2" />
+    <state x="332" y="152" key="Vcs.Push.Dialog.v2/1920.1080" />
     <state x="332" y="168" key="Vcs.Push.Dialog.v2/1920.1080/1680.1050" />
     <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" />
     <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/1920.1080" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup" />
+    <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080/1680.1050" />
   </component>
 </project>

@@ -16,6 +16,19 @@ export const A_TYPES = [
   {value: A_MULTIPLE_CHOICE, label: 'Multiple choice (all that applicable)'}
 ];
 
+export const A_LIST_ENTRY_TEXT = 'a_list_entry_text';
+export const A_LIST_ENTRY_MATH = 'a_list_entry_math';
+export const A_LIST_TYPES = [
+  {value: A_LIST_ENTRY_TEXT, label: 'Text'},
+  {value: A_LIST_ENTRY_MATH, label: 'Math equation (MathJax)'},
+];
+
+export const A_LIST_DEFAULT_ENTRY = {
+  type: A_LIST_ENTRY_TEXT,
+  value: '',
+  is_correct: false
+};
+
 // SORT PROPS
 export const SORT_PROPS = [
   {value: 'question', label: 'Question'},

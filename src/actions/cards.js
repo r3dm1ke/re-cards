@@ -2,6 +2,7 @@ import * as types from '../actions/types';
 import {firestore} from '../firebase';
 import {push} from 'connected-react-router';
 import {add_loader, remove_loader} from "./mics";
+import {A_TEXT, Q_TEXT} from "../const/cards";
 
 let unsubscribe;
 
@@ -69,6 +70,9 @@ export const open_edit_card_dialog_for_new_card = () => async (dispatch, getStat
   });
   dispatch(edit_card_dialog_deck_changed(selected_deck === 'all' ? '' : selected_deck));
   dispatch(edit_card_dialog_answer_changed(''));
+  dispatch(edit_card_dialog_answer_type_changed(A_TEXT));
+  dispatch(edit_card_dialog_question_type_changed(Q_TEXT));
+  dispatch(edit_card_dialog_answer_list_changed([]));
   dispatch(edit_card_dialog_question_changed(''));
   dispatch(open_edit_card_dialog());
 };
@@ -85,8 +89,14 @@ export const open_edit_card_dialog_for_existing_card = card => async (dispatch, 
   dispatch(edit_card_dialog_answer_type_changed(card.answer_type));
   dispatch(edit_card_dialog_validation_required_changed(card.validation_required));
   dispatch(edit_card_dialog_question_type_changed(card.question_type));
+  dispatch(edit_card_dialog_answer_list_changed(card.answer_list ? card.answer_list: []));
   dispatch(open_edit_card_dialog());
 };
+
+export const edit_card_dialog_answer_list_changed = answer_list => ({
+  type: types.EDIT_CARD_DIALOG_ANSWER_LIST_CHANGED,
+  payload: answer_list
+});
 
 export const edit_card_dialog_question_changed = question => ({
   type: types.EDIT_CARD_DIALOG_QUESTION_CHANGED,
@@ -119,7 +129,8 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     edit_dialog_id,
     edit_dialog_question_type,
     edit_dialog_validation_required,
-    edit_dialog_answer_type
+    edit_dialog_answer_type,
+    edit_dialog_answer_list
   } = state.cards;
   const {uid} = state.auth.user;
 
@@ -144,7 +155,8 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     score: 0,
     ratio: 0,
     validation_required: edit_dialog_validation_required,
-    question_type: edit_dialog_question_type
+    question_type: edit_dialog_question_type,
+    answer_list: edit_dialog_answer_list
   };
 
   if (edit_dialog_id === '' || edit_dialog_id === null || edit_dialog_id === undefined) {
@@ -192,4 +204,18 @@ export const cards_sort_prop_updated = sort_prop => ({
 
 export const cards_sort_direction_toggled = () => ({
   type: types.CARDS_SORT_DIRECTION_TOGGLED
+});
+
+export const edit_card_dialog_answer_list_added_new_entry = () => ({
+  type: types.EDIT_CARD_DIALOG_ANSWER_LIST_ADDED_NEW_ENTRY
+});
+
+export const edit_card_dialog_answer_list_entry_modified = (index, newEntry) => ({
+  type: types.EDIT_CARD_DIALOG_ANSWER_LIST_ENTRY_MODIFIED,
+  payload: [index, newEntry]
+});
+
+export const edit_card_dialog_answer_list_removed_entry = (index) => ({
+  type: types.EDIT_CARD_DIALOG_ANSWER_LIST_REMOVED_ENTRY,
+  payload: index
 });

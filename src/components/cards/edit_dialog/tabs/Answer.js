@@ -11,12 +11,13 @@ import {
   Typography,
   makeStyles
 } from "@material-ui/core";
+import AnswerListTable from './AnswerListTable';
 import {
   edit_card_dialog_validation_required_changed,
   edit_card_dialog_answer_changed,
   edit_card_dialog_answer_type_changed
 } from "../../../../actions/cards";
-import {A_TYPES} from "../../../../const/cards";
+import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT, A_TYPES} from "../../../../const/cards";
 
 const useStyles = makeStyles(theme => ({
   form: {
@@ -70,6 +71,14 @@ export default props => {
     </FormControl>
   );
 
+  const renderAnswerField = () => {
+    if (answer_type === A_TEXT) return renderAnswerTextField();
+    else if (answer_type === A_MULTIPLE_CHOICE ||
+             answer_type === A_SINGLE_CHOICE) {
+      return <AnswerListTable/>
+    }
+  };
+
   const renderValidationSwitch = () => (
     <FormControlLabel
       control={
@@ -87,7 +96,7 @@ export default props => {
     />
   );
 
-  const renderAnswerField = () => (
+  const renderAnswerTextField = () => (
     <TextField
       variant={'outlined'}
       label={'Answer'}

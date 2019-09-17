@@ -1,5 +1,5 @@
 import * as types from '../actions/types';
-import {Q_TEXT, A_TEXT} from "../const/cards";
+import {Q_TEXT, A_TEXT, A_LIST_DEFAULT_ENTRY} from "../const/cards";
 
 const INITIAL_STATE = {
   cards: undefined,
@@ -12,6 +12,7 @@ const INITIAL_STATE = {
   edit_dialog_answer: '',
   edit_dialog_deck: '',
   edit_dialog_id: '',
+  edit_dialog_answer_list: [],
   edit_dialog_answer_type: A_TEXT,
   edit_dialog_question_type: Q_TEXT,
   edit_dialog_validation_required: false,
@@ -73,6 +74,29 @@ export default (state=INITIAL_STATE, action) => {
         refresh_helper: !state.refresh_helper,
         sort_direction: !state.sort_direction,
         filtered_cards: filter_cards({...state, sort_direction: !state.sort_direction})
+      };
+    case types.EDIT_CARD_DIALOG_ANSWER_LIST_ADDED_NEW_ENTRY:
+      return {
+        ...state,
+        edit_dialog_answer_list:
+          [...state.edit_dialog_answer_list, A_LIST_DEFAULT_ENTRY]
+      };
+    case types.EDIT_CARD_DIALOG_ANSWER_LIST_REMOVED_ENTRY:
+      return {
+        ...state,
+        edit_dialog_answer_list: state.edit_dialog_answer_list
+          .filter((elem, index) => index !== action.payload)
+      };
+    case types.EDIT_CARD_DIALOG_ANSWER_LIST_ENTRY_MODIFIED:
+      return {
+        ...state,
+        edit_dialog_answer_list: state.edit_dialog_answer_list
+          .map((elem, index) => (index === action.payload[0] ? action.payload[1] : elem))
+      };
+    case types.EDIT_CARD_DIALOG_ANSWER_LIST_CHANGED:
+      return {
+        ...state,
+        edit_dialog_answer_list: action.payload
       };
     default:
       return state;
