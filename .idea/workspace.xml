@@ -1,15 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" afterDir="false" />
+    <list default="true" id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/cards/cards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/decks/decks_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/const/study.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/decks/decks_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/listeners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/cards.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/mics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/mics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/trend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/trend.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/worst_cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/worst_cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardSearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardSearchBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardSortSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardSortSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/const/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Deck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Deck.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/SimpleStudyWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/SimpleStudyWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/SmartStudyWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/SmartStudyWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckSearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckSearchBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckSortSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckSortSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/EditDeckDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/EditDeckDialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/NewDeckDialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/Flashcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/SimpleStudy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/Study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/SimpleStudyResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/StudyResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/SmartStudy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/SmartStudyResults.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/decks/decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,18 +86,28 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web-client" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\personal_projects\flashcards\flashcards\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\components\cards\edit_dialog" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\reducers\cards" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\actions\cards" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\reducers\decks" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\actions\decks" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\study\flashcard" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -67,7 +127,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="" />
+      <changelist id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="" />
       <created>1568642032098</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -79,6 +139,12 @@
       <workItem from="1568675159280" duration="3237000" />
       <workItem from="1568742159137" duration="3751000" />
       <workItem from="1568748409190" duration="1380000" />
+      <workItem from="1568833654671" duration="5458000" />
+      <workItem from="1568932873467" duration="9000" />
+      <workItem from="1569075209024" duration="6563000" />
+      <workItem from="1569109541351" duration="3092000" />
+      <workItem from="1569115015909" duration="395000" />
+      <workItem from="1569167332218" duration="3287000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -100,6 +166,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added filters to decks, refactored edit/new dialog for cards" />
     <MESSAGE value="answer types and card edit form features" />
@@ -116,5 +198,16 @@
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080/1680.1050" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/actions/auth.js</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

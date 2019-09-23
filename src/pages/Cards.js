@@ -2,23 +2,24 @@ import React, {Component} from 'react';
 import {withStyles, Divider, Grow} from '@material-ui/core';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import CardThumbnail from "../components/cards/CardThumbnail";
-import Filters from "../components/cards/Filters";
+import CardThumbnail from '../components/cards/CardThumbnail';
+import Filters from '../components/cards/Filters';
 import {
   deck_selected, delete_card,
+} from '../actions/cards/cards';
+import {
   open_edit_card_dialog_for_existing_card,
-  open_edit_card_dialog_for_new_card
-} from '../actions/cards';
+  open_edit_card_dialog_for_new_card,
+} from '../actions/cards/cards_form';
 import NewItemCard from '../components/common/NewItemCard';
-import EditCardDialog from '../components/cards/edit_dialog/EditCardDialog'
+import EditCardDialog from '../components/cards/edit_dialog/EditCardDialog';
 
 class CardsPage extends Component {
-
   renderCards() {
     console.log('now rendering these cards: ');
     console.dir(this.props.cards);
     if (this.props.cards === undefined) {
-      return this.renderSkeletons()
+      return this.renderSkeletons();
     }
     return this.props.cards
       .map((card, index) => (
@@ -33,18 +34,18 @@ class CardsPage extends Component {
             onDelete={() => this.props.delete_card(card)}
           />
         </Grow>
-      ))
+      ));
   }
 
   renderSkeletons() {
     const ids = [1, 2, 3, 4, 5];
-    return ids.map(id => (
+    return ids.map((id) => (
       <CardThumbnail key={id} skeleton />
-    ))
+    ));
   }
 
   handleDeckChange(event) {
-    this.props.deck_selected(event.target.value)
+    this.props.deck_selected(event.target.value);
   }
 
   render() {
@@ -63,28 +64,28 @@ class CardsPage extends Component {
         </div>
         <EditCardDialog />
       </div>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   cardContainer: {
     display: 'flex',
     flexWrap: 'wrap',
   },
 
 });
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   logged_in: state.auth.logged_in,
   cards: state.cards.filtered_cards,
   selected_deck: state.cards.selected_deck,
   decks: state.cards.decks,
-  _: state.cards.refresh_helper
+  _: state.cards.refresh_helper,
 });
-const mapDispatchToProps = dispatch => ({
-  deck_selected: deck => dispatch(deck_selected(deck)),
+const mapDispatchToProps = (dispatch) => ({
+  deck_selected: (deck) => dispatch(deck_selected(deck)),
   open_new_card: () => dispatch(open_edit_card_dialog_for_new_card()),
-  edit_existing_card: card => dispatch(open_edit_card_dialog_for_existing_card(card)),
-  delete_card: card => dispatch(delete_card(card))
+  edit_existing_card: (card) => dispatch(open_edit_card_dialog_for_existing_card(card)),
+  delete_card: (card) => dispatch(delete_card(card)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(CardsPage));

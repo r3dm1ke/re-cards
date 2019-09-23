@@ -4,48 +4,44 @@ import {
   CardContent,
   CardActions,
   Button,
-  Typography,
   Divider,
   Slide,
-  TextField,
   withStyles
 } from "@material-ui/core";
-import {Q_MATH, Q_TEXT} from "../../const/cards";
-import MathJax from "react-mathjax2";
+import Question from "./Question";
+import Answer from "./Answer";
+import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from "../../../const/cards";
 
 class Flashcard extends Component {
 
   state = {
-    validation_value: '',
+    validation_value: this.props.answer_type === A_TEXT ? '' : new Set(),
     confirmed: false
   };
 
-  renderAnswer() {
-    const {answer, validation_required, classes} = this.props;
-    const {validation_value, confirmed} = this.state;
-    if (validation_required) {
-      return (
-        <TextField
-          label={'Answer'}
-          className={classes.answerField}
-          disabled={confirmed}
-          value={validation_value}
-          onChange={e => this.setState({validation_value: e.target.value})}
-        />
-      )
-    } else {
-      return <Typography variant={'h5'} className={classes.answer}>{answer}</Typography>
-    }
-  }
-
   renderActions() {
-    const {validation_required, answer, classes} = this.props;
+    const {validation_required, answer, classes, answer_type, answer_list} = this.props;
     const {confirmed, validation_value} = this.state;
+
+    const check_validation = () => {
+      if (answer_type === A_TEXT) {
+        return validation_value === answer;
+      } else if (answer_type === A_MULTIPLE_CHOICE || answer_type === A_SINGLE_CHOICE) {
+        for (let i = 0; i < answer_list.length; i++) {
+          if (answer_list[i].is_correct && !validation_value.has(i)) return false;
+          else if (!answer_list[i].is_correct && validation_value.has(i)) return false;
+        }
+        return true;
+      }
+    };
+
+
     if (validation_required) {
+
       if (!confirmed) {
         return <Button onClick={() => this.setState({confirmed: true})}>Confirm</Button>
       } else {
-        if (answer === validation_value) {
+        if (check_validation()) {
           return <Button variant={'contained'} color={'primary'} className={classes.buttonSucc} onClick={this.onSuccess.bind(this)}>You are correct</Button>
         } else {
           return <Button variant={'contained'} color={'secondary'} className={classes.buttonFail} onClick={this.onFail.bind(this)}>You are wrong</Button>
@@ -59,24 +55,6 @@ class Flashcard extends Component {
     }
   }
 
-  renderQuestion() {
-    const {question, question_type, classes} = this.props;
-    if (question_type === Q_TEXT) {
-      return <Typography variant={'h3'} className={classes.question}>{question}</Typography>;
-    } else if (question_type === Q_MATH) {
-      console.log('mathjax rendered!');
-      return (
-        <MathJax.Context input={'tex'}>
-          <MathJax.Node block>{question}</MathJax.Node>
-        </MathJax.Context>
-      )
-    }
-  }
-
-  clear() {
-    this.setState({validation_value: '', confirmed: false});
-  }
-
   onSuccess() {
     this.clear();
     this.props.onSuccess();
@@ -87,14 +65,45 @@ class Flashcard extends Component {
     this.props.onFail();
   }
 
+  clear() {
+    this.setState({validation_value: null, confirmed: ''})
+  }
+
   render() {
-    const {classes} = this.props;
+    const {
+      classes,
+      question,
+      question_type,
+      answer,
+      answer_type,
+      answer_list,
+      validation_required
+    } = this.props;
+    const {
+      confirmed,
+      validation_value
+    } = this.state;
+    if (validation_value === null) {
+      this.setState({validation_value: this.props.answer_type === A_TEXT ? '' : new Set()});
+      return null;
+    }
     return (
       <Slide direction={'up'} in mountOnEnter unmountOnExit>
         <Card className={classes.root}>
           <CardContent className={classes.content}>
-            {this.renderQuestion()}
-            {this.renderAnswer()}
+            <Question
+              question={question}
+              question_type={question_type}
+            />
+            <Answer
+              answer={answer}
+              answer_type={answer_type}
+              answer_list={answer_list}
+              validation_required={validation_required}
+              disabled={confirmed}
+              validation_value={validation_value}
+              on_validation_value_change={(value) => this.setState({validation_value: value})}
+            />
           </CardContent>
           <Divider />
           <CardActions className={classes.actions}>
@@ -105,6 +114,8 @@ class Flashcard extends Component {
     )
   }
 }
+
+
 
 const styles = theme => ({
   root: {
@@ -122,18 +133,7 @@ const styles = theme => ({
   actions: {
     justifyContent: 'space-around'
   },
-  question: {
-    textAlign: 'center',
-    margin: theme.spacing(2)
-  },
-  answer: {
-    margin: theme.spacing(2),
-    textAlign: 'center',
-    filter: 'blur(5px)',
-    '&:hover, &:focus, &:active': {
-      filter: 'none'
-    }
-  },
+
   answerField: {
     width: '100%'
   },

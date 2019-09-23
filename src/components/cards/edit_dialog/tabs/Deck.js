@@ -1,19 +1,19 @@
 import React from 'react';
-import {useSelector, useDispatch} from "react-redux";
+import {useSelector, useDispatch} from 'react-redux';
 import {
   FormControl,
   InputLabel,
   Select,
   MenuItem,
   Typography,
-  makeStyles
-} from "@material-ui/core";
-import {edit_card_dialog_deck_changed} from "../../../../actions/cards";
+  makeStyles,
+} from '@material-ui/core';
+import {edit_card_dialog_deck_changed} from '../../../../actions/cards/cards_form';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   form: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   title: {
     marginTop: theme.spacing(2),
@@ -21,17 +21,17 @@ const useStyles = makeStyles(theme => ({
   },
   deckFormControl: {
     marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(1)
-  }
+    marginBottom: theme.spacing(1),
+  },
 }));
 
-export default props => {
-  const deck = useSelector(state => state.cards.edit_dialog_deck);
-  const decks = useSelector(state => state.cards.decks);
+export default () => {
+  const deck = useSelector((state) => state.cards_form.edit_dialog_deck);
+  const decks = useSelector((state) => state.cards.decks);
   const classes = useStyles();
   const dispatch = useDispatch();
 
-  const renderDeckSelectorItems = () => decks.map(d => (
+  const renderDeckSelectorItems = () => decks.map((d) => (
     <MenuItem value={d.id} key={d.id}>{d.name}</MenuItem>
   ));
 
@@ -40,12 +40,12 @@ export default props => {
       <InputLabel htmlFor={'card-deck-selector'}>Select deck for your card</InputLabel>
       <Select
         value={deck}
-        onChange={e => dispatch(
+        onChange={(e) => dispatch(
           edit_card_dialog_deck_changed(e.target.value)
         )}
         inputProps={{
           name: 'card-deck',
-          id: 'card-deck-selector'
+          id: 'card-deck-selector',
         }}
         labelWidth={180}
         className={classes.select}
@@ -63,4 +63,4 @@ export default props => {
       </div>
     </div>
   );
-}
+};

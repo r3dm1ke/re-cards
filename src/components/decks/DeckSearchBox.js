@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withStyles} from "@material-ui/core";
 import SearchBox from "../common/SearchBox";
-import {decks_search_term_updated} from "../../actions/decks";
+import {decks_search_term_updated} from "../../actions/decks/decks";
 
 class DeckSearchBox extends Component {
   render() {

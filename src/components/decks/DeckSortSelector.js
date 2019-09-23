@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 import UpIcon from '@material-ui/icons/ArrowUpward';
 import DownIcon from '@material-ui/icons/ArrowDownward';
-import {decks_sort_direction_toggled, decks_sort_prop_changed} from "../../actions/decks";
+import {decks_sort_direction_toggled, decks_sort_prop_changed} from "../../actions/decks/decks";
 import {SORT_PROPS} from "../../const/decks";
 
 class DeckSortSelector extends Component {

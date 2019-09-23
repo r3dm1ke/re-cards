@@ -7,8 +7,19 @@
     "@material-ui/icons": "^4.2.1",
     "@material-ui/lab": "^4.0.0-alpha.26",
     "axios": "^0.19.0",
+    "babel-eslint": "^10.0.3",
     "chart.js": "^2.8.0",
     "connected-react-router": "^6.5.2",
+    "eslint": "^6.4.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "prettier": "^1.18.2",
     "react": "^16.9.0",
     "react-chartkick": "^0.3.2",
     "react-dom": "^16.9.0",
@@ -26,9 +37,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "react-scripts build && firebase deploy"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

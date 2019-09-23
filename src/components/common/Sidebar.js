@@ -17,8 +17,8 @@ import HistoryIcon from '@material-ui/icons/History';
 import CardsIcon from '@material-ui/icons/FileCopy';
 import {connect} from 'react-redux';
 import {toggle_drawer} from "../../actions/layout";
-import {open_decks} from "../../actions/decks";
-import {open_cards} from "../../actions/cards";
+import {open_decks} from "../../actions/decks/decks";
+import {open_cards} from "../../actions/cards/cards";
 import {open_dashboard} from '../../actions/dashboard';
 
 class Sidebar extends Component {

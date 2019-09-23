@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSelector, useDispatch} from "react-redux";
+import {useSelector, useDispatch} from 'react-redux';
 import {
   Table,
   TableHead,
@@ -8,48 +8,35 @@ import {
   TableRow,
   IconButton,
   TextField,
-  InputLabel,
   Select,
   FormControl,
   MenuItem,
-  FormControlLabel,
   Switch,
-  makeStyles
-} from "@material-ui/core";
+  makeStyles,
+} from '@material-ui/core';
 import ClearIcon from '@material-ui/icons/Clear';
 import AddIcon from '@material-ui/icons/Add';
 import {
   edit_card_dialog_answer_list_added_new_entry,
   edit_card_dialog_answer_list_entry_modified,
-  edit_card_dialog_answer_list_removed_entry
-} from "../../../../actions/cards";
-import {A_LIST_TYPES} from "../../../../const/cards";
+  edit_card_dialog_answer_list_removed_entry,
+} from '../../../../actions/cards/cards_form';
+import {A_LIST_TYPES} from '../../../../const/cards';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
 
 }));
 
-const clone = obj => {
-  if (null == obj || "object" != typeof obj) return obj;
-  const copy = obj.constructor();
-  for (const attr in obj) {
-    if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
-  }
-  return copy;
-};
-
-
-export default props => {
+export default () => {
   const dispatch = useDispatch();
   const classes = useStyles();
-  const entries = useSelector(state => state.cards.edit_dialog_answer_list);
+  const entries = useSelector((state) => state.cards_form.edit_dialog_answer_list);
 
   const renderAnswerFieldForEntry = (entry, index) => (
     <TextField
       value={entry.value}
-      onChange={e => {
-        const newEntry = clone(entry);
-        newEntry.value = e.target.value;
+      onChange={(e) => {
+        const newEntry = {...entry, value: e.target.value};
         dispatch(
           edit_card_dialog_answer_list_entry_modified(index, newEntry)
         );
@@ -66,19 +53,18 @@ export default props => {
     <FormControl className={classes.answerTypeForEntrySelectFormControl}>
       <Select
         value={entry.type}
-        onChange={e => {
-          const newEntry = clone(entry);
-          newEntry.type = e.target.value;
-          dispatch(edit_card_dialog_answer_list_entry_modified(index, newEntry))
+        onChange={(e) => {
+          const newEntry = {...entry, type: e.target.value};
+          dispatch(edit_card_dialog_answer_list_entry_modified(index, newEntry));
         }}
         inputProps={{
           name: 'answer-type-for-entry',
-          id: 'answer-type-for-entry'
+          id: 'answer-type-for-entry',
         }}
         labelWidth={100}
         className={classes.answerTypeForEntrySelect}
       >
-        {A_LIST_TYPES.map(t => (
+        {A_LIST_TYPES.map((t) => (
           <MenuItem value={t.value} key={t.value}>{t.label}</MenuItem>
         ))}
       </Select>
@@ -89,16 +75,15 @@ export default props => {
     <Switch
       checked={entry.is_correct}
       value={'answer_entry_is_correct'}
-      onChange={e => {
-        const newEntry = clone(entry);
-        newEntry.is_correct = !newEntry.is_correct;
-        dispatch(edit_card_dialog_answer_list_entry_modified(index, newEntry))
+      onChange={(e) => {
+        const newEntry = {...entry, is_correct: !entry.is_correct};
+        dispatch(edit_card_dialog_answer_list_entry_modified(index, newEntry));
       }}
       color={'primary'}
     />
   );
 
-  const renderDeleteButtonForEntry = index => (
+  const renderDeleteButtonForEntry = (index) => (
     <IconButton
       onClick={() =>
         dispatch(edit_card_dialog_answer_list_removed_entry(index))
@@ -137,7 +122,7 @@ export default props => {
     </TableRow>
   );
 
-  const renderEntries = entries => entries.map((entry, index) => (
+  const renderEntries = (entries) => entries.map((entry, index) => (
     renderEntry(entry, index)
   ));
 
@@ -161,4 +146,4 @@ export default props => {
       {renderAddNewEntryButton()}
     </div>
   );
-}
+};

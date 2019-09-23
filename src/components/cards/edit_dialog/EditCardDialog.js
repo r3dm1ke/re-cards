@@ -10,13 +10,12 @@ import {
   MobileStepper,
   AppBar,
   Tab,
-  withStyles
+  withStyles,
 } from '@material-ui/core';
 import {
   close_edit_card_dialog,
-  delete_card_from_dialog,
-  save_card_from_dialog
-} from "../../../actions/cards";
+  save_card_from_dialog,
+} from '../../../actions/cards/cards_form';
 import QuestionTab from './tabs/Question';
 import AnswerTab from './tabs/Answer';
 import DeckTab from './tabs/Deck';
@@ -24,13 +23,12 @@ import DeckTab from './tabs/Deck';
 const TABS = [
   {label: 'Question', component: <QuestionTab />},
   {label: 'Answer', component: <AnswerTab />},
-  {label: 'Deck', component: <DeckTab />}
+  {label: 'Deck', component: <DeckTab />},
 ];
 
 class EditCardDialog extends Component {
-
   state = {
-    index: 0
+    index: 0,
   };
 
   onTabChange(event, index) {
@@ -86,21 +84,25 @@ class EditCardDialog extends Component {
           index === 0 ? <Button disabled>Back</Button> : <Button onClick={this.prevTab.bind(this)}>Back</Button>
         }
       />
-    )
+    );
+  }
+
+  onClose() {
+    this.setState({index: 0});
+    this.props.close_dialog();
   }
 
   render() {
     const {
       edit_dialog_opened,
-      close_dialog,
-      classes
+      classes,
     } = this.props;
     const {index} = this.state;
 
     return (
       <Dialog
         open={edit_dialog_opened}
-        onClose={close_dialog}
+        onClose={this.onClose.bind(this)}
       >
         <DialogTitle>Edit card</DialogTitle>
         <DialogContent>
@@ -117,19 +119,19 @@ class EditCardDialog extends Component {
           {this.renderStepper()}
         </DialogActions>
       </Dialog>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   stepper: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });
-const mapStateToProps = state => ({
-  edit_dialog_opened: state.cards.edit_dialog_opened,
+const mapStateToProps = (state) => ({
+  edit_dialog_opened: state.cards_form.edit_dialog_opened,
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   close_dialog: () => dispatch(close_edit_card_dialog()),
   save_card: () => dispatch(save_card_from_dialog()),
 });

@@ -7,7 +7,7 @@ import {
   withStyles
 } from "@material-ui/core";
 import {connect} from 'react-redux';
-import {deck_selected} from "../../actions/cards";
+import {deck_selected} from "../../actions/cards/cards";
 
 class DeckSelector extends Component {
   renderItems() {

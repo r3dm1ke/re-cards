@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {useSelector, useDispatch} from "react-redux";
+import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {
   InputLabel,
   Select,
@@ -7,39 +7,39 @@ import {
   TextField,
   FormControl,
   Typography,
-  makeStyles
+  makeStyles,
 } from '@material-ui/core';
-import {Q_TYPES} from "../../../../const/cards";
+import {Q_TYPES} from '../../../../const/cards';
 import {
   edit_card_dialog_question_changed,
-  edit_card_dialog_question_type_changed
-} from "../../../../actions/cards";
+  edit_card_dialog_question_type_changed,
+} from '../../../../actions/cards/cards_form';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   form: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   questionTypeFormControl: {
-    marginTop: theme.spacing(2)
+    marginTop: theme.spacing(2),
   },
   questionField: {
     marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(1)
+    marginBottom: theme.spacing(1),
   },
   title: {
     marginTop: theme.spacing(2),
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 }));
 
-export default props => {
+export default () => {
   const classes = useStyles();
-  const question = useSelector(state => state.cards.edit_dialog_question);
-  const question_type = useSelector(state => state.cards.edit_dialog_question_type);
+  const question = useSelector((state) => state.cards_form.edit_dialog_question);
+  const question_type = useSelector((state) => state.cards_form.edit_dialog_question_type);
   const dispatch = useDispatch();
 
-  const renderQuestionTypes = () => Q_TYPES.map(t => (
+  const renderQuestionTypes = () => Q_TYPES.map((t) => (
     <MenuItem value={t.value} key={t.value}>{t.label}</MenuItem>
   ));
 
@@ -48,12 +48,12 @@ export default props => {
       <InputLabel htmlFor={'qtype-selector'}>Question type</InputLabel>
       <Select
         value={question_type}
-        onChange={e => dispatch(
+        onChange={(e) => dispatch(
           edit_card_dialog_question_type_changed(e.target.value)
         )}
         inputProps={{
           name: 'qtype',
-          id: 'qtype-selector'
+          id: 'qtype-selector',
         }}
         labelWidth={80}
         className={classes.select}
@@ -68,7 +68,7 @@ export default props => {
       variant={'outlined'}
       label={'Question'}
       value={question}
-      onChange={e => dispatch(
+      onChange={(e) => dispatch(
         edit_card_dialog_question_changed(e.target.value)
       )}
       className={classes.questionField}
@@ -83,5 +83,5 @@ export default props => {
         {renderQuestionField()}
       </div>
     </div>
-  )
-}
+  );
+};

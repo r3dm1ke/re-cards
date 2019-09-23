@@ -1,19 +1,18 @@
 import React, {Component} from 'react';
 import {
   withStyles,
-  LinearProgress
+  LinearProgress,
 } from '@material-ui/core';
-import Flashcard from './Flashcard';
+import Flashcard from './flashcard/Flashcard';
 import {connect} from 'react-redux';
-import {smart_study_register_answer} from "../../actions/study";
+import {register_answer} from '../../actions/study';
 
-class SmartStudy extends Component {
-
+class Study extends Component {
   renderCard() {
     const {
       study_cards,
       study_index,
-      register_answer
+      register_answer,
     } = this.props;
     const card = study_cards[study_index];
     return (
@@ -24,8 +23,10 @@ class SmartStudy extends Component {
         question_type={card.question_type}
         onSuccess={() => register_answer(false)}
         onFail={() => register_answer(true)}
+        answer_list={card.answer_list}
+        answer_type={card.answer_type}
       />
-    )
+    );
   }
 
   renderProgress() {
@@ -33,13 +34,13 @@ class SmartStudy extends Component {
       study_index,
       study_length,
       study_score,
-      classes
+      classes,
     } = this.props;
     const total = Math.floor((study_index / study_length) * 100);
     const success = Math.floor((study_score / study_length) * 100);
     return (
       <LinearProgress variant={'buffer'} value={success} valueBuffer={total} />
-    )
+    );
   }
 
   render() {
@@ -56,31 +57,31 @@ class SmartStudy extends Component {
           {this.renderProgress()}
         </div>
       </div>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   card: {
     display: 'flex',
     flexGrow: 1,
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 });
-const mapStateToProps = state => ({
-  study_score: state.study.smart_study_score,
-  study_length: state.study.smart_study_length,
-  study_index: state.study.smart_study_index,
-  study_cards: state.study.smart_study_cards,
+const mapStateToProps = (state) => ({
+  study_score: state.study.study_score,
+  study_length: state.study.study_length,
+  study_index: state.study.study_index,
+  study_cards: state.study.study_cards,
 });
-const mapDispatchToProps = dispatch => ({
-  register_answer: (stoopid) => dispatch(smart_study_register_answer(stoopid))
+const mapDispatchToProps = (dispatch) => ({
+  register_answer: (is_incorrect) => dispatch(register_answer(is_incorrect)),
 });
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(SmartStudy));
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Study));

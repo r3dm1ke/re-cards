@@ -4,25 +4,27 @@ import {Redirect} from 'react-router-dom';
 import {withStyles, Grow} from '@material-ui/core';
 import DeckThumbnail from '../components/decks/DeckThumbnail';
 import NewDeckCard from '../components/common/NewItemCard';
-import NewDeckDialog from '../components/decks/NewDeckDialog';
 import EditDeckDialog from '../components/decks/EditDeckDialog';
-import Filters from "../components/decks/Filters";
-import {toggle_new_deck_dialog, open_edit_dialog} from "../actions/decks";
-import {open_cards_for_deck} from '../actions/cards';
+import Filters from '../components/decks/Filters';
+import {open_cards_for_deck} from '../actions/cards/cards';
+import {open_edit_dialog} from '../actions/decks/decks_form';
 
 class DecksPage extends Component {
-
   renderDecks() {
     return this.props.decks.map((deck, index) => (
       <Grow timeout={index * 250} in key={deck.id}>
         <DeckThumbnail
           subject={deck.name}
-          onEdit={() => {this.props.open_edit_dialog(deck.id)}}
+          onEdit={() => {
+            this.props.open_edit_dialog(deck.id);
+          }}
           onStart={() => {}}
-          onCards={() => {this.props.open_cards_for_deck(deck.id)}}
+          onCards={() => {
+            this.props.open_cards_for_deck(deck.id);
+          }}
         />
       </Grow>
-    ))
+    ));
   }
 
   render() {
@@ -37,30 +39,29 @@ class DecksPage extends Component {
         <div className={classes.deckContainer}>
           {this.renderDecks()}
           <Grow timeout={finalTimeout} in>
-            <NewDeckCard onClick={this.props.toggle_new_deck_dialog}/>
+            <NewDeckCard onClick={this.props.open_new_dialog}/>
           </Grow>
-          <NewDeckDialog />
           <EditDeckDialog />
         </div>
       </div>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   deckContainer: {
     display: 'flex',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 });
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   logged_in: state.auth.logged_in,
   decks: state.decks.filtered_decks,
 });
-const mapDispatchToProps = dispatch => ({
-  toggle_new_deck_dialog: () => dispatch(toggle_new_deck_dialog()),
-  open_edit_dialog: id => dispatch(open_edit_dialog(id)),
-  open_cards_for_deck: id => dispatch(open_cards_for_deck(id))
+const mapDispatchToProps = (dispatch) => ({
+  open_new_dialog: () => dispatch(open_edit_dialog()),
+  open_edit_dialog: (id) => dispatch(open_edit_dialog(id)),
+  open_cards_for_deck: (id) => dispatch(open_cards_for_deck(id)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(DecksPage));

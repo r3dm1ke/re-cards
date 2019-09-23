@@ -1,29 +1,19 @@
 import * as types from './types';
-import {firestore} from "../firebase";
-
-let unsubscribe;
+import {firestore} from '../firebase';
 
 export const subscribe_to_trends = () => async (dispatch, getState) => {
   const {uid} = getState().auth.user;
-  unsubscribe = firestore.collection('history')
+  firestore.collection('history')
     .where('uid', '==', uid)
     .orderBy('timestamp', 'desc')
     .limit(20)
-    .onSnapshot(query => {
-      const data = [];
-      query.forEach(q => data.push({...q.data()}));
+    .onSnapshot((query) => {
+      let data = [];
+      query.forEach((q) => data = [...data, {...q.data()}]);
       data.reverse();
       dispatch({
         type: types.TRENDS_LOADED,
-        payload: data
+        payload: data,
       });
-    })
-};
-
-export const unsubscribe_from_trends = () => async (dispatch, getState) => {
-  unsubscribe();
-  dispatch({
-    type: types.TRENDS_LOADED,
-    payload: []
-  })
+    });
 };

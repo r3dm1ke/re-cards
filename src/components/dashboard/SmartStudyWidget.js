@@ -6,9 +6,10 @@ import {
   CardActions,
   Button,
   Typography,
-  withStyles
+  withStyles,
 } from '@material-ui/core';
-import {start_smart_study} from "../../actions/study";
+import {start_study} from '../../actions/study';
+import {SMART_STUDY} from '../../const/study';
 
 class SmartStudyWidget extends Component {
   render() {
@@ -24,27 +25,27 @@ class SmartStudyWidget extends Component {
           <Button onClick={start} color={'inherit'}>Study</Button>
         </CardActions>
       </Card>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     maxHeight: '25rem',
-    maxWidth: '20rem'
+    maxWidth: '20rem',
   },
   [theme.breakpoints.down('sm')]: {
     root: {
       width: '100%',
-      maxWidth: 'initial'
-    }
-  }
+      maxWidth: 'initial',
+    },
+  },
 });
-const mapStateToProps = state => ({});
-const mapDispatchToProps = dispatch => ({
-  start: () => dispatch(start_smart_study())
+const mapStateToProps = (state) => ({});
+const mapDispatchToProps = (dispatch) => ({
+  start: () => dispatch(start_study(SMART_STUDY)),
 });
-export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(SmartStudyWidget))
+export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(SmartStudyWidget));

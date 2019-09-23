@@ -7,5 +7,5 @@ export const open_dashboard = () => async (dispatch, getState) => {
 
 export const simple_study_deck_selected = (deck, selected) => ({
   type: types.SIMPLE_STUDY_DECK_SELECTED,
-  payload: [deck, selected]
+  payload: [deck, selected],
 });

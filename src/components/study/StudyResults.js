@@ -6,11 +6,17 @@ import {
   CardActions,
   Button,
   withStyles,
-  Typography
+  Typography,
 } from '@material-ui/core';
-import {smart_study_teardown} from "../../actions/study";
+import {study_teardown} from '../../actions/study';
 
-class SmartStudyResults extends Component {
+class StudyResults extends Component {
+  renderDeckResults() {
+    let {decks, selected_decks} = this.props;
+    decks = decks.filter((deck) => selected_decks.indexOf(deck.id) > -1);
+    const deck_names = decks.map((deck) => deck.name);
+    return `You studied cards from ${deck_names.join(', ')} decks`;
+  }
 
   renderScoreResults() {
     const {study_length, study_score} = this.props;
@@ -27,22 +33,25 @@ class SmartStudyResults extends Component {
       <Card>
         <CardContent>
           <Typography variant={'h3'}>Results</Typography>
+          <Typography variant={'h6'}>{this.renderDeckResults()}</Typography>
           <Typography variant={'h6'}>{this.renderScoreResults()}</Typography>
         </CardContent>
         <CardActions>
           <Button onClick={teardown}>Close</Button>
         </CardActions>
       </Card>
-    )
+    );
   }
 }
 
-const styles = theme => ({});
-const mapStateToProps = state => ({
-  study_length: state.study.smart_study_length,
-  study_score: state.study.smart_study_score,
+const styles = (theme) => ({});
+const mapStateToProps = (state) => ({
+  study_length: state.study.study_length,
+  study_score: state.study.study_score,
+  decks: state.cards.decks,
+  selected_decks: state.dashboard.simple_study_decks,
 });
-const mapDispatchToProps = dispatch => ({
-  teardown: () => dispatch(smart_study_teardown())
+const mapDispatchToProps = (dispatch) => ({
+  teardown: () => dispatch(study_teardown()),
 });
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(SmartStudyResults));
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(StudyResults));

@@ -10,20 +10,20 @@ import {
   FormControlLabel,
   Checkbox,
   Button,
-  withStyles
-} from "@material-ui/core";
-import {Skeleton} from "@material-ui/lab";
-import {simple_study_deck_selected} from "../../actions/dashboard";
-import {start_simple_study} from "../../actions/study";
+  withStyles,
+} from '@material-ui/core';
+import {Skeleton} from '@material-ui/lab';
+import {simple_study_deck_selected} from '../../actions/dashboard';
+import {start_study} from '../../actions/study';
+import {SIMPLE_STUDY} from '../../const/study';
 
 class SimpleStudyWidget extends Component {
-
   renderSkeletons() {
     return [
       <Skeleton variant={'text'} width={'70%'} height={40} key={1}/>,
       <Skeleton variant={'text'} width={'70%'} height={40} key={2}/>,
       <Skeleton variant={'text'} width={'70%'} height={40} key={3}/>,
-    ]
+    ];
   }
 
   renderDecks() {
@@ -32,7 +32,7 @@ class SimpleStudyWidget extends Component {
       return this.renderSkeletons();
     }
     console.log(decks_selected);
-    return decks.map(deck => (
+    return decks.map((deck) => (
       <FormControlLabel
         control={
           <Checkbox
@@ -44,11 +44,11 @@ class SimpleStudyWidget extends Component {
         label={deck.name}
         key={deck.id}
       />
-    ))
+    ));
   }
 
   render() {
-    const {classes, start_simple_study, className} = this.props;
+    const {classes, start_study, className} = this.props;
     return (
       <Card className={`${classes.root} ${className}`}>
         <CardContent className={classes.content}>
@@ -61,39 +61,39 @@ class SimpleStudyWidget extends Component {
           </FormControl>
         </CardContent>
         <CardActions>
-          <Button color={'inherit'} onClick={start_simple_study}>Study</Button>
+          <Button color={'inherit'} onClick={start_study}>Study</Button>
         </CardActions>
       </Card>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     maxHeight: '25rem',
-    maxWidth: '20rem'
+    maxWidth: '20rem',
   },
   content: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   [theme.breakpoints.down('sm')]: {
     root: {
       width: '100%',
-      maxWidth: 'initial'
-    }
-  }
+      maxWidth: 'initial',
+    },
+  },
 });
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   decks: state.cards.decks,
   decks_selected: state.dashboard.simple_study_decks,
-  refresh_helper: state.dashboard.refresh_helper
+  refresh_helper: state.dashboard.refresh_helper,
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   deck_selected: (deck, selected) => dispatch(simple_study_deck_selected(deck, selected)),
-  start_simple_study: () => dispatch(start_simple_study())
+  start_study: () => dispatch(start_study(SIMPLE_STUDY)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(SimpleStudyWidget));
