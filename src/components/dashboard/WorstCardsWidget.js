@@ -11,7 +11,7 @@ import {
   withStyles
 } from '@material-ui/core';
 import {connect} from 'react-redux';
-import MathJaxRenderer from "../common/MathJaxRenderer";
+import MathJaxRenderer from "../common/MathRenderer";
 import {study_worst_cards} from "../../actions/worst_cards";
 
 class WorstCardsWidget extends Component {

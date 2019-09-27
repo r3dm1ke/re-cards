@@ -2,13 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/validators/cards.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/auto-render.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/auto-render.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/auto-render.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/copy-tex.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/copy-tex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/copy-tex.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/copy-tex.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/copy-tex.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/mathtex-script-type.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/mathtex-script-type.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/mathtex-script-type.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/mhchem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/mhchem.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/mhchem.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/render-a11y-string.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/render-a11y-string.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/contrib/render-a11y-string.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_AMS-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_AMS-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_AMS-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Caligraphic-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Caligraphic-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Caligraphic-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Caligraphic-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Caligraphic-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Caligraphic-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Fraktur-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Fraktur-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Fraktur-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Fraktur-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Fraktur-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Fraktur-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-BoldItalic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-BoldItalic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Main-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Math-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Math-BoldItalic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Math-BoldItalic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Math-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Math-Italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Math-Italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_SansSerif-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Script-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Script-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Script-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size1-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size1-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size1-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size2-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size2-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size2-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size3-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size3-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size3-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size4-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size4-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Size4-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Typewriter-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Typewriter-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/fonts/KaTeX_Typewriter-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/katex.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/katex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/katex.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/katex.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/libs/katex/katex.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/libs/katex.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MathRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +122,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/web-client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/libs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -52,6 +138,9 @@
     <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\personal_projects\flashcards\flashcards\src\reducers\cards" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\actions\cards" />
@@ -99,7 +188,7 @@
       <workItem from="1569416858113" duration="108000" />
       <workItem from="1569530480427" duration="196000" />
       <workItem from="1569591196402" duration="59000" />
-      <workItem from="1569599825339" duration="7525000" />
+      <workItem from="1569599825339" duration="10360000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -136,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569605120453</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added validation for question in card form">
+      <created>1569607674707</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569607674707</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

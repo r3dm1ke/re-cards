@@ -7,14 +7,13 @@ import {
   Button,
   withStyles,
   Divider,
-  Chip
-} from "@material-ui/core";
+  Chip,
+} from '@material-ui/core';
 import {Skeleton} from '@material-ui/lab';
-import {Q_MATH, Q_TEXT} from "../../const/cards";
-import MathJaxRenderer from "../common/MathJaxRenderer";
+import {Q_MATH, Q_TEXT} from '../../const/cards';
+import MathJaxRenderer from '../common/MathRenderer';
 
 class CardThumbnail extends Component {
-
   renderQuestion() {
     const {question, question_type} = this.props;
     if (question_type === Q_TEXT) {
@@ -23,7 +22,7 @@ class CardThumbnail extends Component {
       console.log('mathjax rendered!');
       return (
         <MathJaxRenderer block content={question} />
-      )
+      );
     }
   }
 
@@ -42,7 +41,7 @@ class CardThumbnail extends Component {
           </CardActions>
         </div>
       </Card>
-    )
+    );
   }
 
   render() {
@@ -54,7 +53,7 @@ class CardThumbnail extends Component {
     console.log(color);
     return (
       <Card className={classes.root} style={{...this.props.style}}>
-        <Chip label={deckName} variant={'outlined'} size={'small'}  className={classes.chip}/>
+        <Chip label={deckName} variant={'outlined'} size={'small'} className={classes.chip}/>
         <CardContent className={classes.content}>
           {this.renderQuestion()}
           <Typography variant={'overline'} className={classes.answer}>{answer}</Typography>
@@ -67,40 +66,40 @@ class CardThumbnail extends Component {
           </CardActions>
         </div>
       </Card>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      maxWidth: '15rem'
+      maxWidth: '15rem',
     },
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     margin: theme.spacing(1),
-    position: 'relative'
+    position: 'relative',
   },
   content: {
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   chip: {
     display: 'flex',
     position: 'absolute',
     bottom: theme.spacing(2),
-    right: theme.spacing(2)
+    right: theme.spacing(2),
   },
   answer: {
-    filter: 'blur(5px)',
+    'filter': 'blur(5px)',
     '&:hover, &:focus, &:active': {
-      filter: 'none'
-    }
-  }
+      filter: 'none',
+    },
+  },
 });
 
 export default withStyles(styles)(CardThumbnail);
