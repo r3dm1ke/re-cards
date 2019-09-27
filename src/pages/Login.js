@@ -1,11 +1,22 @@
 import React, {Component} from 'react';
-import {Container, Paper, Typography, Divider, withStyles, Button} from "@material-ui/core";
+import {
+  Container,
+  Paper,
+  Typography,
+  Divider,
+  withStyles,
+  Button,
+  CircularProgress,
+} from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
-import {login} from "../actions/auth";
-import {connect} from "react-redux";
-import {open_dashboard} from "../actions/dashboard";
+import {login} from '../actions/auth';
+import {connect} from 'react-redux';
+import {open_dashboard} from '../actions/dashboard';
 
+// TODO rewrite as functional
+// eslint-disable-next-line require-jsdoc
 class LoginPage extends Component {
+  // eslint-disable-next-line require-jsdoc
   render() {
     if (this.props.logged_in) {
       this.props.open_dashboard();
@@ -18,20 +29,22 @@ class LoginPage extends Component {
           <Typography variant={'h3'} className={classes.title}>Welcome to Flashcards</Typography>
           <Divider className={classes.divider}/>
           <SchoolIcon className={classes.icon}/>
-          <Button variant={'outlined'} color={'primary'} onClick={this.props.login}>Sign in</Button>
+          {this.props.app_initialized ? (
+            <Button variant={'outlined'} color={'primary'} onClick={this.props.login}>Sign in</Button>
+          ) : (<CircularProgress color={'primary'} />)}
         </Paper>
       </Container>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   container: {
     display: 'flex',
     justifyContent: 'space-around',
   },
   title: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   root: {
     maxWidth: '25rem',
@@ -41,21 +54,22 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   icon: {
-    fontSize: '10rem'
+    fontSize: '10rem',
   },
   divider: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 });
 
-const mapStateToProps = state => ({
-  logged_in: state.auth.logged_in
+const mapStateToProps = (state) => ({
+  logged_in: state.auth.logged_in,
+  app_initialized: state.auth.app_initialized,
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   login: () => dispatch(login()),
-  open_dashboard: () => dispatch(open_dashboard())
+  open_dashboard: () => dispatch(open_dashboard()),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(LoginPage));

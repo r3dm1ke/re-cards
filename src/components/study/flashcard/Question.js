@@ -1,7 +1,7 @@
 import React from 'react';
 import {Typography} from '@material-ui/core';
 import {Q_MATH, Q_TEXT} from '../../../const/cards';
-import MathJax from 'react-mathjax2';
+import MathJaxRenderer from '../../common/MathJaxRenderer';
 import {useSelector} from 'react-redux';
 import {makeStyles} from '@material-ui/core';
 
@@ -21,9 +21,10 @@ export default () => {
   } else if (question_type === Q_MATH) {
     console.log('mathjax rendered!');
     return (
-      <MathJax.Context input={'tex'}>
-        <MathJax.Node block>{question}</MathJax.Node>
-      </MathJax.Context>
+      <MathJaxRenderer
+        block
+        content={question}
+      />
     );
   }
 };

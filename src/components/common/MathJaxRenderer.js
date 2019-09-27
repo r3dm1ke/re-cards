@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import MathJax from 'react-mathjax2';
-import {Skeleton} from "@material-ui/lab";
-import {makeStyles} from "@material-ui/core";
+import {Skeleton} from '@material-ui/lab';
+import {makeStyles} from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   skeleton: {
     marginTop: 0,
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 }));
 
-export default props => {
+export default (props) => {
   const [mathRendered, setMathRendered] = useState(false);
   const classes = useStyles();
   const {block, content} = props;
@@ -26,4 +26,4 @@ export default props => {
       }
     </MathJax.Context>
   );
-}
+};

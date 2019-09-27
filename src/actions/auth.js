@@ -5,9 +5,14 @@ import {open_dashboard} from './dashboard';
 import {add_subscribers} from '../utils/listeners';
 import {add_loader, remove_loader} from './mics';
 
-export const init = () => async (dispatch, getState) => {
+const app_initialized = () => ({
+  type: types.APP_INITIALIZED,
+});
+
+export const init = () => async (dispatch) => {
   auth.onAuthStateChanged((user) => {
     console.log(`auth state changed ${user}`);
+    dispatch(app_initialized());
     if (user) {
       dispatch(add_loader('loading', 'Loading...'));
       const action = {
@@ -29,13 +34,13 @@ const set_persistence_async = async () => {
 };
 
 
-export const login = () => async (dispatch, getState) => {
+export const login = () => async (dispatch) => {
   dispatch(add_loader('login', 'Logging in...'));
   await auth.signInWithPopup(provider);
   dispatch(remove_loader('login'));
 };
 
-export const logout = () => async (dispatch, getState) => {
+export const logout = () => async (dispatch) => {
   await auth.signOut();
   dispatch({
     type: types.LOGGED_OUT,

@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MathJaxRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +99,7 @@
       <workItem from="1569416858113" duration="108000" />
       <workItem from="1569530480427" duration="196000" />
       <workItem from="1569591196402" duration="59000" />
-      <workItem from="1569599825339" duration="4238000" />
+      <workItem from="1569599825339" duration="5261000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -118,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569602591638</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Resolved issue with color coding answers in multiple choice after confirming">
+      <created>1569604160068</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569604160068</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +155,9 @@
     <MESSAGE value="Added filters to decks, refactored edit/new dialog for cards" />
     <MESSAGE value="answer types and card edit form features" />
     <MESSAGE value="Validation for edit deck form and minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation for edit deck form and minor fixes" />
+    <MESSAGE value="Resolved issue with color coding answers in multiple choice after confirming" />
+    <MESSAGE value="Spinner on login button until auth state is loaded from local" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spinner on login button until auth state is loaded from local" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
@@ -169,7 +182,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/actions/auth.js</url>
-          <line>14</line>
+          <line>19</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
