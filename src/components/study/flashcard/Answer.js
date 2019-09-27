@@ -20,10 +20,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   entry_correct: {
-    backgroundColor: 'green !important', // TODO change to theme primary color
+    backgroundColor: `${theme.palette.primary.main} !important`,
+    color: 'white',
   },
   entry_wrong: {
-    backgroundColor: 'red !important', // TODO change to theme secondary color
+    backgroundColor: `${theme.palette.secondary.main} !important`,
+    color: 'white',
   },
 }));
 

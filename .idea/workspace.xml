@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Michael_Krasnov.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/Actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/validators/decks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/decks/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/decks/decks_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/decks/EditDeckDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/EditDeckDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/decks/decks_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/decks/decks_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/study.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +95,7 @@
       <workItem from="1569416858113" duration="108000" />
       <workItem from="1569530480427" duration="196000" />
       <workItem from="1569591196402" duration="59000" />
-      <workItem from="1569599825339" duration="2733000" />
+      <workItem from="1569599825339" duration="4238000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -123,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568677854596</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Validation for edit deck form and minor fixes">
+      <created>1569602591638</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569602591638</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +158,8 @@
     <state x="332" y="168" key="Vcs.Push.Dialog.v2/1920.1080/1680.1050" />
     <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" />
     <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/1920.1080" />
+    <state x="412" y="229" key="run.anything.popup" />
+    <state x="412" y="229" key="run.anything.popup/1920.1080/1680.1050" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080/1680.1050" />

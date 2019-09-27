@@ -64,13 +64,17 @@ const check_answer = (card, validation_value) => {
   }
 };
 
-const check_answer_for_text = (answer, validation_value) => validation_value === answer;
+const check_answer_for_text = (answer, validation_value) =>
+  validation_value === answer;
 const check_answer_for_multiple_choice = (answer_list, validation_value) => {
+  let result = true;
   answer_list.forEach((answer_entry, i) => {
-    if (answer_entry.is_correct && !validation_value.has(i)) return false;
-    else if (!answer_entry.is_correct && validation_value.has(i)) return false;
+    // eslint-disable-next-line fp/no-mutation
+    if (answer_entry.is_correct && !validation_value.has(i)) result = false;
+    // eslint-disable-next-line fp/no-mutation
+    else if (!answer_entry.is_correct && validation_value.has(i)) result = false;
   });
-  return true;
+  return result;
 };
 
 export const confirm_answer = () => async (dispatch, getState) => {
