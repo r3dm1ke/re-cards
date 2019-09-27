@@ -11,8 +11,10 @@ const INITIAL_STATE = {
   edit_dialog_answer_type: A_TEXT,
   edit_dialog_question_type: Q_TEXT,
   edit_dialog_validation_required: false,
+  edit_dialog_errors: {},
 };
 
+// eslint-disable-next-line complexity,max-lines-per-function
 export default (state=INITIAL_STATE, action) => {
   switch (action.type) {
   case types.OPEN_EDIT_CARD_DIALOG:
@@ -57,7 +59,17 @@ export default (state=INITIAL_STATE, action) => {
       ...state,
       edit_dialog_answer_list: action.payload,
     };
+  case types.EDIT_CARD_DIALOG_ERRORS_CHANGED:
+    return {
+      ...state,
+      edit_dialog_errors: action.payload,
+    };
+  case types.EDIT_CARD_DIALOG_ERRORS_CLEARED:
+    return {
+      ...state,
+      edit_dialog_errors: {},
+    };
   default:
     return state;
   }
-}
+};

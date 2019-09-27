@@ -2,13 +2,14 @@ import * as types from '../types';
 import {A_TEXT, Q_TEXT} from '../../const/cards';
 import {add_loader, remove_loader} from '../mics';
 import {firestore} from '../../firebase';
+import {validate_card} from '../../validators/cards';
 
 export const open_edit_card_dialog = () => ({
   type: types.OPEN_EDIT_CARD_DIALOG,
 });
 
 export const open_edit_card_dialog_for_new_card = () =>
-  async (dispatch, getState) => {
+  async (dispatch) => {
     dispatch({
       type: types.EDIT_CARD_DIALOG_ID_CHANGED,
       payload: '',
@@ -30,12 +31,12 @@ const set_defaults_for_new_card_dialog = () => async (dispatch, getState) => {
 };
 
 export const open_edit_card_dialog_for_existing_card = (card) =>
-  async (dispatch, getState) => {
+  async (dispatch) => {
     dispatch(populate_edit_card_dialog(card));
     dispatch(open_edit_card_dialog());
   };
 
-const populate_edit_card_dialog = (card) => async (dispatch, getState) => {
+const populate_edit_card_dialog = (card) => async (dispatch) => {
   dispatch({
     type: types.EDIT_CARD_DIALOG_ID_CHANGED,
     payload: card.id,
@@ -73,25 +74,43 @@ export const edit_card_dialog_deck_changed = (deck) => ({
 
 export const save_card_from_dialog = () => async (dispatch, getState) => {
   const state = getState();
-
-  dispatch(add_loader('add_card', 'Saving...'));
-  dispatch(close_edit_card_dialog());
-
   const data = load_edited_card_from_state(state);
-  const {edit_dialog_id} = state.cards_form;
+  dispatch(clear_errors());
+  const errors = await validate_card_data(data);
+  if (errors === {}) {
+    dispatch(add_loader('add_card', 'Saving...'));
+    dispatch(close_edit_card_dialog());
 
-  if (
-    edit_dialog_id === '' ||
-    edit_dialog_id === null ||
-    edit_dialog_id === undefined) {
-    const ref = firestore.collection('cards');
-    await ref.add(data);
+    const {edit_dialog_id} = state.cards_form;
+
+    if (
+      edit_dialog_id === '' ||
+      edit_dialog_id === null ||
+      edit_dialog_id === undefined) {
+      const ref = firestore.collection('cards');
+      await ref.add(data);
+    } else {
+      const ref = firestore.collection('cards').doc(edit_dialog_id);
+      await ref.set(data, {merge: true});
+    }
+
+    dispatch(remove_loader('add_card'));
   } else {
-    const ref = firestore.collection('cards').doc(edit_dialog_id);
-    await ref.set(data, {merge: true});
+    dispatch(add_errors(errors));
   }
+};
 
-  dispatch(remove_loader('add_card'));
+const add_errors = (errors) => ({
+  type: types.EDIT_CARD_DIALOG_ERRORS_CHANGED,
+  payload: errors,
+});
+
+const clear_errors = () => ({
+  type: types.EDIT_CARD_DIALOG_ERRORS_CLEARED,
+});
+
+const validate_card_data = async (card_data) => {
+  return await validate_card(card_data);
 };
 
 const load_edited_card_from_state = (state) => ({
@@ -101,9 +120,10 @@ const load_edited_card_from_state = (state) => ({
   question: state.cards_form.edit_dialog_question,
   question_type: state.cards_form.edit_dialog_question_type,
   uid: state.auth.user.uid,
-  deck: firestore.collection('decks').doc(
-    state.cards_form.edit_dialog_deck
-  ),
+  deck: state.cards_form.edit_dialog_deck !== '' ?
+    firestore.collection('decks').doc(
+      state.cards_form.edit_dialog_deck
+    ) : null,
   total: 0,
   score: 0,
   ratio: 0,

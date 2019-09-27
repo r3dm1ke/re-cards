@@ -7,6 +7,7 @@ import {
   TextField,
   FormControl,
   Typography,
+  FormHelperText,
   makeStyles,
 } from '@material-ui/core';
 import {Q_TYPES} from '../../../../const/cards';
@@ -33,10 +34,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// eslint-disable-next-line max-lines-per-function
 export default () => {
   const classes = useStyles();
   const question = useSelector((state) => state.cards_form.edit_dialog_question);
   const question_type = useSelector((state) => state.cards_form.edit_dialog_question_type);
+  const errors = useSelector((state) => state.cards_form.edit_dialog_errors);
   const dispatch = useDispatch();
 
   const renderQuestionTypes = () => Q_TYPES.map((t) => (
@@ -44,7 +47,11 @@ export default () => {
   ));
 
   const renderQuestionTypesSelect = () => (
-    <FormControl className={classes.questionTypeFormControl} variant={'outlined'}>
+    <FormControl
+      className={classes.questionTypeFormControl}
+      variant={'outlined'}
+      error={errors.question_type}
+    >
       <InputLabel htmlFor={'qtype-selector'}>Question type</InputLabel>
       <Select
         value={question_type}
@@ -60,6 +67,9 @@ export default () => {
       >
         {renderQuestionTypes()}
       </Select>
+      {errors.question_type ? (
+        <FormHelperText>{errors.question_type}</FormHelperText>
+      ) : null}
     </FormControl>
   );
 
@@ -68,6 +78,8 @@ export default () => {
       variant={'outlined'}
       label={'Question'}
       value={question}
+      error={errors.question}
+      helperText={errors.question}
       onChange={(e) => dispatch(
         edit_card_dialog_question_changed(e.target.value)
       )}

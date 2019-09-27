@@ -42,6 +42,8 @@ export const EDIT_CARD_DIALOG_ANSWER_LIST_ADDED_NEW_ENTRY = 'edit_card_dialog_an
 export const EDIT_CARD_DIALOG_ANSWER_LIST_ENTRY_MODIFIED = 'edit_card_dialog_answer_list_entry_modified';
 export const EDIT_CARD_DIALOG_ANSWER_LIST_REMOVED_ENTRY = 'edit_card_dialog_answer_list_removed_entry';
 export const EDIT_CARD_DIALOG_ANSWER_LIST_CHANGED = 'edit_card_dialog_answer_list_changed';
+export const EDIT_CARD_DIALOG_ERRORS_CHANGED = 'edit_card_dialog_errors_changed';
+export const EDIT_CARD_DIALOG_ERRORS_CLEARED = 'edit_card_dialog_errors_cleared';
 
 // DASHBOARD
 export const SIMPLE_STUDY_DECK_SELECTED = 'simple_study_deck_selected';

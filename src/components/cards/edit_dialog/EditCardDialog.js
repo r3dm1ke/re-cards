@@ -26,21 +26,26 @@ const TABS = [
   {label: 'Deck', component: <DeckTab />},
 ];
 
+// TODO rewrite as functional
+// eslint-disable-next-line require-jsdoc
 class EditCardDialog extends Component {
   state = {
     index: 0,
   };
 
+  // eslint-disable-next-line require-jsdoc
   onTabChange(event, index) {
     this.setState({index});
   }
 
+  // eslint-disable-next-line require-jsdoc
   renderTabs() {
     return TABS.map((tab, index) => (
       <Tab label={tab.label} key={index}/>
     ));
   }
 
+  // eslint-disable-next-line require-jsdoc
   renderTabPanels() {
     const {index} = this.state;
     return TABS.map((tab, _index) => (
@@ -53,14 +58,17 @@ class EditCardDialog extends Component {
     ));
   }
 
+  // eslint-disable-next-line require-jsdoc
   nextTab() {
     this.setState({index: this.state.index + 1});
   }
 
+  // eslint-disable-next-line require-jsdoc
   prevTab() {
     this.setState({index: this.state.index - 1});
   }
 
+  // eslint-disable-next-line require-jsdoc
   renderStepper() {
     const {index} = this.state;
     const {save_card, classes} = this.props;
@@ -87,11 +95,13 @@ class EditCardDialog extends Component {
     );
   }
 
+  // eslint-disable-next-line require-jsdoc
   onClose() {
     this.setState({index: 0});
     this.props.close_dialog();
   }
 
+  // eslint-disable-next-line require-jsdoc
   render() {
     const {
       edit_dialog_opened,
@@ -123,7 +133,7 @@ class EditCardDialog extends Component {
   }
 }
 
-const styles = (theme) => ({
+const styles = () => ({
   stepper: {
     flex: 1,
   },
