@@ -16,6 +16,8 @@ export const DECKS_LOADED = 'decks_loaded';
 export const EDIT_DECK_DIALOG_TOGGLED = 'toggle_edit_deck_dialog';
 export const EDIT_DECK_DIALOG_NAME_CHANGED = 'edit_deck_name_changed';
 export const EDIT_DECK_DIALOG_ID_CHANGED = 'set_edit_deck_id';
+export const EDIT_DECK_DIALOG_ERROR_ADDED = 'edit_deck_dialog_error_added';
+export const EDIT_DECK_DIALOG_ERRORS_CLEARED = 'edit_deck_dialog_errors_cleared';
 export const DECKS_SEARCH_TERM_UPDATED = 'decks_search_term_updated';
 export const DECKS_SORT_PROP_CHANGED = 'decks_sort_prop_updated';
 export const DECKS_SORT_DIRECTION_TOGGLED = 'decks_sort_direction_triggered';
@@ -43,7 +45,7 @@ export const EDIT_CARD_DIALOG_ANSWER_LIST_CHANGED = 'edit_card_dialog_answer_lis
 // DASHBOARD
 export const SIMPLE_STUDY_DECK_SELECTED = 'simple_study_deck_selected';
 
-// SIMPLE STUDY
+// STUDY
 export const CARDS_FOR_STUDY_LOADED = 'cards_for_study_loaded';
 export const START_STUDY = 'start_study';
 export const SET_STUDY_MODE = 'set_study_mode';
@@ -51,6 +53,9 @@ export const STUDY_INCREMENT_INDEX = 'study_increment_index';
 export const STUDY_INCREMENT_SCORE = 'study_increment_score';
 export const STUDY_FINISHED = 'study_finished';
 export const STUDY_SHOW_RESULTS = 'study_show_results';
+export const STUDY_VALIDATION_VALUE_CHANGED = 'study_validation_value_changed';
+export const STUDY_VALIDATION_CONFIRMED_CHANGED = 'study_validation_confirmed_changed';
+export const STUDY_IS_CORRECT_CHANGED = 'study_is_correct_changed';
 
 // WORST CARDS
 export const WORST_CARDS_LOADED = 'worst_cards_loaded';

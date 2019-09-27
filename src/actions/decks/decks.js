@@ -14,7 +14,7 @@ export const subscribe_to_decks = () => async (dispatch, getState) => {
         // eslint-disable-next-line fp/no-mutation
         data = [
           ...data,
-          {id: q.id, name: deck_data.subject, uid: deck_data.uid}
+          {id: q.id, name: deck_data.subject, uid: deck_data.uid},
         ];
       }
       dispatch({
@@ -24,7 +24,7 @@ export const subscribe_to_decks = () => async (dispatch, getState) => {
     });
 };
 
-export const open_decks = () => async (dispatch, getState) => {
+export const open_decks = () => async (dispatch) => {
   dispatch({
     type: types.ADD_LOADER,
     payload: {

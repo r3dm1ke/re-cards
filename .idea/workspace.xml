@@ -1,65 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/cards/cards.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/actions/decks/decks_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/const/study.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/decks/decks_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/listeners.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Michael_Krasnov.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/Actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/validators/decks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/mics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/mics.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/decks/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/decks/decks_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/trend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/trend.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/worst_cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/worst_cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardSearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardSearchBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardSortSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardSortSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Deck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Deck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/SimpleStudyWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/SimpleStudyWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/SmartStudyWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/SmartStudyWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckSearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckSearchBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckSortSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckSortSelector.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/decks/EditDeckDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/EditDeckDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/decks/NewDeckDialog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/Flashcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/SimpleStudy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/Study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/SimpleStudyResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/StudyResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/SmartStudy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/SmartStudyResults.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/decks/decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/decks/decks_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/decks/decks_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +44,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web-client" />
+    <property name="last_opened_file_path" value="C:/web-client" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -127,7 +85,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="" />
+      <changelist id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="" />
       <created>1568642032098</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -145,6 +103,11 @@
       <workItem from="1569109541351" duration="3092000" />
       <workItem from="1569115015909" duration="395000" />
       <workItem from="1569167332218" duration="3287000" />
+      <workItem from="1569271055534" duration="3755000" />
+      <workItem from="1569416858113" duration="108000" />
+      <workItem from="1569530480427" duration="196000" />
+      <workItem from="1569591196402" duration="59000" />
+      <workItem from="1569599825339" duration="2733000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -185,12 +148,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added filters to decks, refactored edit/new dialog for cards" />
     <MESSAGE value="answer types and card edit form features" />
-    <option name="LAST_COMMIT_MESSAGE" value="answer types and card edit form features" />
+    <MESSAGE value="Validation for edit deck form and minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validation for edit deck form and minor fixes" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="332" y="79" key="#ESLint" />
+    <state x="332" y="79" key="#ESLint/1920.1080/1680.1050" />
+    <state x="408" y="61" key="MultipleFileMergeDialog" />
+    <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080" />
     <state x="254" y="40" key="SettingsEditor" />
     <state x="254" y="40" key="SettingsEditor/1920.1080/1680.1050" />
-    <state x="332" y="152" key="Vcs.Push.Dialog.v2" />
+    <state x="332" y="168" key="Vcs.Push.Dialog.v2" />
     <state x="332" y="152" key="Vcs.Push.Dialog.v2/1920.1080" />
     <state x="332" y="168" key="Vcs.Push.Dialog.v2/1920.1080/1680.1050" />
     <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" />

@@ -1,6 +1,7 @@
 import * as types from '../types';
 import {firestore} from '../../firebase';
 import {add_loader, remove_loader} from '../mics';
+import {validate_deck_name} from '../../validators/decks';
 
 export const toggle_edit_deck_dialog = () => ({
   type: types.EDIT_DECK_DIALOG_TOGGLED,
@@ -16,17 +17,39 @@ export const edit_deck_dialog_id_changed = (id) => ({
   payload: id,
 });
 
-export const on_edit_deck_dialog_submit = () => async (dispatch, getState) => {
-  dispatch(add_loader('edit', 'Saving...'));
-  dispatch(toggle_edit_deck_dialog());
-  const {edit_deck_dialog_id, edit_deck_dialog_name} = getState().decks_form;
-  if (edit_deck_dialog_id === '') {
-    const {uid} = getState().auth.user;
-    await create_new_deck(edit_deck_dialog_name, uid);
-  } else {
-    await save_existing_deck(edit_deck_dialog_id, edit_deck_dialog_name);
+export const edit_deck_dialog_add_error = (handle, description) => ({
+  type: types.EDIT_DECK_DIALOG_ERROR_ADDED,
+  payload: {handle, description},
+});
+
+export const edit_deck_dialog_clear_error = () => ({
+  type: types.EDIT_DECK_DIALOG_ERRORS_CLEARED,
+});
+
+const edit_deck_dialog_validate = async (dispatch, getState) => {
+  const {edit_deck_dialog_name} = getState().decks_form;
+  dispatch(edit_deck_dialog_clear_error());
+  const validate_result = await validate_deck_name(edit_deck_dialog_name);
+  if (!validate_result.ok) {
+    dispatch(edit_deck_dialog_add_error('name', validate_result.error));
+    return false;
   }
-  dispatch(remove_loader('edit'));
+  return true;
+};
+
+export const on_edit_deck_dialog_submit = () => async (dispatch, getState) => {
+  if (await edit_deck_dialog_validate(dispatch, getState)) {
+    dispatch(add_loader('edit', 'Saving...'));
+    dispatch(toggle_edit_deck_dialog());
+    const {edit_deck_dialog_id, edit_deck_dialog_name} = getState().decks_form;
+    if (edit_deck_dialog_id === '') {
+      const {uid} = getState().auth.user;
+      await create_new_deck(edit_deck_dialog_name, uid);
+    } else {
+      await save_existing_deck(edit_deck_dialog_id, edit_deck_dialog_name);
+    }
+    dispatch(remove_loader('edit'));
+  }
 };
 
 const create_new_deck = async (name, uid) => {
@@ -69,13 +92,8 @@ const delete_deck = (id) => async (dispatch, getState) => {
   dispatch(remove_loader('delete'));
 };
 
-export const on_deck_delete = (deck_id) => async (dispatch, getState) => {
-  dispatch(delete_deck(deck_id));
-};
-
 export const on_edit_deck_dialog_delete = () => async (dispatch, getState) => {
   dispatch(toggle_edit_deck_dialog());
-  // eslint-disable-next-line no-restricted-globals
   const {edit_deck_dialog_id} = getState().decks_form;
   dispatch(delete_deck(edit_deck_dialog_id));
 };

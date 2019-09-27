@@ -17,12 +17,14 @@ import {
   toggle_edit_deck_dialog,
 } from '../../actions/decks/decks_form';
 
+// TODO rewrite as functional
+// eslint-disable-next-line require-jsdoc
 class EditDeckDialog extends Component {
+  // eslint-disable-next-line max-lines-per-function,require-jsdoc
   render() {
     const {
-      classes,
       edit_deck_dialog_opened,
-      edit_deck_dialog_error,
+      edit_deck_dialog_errors,
       edit_deck_dialog_name,
       on_edit_deck_submit,
       on_edit_deck_delete,
@@ -39,8 +41,9 @@ class EditDeckDialog extends Component {
           </DialogContentText>
           <TextField
             autoFocus
-            label={edit_deck_dialog_error}
-            margin={'dense'}
+            label={'Name'}
+            error={edit_deck_dialog_errors.name}
+            helperText={edit_deck_dialog_errors.name}
             type={'text'}
             fullWidth
             value={edit_deck_dialog_name}
@@ -73,11 +76,12 @@ class EditDeckDialog extends Component {
   }
 }
 
-const styles = (theme) => ({});
+const styles = () => ({});
 const mapStateToProps = (state) => ({
   edit_deck_dialog_opened: state.decks_form.edit_deck_dialog_opened,
   edit_deck_dialog_name: state.decks_form.edit_deck_dialog_name,
   edit_deck_dialog_id: state.decks_form.edit_deck_dialog_id,
+  edit_deck_dialog_errors: state.decks_form.edit_deck_dialog_errors,
 });
 const mapDispatchToProps = (dispatch) => ({
   toggle_edit_deck_dialog: () => dispatch(toggle_edit_deck_dialog()),

@@ -1,18 +1,20 @@
 import React from 'react';
-import {Typography} from "@material-ui/core";
-import {Q_MATH, Q_TEXT} from "../../../const/cards";
-import MathJax from "react-mathjax2";
-import {makeStyles} from "@material-ui/core";
+import {Typography} from '@material-ui/core';
+import {Q_MATH, Q_TEXT} from '../../../const/cards';
+import MathJax from 'react-mathjax2';
+import {useSelector} from 'react-redux';
+import {makeStyles} from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   question: {
     textAlign: 'center',
-    margin: theme.spacing(2)
+    margin: theme.spacing(2),
   },
 }));
 
-export default props => {
-  const {question, question_type} = props;
+export default () => {
+  const card = useSelector((state) => state.study.study_cards[state.study.study_index]);
+  const {question, question_type} = card;
   const classes = useStyles();
   if (question_type === Q_TEXT) {
     return <Typography variant={'h3'} className={classes.question}>{question}</Typography>;
@@ -22,6 +24,6 @@ export default props => {
       <MathJax.Context input={'tex'}>
         <MathJax.Node block>{question}</MathJax.Node>
       </MathJax.Context>
-    )
+    );
   }
-}
+};
