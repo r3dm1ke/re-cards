@@ -75,8 +75,9 @@ export const edit_card_dialog_deck_changed = (deck) => ({
 export const save_card_from_dialog = () => async (dispatch, getState) => {
   const state = getState();
   const data = load_edited_card_from_state(state);
+  const decks = state.decks.decks;
   dispatch(clear_errors());
-  const errors = await validate_card_data(data);
+  const errors = await validate_card_data(data, decks);
   console.log('errors');
   console.log(errors);
   if (Object.keys(errors).length === 0) {
@@ -99,6 +100,7 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     dispatch(remove_loader('add_card'));
   } else {
     dispatch(add_errors(errors));
+    dispatch(skip_tabs_to_error());
   }
 };
 
@@ -111,8 +113,8 @@ const clear_errors = () => ({
   type: types.EDIT_CARD_DIALOG_ERRORS_CLEARED,
 });
 
-const validate_card_data = async (card_data) => {
-  return await validate_card(card_data);
+const validate_card_data = async (card_data, decks) => {
+  return await validate_card(card_data, decks);
 };
 
 const load_edited_card_from_state = (state) => ({
@@ -166,3 +168,30 @@ export const edit_card_dialog_answer_list_removed_entry = (index) => ({
   type: types.EDIT_CARD_DIALOG_ANSWER_LIST_REMOVED_ENTRY,
   payload: index,
 });
+
+export const edit_card_dialog_tab_changed = (index) => ({
+  type: types.EDIT_CARD_DIALOG_TAB_CHANGED,
+  payload: index,
+});
+
+export const edit_card_dialog_next_tab = () => async (dispatch, getState) => {
+  const index = getState().cards_form.edit_dialog_tab;
+  dispatch(edit_card_dialog_tab_changed(index + 1));
+};
+
+export const edit_card_dialog_previous_tab = () => async (dispatch, getState) => {
+  const index = getState().cards_form.edit_dialog_tab;
+  dispatch(edit_card_dialog_tab_changed(index - 1));
+};
+
+// КОСТЫЛЬ ПИЗДЕЦ
+const skip_tabs_to_error = () => async (dispatch, getState) => {
+  const errors = getState().cards_form.edit_dialog_errors;
+  if ('question' in errors || 'question_type' in errors) {
+    dispatch(edit_card_dialog_tab_changed(0));
+  } else if ('decks' in errors) {
+    dispatch(edit_card_dialog_tab_changed(2));
+  } else {
+    dispatch(edit_card_dialog_tab_changed(1));
+  }
+};

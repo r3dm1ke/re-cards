@@ -73,7 +73,7 @@ export const validate_multiple_choice_at_least_two_entries = (entries) =>
 
 export const validate_deck = (card, decks) => {
   if (card.deck) {
-    const _ = decks.filter((d) => card.deck.id);
+    const _ = decks.filter((d) => d.id === card.deck.id);
     return _.length === 1;
   }
   return false;

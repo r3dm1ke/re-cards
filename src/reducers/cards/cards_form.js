@@ -12,6 +12,7 @@ const INITIAL_STATE = {
   edit_dialog_question_type: Q_TEXT,
   edit_dialog_validation_required: false,
   edit_dialog_errors: {},
+  edit_dialog_tab: 0,
 };
 
 // eslint-disable-next-line complexity,max-lines-per-function
@@ -68,6 +69,11 @@ export default (state=INITIAL_STATE, action) => {
     return {
       ...state,
       edit_dialog_errors: {},
+    };
+  case types.EDIT_CARD_DIALOG_TAB_CHANGED:
+    return {
+      ...state,
+      edit_dialog_tab: action.payload,
     };
   default:
     return state;

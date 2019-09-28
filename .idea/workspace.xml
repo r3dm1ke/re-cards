@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Deck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Deck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/MathRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MathRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/validators/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/cards.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +81,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="" />
+      <changelist id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="" />
       <created>1568642032098</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -105,6 +104,7 @@
       <workItem from="1569530480427" duration="196000" />
       <workItem from="1569591196402" duration="59000" />
       <workItem from="1569599825339" duration="10360000" />
+      <workItem from="1569635264843" duration="1448000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -155,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569630317315</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Full form validation for card edit dialog">
+      <created>1569634837712</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569634837712</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +192,8 @@
     <MESSAGE value="Spinner on login button until auth state is loaded from local" />
     <MESSAGE value="Added validation for question in card form" />
     <MESSAGE value="Eslint fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eslint fixes" />
+    <MESSAGE value="Full form validation for card edit dialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Full form validation for card edit dialog" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

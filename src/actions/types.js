@@ -14,18 +14,25 @@ export const HIDE_ALERT = 'hide_alert';
 
 // DECKS
 export const DECKS_LOADED = 'decks_loaded';
+export const DECKS_SEARCH_TERM_UPDATED = 'decks_search_term_updated';
+export const DECKS_SORT_PROP_CHANGED = 'decks_sort_prop_updated';
+export const DECKS_SORT_DIRECTION_TOGGLED = 'decks_sort_direction_triggered';
+
+// DECKS/EDIT DIALOG
 export const EDIT_DECK_DIALOG_TOGGLED = 'toggle_edit_deck_dialog';
 export const EDIT_DECK_DIALOG_NAME_CHANGED = 'edit_deck_name_changed';
 export const EDIT_DECK_DIALOG_ID_CHANGED = 'set_edit_deck_id';
 export const EDIT_DECK_DIALOG_ERROR_ADDED = 'edit_deck_dialog_error_added';
 export const EDIT_DECK_DIALOG_ERRORS_CLEARED = 'edit_deck_dialog_errors_cleared';
-export const DECKS_SEARCH_TERM_UPDATED = 'decks_search_term_updated';
-export const DECKS_SORT_PROP_CHANGED = 'decks_sort_prop_updated';
-export const DECKS_SORT_DIRECTION_TOGGLED = 'decks_sort_direction_triggered';
 
 // CARDS
 export const DECK_SELECTED = 'deck_selected';
 export const CARDS_LOADED = 'cards_loaded';
+export const CARDS_SEARCH_TERM_UPDATED = 'cards_search_term_updated';
+export const CARDS_SORT_PROP_CHANGED = 'cards_sort_prop_changed';
+export const CARDS_SORT_DIRECTION_TOGGLED = 'cards_sort_direction_toggled';
+
+// CARDS/EDIT DIALOG
 export const OPEN_EDIT_CARD_DIALOG = 'open_edit_card_dialog';
 export const EDIT_CARD_DIALOG_ID_CHANGED = 'edit_card_dialog_id_changed';
 export const EDIT_CARD_DIALOG_QUESTION_CHANGED = 'edit_card_dialog_question_changed';
@@ -34,9 +41,6 @@ export const EDIT_CARD_DIALOG_DECK_CHANGED = 'edit_card_dialog_deck_changed';
 export const EDIT_CARD_DIALOG_VALIDATION_REQUIRED_CHANGED = 'edit_card_dialog_validation_required_changed';
 export const EDIT_CARD_DIALOG_QUESTION_TYPE_CHANGED = 'edit_card_dialog_question_type_changed';
 export const CLOSE_EDIT_CARD_DIALOG = 'close_edit_card_dialog';
-export const CARDS_SEARCH_TERM_UPDATED = 'cards_search_term_updated';
-export const CARDS_SORT_PROP_CHANGED = 'cards_sort_prop_changed';
-export const CARDS_SORT_DIRECTION_TOGGLED = 'cards_sort_direction_toggled';
 export const EDIT_CARD_DIALOG_ANSWER_TYPE_CHANGED = 'edit_card_dialog_answer_type_changed';
 export const EDIT_CARD_DIALOG_ANSWER_LIST_ADDED_NEW_ENTRY = 'edit_card_dialog_answer_list_added_new_entry';
 export const EDIT_CARD_DIALOG_ANSWER_LIST_ENTRY_MODIFIED = 'edit_card_dialog_answer_list_entry_modified';
@@ -44,6 +48,7 @@ export const EDIT_CARD_DIALOG_ANSWER_LIST_REMOVED_ENTRY = 'edit_card_dialog_answ
 export const EDIT_CARD_DIALOG_ANSWER_LIST_CHANGED = 'edit_card_dialog_answer_list_changed';
 export const EDIT_CARD_DIALOG_ERRORS_CHANGED = 'edit_card_dialog_errors_changed';
 export const EDIT_CARD_DIALOG_ERRORS_CLEARED = 'edit_card_dialog_errors_cleared';
+export const EDIT_CARD_DIALOG_TAB_CHANGED = 'edit_card_dialog_tab_changed';
 
 // DASHBOARD
 export const SIMPLE_STUDY_DECK_SELECTED = 'simple_study_deck_selected';
