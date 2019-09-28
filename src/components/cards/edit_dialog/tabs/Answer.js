@@ -9,7 +9,7 @@ import {
   FormControl,
   MenuItem,
   Typography,
-  makeStyles,
+  makeStyles, FormHelperText,
 } from '@material-ui/core';
 import AnswerListTable from './AnswerListTable';
 import {
@@ -45,6 +45,7 @@ export default () => {
   const answer = useSelector((state) => state.cards_form.edit_dialog_answer);
   const answer_type = useSelector((state) => state.cards_form.edit_dialog_answer_type);
   const validation_required = useSelector((state) => state.cards_form.edit_dialog_validation_required);
+  const errors = useSelector((state) => state.cards_form.edit_dialog_errors);
   const dispatch = useDispatch();
 
   const renderAnswerTypes = () => A_TYPES.map((t) => (
@@ -52,7 +53,11 @@ export default () => {
   ));
 
   const renderAnswerTypeSwitch = () => (
-    <FormControl className={classes.answerTypeFormControl} variant={'outlined'}>
+    <FormControl
+      className={classes.answerTypeFormControl}
+      variant={'outlined'}
+      error={errors.answer_type}
+    >
       <InputLabel htmlFor={'answer-type-selector'}>Answer type</InputLabel>
       <Select
         value={answer_type}
@@ -68,6 +73,7 @@ export default () => {
       >
         {renderAnswerTypes()}
       </Select>
+      {errors.answer_type ? <FormHelperText>{errors.answer_type}</FormHelperText> : null}
     </FormControl>
   );
 
@@ -105,6 +111,8 @@ export default () => {
         edit_card_dialog_answer_changed(e.target.value)
       )}
       className={classes.answerField}
+      error={errors.answer}
+      helperText={errors.answer}
     />
   );
 

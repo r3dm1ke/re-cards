@@ -77,7 +77,9 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
   const data = load_edited_card_from_state(state);
   dispatch(clear_errors());
   const errors = await validate_card_data(data);
-  if (errors === {}) {
+  console.log('errors');
+  console.log(errors);
+  if (Object.keys(errors).length === 0) {
     dispatch(add_loader('add_card', 'Saving...'));
     dispatch(close_edit_card_dialog());
 

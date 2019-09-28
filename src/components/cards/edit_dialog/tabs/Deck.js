@@ -6,7 +6,7 @@ import {
   Select,
   MenuItem,
   Typography,
-  makeStyles,
+  makeStyles, FormHelperText,
 } from '@material-ui/core';
 import {edit_card_dialog_deck_changed} from '../../../../actions/cards/cards_form';
 
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
 export default () => {
   const deck = useSelector((state) => state.cards_form.edit_dialog_deck);
   const decks = useSelector((state) => state.cards.decks);
+  const errors = useSelector((state) => state.cards_form.edit_dialog_errors);
   const classes = useStyles();
   const dispatch = useDispatch();
 
@@ -36,7 +37,11 @@ export default () => {
   ));
 
   const renderDeckSelector = () => (
-    <FormControl className={classes.deckFormControl} variant={'outlined'}>
+    <FormControl
+      className={classes.deckFormControl}
+      variant={'outlined'}
+      error={errors.decks}
+    >
       <InputLabel htmlFor={'card-deck-selector'}>Select deck for your card</InputLabel>
       <Select
         value={deck}
@@ -52,6 +57,7 @@ export default () => {
       >
         {renderDeckSelectorItems()}
       </Select>
+      {errors.decks ? <FormHelperText>{errors.decks}</FormHelperText> : null}
     </FormControl>
   );
 

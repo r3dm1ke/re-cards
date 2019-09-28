@@ -11,7 +11,9 @@ import {
   withStyles,
 } from '@material-ui/core';
 import {connect} from 'react-redux';
+import MathRenderer from '../common/MathRenderer';
 import {study_worst_cards} from '../../actions/worst_cards';
+import {Q_MATH, Q_TEXT} from '../../const/cards';
 
 class WorstCardsWidget extends Component {
   renderCards() {
@@ -22,7 +24,7 @@ class WorstCardsWidget extends Component {
       const color = `rgb(${red}, ${green}, 0)`;
       return (
         <ListItem key={card.id} className={classes.listItem}>
-          <ListItemText primary={card.question} />
+          {this.renderCardQuestion(card)}
           <div
             className={classes.progress}
             style={{backgroundColor: color, width: `${card.ratio}%`}}
@@ -30,6 +32,16 @@ class WorstCardsWidget extends Component {
         </ListItem>
       );
     });
+  }
+
+  // eslint-disable-next-line require-jsdoc
+  renderCardQuestion(card) {
+    if (card.question_type === Q_TEXT) {
+      return <ListItemText primary={card.question} />
+    } else if (card.question_type === Q_MATH) {
+      return <MathRenderer content={card.question} />
+    }
+    return null;
   }
 
   render() {

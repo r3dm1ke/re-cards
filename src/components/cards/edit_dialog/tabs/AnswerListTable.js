@@ -9,10 +9,11 @@ import {
   IconButton,
   TextField,
   Select,
+  Box,
   FormControl,
   MenuItem,
   Switch,
-  makeStyles,
+  makeStyles, Typography,
 } from '@material-ui/core';
 import ClearIcon from '@material-ui/icons/Clear';
 import AddIcon from '@material-ui/icons/Add';
@@ -24,13 +25,22 @@ import {
 import {A_LIST_TYPES} from '../../../../const/cards';
 
 const useStyles = makeStyles((theme) => ({
+  errors_table_container: {},
+  errors_table_text: {
 
+  },
+  lower_table_container: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  root: {},
 }));
 
 export default () => {
   const dispatch = useDispatch();
   const classes = useStyles();
   const entries = useSelector((state) => state.cards_form.edit_dialog_answer_list);
+  const errors = useSelector((state) => state.cards_form.edit_dialog_errors);
 
   const renderAnswerFieldForEntry = (entry, index) => (
     <TextField
@@ -46,6 +56,8 @@ export default () => {
       label={''}
       placeholder={'Answer'}
       className={classes.answerField}
+      error={errors[`answer_list_${index}_text`]}
+      helperText={errors[`answer_list_${index}_text`]}
     />
   );
 
@@ -63,6 +75,7 @@ export default () => {
         }}
         labelWidth={100}
         className={classes.answerTypeForEntrySelect}
+        error={errors[`answer_list_${index}_type`]}
       >
         {A_LIST_TYPES.map((t) => (
           <MenuItem value={t.value} key={t.value}>{t.label}</MenuItem>
@@ -135,15 +148,26 @@ export default () => {
     </TableHead>
   );
 
+  const renderTableErrors = () => (
+    <div className={classes.table_errors_container}>
+      <Typography variant={'overline'} className={classes.table_errors_text}>
+        <Box color={'error.main'}>{errors.answer_list}</Box>
+      </Typography>
+    </div>
+  );
+
   return (
-    <div>
+    <div className={classes.root}>
       <Table size={'small'}>
         {renderTableHead()}
         <TableBody>
           {renderEntries(entries)}
         </TableBody>
       </Table>
-      {renderAddNewEntryButton()}
+      <div className={classes.lower_table_container}>
+        {renderAddNewEntryButton()}
+        {renderTableErrors()}
+      </div>
     </div>
   );
 };
