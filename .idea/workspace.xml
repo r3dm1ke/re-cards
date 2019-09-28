@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/ping.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/offline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/offline.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/listeners.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +106,7 @@
       <workItem from="1569599825339" duration="10360000" />
       <workItem from="1569635264843" duration="2282000" />
       <workItem from="1569676070534" duration="4730000" />
-      <workItem from="1569705915840" duration="2817000" />
+      <workItem from="1569705915840" duration="4345000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -188,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569708395016</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="HMR for development">
+      <created>1569708753118</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569708753118</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +236,8 @@
     <MESSAGE value="added preview for math text fields" />
     <MESSAGE value="responsive edit card dialog, rewritten as functional" />
     <MESSAGE value="added error handling and messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added error handling and messages" />
+    <MESSAGE value="HMR for development" />
+    <option name="LAST_COMMIT_MESSAGE" value="HMR for development" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

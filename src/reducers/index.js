@@ -10,6 +10,7 @@ import studyReducer from './study';
 import worstCardsReducer from './worst_cards';
 import trendReducer from './trend';
 import errorsReducer from './errors';
+import offlineReducer from './offline';
 import {combineReducers} from 'redux';
 import {connectRouter} from 'connected-react-router';
 
@@ -26,5 +27,6 @@ export default (history) => combineReducers({
   worst_cards: worstCardsReducer,
   trend: trendReducer,
   errors: errorsReducer,
+  offline: offlineReducer,
   router: connectRouter(history),
 });

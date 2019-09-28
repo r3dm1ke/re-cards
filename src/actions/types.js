@@ -74,3 +74,7 @@ export const TRENDS_LOADED = 'trends_loaded';
 // ERRORS
 export const ERROR_HAPPENED = 'error_happened';
 export const ERROR_DISMISSED = 'error_dismissed';
+
+// OFFLINE
+export const IS_OFFLINE = 'is_offline';
+export const IS_ONLINE = 'is_online';
