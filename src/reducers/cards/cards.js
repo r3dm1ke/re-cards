@@ -1,5 +1,4 @@
 import * as types from '../../actions/types';
-import {Q_TEXT, A_TEXT, A_LIST_DEFAULT_ENTRY} from '../../const/cards';
 
 const INITIAL_STATE = {
   cards: undefined,

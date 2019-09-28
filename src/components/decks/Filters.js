@@ -1,29 +1,25 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
 import {
   Divider,
-  makeStyles
+  makeStyles,
 } from '@material-ui/core';
-import DeckSearchBox from "./DeckSearchBox";
-import DeckSortSelector from "./DeckSortSelector";
-import DeckSelector from "../cards/DeckSelector";
-import CardSearchBox from "../cards/CardSearchBox";
-import SortSelect from "../cards/CardSortSelector";
+import DeckSearchBox from './DeckSearchBox';
+import DeckSortSelector from './DeckSortSelector';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   divider: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 }));
 
-export default props => {
+export default (props) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -31,5 +27,5 @@ export default props => {
       <DeckSortSelector />
       <Divider className={classes.divider}/>
     </div>
-  )
-}
+  );
+};

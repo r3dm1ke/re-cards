@@ -3,14 +3,13 @@ import {
   Card,
   CardContent,
   Typography,
-  withStyles
+  withStyles,
 } from '@material-ui/core';
 import {connect} from 'react-redux';
 import {LineChart} from 'react-chartkick';
 import 'chart.js';
 
 class TrendWidget extends Component {
-
   getData() {
     const {trends} = this.props;
     const data = {};
@@ -32,25 +31,25 @@ class TrendWidget extends Component {
           <LineChart data={this.getData()} />
         </CardContent>
       </Card>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     height: '25rem',
-    maxWidth: '20rem'
+    maxWidth: '20rem',
   },
   [theme.breakpoints.down('sm')]: {
     root: {
       width: '100%',
-      maxWidth: 'initial'
-    }
-  }
+      maxWidth: 'initial',
+    },
+  },
 });
-const mapStateToProps = state => ({
-  trends: state.trend.entries
+const mapStateToProps = (state) => ({
+  trends: state.trend.entries,
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
 });
 export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(TrendWidget));

@@ -4,17 +4,17 @@ import {
   Select,
   InputLabel,
   MenuItem,
-  withStyles
-} from "@material-ui/core";
+  withStyles,
+} from '@material-ui/core';
 import {connect} from 'react-redux';
-import {deck_selected} from "../../actions/cards/cards";
+import {deck_selected} from '../../actions/cards/cards';
 
 class DeckSelector extends Component {
   renderItems() {
     const {decks} = this.props;
-    return decks.map(deck => (
+    return decks.map((deck) => (
       <MenuItem value={deck.id} key={deck.id}>{deck.name}</MenuItem>
-    ))
+    ));
   }
 
   render() {
@@ -24,7 +24,7 @@ class DeckSelector extends Component {
         <InputLabel htmlFor="deck-selector">Deck</InputLabel>
         <Select
           value={selected_deck}
-          onChange={e => deck_selected(e.target.value)}
+          onChange={(e) => deck_selected(e.target.value)}
           inputProps={{
             name: 'deck',
             id: 'deck-selector',
@@ -36,28 +36,28 @@ class DeckSelector extends Component {
           <MenuItem value={'all'}>All</MenuItem>
         </Select>
       </FormControl>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   formControl: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
   },
   select: {
-    paddingRight: theme.spacing(2)
+    paddingRight: theme.spacing(2),
   },
   [theme.breakpoints.down('sm')]: {
     formControl: {
-      width: '100%'
-    }
-  }
+      width: '100%',
+    },
+  },
 });
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   selected_deck: state.cards.selected_deck,
-  decks: state.decks.decks
+  decks: state.decks.decks,
 });
-const mapDispatchToProps = dispatch => ({
-  deck_selected: deck => dispatch(deck_selected(deck))
+const mapDispatchToProps = (dispatch) => ({
+  deck_selected: (deck) => dispatch(deck_selected(deck)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(DeckSelector));

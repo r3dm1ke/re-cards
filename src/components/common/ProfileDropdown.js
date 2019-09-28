@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {
   makeStyles,
   Menu,
   MenuItem,
   Avatar,
-  Divider
-} from '@material-ui/core'
-import {logout} from "../../actions/auth";
+  Divider,
+} from '@material-ui/core';
+import {logout} from '../../actions/auth';
 
-const useStyles = makeStyles(theme => ({
-  root: {}
+const useStyles = makeStyles((theme) => ({
+  root: {},
 }));
 
-export default props => {
-  const user = useSelector(state => state.auth.user);
-  const logged_in = useSelector(state => state.auth.logged_in);
+export default () => {
+  const user = useSelector((state) => state.auth.user);
+  const logged_in = useSelector((state) => state.auth.logged_in);
   const dispatch = useDispatch();
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = event => {
+  const handleClick = (event) => {
     setAnchorEl(event.target);
   };
 
@@ -51,7 +51,7 @@ export default props => {
           <MenuItem onClick={handleLogout}>Logout</MenuItem>
         </Menu>
       </div>
-    )
+    );
   }
   return null;
-}
+};

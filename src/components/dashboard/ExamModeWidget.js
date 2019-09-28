@@ -5,10 +5,10 @@ import {
   CardActions,
   Typography,
   Button,
-  withStyles
-} from "@material-ui/core";
+  withStyles,
+} from '@material-ui/core';
 import {connect} from 'react-redux';
-import {engage_exam_mode} from "../../actions/study";
+import {engage_exam_mode} from '../../actions/study';
 
 class ExamModeWidget extends Component {
   render() {
@@ -26,27 +26,27 @@ class ExamModeWidget extends Component {
           <Button color={'inherit'} onClick={engage}>Engage</Button>
         </CardActions>
       </Card>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     maxHeight: '25rem',
-    maxWidth: '20rem'
+    maxWidth: '20rem',
   },
   [theme.breakpoints.down('sm')]: {
     root: {
       width: '100%',
-      maxWidth: 'initial'
-    }
-  }
+      maxWidth: 'initial',
+    },
+  },
 });
-const mapStateToProps = state => ({});
-const mapDispatchToProps = dispatch => ({
-  engage: () => dispatch(engage_exam_mode())
+const mapStateToProps = (state) => ({});
+const mapDispatchToProps = (dispatch) => ({
+  engage: () => dispatch(engage_exam_mode()),
 });
 export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(ExamModeWidget));

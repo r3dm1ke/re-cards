@@ -1,23 +1,23 @@
-import React from "react";
-import CardSearchBox from "./CardSearchBox";
-import DeckSelector from "./DeckSelector";
-import SortSelect from "./CardSortSelector";
-import {makeStyles, Divider} from "@material-ui/core";
+import React from 'react';
+import CardSearchBox from './CardSearchBox';
+import DeckSelector from './DeckSelector';
+import SortSelect from './CardSortSelector';
+import {makeStyles, Divider} from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   divider: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 }));
 
-export default props => {
+export default (props) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -26,5 +26,5 @@ export default props => {
       <SortSelect />
       <Divider className={classes.divider}/>
     </div>
-  )
-}
+  );
+};

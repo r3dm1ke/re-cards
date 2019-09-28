@@ -6,9 +6,9 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  Button
-} from "@material-ui/core";
-import {hide_alert} from "../../actions/mics";
+  Button,
+} from '@material-ui/core';
+import {hide_alert} from '../../actions/mics';
 
 class Alert extends Component {
   render() {
@@ -28,17 +28,17 @@ class Alert extends Component {
           <Button color={'inherit'} onClick={onClose}>Ok</Button>
         </DialogActions>
       </Dialog>
-    )
+    );
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   open: state.mics.alert,
   title: state.mics.alertTitle,
-  description: state.mics.alertDescription
+  description: state.mics.alertDescription,
 });
-const mapDispatchToProps = dispatch => ({
-  onClose: () => dispatch(hide_alert())
+const mapDispatchToProps = (dispatch) => ({
+  onClose: () => dispatch(hide_alert()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Alert);

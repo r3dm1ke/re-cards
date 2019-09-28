@@ -7,7 +7,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  withStyles
+  withStyles,
 } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import CollectionsIcon from '@material-ui/icons/Collections';
@@ -16,13 +16,12 @@ import AboutIcon from '@material-ui/icons/Info';
 import HistoryIcon from '@material-ui/icons/History';
 import CardsIcon from '@material-ui/icons/FileCopy';
 import {connect} from 'react-redux';
-import {toggle_drawer} from "../../actions/layout";
-import {open_decks} from "../../actions/decks/decks";
-import {open_cards} from "../../actions/cards/cards";
+import {toggle_drawer} from '../../actions/layout';
+import {open_decks} from '../../actions/decks/decks';
+import {open_cards} from '../../actions/cards/cards';
 import {open_dashboard} from '../../actions/dashboard';
 
 class Sidebar extends Component {
-
   renderDrawer() {
     const {classes} = this.props;
 
@@ -64,7 +63,7 @@ class Sidebar extends Component {
           </List>
         </div>
       </div>
-    )
+    );
   }
 
   render() {
@@ -78,10 +77,10 @@ class Sidebar extends Component {
             open={this.props.drawer_opened}
             onClose={this.props.toggle_drawer}
             classes={{
-              paper: classes.drawerPaper
+              paper: classes.drawerPaper,
             }}
             ModalProps={{
-              keepMounted: true
+              keepMounted: true,
             }}
           >
             {this.renderDrawer()}
@@ -90,7 +89,7 @@ class Sidebar extends Component {
         <Hidden xsDown>
           <Drawer
             classes={{
-              paper: classes.drawerPaper
+              paper: classes.drawerPaper,
             }}
             variant={'permanent'}
             open
@@ -99,13 +98,13 @@ class Sidebar extends Component {
           </Drawer>
         </Hidden>
       </nav>
-    )
+    );
   }
 }
 
 const drawerWidth = 240;
 
-const styles = theme => ({
+const styles = (theme) => ({
   drawer: {
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
@@ -114,16 +113,16 @@ const styles = theme => ({
   },
   drawerPaper: {
     width: drawerWidth,
-  }
+  },
 });
 
-const mapStateToProps = state => ({
-  drawer_opened: state.layout.drawer_opened
+const mapStateToProps = (state) => ({
+  drawer_opened: state.layout.drawer_opened,
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   toggle_drawer: () => dispatch(toggle_drawer()),
   open_decks: () => dispatch(open_decks()),
   open_cards: () => dispatch(open_cards()),
-  open_dashboard: () => dispatch(open_dashboard())
+  open_dashboard: () => dispatch(open_dashboard()),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Sidebar));

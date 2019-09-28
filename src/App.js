@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Route} from "react-router-dom";
-import {ConnectedRouter} from "connected-react-router";
+import {Route} from 'react-router-dom';
+import {ConnectedRouter} from 'connected-react-router';
 import LoginPage from './pages/Login';
 import DashboardPage from './pages/Dashboard';
 import DecksPage from './pages/Decks';
@@ -15,7 +15,7 @@ import './App.css';
 
 class App extends Component {
   componentDidMount() {
-    store.dispatch(init())
+    store.dispatch(init());
   }
   render() {
     return (

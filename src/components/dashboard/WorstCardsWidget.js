@@ -8,17 +8,15 @@ import {
   List,
   ListItem,
   ListItemText,
-  withStyles
+  withStyles,
 } from '@material-ui/core';
 import {connect} from 'react-redux';
-import MathJaxRenderer from "../common/MathRenderer";
-import {study_worst_cards} from "../../actions/worst_cards";
+import {study_worst_cards} from '../../actions/worst_cards';
 
 class WorstCardsWidget extends Component {
-
   renderCards() {
     const {cards, classes} = this.props;
-    return cards.map(card => {
+    return cards.map((card) => {
       const green = Math.round((card.ratio / 100) * 255);
       const red = 255 - green;
       const color = `rgb(${red}, ${green}, 0)`;
@@ -30,8 +28,8 @@ class WorstCardsWidget extends Component {
             style={{backgroundColor: color, width: `${card.ratio}%`}}
           />
         </ListItem>
-      )
-    })
+      );
+    });
   }
 
   render() {
@@ -48,43 +46,43 @@ class WorstCardsWidget extends Component {
           <Button color={'inherit'} onClick={start_study}>Study</Button>
         </CardActions>
       </Card>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     maxWidth: '20rem',
     height: '25rem',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   list: {
     height: '15rem',
-    overflowY: 'scroll'
+    overflowY: 'scroll',
   },
   progress: {
     display: 'block',
-    height: '4px'
+    height: '4px',
   },
   listItem: {
     display: 'flex',
     paddingLeft: 0,
     flexDirection: 'column',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
   },
   [theme.breakpoints.down('sm')]: {
     root: {
       width: '100%',
-      maxWidth: 'initial'
-    }
-  }
+      maxWidth: 'initial',
+    },
+  },
 });
-const mapStateToProps = state => ({
-  cards: state.worst_cards.worst_cards
+const mapStateToProps = (state) => ({
+  cards: state.worst_cards.worst_cards,
 });
-const mapDispatchToProps = dispatch => ({
-  start_study: () => dispatch(study_worst_cards())
+const mapDispatchToProps = (dispatch) => ({
+  start_study: () => dispatch(study_worst_cards()),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(WorstCardsWidget));

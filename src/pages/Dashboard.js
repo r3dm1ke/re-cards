@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom'
-import {withStyles} from "@material-ui/core";
+import {Redirect} from 'react-router-dom';
+import {withStyles} from '@material-ui/core';
 import SimpleStudyWidget from '../components/dashboard/SimpleStudyWidget';
 import WorstCardsWidget from '../components/dashboard/WorstCardsWidget';
 import TrendWidget from '../components/dashboard/TrendWidget';
@@ -21,19 +21,19 @@ class DashboardPage extends Component {
         <WorstCardsWidget className={classes.widget}/>
         <TrendWidget className={classes.widget} />
       </div>
-    )
+    );
   }
 }
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   widget: {
-    margin: '0.5rem'
-  }
+    margin: '0.5rem',
+  },
 });
-const mapStateToProps = state => ({
-  logged_in: state.auth.logged_in
+const mapStateToProps = (state) => ({
+  logged_in: state.auth.logged_in,
 });
 export default connect(mapStateToProps)(withStyles(styles)(DashboardPage));

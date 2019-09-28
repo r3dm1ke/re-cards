@@ -6,7 +6,7 @@ import {
   Typography,
   Button,
   Divider,
-  withStyles
+  withStyles,
 } from '@material-ui/core';
 
 class DeckThumbnail extends Component {
@@ -26,20 +26,20 @@ class DeckThumbnail extends Component {
           </CardActions>
         </div>
       </Card>
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   card: {
     width: '100%',
     margin: theme.spacing(1),
     [theme.breakpoints.up('sm')]: {
-      maxWidth: '15rem'
+      maxWidth: '15rem',
     },
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 });
 export default withStyles(styles)(DeckThumbnail);

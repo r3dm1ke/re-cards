@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {withStyles} from "@material-ui/core";
-import SearchBox from "../common/SearchBox";
-import {decks_search_term_updated} from "../../actions/decks/decks";
+import {withStyles} from '@material-ui/core';
+import SearchBox from '../common/SearchBox';
+import {decks_search_term_updated} from '../../actions/decks/decks';
 
 class DeckSearchBox extends Component {
   render() {
@@ -14,24 +14,24 @@ class DeckSearchBox extends Component {
         label={'Search decks...'}
         className={classes.root}
       />
-    )
+    );
   }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
   },
   [theme.breakpoints.down('sm')]: {
     root: {
-      width: '100%'
-    }
-  }
+      width: '100%',
+    },
+  },
 });
-const mapStateToProps = state => ({
-  search_term: state.decks.search_term
+const mapStateToProps = (state) => ({
+  search_term: state.decks.search_term,
 });
-const mapDispatchToProps = dispatch => ({
-  search_term_updated: search_term => dispatch(decks_search_term_updated(search_term))
+const mapDispatchToProps = (dispatch) => ({
+  search_term_updated: (search_term) => dispatch(decks_search_term_updated(search_term)),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(DeckSearchBox));

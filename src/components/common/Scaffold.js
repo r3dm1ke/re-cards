@@ -5,30 +5,27 @@ import {
   Toolbar,
   Typography,
   Container,
-  Button,
   IconButton,
-  Avatar
-} from "@material-ui/core";
+} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import Sidebar from './Sidebar';
-import ProfileDropdown from "./ProfileDropdown";
+import ProfileDropdown from './ProfileDropdown';
 import {connect} from 'react-redux';
 import {logout} from '../../actions/auth';
-import {toggle_drawer} from "../../actions/layout";
+import {toggle_drawer} from '../../actions/layout';
 import Loader from './Loader';
 
 class Scaffold extends Component {
-
   renderTitle() {
     if (this.props.logged_in) {
-      return `Welcome, ${this.props.user.displayName}`
+      return `Welcome, ${this.props.user.displayName}`;
     }
-    return 'Flashcards'
+    return 'Flashcards';
   }
 
   renderSidebar() {
     if (this.props.logged_in) {
-      return <Sidebar />
+      return <Sidebar />;
     }
     return null;
   }
@@ -45,7 +42,7 @@ class Scaffold extends Component {
       >
         <MenuIcon />
       </IconButton>
-    )
+    );
   }
 
   renderContent() {
@@ -71,20 +68,20 @@ class Scaffold extends Component {
           {this.renderContent()}
         </Container>
       </div>
-    )
+    );
   }
 }
 
 const drawerWidth = 240;
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
     height: '100vh',
-    display: 'flex'
+    display: 'flex',
   },
   title: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -95,7 +92,7 @@ const styles = theme => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    marginTop: theme.spacing(8)
+    marginTop: theme.spacing(8),
   },
   appBar: {
     marginLeft: drawerWidth,
@@ -105,13 +102,13 @@ const styles = theme => ({
   },
 });
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   logged_in: state.auth.logged_in,
   user: state.auth.user,
-  loading: state.mics.loading
+  loading: state.mics.loading,
 });
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),
-  toggle_drawer: () => dispatch(toggle_drawer())
+  toggle_drawer: () => dispatch(toggle_drawer()),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(Scaffold));

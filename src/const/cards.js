@@ -3,7 +3,7 @@ export const Q_TEXT = 'q_text';
 export const Q_MATH = 'q_math';
 export const Q_TYPES = [
   {value: Q_TEXT, label: 'Text'},
-  {value: Q_MATH, label: 'Math equation (MathJax)'}
+  {value: Q_MATH, label: 'Math equation (MathJax)'},
 ];
 
 // ANSWER TYPES
@@ -13,7 +13,7 @@ export const A_MULTIPLE_CHOICE = 'a_multiple_choice';
 export const A_TYPES = [
   {value: A_TEXT, label: 'Text'},
   {value: A_SINGLE_CHOICE, label: 'Multiple choice (pick one)'},
-  {value: A_MULTIPLE_CHOICE, label: 'Multiple choice (all that applicable)'}
+  {value: A_MULTIPLE_CHOICE, label: 'Multiple choice (all that applicable)'},
 ];
 
 export const A_LIST_ENTRY_TEXT = 'a_list_entry_text';
@@ -26,11 +26,11 @@ export const A_LIST_TYPES = [
 export const A_LIST_DEFAULT_ENTRY = {
   type: A_LIST_ENTRY_TEXT,
   value: '',
-  is_correct: false
+  is_correct: false,
 };
 
 // SORT PROPS
 export const SORT_PROPS = [
   {value: 'question', label: 'Question'},
-  {value: 'score', label: 'Score'}
+  {value: 'score', label: 'Score'},
 ];
