@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, {useState} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {
   Dialog,
   DialogTitle,
@@ -10,7 +10,8 @@ import {
   MobileStepper,
   AppBar,
   Tab,
-  withStyles,
+  makeStyles,
+  useMediaQuery, useTheme,
 } from '@material-ui/core';
 import {
   close_edit_card_dialog, edit_card_dialog_next_tab, edit_card_dialog_previous_tab, edit_card_dialog_tab_changed,
@@ -26,26 +27,35 @@ const TABS = [
   {label: 'Deck', component: <DeckTab />},
 ];
 
-// TODO rewrite as functional
-// eslint-disable-next-line require-jsdoc
-class EditCardDialog extends Component {
+const useStyles = makeStyles((theme) => ({
+  stepper: {
+    flex: 1,
+  },
+  tab_header: {
+    justifyContent: 'space-around',
+  },
+}));
 
-  // eslint-disable-next-line require-jsdoc
-  onTabChange(event, index) {
-    this.props.set_tab(index);
-  }
+export default () => {
+  const edit_dialog_opened = useSelector((state) => state.cards_form.edit_dialog_opened);
+  const tab_index = useSelector((state) => state.cards_form.edit_dialog_tab);
+  const dispatch = useDispatch();
+  const classes = useStyles();
+  const close_dialog = () => dispatch(close_edit_card_dialog());
+  const save_card = () => dispatch(save_card_from_dialog());
+  const next_tab = () => dispatch(edit_card_dialog_next_tab());
+  const prev_tab = () => dispatch(edit_card_dialog_previous_tab());
+  const set_tab = (index) => dispatch(edit_card_dialog_tab_changed(index));
+  const theme = useTheme();
+  const full_screen = useMediaQuery(theme.breakpoints.down('md'));
 
-  // eslint-disable-next-line require-jsdoc
-  renderTabs() {
-    return TABS.map((tab, index) => (
+  const render_tabs = () =>
+    TABS.map((tab, index) => (
       <Tab label={tab.label} key={index}/>
     ));
-  }
 
-  // eslint-disable-next-line require-jsdoc
-  renderTabPanels() {
-    const {tab_index} = this.props;
-    return TABS.map((tab, _index) => (
+  const render_tab_panels = () =>
+    TABS.map((tab, _index) => (
       <div
         hidden={tab_index !== _index}
         key={_index}
@@ -53,90 +63,49 @@ class EditCardDialog extends Component {
         {tab.component}
       </div>
     ));
-  }
 
+  const render_stepper = () =>
+    <MobileStepper
+      variant={'progress'}
+      steps={TABS.length}
+      position={'static'}
+      activeStep={tab_index}
+      className={classes.stepper}
+      nextButton={
+        tab_index + 1 === TABS.length ?
+          (
+            <Button onClick={save_card}>Save</Button>
+          ) : (
+            <Button onClick={next_tab}>Next</Button>
+          )
+      }
+      backButton={
+        tab_index === 0 ? <Button disabled>Back</Button> : <Button onClick={prev_tab}>Back</Button>
+      }
+    />;
 
-  // eslint-disable-next-line require-jsdoc
-  renderStepper() {
-    const {save_card, classes, tab_index} = this.props;
-    const length = TABS.length;
-    return (
-      <MobileStepper
-        variant={'progress'}
-        steps={length}
-        position={'static'}
-        activeStep={tab_index}
-        className={classes.stepper}
-        nextButton={
-          tab_index + 1 === length ?
-            (
-              <Button onClick={save_card}>Save</Button>
-            ) : (
-              <Button onClick={this.props.next_tab}>Next</Button>
-            )
-        }
-        backButton={
-          tab_index === 0 ? <Button disabled>Back</Button> : <Button onClick={this.props.prev_tab}>Back</Button>
-        }
-      />
-    );
-  }
-
-  // eslint-disable-next-line require-jsdoc
-  onClose() {
-    this.setState({index: 0});
-    this.props.close_dialog();
-  }
-
-  // eslint-disable-next-line require-jsdoc
-  render() {
-    const {
-      edit_dialog_opened,
-      tab_index,
-      classes,
-    } = this.props;
-
-    return (
-      <Dialog
-        open={edit_dialog_opened}
-        onClose={this.onClose.bind(this)}
-      >
-        <DialogTitle>Edit card</DialogTitle>
-        <DialogContent>
-          <div className={classes.tabs}>
-            <AppBar position={'static'}>
-              <Tabs variant={'fullWidth'} value={tab_index} onChange={this.onTabChange.bind(this)}>
-                {this.renderTabs()}
-              </Tabs>
-            </AppBar>
-            {this.renderTabPanels()}
-          </div>
-        </DialogContent>
-        <DialogActions>
-          {this.renderStepper()}
-        </DialogActions>
-      </Dialog>
-    );
-  }
-}
-
-const styles = () => ({
-  stepper: {
-    flex: 1,
-  },
-  tab_header: {
-    justifyContent: 'space-around',
-  },
-});
-const mapStateToProps = (state) => ({
-  edit_dialog_opened: state.cards_form.edit_dialog_opened,
-  tab_index: state.cards_form.edit_dialog_tab,
-});
-const mapDispatchToProps = (dispatch) => ({
-  close_dialog: () => dispatch(close_edit_card_dialog()),
-  save_card: () => dispatch(save_card_from_dialog()),
-  next_tab: () => dispatch(edit_card_dialog_next_tab()),
-  prev_tab: () => dispatch(edit_card_dialog_previous_tab()),
-  set_tab: (index) => dispatch(edit_card_dialog_tab_changed(index)),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(EditCardDialog));
+  return (
+    <Dialog
+      open={edit_dialog_opened}
+      onClose={close_dialog}
+      fullWidth={true}
+      maxWidth={'md'}
+      fullScreen={full_screen}
+    >
+      <DialogTitle>Edit card</DialogTitle>
+      <DialogContent>
+        <div className={classes.tabs}>
+          <AppBar position={'static'}>
+            <Tabs variant={'fullWidth'} value={tab_index} onChange={(_, index) => set_tab(index)}>
+              {render_tabs()}
+            </Tabs>
+          </AppBar>
+          {render_tab_panels()}
+        </div>
+      </DialogContent>
+      <DialogActions>
+        {render_stepper()}
+      </DialogActions>
+    </Dialog>
+  );
+};
