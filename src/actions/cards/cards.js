@@ -4,6 +4,7 @@ import {push} from 'connected-react-router';
 import {add_loader, remove_loader} from '../mics';
 import {A_TEXT, Q_TEXT} from '../../const/cards';
 import {extract_cards_from_docs_async} from '../../utils/database';
+import {error_happened} from '../errors';
 
 export const subscribe_to_cards = () => async (dispatch, getState) => {
   const {uid} = getState().auth.user;
@@ -38,7 +39,11 @@ export const deck_selected = (deckId) => async (dispatch, getState) => {
 export const delete_card = (card) => async (dispatch, getState) => {
   dispatch(add_loader('del_card', 'Deleting...'));
   const ref = firestore.collection('cards').doc(card.id);
-  await ref.delete();
+  try {
+    await ref.delete();
+  } catch {
+    dispatch(error_happened('Error deleting card. Is it really there?'));
+  }
   dispatch(remove_loader('del_card'));
 };
 

@@ -4,6 +4,7 @@ import {push} from 'connected-react-router';
 import {open_dashboard} from './dashboard';
 import {add_subscribers} from '../utils/listeners';
 import {add_loader, remove_loader} from './mics';
+import {error_happened} from './errors';
 
 const app_initialized = () => ({
   type: types.APP_INITIALIZED,
@@ -25,18 +26,31 @@ export const init = () => async (dispatch) => {
       dispatch(remove_loader('loading'));
     }
   });
-  await set_persistence_async();
+  try {
+    await set_persistence_async();
+  } catch {
+    dispatch(error_happened('Error initializing local storage. Are you a developer?'));
+  }
 };
 
 const set_persistence_async = async () => {
-  await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-  await firestore.enablePersistence();
+  try {
+    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    await firestore.enablePersistence();
+  } catch (e) {
+    // eslint-disable-next-line fp/no-throw
+    throw e;
+  }
 };
 
 
 export const login = () => async (dispatch) => {
   dispatch(add_loader('login', 'Logging in...'));
-  await auth.signInWithPopup(provider);
+  try {
+    await auth.signInWithPopup(provider);
+  } catch {
+    dispatch(error_happened('Error while logging in. Are you sure you are you?'));
+  }
   dispatch(remove_loader('login'));
 };
 

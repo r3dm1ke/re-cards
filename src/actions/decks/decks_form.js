@@ -2,6 +2,7 @@ import * as types from '../types';
 import {firestore} from '../../firebase';
 import {add_loader, remove_loader} from '../mics';
 import {validate_deck_name} from '../../validators/decks';
+import {error_happened} from '../errors';
 
 export const toggle_edit_deck_dialog = () => ({
   type: types.EDIT_DECK_DIALOG_TOGGLED,
@@ -42,11 +43,15 @@ export const on_edit_deck_dialog_submit = () => async (dispatch, getState) => {
     dispatch(add_loader('edit', 'Saving...'));
     dispatch(toggle_edit_deck_dialog());
     const {edit_deck_dialog_id, edit_deck_dialog_name} = getState().decks_form;
-    if (edit_deck_dialog_id === '') {
-      const {uid} = getState().auth.user;
-      await create_new_deck(edit_deck_dialog_name, uid);
-    } else {
-      await save_existing_deck(edit_deck_dialog_id, edit_deck_dialog_name);
+    try {
+      if (edit_deck_dialog_id === '') {
+        const {uid} = getState().auth.user;
+        await create_new_deck(edit_deck_dialog_name, uid);
+      } else {
+        await save_existing_deck(edit_deck_dialog_id, edit_deck_dialog_name);
+      }
+    } catch {
+      dispatch(error_happened('Error saving deck. That\'s it.'));
     }
     dispatch(remove_loader('edit'));
   }
@@ -54,14 +59,24 @@ export const on_edit_deck_dialog_submit = () => async (dispatch, getState) => {
 
 const create_new_deck = async (name, uid) => {
   const ref = firestore.collection('decks');
-  await ref.add({subject: name, uid});
+  try {
+    await ref.add({subject: name, uid});
+  } catch (e) {
+    // eslint-disable-next-line fp/no-throw
+    throw e;
+  }
 };
 
 const save_existing_deck = async (id, name) => {
   const ref = firestore.collection('decks').doc(id);
-  await ref.set({
-    subject: name,
-  }, {merge: true});
+  try {
+    await ref.set({
+      subject: name,
+    }, {merge: true});
+  } catch (e) {
+    // eslint-disable-next-line fp/no-throw
+    throw e;
+  }
 };
 
 const delete_deck = (id) => async (dispatch, getState) => {
@@ -86,7 +101,11 @@ const delete_deck = (id) => async (dispatch, getState) => {
     cards.docs.forEach((card) => {
       batch.delete(firestore.collection('cards').doc(card.id));
     });
-    await batch.commit();
+    try {
+      await batch.commit();
+    } catch {
+      dispatch(error_happened('Error deleting stuff. Maybe it\'s a sign.'));
+    }
   }
 
   dispatch(remove_loader('delete'));

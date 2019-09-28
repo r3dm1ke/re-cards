@@ -3,6 +3,7 @@ import {A_TEXT, Q_TEXT} from '../../const/cards';
 import {add_loader, remove_loader} from '../mics';
 import {firestore} from '../../firebase';
 import {validate_card} from '../../validators/cards';
+import {error_happened} from '../errors';
 
 export const open_edit_card_dialog = () => ({
   type: types.OPEN_EDIT_CARD_DIALOG,
@@ -85,16 +86,19 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
     dispatch(close_edit_card_dialog());
 
     const {edit_dialog_id} = state.cards_form;
-
-    if (
-      edit_dialog_id === '' ||
-      edit_dialog_id === null ||
-      edit_dialog_id === undefined) {
-      const ref = firestore.collection('cards');
-      await ref.add(data);
-    } else {
-      const ref = firestore.collection('cards').doc(edit_dialog_id);
-      await ref.set(data, {merge: true});
+    try {
+      if (
+        edit_dialog_id === '' ||
+        edit_dialog_id === null ||
+        edit_dialog_id === undefined) {
+        const ref = firestore.collection('cards');
+        await ref.add(data);
+      } else {
+        const ref = firestore.collection('cards').doc(edit_dialog_id);
+        await ref.set(data, {merge: true});
+      }
+    } catch {
+      dispatch(error_happened('Some troubles saving the card. Probably you don\'t really need it.'));
     }
 
     dispatch(remove_loader('add_card'));

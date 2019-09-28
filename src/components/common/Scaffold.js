@@ -13,8 +13,10 @@ import ProfileDropdown from './ProfileDropdown';
 import {connect} from 'react-redux';
 import {logout} from '../../actions/auth';
 import {toggle_drawer} from '../../actions/layout';
+import ErrorsRenderer from './ErrorsRenderer';
 import Loader from './Loader';
 
+// TODO rewrite as functional
 class Scaffold extends Component {
   renderTitle() {
     if (this.props.logged_in) {
@@ -54,6 +56,7 @@ class Scaffold extends Component {
     const {classes} = this.props;
     return (
       <div className={classes.root}>
+        <ErrorsRenderer/>
         <AppBar position={'fixed'} className={this.props.logged_in ? classes.appBar : null}>
           <Container>
             <Toolbar disableGutters>

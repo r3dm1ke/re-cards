@@ -4,6 +4,7 @@ import {functions} from '../firebase';
 import {add_loader, remove_loader, show_alert} from './mics';
 import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
 import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../const/cards';
+import {error_happened} from './errors';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,
@@ -15,27 +16,38 @@ export const start_study = (type=undefined) => async (dispatch, getState) => {
   const state = getState();
   const study_mode = type !== undefined ? type : state.study.study_mode;
   dispatch(set_study_mode(study_mode));
-  console.log(`Bootstrapping ${study_mode}`);
-  let cards_for_session;
-  if (study_mode === SIMPLE_STUDY) {
+  let cards_for_session = [];
+  try {
     // eslint-disable-next-line fp/no-mutation
-    cards_for_session = await load_cards_for_simple_study(state);
-  } else if (study_mode === SMART_STUDY) {
-    // eslint-disable-next-line fp/no-mutation
-    cards_for_session = await load_cards_for_smart_study(state);
-    if (cards_for_session.length === 0) {
-      dispatch(show_alert(
-        'You are done for today',
-        'You have no cards left to study today. Come back tomorrow or try any other study modes.'
-      ));
-      dispatch(remove_loader('ss'));
-      return;
-    }
+    cards_for_session = await load_cards_for_study(study_mode, state);
+  } catch {
+    dispatch(error_happened('Error loading cards. Are you a student?'));
+  }
+  if (cards_for_session.length === 0) {
+    dispatch(show_alert(
+      'You are done for today',
+      'You have no cards left to study today. Come back tomorrow or try any other study modes.'
+    ));
+    dispatch(remove_loader('ss'));
+    return;
   }
   dispatch(cards_for_study_loaded(cards_for_session));
   dispatch({type: types.START_STUDY});
   dispatch(push('/study'));
   dispatch(remove_loader('ss'));
+};
+
+const load_cards_for_study = async (study_mode, state) => {
+  try {
+    if (study_mode === SIMPLE_STUDY) {
+      return await load_cards_for_simple_study(state);
+    } else if (study_mode === SMART_STUDY) {
+      return await load_cards_for_smart_study(state);
+    }
+  } catch (e) {
+    // eslint-disable-next-line fp/no-throw
+    throw e;
+  }
 };
 
 const cards_for_study_loaded = (cards) => ({
@@ -110,7 +122,8 @@ export const register_answer = () => async (dispatch, getState) => {
     answer: study_is_correct,
     smart: study_mode === SMART_STUDY,
   })
-    .then(() => {});
+    .then(() => {})
+    .catch(() => dispatch(error_happened('Error saving your answer to server. He is probably depressed.')))
 
   if (study_is_correct) {
     dispatch({type: types.STUDY_INCREMENT_SCORE});
@@ -133,7 +146,8 @@ export const study_teardown = () => async (dispatch, getState) => {
     deck_ids: study_mode === SIMPLE_STUDY ? simple_study_decks : [],
     is_smart: study_mode === SMART_STUDY,
   })
-    .then(() => {});
+    .then(() => {})
+    .catch(() => dispatch(error_happened('Error saving session on server. beep beep bop')));
 
   dispatch(push('/dashboard'));
 };
@@ -141,7 +155,11 @@ export const study_teardown = () => async (dispatch, getState) => {
 export const engage_exam_mode = () => async (dispatch) => {
   dispatch(add_loader('exam', 'Clearing your past sins...'));
   const engage = functions.httpsCallable('engage_exam_mode');
-  await engage();
+  try {
+    await engage();
+  } catch {
+    dispatch(error_happened('Error while engaging exam mode. You probably don\'t have any exams'));
+  }
   dispatch(remove_loader('exam'));
 };
 

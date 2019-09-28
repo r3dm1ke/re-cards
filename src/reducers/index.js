@@ -9,6 +9,7 @@ import dashboardReducer from './dashboard';
 import studyReducer from './study';
 import worstCardsReducer from './worst_cards';
 import trendReducer from './trend';
+import errorsReducer from './errors';
 import {combineReducers} from 'redux';
 import {connectRouter} from 'connected-react-router';
 
@@ -24,5 +25,6 @@ export default (history) => combineReducers({
   study: studyReducer,
   worst_cards: worstCardsReducer,
   trend: trendReducer,
+  errors: errorsReducer,
   router: connectRouter(history),
 });
