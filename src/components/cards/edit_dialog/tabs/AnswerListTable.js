@@ -7,7 +7,6 @@ import {
   TableBody,
   TableRow,
   IconButton,
-  TextField,
   Select,
   Box,
   FormControl,
@@ -15,6 +14,7 @@ import {
   Switch,
   makeStyles, Typography,
 } from '@material-ui/core';
+import TextFieldMathPreview from '../../../common/TextFieldMathPreview';
 import ClearIcon from '@material-ui/icons/Clear';
 import AddIcon from '@material-ui/icons/Add';
 import {
@@ -22,7 +22,7 @@ import {
   edit_card_dialog_answer_list_entry_modified,
   edit_card_dialog_answer_list_removed_entry,
 } from '../../../../actions/cards/cards_form';
-import {A_LIST_TYPES} from '../../../../const/cards';
+import {A_LIST_ENTRY_MATH, A_LIST_TYPES} from '../../../../const/cards';
 
 const useStyles = makeStyles((theme) => ({
   errors_table_container: {},
@@ -43,7 +43,7 @@ export default () => {
   const errors = useSelector((state) => state.cards_form.edit_dialog_errors);
 
   const renderAnswerFieldForEntry = (entry, index) => (
-    <TextField
+    <TextFieldMathPreview
       value={entry.value}
       onChange={(e) => {
         const newEntry = {...entry, value: e.target.value};
@@ -51,6 +51,7 @@ export default () => {
           edit_card_dialog_answer_list_entry_modified(index, newEntry)
         );
       }}
+      math={entry.type === A_LIST_ENTRY_MATH}
       variant={'outlined'}
       margin={'dense'}
       label={''}

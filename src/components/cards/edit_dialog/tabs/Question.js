@@ -10,7 +10,8 @@ import {
   FormHelperText,
   makeStyles,
 } from '@material-ui/core';
-import {Q_TYPES} from '../../../../const/cards';
+import TextFieldMathPreview from '../../../common/TextFieldMathPreview';
+import {Q_MATH, Q_TYPES} from '../../../../const/cards';
 import {
   edit_card_dialog_question_changed,
   edit_card_dialog_question_type_changed,
@@ -74,12 +75,14 @@ export default () => {
   );
 
   const renderQuestionField = () => (
-    <TextField
+    <TextFieldMathPreview
       variant={'outlined'}
       label={'Question'}
       value={question}
       error={errors.question}
       helperText={errors.question}
+      math={question_type === Q_MATH}
+      math_content={question}
       onChange={(e) => dispatch(
         edit_card_dialog_question_changed(e.target.value)
       )}

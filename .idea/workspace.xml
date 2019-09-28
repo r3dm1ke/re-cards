@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/TextFieldMathPreview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/validators/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +101,8 @@
       <workItem from="1569530480427" duration="196000" />
       <workItem from="1569591196402" duration="59000" />
       <workItem from="1569599825339" duration="10360000" />
-      <workItem from="1569635264843" duration="1448000" />
+      <workItem from="1569635264843" duration="2282000" />
+      <workItem from="1569676070534" duration="3937000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -162,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569634837712</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="moved tab management to redux for card edit dialog, added skipping to tab when error happens">
+      <created>1569636746748</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569636746748</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +190,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Added filters to decks, refactored edit/new dialog for cards" />
     <MESSAGE value="answer types and card edit form features" />
     <MESSAGE value="Validation for edit deck form and minor fixes" />
@@ -193,7 +200,8 @@
     <MESSAGE value="Added validation for question in card form" />
     <MESSAGE value="Eslint fixes" />
     <MESSAGE value="Full form validation for card edit dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Full form validation for card edit dialog" />
+    <MESSAGE value="moved tab management to redux for card edit dialog, added skipping to tab when error happens" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved tab management to redux for card edit dialog, added skipping to tab when error happens" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
