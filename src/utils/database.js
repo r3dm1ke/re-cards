@@ -3,6 +3,9 @@ export const extract_card_from_ref_async = async (card) => {
   card_data.id = card.id;
   const deck_data = await card_data.deck.get();
   card_data.deckName = deck_data.data().subject;
+  if (card_data.repetition_due) {
+    card_data.repetition_due = new Date(card_data.repetition_due.seconds * 1000);
+  }
   return card_data;
 };
 

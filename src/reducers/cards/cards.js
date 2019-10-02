@@ -9,15 +9,28 @@ const INITIAL_STATE = {
   sort_prop: 'question',
   refresh_helper: false,
   sort_direction: true, // TRUE for desc, FALSE for asc
+  mastered_cards: 0,
+  cards_due_for_smart_study: 0,
+  total_cards: 0,
+  smart_study_advisable: false,
 };
+
+const count_mastered_cards = (cards) => cards.filter((card) => cards.mastered).length;
+const count_cards_due_for_smart_study = (cards) =>
+  cards.filter((card) => !card.repetition_due || card.repetition_due <= (new Date())).length;
 
 export default (state=INITIAL_STATE, action) => {
   switch (action.type) {
   case types.CARDS_LOADED:
+    const cards_due_for_smart_study = count_cards_due_for_smart_study(action.payload);
     return {
       ...state,
       cards: action.payload,
       filtered_cards: filter_cards({...state, cards: action.payload}),
+      mastered_cards: count_mastered_cards(action.payload),
+      total_cards: action.payload.length,
+      cards_due_for_smart_study,
+      smart_study_advisable: cards_due_for_smart_study > 5,
     };
   case types.DECK_SELECTED:
     return {

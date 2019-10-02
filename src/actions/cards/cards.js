@@ -2,7 +2,6 @@ import * as types from '../types';
 import {firestore} from '../../firebase';
 import {push} from 'connected-react-router';
 import {add_loader, remove_loader} from '../mics';
-import {A_TEXT, Q_TEXT} from '../../const/cards';
 import {extract_cards_from_docs_async} from '../../utils/database';
 import {error_happened} from '../errors';
 

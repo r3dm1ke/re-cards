@@ -2,6 +2,7 @@ import React from 'react';
 import {
   makeStyles, Typography,
 } from '@material-ui/core';
+import Showcase from './showcase';
 import {useSelector} from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
@@ -12,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
     height: '20rem',
     width: '100%',
     padding: theme.spacing(3),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   '@keyframes JumbotronBackground': {
     '0%': {backgroundPosition: '99% 0%'},
@@ -35,6 +40,7 @@ export default () => {
   return (
     <div className={classes.root}>
       {renderGreeting()}
+      <Showcase/>
     </div>
   );
 };

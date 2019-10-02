@@ -27,7 +27,7 @@ export default () => {
   const online_and_offline_widgets = [
     <SimpleStudyWidget key={'simple_study'} className={classes.widget}/>,
     <WorstCardsWidget key={'worst_cards'} className={classes.widget}/>,
-    <TrendWidget key={'trend'} className={classes.widget} />
+    <TrendWidget key={'trend'} className={classes.widget} />,
   ];
 
   const online_only_widgets = [
@@ -35,10 +35,11 @@ export default () => {
     <ExamModeWidget key={'exam_mode'} className={classes.widget} />,
   ];
 
+  if (!logged_in) return check_logged_in(logged_in);
+
   return (
     <div className={classes.root}>
       <Jumbotron/>
-      {check_logged_in(logged_in)}
       {online_and_offline_widgets}
       {offline ? null : online_only_widgets}
     </div>

@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/firebase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Scaffold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
