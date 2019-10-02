@@ -71,7 +71,7 @@ class Scaffold extends Component {
         <Container className={classes.content}>
           {this.renderContent()}
         </Container>
-        {this.props.offline ? <OfflineBar/> : null}
+        {this.props.offline && this.props.logged_in ? <OfflineBar/> : null}
       </div>
     );
   }

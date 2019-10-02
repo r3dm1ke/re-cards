@@ -1,30 +1,15 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import {connect, useSelector} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import {withStyles} from '@material-ui/core';
+import {makeStyles, withStyles} from '@material-ui/core';
 import SimpleStudyWidget from '../components/dashboard/SimpleStudyWidget';
 import WorstCardsWidget from '../components/dashboard/WorstCardsWidget';
 import TrendWidget from '../components/dashboard/TrendWidget';
 import SmartStudyWidget from '../components/dashboard/SmartStudyWidget';
 import ExamModeWidget from '../components/dashboard/ExamModeWidget';
+import {check_logged_in} from '../utils/auth';
 
-class DashboardPage extends Component {
-  render() {
-    const {classes, logged_in, offline} = this.props;
-    if (!logged_in) return <Redirect to={'/'} />;
-
-    return (
-      <div className={classes.root}>
-        {offline ? null : <SmartStudyWidget className={classes.widget} />}
-        <SimpleStudyWidget className={classes.widget}/>
-        {offline ? null : <ExamModeWidget className={classes.widget} />}
-        <WorstCardsWidget className={classes.widget}/>
-        <TrendWidget className={classes.widget} />
-      </div>
-    );
-  }
-}
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -32,9 +17,29 @@ const styles = (theme) => ({
   widget: {
     margin: '0.5rem',
   },
-});
-const mapStateToProps = (state) => ({
-  logged_in: state.auth.logged_in,
-  offline: state.offline.offline
-});
-export default connect(mapStateToProps)(withStyles(styles)(DashboardPage));
+}));
+
+export default () => {
+  const classes = useStyles();
+  const logged_in = useSelector((state) => state.auth.logged_in);
+  const offline = useSelector((state) => state.offline.offline);
+
+  const online_and_offline_widgets = [
+    <SimpleStudyWidget key={'simple_study'} className={classes.widget}/>,
+    <WorstCardsWidget key={'worst_cards'} className={classes.widget}/>,
+    <TrendWidget key={'trend'} className={classes.widget} />
+  ];
+
+  const online_only_widgets = [
+    <SmartStudyWidget key={'smart_study'} className={classes.widget} />,
+    <ExamModeWidget key={'exam_mode'} className={classes.widget} />,
+  ];
+
+  return (
+    <div className={classes.root}>
+      {check_logged_in(logged_in)}
+      {online_and_offline_widgets}
+      {offline ? null : online_only_widgets}
+    </div>
+  );
+};
