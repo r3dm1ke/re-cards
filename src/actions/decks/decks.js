@@ -25,20 +25,7 @@ export const subscribe_to_decks = () => async (dispatch, getState) => {
 };
 
 export const open_decks = () => async (dispatch) => {
-  dispatch({
-    type: types.ADD_LOADER,
-    payload: {
-      handle: 'decks',
-      description: 'Loading your decks...',
-    },
-  });
-
   dispatch(push('/decks'));
-
-  dispatch({
-    type: types.REMOVE_LOADER,
-    payload: 'decks',
-  });
 };
 
 
