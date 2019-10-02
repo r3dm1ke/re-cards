@@ -10,14 +10,14 @@ import ExamModeWidget from '../components/dashboard/ExamModeWidget';
 
 class DashboardPage extends Component {
   render() {
-    const {classes, logged_in} = this.props;
+    const {classes, logged_in, offline} = this.props;
     if (!logged_in) return <Redirect to={'/'} />;
 
     return (
       <div className={classes.root}>
-        <SmartStudyWidget className={classes.widget} />
+        {offline ? null : <SmartStudyWidget className={classes.widget} />}
         <SimpleStudyWidget className={classes.widget}/>
-        <ExamModeWidget className={classes.widget} />
+        {offline ? null : <ExamModeWidget className={classes.widget} />}
         <WorstCardsWidget className={classes.widget}/>
         <TrendWidget className={classes.widget} />
       </div>
@@ -35,5 +35,6 @@ const styles = (theme) => ({
 });
 const mapStateToProps = (state) => ({
   logged_in: state.auth.logged_in,
+  offline: state.offline.offline
 });
 export default connect(mapStateToProps)(withStyles(styles)(DashboardPage));

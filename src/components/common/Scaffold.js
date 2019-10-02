@@ -10,6 +10,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import Sidebar from './Sidebar';
 import ProfileDropdown from './ProfileDropdown';
+import OfflineBar from './OfflineBar';
 import {connect} from 'react-redux';
 import {logout} from '../../actions/auth';
 import {toggle_drawer} from '../../actions/layout';
@@ -70,6 +71,7 @@ class Scaffold extends Component {
         <Container className={classes.content}>
           {this.renderContent()}
         </Container>
+        {this.props.offline ? <OfflineBar/> : null}
       </div>
     );
   }
@@ -109,6 +111,7 @@ const mapStateToProps = (state) => ({
   logged_in: state.auth.logged_in,
   user: state.auth.user,
   loading: state.mics.loading,
+  offline: state.offline.offline,
 });
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),
