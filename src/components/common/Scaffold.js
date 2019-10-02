@@ -20,9 +20,6 @@ import Loader from './Loader';
 // TODO rewrite as functional
 class Scaffold extends Component {
   renderTitle() {
-    if (this.props.logged_in) {
-      return `Welcome, ${this.props.user.displayName}`;
-    }
     return 'Flashcards';
   }
 
@@ -68,9 +65,9 @@ class Scaffold extends Component {
           </Container>
         </AppBar>
         {this.renderSidebar()}
-        <Container className={classes.content}>
+        <div className={classes.content}>
           {this.renderContent()}
-        </Container>
+        </div>
         {this.props.offline && this.props.logged_in ? <OfflineBar/> : null}
       </div>
     );
@@ -96,7 +93,7 @@ const styles = (theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    //padding: theme.spacing(3),
     marginTop: theme.spacing(8),
   },
   appBar: {

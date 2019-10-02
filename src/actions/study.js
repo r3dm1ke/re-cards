@@ -118,12 +118,15 @@ export const register_answer = () => async (dispatch, getState) => {
   } = state.study;
   const register_answer = functions.httpsCallable('register_answer');
   register_answer({
-    card: study_cards[study_index],
+    card: study_cards[study_index].id,
     answer: study_is_correct,
     smart: study_mode === SMART_STUDY,
   })
     .then(() => {})
-    .catch(() => dispatch(error_happened('Error saving your answer to server. He is probably depressed.')))
+    .catch((e) => {
+      dispatch(error_happened('Error saving your answer to server. He is probably depressed.'));
+      console.log(e);
+    });
 
   if (study_is_correct) {
     dispatch({type: types.STUDY_INCREMENT_SCORE});

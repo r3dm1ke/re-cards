@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81a32f43-082c-495c-8732-1b8e3e32fef6" name="Default Changelist" comment="">
+    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/firebase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Scaffold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +27,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QvJGsputTs9PaF1G2PLxzTVE0j" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -45,7 +52,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\personal_projects\flashcards\flashcards\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\Michael Krasnov\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.2956.38\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -280,6 +287,7 @@
     <state x="332" y="79" key="#ESLint/1920.1080/1680.1050" />
     <state x="408" y="61" key="MultipleFileMergeDialog" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080" />
+    <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080/1680.1050" />
     <state x="254" y="40" key="SettingsEditor" />
     <state x="254" y="40" key="SettingsEditor/1920.1080/1680.1050" />
     <state x="332" y="168" key="Vcs.Push.Dialog.v2" />
@@ -287,6 +295,7 @@
     <state x="332" y="168" key="Vcs.Push.Dialog.v2/1920.1080/1680.1050" />
     <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" />
     <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/1920.1080" />
+    <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/1920.1080/1680.1050" />
     <state x="412" y="229" key="run.anything.popup" />
     <state x="412" y="229" key="run.anything.popup/1920.1080/1680.1050" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup" />
