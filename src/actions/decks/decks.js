@@ -7,16 +7,10 @@ export const subscribe_to_decks = () => async (dispatch, getState) => {
   firestore.collection('decks')
     .where('uid', '==', uid)
     .onSnapshot(async (query) => {
-      let data = [];
-      // eslint-disable-next-line fp/no-loops
-      for (const q of query.docs) {
+      const data = query.docs.map((q) => {
         const deck_data = q.data();
-        // eslint-disable-next-line fp/no-mutation
-        data = [
-          ...data,
-          {id: q.id, name: deck_data.subject, uid: deck_data.uid},
-        ];
-      }
+        return {id: q.id, name: deck_data.subject, uid: deck_data.uid};
+      });
       dispatch({
         type: types.DECKS_LOADED,
         payload: data,
