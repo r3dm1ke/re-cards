@@ -6,6 +6,7 @@ import WorstCardsWidget from '../components/dashboard/WorstCardsWidget';
 import TrendWidget from '../components/dashboard/TrendWidget';
 import SmartStudyWidget from '../components/dashboard/SmartStudyWidget';
 import ExamModeWidget from '../components/dashboard/ExamModeWidget';
+import MasonryLayout from '../components/common/MasonryLayout';
 import Jumbotron from '../components/dashboard/jumbotron';
 import {check_logged_in} from '../utils/auth';
 
@@ -13,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+  },
+  widgets: {
+    marginTop: `-${theme.spacing(10)}px`,
   },
   widget: {
     margin: '0.5rem',
@@ -40,8 +44,10 @@ export default () => {
   return (
     <div className={classes.root}>
       <Jumbotron/>
-      {online_and_offline_widgets}
-      {offline ? null : online_only_widgets}
+      <MasonryLayout className={classes.widgets} columns={3} gap={8}>
+        {online_and_offline_widgets}
+        {offline ? null : online_only_widgets}
+      </MasonryLayout>
     </div>
   );
 };

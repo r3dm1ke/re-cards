@@ -93,7 +93,7 @@ const styles = (theme) => ({
   },
   content: {
     flexGrow: 1,
-    //padding: theme.spacing(3),
+    padding: theme.spacing(3),
     marginTop: theme.spacing(8),
   },
   appBar: {

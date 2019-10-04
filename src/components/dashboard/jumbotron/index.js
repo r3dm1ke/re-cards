@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  makeStyles, Typography,
+  makeStyles, Typography, Card
 } from '@material-ui/core';
 import Showcase from './showcase';
 import {useSelector} from 'react-redux';
@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-around',
+    margin: '-0.5rem',
   },
   '@keyframes JumbotronBackground': {
     '0%': {backgroundPosition: '99% 0%'},
@@ -38,9 +39,9 @@ export default () => {
   );
 
   return (
-    <div className={classes.root}>
+    <Card className={classes.root}>
       {renderGreeting()}
       <Showcase/>
-    </div>
+    </Card>
   );
 };
