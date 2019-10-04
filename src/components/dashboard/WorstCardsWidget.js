@@ -64,8 +64,6 @@ class WorstCardsWidget extends Component {
 
 const styles = (theme) => ({
   root: {
-    maxWidth: '20rem',
-    height: '25rem',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -83,12 +81,6 @@ const styles = (theme) => ({
     paddingLeft: 0,
     flexDirection: 'column',
     alignItems: 'flex-start',
-  },
-  [theme.breakpoints.down('sm')]: {
-    root: {
-      width: '100%',
-      maxWidth: 'initial',
-    },
   },
 });
 const mapStateToProps = (state) => ({

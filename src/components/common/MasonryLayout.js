@@ -12,7 +12,7 @@ export default (props) => {
 
   // eslint-disable-next-line fp/no-loops,fp/no-mutation
   for (let i = 0; i < props.children.length; i++) {
-    const column_index = Math.floor(i / props.columns);
+    const column_index = i % props.columns;
     // eslint-disable-next-line fp/no-mutating-methods
     column_wrapper[`column${column_index}`].push(
       <div style={{marginTop: `${props.gap}px`}}>
@@ -37,7 +37,11 @@ export default (props) => {
   }
 
   return (
-    <div style={{display: 'flex'}} className={props.className}>
+    <div
+      style={{display: 'flex'}}
+      className={props.className}
+      id={props.id}
+    >
       {result}
     </div>
   );

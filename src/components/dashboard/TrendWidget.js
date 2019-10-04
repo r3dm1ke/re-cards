@@ -36,16 +36,6 @@ class TrendWidget extends Component {
 }
 
 const styles = (theme) => ({
-  root: {
-    height: '25rem',
-    maxWidth: '20rem',
-  },
-  [theme.breakpoints.down('sm')]: {
-    root: {
-      width: '100%',
-      maxWidth: 'initial',
-    },
-  },
 });
 const mapStateToProps = (state) => ({
   trends: state.trend.entries,

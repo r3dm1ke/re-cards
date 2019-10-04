@@ -34,14 +34,6 @@ const styles = (theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    maxHeight: '25rem',
-    maxWidth: '20rem',
-  },
-  [theme.breakpoints.down('sm')]: {
-    root: {
-      width: '100%',
-      maxWidth: 'initial',
-    },
   },
 });
 const mapStateToProps = (state) => ({});

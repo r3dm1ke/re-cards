@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {makeStyles} from '@material-ui/core';
+import {makeStyles, useMediaQuery, useTheme} from '@material-ui/core';
 import SimpleStudyWidget from '../components/dashboard/SimpleStudyWidget';
 import WorstCardsWidget from '../components/dashboard/WorstCardsWidget';
 import TrendWidget from '../components/dashboard/TrendWidget';
@@ -9,6 +9,7 @@ import ExamModeWidget from '../components/dashboard/ExamModeWidget';
 import MasonryLayout from '../components/common/MasonryLayout';
 import Jumbotron from '../components/dashboard/jumbotron';
 import {check_logged_in} from '../utils/auth';
+import {Parallax} from 'react-skrollr';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,10 +17,22 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
   },
   widgets: {
-    marginTop: `-${theme.spacing(10)}px`,
+    marginTop: '300px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
   },
   widget: {
     margin: '0.5rem',
+  },
+  parallax: {
+    position: 'fixed',
+    left: '264px',
+    right: '54px',
+    zIndex: -1,
+    [theme.breakpoints.down('sm')]: {
+      left: '24px',
+    },
   },
 }));
 
@@ -39,14 +52,41 @@ export default () => {
     <ExamModeWidget key={'exam_mode'} className={classes.widget} />,
   ];
 
+  let widgets;
+  if (offline) {
+    widgets = [
+      ...online_and_offline_widgets,
+    ];
+  } else {
+    widgets = [
+      ...online_and_offline_widgets,
+      ...online_only_widgets,
+    ];
+  }
+
   if (!logged_in) return check_logged_in(logged_in);
+
+  const theme = useTheme();
+  const is_sm = useMediaQuery(theme.breakpoints.down('sm'));
+  const is_md = useMediaQuery(theme.breakpoints.down('md'));
+  let cols = 3;
+  if (is_md) cols = 2;
+  if (is_sm) cols = 1;
 
   return (
     <div className={classes.root}>
-      <Jumbotron/>
-      <MasonryLayout className={classes.widgets} columns={3} gap={8}>
-        {online_and_offline_widgets}
-        {offline ? null : online_only_widgets}
+      <div className={classes.parallax}>
+        <Parallax
+          data={{
+            'data-400': 'opacity: 0; transform: scale(0.5)',
+            'data-start': 'opacity: 1; transform: scale(1)',
+          }}
+        >
+          <Jumbotron/>
+        </Parallax>
+      </div>
+      <MasonryLayout id={'parallax-target'} className={classes.widgets} columns={cols} gap={8}>
+        {widgets}
       </MasonryLayout>
     </div>
   );

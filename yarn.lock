@@ -9157,6 +9157,13 @@ react-scripts@3.0.1:
   optionalDependencies:
     fsevents "2.0.6"
 
+react-skrollr@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-skrollr/-/react-skrollr-1.0.4.tgz#5f8a4426bba789e70e78d2f27283149aef9e694c"
+  integrity sha1-X4pEJruniecOeNLycoMUmu+eaUw=
+  dependencies:
+    skrollr "0.6.26"
+
 react-slick@^0.25.2:
   version "0.25.2"
   resolved "https://registry.yarnpkg.com/react-slick/-/react-slick-0.25.2.tgz#56331b67d47d8bcfe2dceb6acab1c8fd5bd1f6bc"
@@ -9863,6 +9870,11 @@ sisteransi@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.0.tgz#77d9622ff909080f1c19e5f4a1df0c1b0a27b88c"
   integrity sha512-N+z4pHB4AmUv0SjveWRd6q1Nj5w62m5jodv+GD8lvmbY/83T/rpbJGZOnK5T149OldDj4Db07BSv9xY4K6NTPQ==
+
+skrollr@0.6.26:
+  version "0.6.26"
+  resolved "https://registry.yarnpkg.com/skrollr/-/skrollr-0.6.26.tgz#65d1aafcc69fc6d27e6cff0f086c25b31b20ab18"
+  integrity sha1-ZdGq/MafxtJ+bP8PCGwlsxsgqxg=
 
 slash@^1.0.0:
   version "1.0.0"
