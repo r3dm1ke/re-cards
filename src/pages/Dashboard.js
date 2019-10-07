@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     left: '264px',
     right: '54px',
     zIndex: -1,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
       left: '24px',
     },
   },
@@ -87,6 +87,7 @@ export default () => {
           <Jumbotron/>
         </Parallax>
       </div>
+      <Element id={'parallax-anchor'}/>
       <MasonryLayout className={classes.widgets} columns={cols} gap={24}>
         {widgets}
       </MasonryLayout>

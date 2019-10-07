@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     margin: '-0.5rem',
   },
   '@keyframes JumbotronBackground': {
@@ -27,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
   greeting: {
     color: 'white',
     textAlign: 'center',
+    flex: 0,
+    marginBottom: theme.spacing(4),
   },
 }));
 
@@ -35,7 +37,7 @@ export default () => {
   const user = useSelector((state) => state.auth.user);
 
   const renderGreeting = () => (
-    <Typography variant={'h3'} className={classes.greeting}>Hi, {user.displayName}</Typography>
+    <Typography variant={'h5'} className={classes.greeting}>Hi, {user.displayName}</Typography>
   );
 
   return (

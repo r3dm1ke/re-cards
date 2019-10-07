@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/MotivationalQuotes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/random.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/study.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +117,7 @@
       <workItem from="1569979780926" duration="2917000" />
       <workItem from="1570110518770" duration="1950000" />
       <workItem from="1570398494843" duration="529000" />
-      <workItem from="1570462524014" duration="2556000" />
+      <workItem from="1570462524014" duration="8348000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -260,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570464484735</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Removed redundant animation">
+      <created>1570465140252</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1570465140252</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +319,8 @@
     <MESSAGE value="Added slider to jumbotron component" />
     <MESSAGE value="Scrolling effect on jumbotron working" />
     <MESSAGE value="Updated animations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated animations" />
+    <MESSAGE value="Removed redundant animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed redundant animation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

@@ -1,5 +1,6 @@
 import * as types from '../actions/types';
 import {A_TEXT} from '../const/cards';
+import {shuffle} from '../utils/random';
 
 const INITIAL_STATE = {
   study_cards: [],
@@ -11,16 +12,6 @@ const INITIAL_STATE = {
   study_validation_value: null,
   study_is_confirmed: false,
   study_is_correct: false,
-};
-
-const shuffle = (a) => {
-  // eslint-disable-next-line fp/no-loops,fp/no-mutation
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    // eslint-disable-next-line fp/no-mutation
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
 };
 
 // eslint-disable-next-line complexity,max-lines-per-function

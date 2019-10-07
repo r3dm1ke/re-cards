@@ -4,22 +4,38 @@ import {
   makeStyles,
   Typography,
 } from '@material-ui/core';
+import MotivationalQuotes from './MotivationalQuotes';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const slider_settings = {
   dots: false,
   infinite: true,
-  speed: 1500,
+  speed: 500,
+  autoplaySpeed: 3000,
+  autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
+  adaptiveHeight: true,
 };
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '500px',
-    height: '50%',
+    width: '350px',
+    [theme.breakpoints.up('md')]: {
+      width: '500px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '750px',
+    },
+  },
+  container: {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    paddingBottom: theme.spacing(4),
   },
   text: {
     color: 'white',
@@ -29,16 +45,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default (props) => {
   const classes = useStyles();
+  const quotes = MotivationalQuotes();
 
   return (
-    <Slider {...slider_settings} className={classes.root}>
-      <div>
-        <Typography className={classes.text} variant={'h6'}>You have 6 cards to study today</Typography>
-      </div>
-      <div>
-        <Typography className={classes.text} variant={'h6'}>So far, you have mastered 12 cards across 5 decks</Typography>
-      </div>
-    </Slider>
+    <div className={classes.container}>
+      <Slider {...slider_settings} className={`${classes.root} ${props.className}`}>
+        {quotes}
+      </Slider>
+    </div>
   );
 };
 
