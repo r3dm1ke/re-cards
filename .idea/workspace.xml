@@ -5,12 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/MasonryLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MasonryLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/ExamModeWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/ExamModeWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/SimpleStudyWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/SimpleStudyWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/SmartStudyWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/SmartStudyWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/TrendWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/TrendWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -119,6 +113,8 @@
       <workItem from="1569705915840" duration="5295000" />
       <workItem from="1569979780926" duration="2917000" />
       <workItem from="1570110518770" duration="1950000" />
+      <workItem from="1570398494843" duration="529000" />
+      <workItem from="1570462524014" duration="1899000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -253,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570055957758</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Scrolling effect on jumbotron working">
+      <created>1570205897216</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1570205897216</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,43 +300,44 @@
     <MESSAGE value="Minor fix" />
     <MESSAGE value="Minor refactor" />
     <MESSAGE value="Added slider to jumbotron component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added slider to jumbotron component" />
+    <MESSAGE value="Scrolling effect on jumbotron working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scrolling effect on jumbotron working" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
     <state x="332" y="79" key="#ESLint/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.0.bottom" />
-    <state width="1656" height="376" key="GridCell.Tab.0.bottom/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.0.center" />
-    <state width="1656" height="376" key="GridCell.Tab.0.center/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.0.left" />
-    <state width="1656" height="376" key="GridCell.Tab.0.left/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.0.right" />
-    <state width="1656" height="376" key="GridCell.Tab.0.right/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.1.bottom" />
-    <state width="1656" height="376" key="GridCell.Tab.1.bottom/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.1.center" />
-    <state width="1656" height="376" key="GridCell.Tab.1.center/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.1.left" />
-    <state width="1656" height="376" key="GridCell.Tab.1.left/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.1.right" />
-    <state width="1656" height="376" key="GridCell.Tab.1.right/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.2.bottom" />
-    <state width="1656" height="376" key="GridCell.Tab.2.bottom/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.2.center" />
-    <state width="1656" height="376" key="GridCell.Tab.2.center/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.2.left" />
-    <state width="1656" height="376" key="GridCell.Tab.2.left/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.2.right" />
-    <state width="1656" height="376" key="GridCell.Tab.2.right/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.3.bottom" />
-    <state width="1656" height="376" key="GridCell.Tab.3.bottom/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.3.center" />
-    <state width="1656" height="376" key="GridCell.Tab.3.center/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.3.left" />
-    <state width="1656" height="376" key="GridCell.Tab.3.left/1920.1080/1680.1050" />
-    <state width="1656" height="376" key="GridCell.Tab.3.right" />
-    <state width="1656" height="376" key="GridCell.Tab.3.right/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.0.bottom" />
+    <state width="1656" height="255" key="GridCell.Tab.0.bottom/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.0.center" />
+    <state width="1656" height="255" key="GridCell.Tab.0.center/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.0.left" />
+    <state width="1656" height="255" key="GridCell.Tab.0.left/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.0.right" />
+    <state width="1656" height="255" key="GridCell.Tab.0.right/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.1.bottom" />
+    <state width="1656" height="255" key="GridCell.Tab.1.bottom/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.1.center" />
+    <state width="1656" height="255" key="GridCell.Tab.1.center/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.1.left" />
+    <state width="1656" height="255" key="GridCell.Tab.1.left/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.1.right" />
+    <state width="1656" height="255" key="GridCell.Tab.1.right/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.2.bottom" />
+    <state width="1656" height="255" key="GridCell.Tab.2.bottom/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.2.center" />
+    <state width="1656" height="255" key="GridCell.Tab.2.center/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.2.left" />
+    <state width="1656" height="255" key="GridCell.Tab.2.left/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.2.right" />
+    <state width="1656" height="255" key="GridCell.Tab.2.right/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.3.bottom" />
+    <state width="1656" height="255" key="GridCell.Tab.3.bottom/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.3.center" />
+    <state width="1656" height="255" key="GridCell.Tab.3.center/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.3.left" />
+    <state width="1656" height="255" key="GridCell.Tab.3.left/1920.1080/1680.1050" />
+    <state width="1656" height="255" key="GridCell.Tab.3.right" />
+    <state width="1656" height="255" key="GridCell.Tab.3.right/1920.1080/1680.1050" />
     <state x="408" y="61" key="MultipleFileMergeDialog" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080/1680.1050" />

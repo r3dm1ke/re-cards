@@ -9,7 +9,7 @@ import ExamModeWidget from '../components/dashboard/ExamModeWidget';
 import MasonryLayout from '../components/common/MasonryLayout';
 import Jumbotron from '../components/dashboard/jumbotron';
 import {check_logged_in} from '../utils/auth';
-import {Parallax} from 'react-skrollr';
+import {Parallax, Element} from 'rc-scroll-anim';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
   },
   widget: {
-    margin: '0.5rem',
   },
   parallax: {
     position: 'fixed',
@@ -77,17 +76,33 @@ export default () => {
     <div className={classes.root}>
       <div className={classes.parallax}>
         <Parallax
-          data={{
-            'data-400': 'opacity: 0; transform: scale(0.5)',
-            'data-start': 'opacity: 1; transform: scale(1)',
+          animation={{
+            opacity: 0,
+            scaleX: 0.5,
+            scaleY: 0.5,
+            playScale: [0.9, 1.4],
           }}
+          location={'parallax-anchor'}
         >
           <Jumbotron/>
         </Parallax>
       </div>
-      <MasonryLayout id={'parallax-target'} className={classes.widgets} columns={cols} gap={8}>
-        {widgets}
-      </MasonryLayout>
+      <Element id={'parallax-anchor'} />
+      <Parallax
+        animation={{
+          marginLeft: 0,
+          marginRight: 0,
+          playScale: [0.9, 1.4],
+        }}
+        style={{
+          marginLeft: '1rem',
+          marginRight: '1rem',
+        }}
+      >
+        <MasonryLayout className={classes.widgets} columns={cols} gap={24}>
+          {widgets}
+        </MasonryLayout>
+      </Parallax>
     </div>
   );
 };
