@@ -87,22 +87,9 @@ export default () => {
           <Jumbotron/>
         </Parallax>
       </div>
-      <Element id={'parallax-anchor'} />
-      <Parallax
-        animation={{
-          marginLeft: 0,
-          marginRight: 0,
-          playScale: [0.9, 1.4],
-        }}
-        style={{
-          marginLeft: '1rem',
-          marginRight: '1rem',
-        }}
-      >
-        <MasonryLayout className={classes.widgets} columns={cols} gap={24}>
-          {widgets}
-        </MasonryLayout>
-      </Parallax>
+      <MasonryLayout className={classes.widgets} columns={cols} gap={24}>
+        {widgets}
+      </MasonryLayout>
     </div>
   );
 };
