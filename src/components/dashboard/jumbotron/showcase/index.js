@@ -8,6 +8,7 @@ import SmartStudyCTA from './SmartStudyCTA';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {shuffle} from '../../../../utils/random';
+import {useSelector} from 'react-redux';
 
 const slider_settings = {
   dots: false,
@@ -49,8 +50,11 @@ export default (props) => {
   const quotes = getMotivationalQuotes();
   const slides = shuffle([
     ...quotes,
-    <SmartStudyCTA key={'sscta'}/>,
   ]);
+
+  const smart_study_advisable = useSelector((state) => state.cards.smart_study_advisable);
+  // eslint-disable-next-line fp/no-mutating-methods
+  if (smart_study_advisable) slides.push(<SmartStudyCTA/>);
 
   return (
     <div className={classes.container}>

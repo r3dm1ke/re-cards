@@ -16,13 +16,7 @@ export const start_study = (type=undefined) => async (dispatch, getState) => {
   const state = getState();
   const study_mode = type !== undefined ? type : state.study.study_mode;
   dispatch(set_study_mode(study_mode));
-  let cards_for_session = [];
-  try {
-    // eslint-disable-next-line fp/no-mutation
-    cards_for_session = await load_cards_for_study(study_mode, state);
-  } catch {
-    dispatch(error_happened('Error loading cards. Are you a student?'));
-  }
+  const cards_for_session = load_cards_for_study(study_mode, state);
   if (cards_for_session.length === 0) {
     dispatch(show_alert(
       'You are done for today',
@@ -37,12 +31,12 @@ export const start_study = (type=undefined) => async (dispatch, getState) => {
   dispatch(remove_loader('ss'));
 };
 
-const load_cards_for_study = async (study_mode, state) => {
+const load_cards_for_study = (study_mode, state) => {
   try {
     if (study_mode === SIMPLE_STUDY) {
-      return await load_cards_for_simple_study(state);
+      return load_cards_for_simple_study(state);
     } else if (study_mode === SMART_STUDY) {
-      return await load_cards_for_smart_study(state);
+      return state.cards.cards_due_for_smart_study;
     }
   } catch (e) {
     // eslint-disable-next-line fp/no-throw
@@ -55,7 +49,7 @@ const cards_for_study_loaded = (cards) => ({
   payload: cards,
 });
 
-const load_cards_for_simple_study = async (state) => {
+const load_cards_for_simple_study = (state) => {
   const {simple_study_decks} = state.dashboard;
   const {cards} = state.cards;
   return cards.filter((card) =>

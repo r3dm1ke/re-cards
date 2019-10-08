@@ -17,7 +17,7 @@ const INITIAL_STATE = {
 
 const count_mastered_cards = (cards) => cards.filter((card) => cards.mastered).length;
 const count_cards_due_for_smart_study = (cards) =>
-  cards.filter((card) => !card.repetition_due || card.repetition_due <= (new Date())).length;
+  cards.filter((card) => card.eligible_for_smart_study);
 
 export default (state=INITIAL_STATE, action) => {
   switch (action.type) {
@@ -30,7 +30,7 @@ export default (state=INITIAL_STATE, action) => {
       mastered_cards: count_mastered_cards(action.payload),
       total_cards: action.payload.length,
       cards_due_for_smart_study,
-      smart_study_advisable: cards_due_for_smart_study > 5,
+      smart_study_advisable: cards_due_for_smart_study.length > 0,
     };
   case types.DECK_SELECTED:
     return {
