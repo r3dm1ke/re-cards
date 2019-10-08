@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
   },
   widgets: {
-    marginTop: '300px',
+    transform: 'translateY(300px)',
     display: 'flex',
     justifyContent: 'space-between',
     width: '100%',
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     left: '264px',
     right: '54px',
-    zIndex: -1,
+    zIndex: 0,
     [theme.breakpoints.down('xs')]: {
       left: '24px',
     },

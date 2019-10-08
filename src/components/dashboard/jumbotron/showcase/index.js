@@ -2,11 +2,12 @@ import React from 'react';
 import Slider from 'react-slick';
 import {
   makeStyles,
-  Typography,
 } from '@material-ui/core';
-import MotivationalQuotes from './MotivationalQuotes';
+import getMotivationalQuotes from './MotivationalQuotes';
+import SmartStudyCTA from './SmartStudyCTA';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {shuffle} from '../../../../utils/random';
 
 const slider_settings = {
   dots: false,
@@ -45,12 +46,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default (props) => {
   const classes = useStyles();
-  const quotes = MotivationalQuotes();
+  const quotes = getMotivationalQuotes();
+  const slides = shuffle([
+    ...quotes,
+    <SmartStudyCTA key={'sscta'}/>,
+  ]);
 
   return (
     <div className={classes.container}>
       <Slider {...slider_settings} className={`${classes.root} ${props.className}`}>
-        {quotes}
+        {slides.map((slide) => slide ? slide : null )}
       </Slider>
     </div>
   );

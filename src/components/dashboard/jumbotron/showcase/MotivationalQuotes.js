@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {makeStyles, Typography} from '@material-ui/core';
 import {shuffle} from '../../../../utils/random';
 
@@ -22,14 +22,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default () => {
-  const classes = useStyles();
   const quotes = shuffle(QUOTES).slice(0, QUOTE_COUNT);
   return quotes.map((quote, index) => (
-    <div key={index}>
+    <Quote key={`quote ${index}`} quote={quote} />
+  ));
+};
+
+const Quote = (props) => {
+  const classes = useStyles();
+  return (
+    <div>
       <Typography
         variant={'h3'}
         className={classes.root}
-      >{quote}</Typography>
+      >{props.quote}</Typography>
     </div>
-  ));
+  );
 };
