@@ -5,7 +5,8 @@ import {add_loader, remove_loader, show_alert} from './mics';
 import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
 import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
-import {register_answer as register_answer_to_db} from '../utils/study';
+import {register_answer as register_answer_to_db} from '../utils/study/answers';
+import {register_study_session} from '../utils/study/sessions';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,
@@ -127,12 +128,11 @@ export const study_teardown = () => async (dispatch, getState) => {
   const {simple_study_decks} = state.dashboard;
   const {study_score, study_length, study_mode} = state.study;
   const score = Math.round((study_score / study_length) * 100);
-  const register_study_session = functions.httpsCallable('register_study_session');
-  register_study_session({
+  register_study_session(
+    study_mode === SIMPLE_STUDY ? simple_study_decks : [],
     score,
-    deck_ids: study_mode === SIMPLE_STUDY ? simple_study_decks : [],
-    is_smart: study_mode === SMART_STUDY,
-  })
+    study_mode === SMART_STUDY
+  )
     .then(() => {})
     .catch(() => dispatch(error_happened('Error saving session on server. beep beep bop')));
 

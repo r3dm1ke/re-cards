@@ -1,6 +1,5 @@
-import firebase, {firestore} from '../firebase';
-import {get_uid} from './auth';
-import {SPACED_REPETITION_MAPPING} from '../const/study';
+import firebase, {firestore} from '../../firebase';
+import {SPACED_REPETITION_MAPPING} from '../../const/study';
 
 const increment_total = (card_data) => ({
   ...card_data,
@@ -42,7 +41,7 @@ const set_last_studied_time = (card_data) => ({
 
 const sanitize_for_db = (card_data) => ({
   answer: card_data.answer,
-  answer_list: card_data.answer_list,
+  answer_list: card_data.answer_list ? card_data.answer_list : [],
   answer_type: card_data.answer_type,
   deck: card_data.deck,
   last_studied: card_data.last_studied,

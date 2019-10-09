@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-overrides.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/study.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/study/sessions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/const/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/study/answers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,15 +52,15 @@
     <property name="ts.external.directory.path" value="C:\Users\Michael Krasnov\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.2956.38\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\flashcards\src\utils\study" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\reducers\cards" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\actions\cards" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\reducers\decks" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\actions\decks" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\components\study\flashcard" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -121,7 +115,7 @@
       <workItem from="1570110518770" duration="1950000" />
       <workItem from="1570398494843" duration="529000" />
       <workItem from="1570462524014" duration="8348000" />
-      <workItem from="1570566954747" duration="9000000" />
+      <workItem from="1570566954747" duration="10929000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -291,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570571766776</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Refactored the answer registration from functions to client">
+      <created>1570583708268</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1570583708268</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +341,8 @@
     <MESSAGE value="Removed redundant animation" />
     <MESSAGE value="Added CTA slide to jumbotron" />
     <MESSAGE value="Refactored smart study process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored smart study process" />
+    <MESSAGE value="Refactored the answer registration from functions to client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored the answer registration from functions to client" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
