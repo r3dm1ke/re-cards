@@ -64,12 +64,7 @@ export const STUDY_SHOW_RESULTS = 'study_show_results';
 export const STUDY_VALIDATION_VALUE_CHANGED = 'study_validation_value_changed';
 export const STUDY_VALIDATION_CONFIRMED_CHANGED = 'study_validation_confirmed_changed';
 export const STUDY_IS_CORRECT_CHANGED = 'study_is_correct_changed';
-
-// WORST CARDS
-export const WORST_CARDS_LOADED = 'worst_cards_loaded';
-
-// TRENDS
-export const TRENDS_LOADED = 'trends_loaded';
+export const CARDS_FOR_SIMPLE_STUDY_LOADED = 'cards_for_simple_study_loaded';
 
 // ERRORS
 export const ERROR_HAPPENED = 'error_happened';
@@ -78,3 +73,8 @@ export const ERROR_DISMISSED = 'error_dismissed';
 // OFFLINE
 export const IS_OFFLINE = 'is_offline';
 export const IS_ONLINE = 'is_online';
+
+// ============== WIDGETS ===============
+// QUICK STUDY
+export const NUMBER_OF_CARDS_FOR_QUICK_STUDY_CHANGED = 'number_of_cards_changed';
+// ============= /WIDGETS ===============

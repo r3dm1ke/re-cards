@@ -2,6 +2,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {makeStyles, useMediaQuery, useTheme} from '@material-ui/core';
 import CardsCountWidget from '../components/dashboard/widgets/CardsCountWidget';
+import QuickStudyWidget from '../components/dashboard/widgets/QuickStudyWidget';
 import MasonryLayout from '../components/common/MasonryLayout';
 import Jumbotron from '../components/dashboard/jumbotron';
 import {check_logged_in} from '../utils/auth';
@@ -62,6 +63,7 @@ export default () => {
       <Element id={'parallax-anchor'}/>
       <MasonryLayout className={classes.widgets} columns={cols} gap={24}>
         <CardsCountWidget/>
+        <QuickStudyWidget/>
       </MasonryLayout>
     </div>
   );

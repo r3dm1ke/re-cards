@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/MasteryProgress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/widgets/quick_study.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/QuickStudyWidget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/widgets/quick_study.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/trend.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/worst_cards.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/widget/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/widget/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/ExamModeWidget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/SimpleStudyWidget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/SmartStudyWidget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/TrendWidget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/WorstCardsWidget.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/trend.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/worst_cards.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/listeners.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/random.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/random.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/study/answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/answers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/study/meta.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/meta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/study/sessions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/study.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570635785512</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="refactored save study session into progress">
+      <created>1570640865374</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1570640865374</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +352,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Resolved issue with color coding answers in multiple choice after confirming" />
     <MESSAGE value="Spinner on login button until auth state is loaded from local" />
     <MESSAGE value="Added validation for question in card form" />
     <MESSAGE value="Eslint fixes" />
@@ -384,7 +376,8 @@
     <MESSAGE value="Refactored the session registration to client" />
     <MESSAGE value="Refactored engage_exam_mode to client. Deleted all firebase functions" />
     <MESSAGE value="Added at a glance widget" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added at a glance widget" />
+    <MESSAGE value="refactored save study session into progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored save study session into progress" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

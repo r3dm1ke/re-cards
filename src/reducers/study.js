@@ -4,6 +4,7 @@ import {shuffle} from '../utils/random';
 
 const INITIAL_STATE = {
   study_cards: [],
+  cards_for_simple_study: [],
   study_status: 'idle',
   study_index: 0,
   study_score: 0,
@@ -78,6 +79,11 @@ export default (state=INITIAL_STATE, action) => {
     return {
       ...state,
       study_is_correct: action.payload,
+    };
+  case types.CARDS_FOR_SIMPLE_STUDY_LOADED:
+    return {
+      ...state,
+      cards_for_simple_study: action.payload,
     };
   default:
     return state;

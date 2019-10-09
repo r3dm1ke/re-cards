@@ -36,7 +36,7 @@ export const start_study = (type=undefined) => async (dispatch, getState) => {
 
 const load_cards_for_study = (study_mode, state) => {
   if (study_mode === SIMPLE_STUDY) {
-    return load_cards_for_simple_study(state);
+    return state.study.cards_for_simple_study;
   } else if (study_mode === SMART_STUDY) {
     return state.cards.cards_due_for_smart_study;
   }
@@ -47,13 +47,10 @@ const cards_for_study_loaded = (cards) => ({
   payload: cards,
 });
 
-const load_cards_for_simple_study = (state) => {
-  const {simple_study_decks} = state.dashboard;
-  const {cards} = state.cards;
-  return cards.filter((card) =>
-    simple_study_decks.indexOf(card.deck.id) > -1
-  );
-};
+export const cards_for_simple_study_loaded = (cards) => ({
+  type: types.CARDS_FOR_SIMPLE_STUDY_LOADED,
+  payload: cards,
+});
 
 const check_answer = (card, validation_value) => {
   if (card.answer_type === A_TEXT) {
