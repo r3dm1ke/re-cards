@@ -141,9 +141,8 @@ export const study_teardown = () => async (dispatch, getState) => {
 
 export const engage_exam_mode = () => async (dispatch) => {
   dispatch(add_loader('exam', 'Clearing your past sins...'));
-  const engage = functions.httpsCallable('engage_exam_mode');
   try {
-    await engage();
+    await engage_exam_mode();
   } catch {
     dispatch(error_happened('Error while engaging exam mode. You probably don\'t have any exams'));
   }
