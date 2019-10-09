@@ -4,9 +4,10 @@ import {add_loader, remove_loader, show_alert} from './mics';
 import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
 import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
-import {register_answer as register_answer_to_db} from '../utils/study/answers';
-import {register_study_session} from '../utils/study/sessions';
-import {engage_exam_mode as engage_exam_mode_db} from '../utils/study/meta';
+import {register_answer as register_answer_to_db} from '../utils/database_actions/answers';
+import {register_study_session, save_progress} from '../utils/database_actions/progress';
+import {engage_exam_mode as engage_exam_mode_db} from '../utils/database_actions/meta';
+import cards from '../reducers/cards/cards';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,
@@ -123,19 +124,15 @@ export const register_answer = () => async (dispatch, getState) => {
 };
 
 export const study_teardown = () => async (dispatch, getState) => {
-  dispatch({type: types.STUDY_FINISHED});
   const state = getState();
-  const {simple_study_decks} = state.dashboard;
-  const {study_score, study_length, study_mode} = state.study;
-  const score = Math.round((study_score / study_length) * 100);
-  register_study_session(
-    study_mode === SIMPLE_STUDY ? simple_study_decks : [],
-    score,
-    study_mode === SMART_STUDY
-  )
+  const cards_count = state.cards.cards.length;
+  const decks_count = state.decks.decks.length;
+  const mastered_cards_count = state.cards.mastered_cards;
+  const study_mode = state.study.study_mode;
+  save_progress(cards_count, decks_count, mastered_cards_count, study_mode)
     .then(() => {})
-    .catch(() => dispatch(error_happened('Error saving session on server. beep beep bop')));
-
+    .catch(() => dispatch(error_happened('Could not save progress. Something is definitely wrong.')));
+  dispatch({type: types.STUDY_FINISHED});
   dispatch(push('/dashboard'));
 };
 

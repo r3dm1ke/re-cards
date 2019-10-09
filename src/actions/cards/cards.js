@@ -2,7 +2,7 @@ import * as types from '../types';
 import {firestore} from '../../firebase';
 import {push} from 'connected-react-router';
 import {add_loader, remove_loader} from '../mics';
-import {extract_cards_from_docs_async} from '../../utils/database';
+import {extract_cards_from_docs_async} from '../../utils/database_actions/cards';
 import {error_happened} from '../errors';
 
 export const subscribe_to_cards = () => async (dispatch, getState) => {

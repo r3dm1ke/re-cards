@@ -7,8 +7,6 @@ import cardsReducer from './cards/cards';
 import cardsFormReducer from './cards/cards_form';
 import dashboardReducer from './dashboard';
 import studyReducer from './study';
-import worstCardsReducer from './worst_cards';
-import trendReducer from './trend';
 import errorsReducer from './errors';
 import offlineReducer from './offline';
 import {combineReducers} from 'redux';
@@ -24,8 +22,6 @@ export default (history) => combineReducers({
   layout: layoutReducer,
   dashboard: dashboardReducer,
   study: studyReducer,
-  worst_cards: worstCardsReducer,
-  trend: trendReducer,
   errors: errorsReducer,
   offline: offlineReducer,
   router: connectRouter(history),

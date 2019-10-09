@@ -15,7 +15,7 @@ const INITIAL_STATE = {
   smart_study_advisable: false,
 };
 
-const count_mastered_cards = (cards) => cards.filter((card) => cards.mastered).length;
+const count_mastered_cards = (cards) => cards.filter((card) => card.mastered).length;
 const count_cards_due_for_smart_study = (cards) =>
   cards.filter((card) => card.eligible_for_smart_study);
 

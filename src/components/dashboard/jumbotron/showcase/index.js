@@ -5,6 +5,7 @@ import {
 } from '@material-ui/core';
 import getMotivationalQuotes from './MotivationalQuotes';
 import SmartStudyCTA from './SmartStudyCTA';
+import MasteryProgress from './MasteryProgress';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {shuffle} from '../../../../utils/random';
@@ -48,18 +49,20 @@ const useStyles = makeStyles((theme) => ({
 export default (props) => {
   const classes = useStyles();
   const quotes = getMotivationalQuotes();
-  const slides = shuffle([
+  let slides = [
     ...quotes,
-  ]);
+    <MasteryProgress/>,
+  ];
 
   const smart_study_advisable = useSelector((state) => state.cards.smart_study_advisable);
   // eslint-disable-next-line fp/no-mutating-methods
   if (smart_study_advisable) slides.push(<SmartStudyCTA/>);
+  slides = shuffle(slides);
 
   return (
     <div className={classes.container}>
       <Slider {...slider_settings} className={`${classes.root} ${props.className}`}>
-        {slides.map((slide) => slide ? slide : null )}
+        {slides}
       </Slider>
     </div>
   );

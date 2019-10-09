@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: 'white',
     textTransform: 'uppercase',
-  }
+  },
 }));
 
 export default (props) => {
