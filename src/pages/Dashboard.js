@@ -1,11 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {makeStyles, useMediaQuery, useTheme} from '@material-ui/core';
-import SimpleStudyWidget from '../components/dashboard/SimpleStudyWidget';
-import WorstCardsWidget from '../components/dashboard/WorstCardsWidget';
-import TrendWidget from '../components/dashboard/TrendWidget';
-import SmartStudyWidget from '../components/dashboard/SmartStudyWidget';
-import ExamModeWidget from '../components/dashboard/ExamModeWidget';
+import CardsCountWidget from '../components/dashboard/widgets/CardsCountWidget';
 import MasonryLayout from '../components/common/MasonryLayout';
 import Jumbotron from '../components/dashboard/jumbotron';
 import {check_logged_in} from '../utils/auth';
@@ -38,30 +34,6 @@ const useStyles = makeStyles((theme) => ({
 export default () => {
   const classes = useStyles();
   const logged_in = useSelector((state) => state.auth.logged_in);
-  const offline = useSelector((state) => state.offline.offline);
-
-  const online_and_offline_widgets = [
-    <SimpleStudyWidget key={'simple_study'} className={classes.widget}/>,
-    <WorstCardsWidget key={'worst_cards'} className={classes.widget}/>,
-    <TrendWidget key={'trend'} className={classes.widget} />,
-  ];
-
-  const online_only_widgets = [
-    <SmartStudyWidget key={'smart_study'} className={classes.widget} />,
-    <ExamModeWidget key={'exam_mode'} className={classes.widget} />,
-  ];
-
-  let widgets;
-  if (offline) {
-    widgets = [
-      ...online_and_offline_widgets,
-    ];
-  } else {
-    widgets = [
-      ...online_and_offline_widgets,
-      ...online_only_widgets,
-    ];
-  }
 
   if (!logged_in) return check_logged_in(logged_in);
 
@@ -89,7 +61,7 @@ export default () => {
       </div>
       <Element id={'parallax-anchor'}/>
       <MasonryLayout className={classes.widgets} columns={cols} gap={24}>
-        {widgets}
+        <CardsCountWidget/>
       </MasonryLayout>
     </div>
   );

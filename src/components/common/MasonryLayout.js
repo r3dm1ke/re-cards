@@ -3,6 +3,11 @@ import React from 'react';
 export default (props) => {
   const column_wrapper = {};
   const result = [];
+  let {children} = props;
+  if (!children.length) {
+    // eslint-disable-next-line fp/no-mutation
+    children = [children];
+  }
 
   // eslint-disable-next-line fp/no-loops,fp/no-mutation
   for (let i = 0; i < props.columns; i++) {
@@ -11,12 +16,12 @@ export default (props) => {
   }
 
   // eslint-disable-next-line fp/no-loops,fp/no-mutation
-  for (let i = 0; i < props.children.length; i++) {
+  for (let i = 0; i < children.length; i++) {
     const column_index = i % props.columns;
     // eslint-disable-next-line fp/no-mutating-methods
     column_wrapper[`column${column_index}`].push(
       <div style={{marginTop: `${props.gap}px`}}>
-        {props.children[i]}
+        {children[i]}
       </div>
     );
   }

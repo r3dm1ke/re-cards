@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/study/meta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/widget/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/MasonryLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MasonryLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570585991134</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Refactored engage_exam_mode to client. Deleted all firebase functions">
+      <created>1570632667226</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1570632667226</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +335,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="answer types and card edit form features" />
     <MESSAGE value="Validation for edit deck form and minor fixes" />
     <MESSAGE value="Resolved issue with color coding answers in multiple choice after confirming" />
     <MESSAGE value="Spinner on login button until auth state is loaded from local" />
@@ -349,43 +359,44 @@
     <MESSAGE value="Refactored smart study process" />
     <MESSAGE value="Refactored the answer registration from functions to client" />
     <MESSAGE value="Refactored the session registration to client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the session registration to client" />
+    <MESSAGE value="Refactored engage_exam_mode to client. Deleted all firebase functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored engage_exam_mode to client. Deleted all firebase functions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
     <state x="332" y="79" key="#ESLint/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.0.bottom" />
-    <state width="1656" height="255" key="GridCell.Tab.0.bottom/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.0.center" />
-    <state width="1656" height="255" key="GridCell.Tab.0.center/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.0.left" />
-    <state width="1656" height="255" key="GridCell.Tab.0.left/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.0.right" />
-    <state width="1656" height="255" key="GridCell.Tab.0.right/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.1.bottom" />
-    <state width="1656" height="255" key="GridCell.Tab.1.bottom/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.1.center" />
-    <state width="1656" height="255" key="GridCell.Tab.1.center/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.1.left" />
-    <state width="1656" height="255" key="GridCell.Tab.1.left/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.1.right" />
-    <state width="1656" height="255" key="GridCell.Tab.1.right/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.2.bottom" />
-    <state width="1656" height="255" key="GridCell.Tab.2.bottom/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.2.center" />
-    <state width="1656" height="255" key="GridCell.Tab.2.center/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.2.left" />
-    <state width="1656" height="255" key="GridCell.Tab.2.left/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.2.right" />
-    <state width="1656" height="255" key="GridCell.Tab.2.right/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.3.bottom" />
-    <state width="1656" height="255" key="GridCell.Tab.3.bottom/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.3.center" />
-    <state width="1656" height="255" key="GridCell.Tab.3.center/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.3.left" />
-    <state width="1656" height="255" key="GridCell.Tab.3.left/1920.1080/1680.1050" />
-    <state width="1656" height="255" key="GridCell.Tab.3.right" />
-    <state width="1656" height="255" key="GridCell.Tab.3.right/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.0.bottom" />
+    <state width="1656" height="206" key="GridCell.Tab.0.bottom/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.0.center" />
+    <state width="1656" height="206" key="GridCell.Tab.0.center/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.0.left" />
+    <state width="1656" height="206" key="GridCell.Tab.0.left/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.0.right" />
+    <state width="1656" height="206" key="GridCell.Tab.0.right/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.1.bottom" />
+    <state width="1656" height="206" key="GridCell.Tab.1.bottom/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.1.center" />
+    <state width="1656" height="206" key="GridCell.Tab.1.center/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.1.left" />
+    <state width="1656" height="206" key="GridCell.Tab.1.left/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.1.right" />
+    <state width="1656" height="206" key="GridCell.Tab.1.right/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.2.bottom" />
+    <state width="1656" height="206" key="GridCell.Tab.2.bottom/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.2.center" />
+    <state width="1656" height="206" key="GridCell.Tab.2.center/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.2.left" />
+    <state width="1656" height="206" key="GridCell.Tab.2.left/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.2.right" />
+    <state width="1656" height="206" key="GridCell.Tab.2.right/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.3.bottom" />
+    <state width="1656" height="206" key="GridCell.Tab.3.bottom/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.3.center" />
+    <state width="1656" height="206" key="GridCell.Tab.3.center/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.3.left" />
+    <state width="1656" height="206" key="GridCell.Tab.3.left/1920.1080/1680.1050" />
+    <state width="1656" height="206" key="GridCell.Tab.3.right" />
+    <state width="1656" height="206" key="GridCell.Tab.3.right/1920.1080/1680.1050" />
     <state x="408" y="61" key="MultipleFileMergeDialog" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080/1680.1050" />

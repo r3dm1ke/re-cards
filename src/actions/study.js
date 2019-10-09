@@ -1,12 +1,12 @@
 import * as types from './types';
 import {push} from 'connected-react-router';
-import {functions} from '../firebase';
 import {add_loader, remove_loader, show_alert} from './mics';
 import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
 import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
 import {register_answer as register_answer_to_db} from '../utils/study/answers';
 import {register_study_session} from '../utils/study/sessions';
+import {engage_exam_mode as engage_exam_mode_db} from '../utils/study/meta';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,
@@ -142,7 +142,7 @@ export const study_teardown = () => async (dispatch, getState) => {
 export const engage_exam_mode = () => async (dispatch) => {
   dispatch(add_loader('exam', 'Clearing your past sins...'));
   try {
-    await engage_exam_mode();
+    await engage_exam_mode_db();
   } catch {
     dispatch(error_happened('Error while engaging exam mode. You probably don\'t have any exams'));
   }
