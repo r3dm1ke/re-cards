@@ -28,7 +28,7 @@ class CardsPage extends Component {
             question={card.question}
             question_type={card.question_type}
             answer={card.answer}
-            deckName={card.deckName}
+            deckName={card.deck_name}
             ratio={card.ratio}
             onEdit={() => this.props.edit_existing_card(card)}
             onDelete={() => this.props.delete_card(card)}

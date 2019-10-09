@@ -1,11 +1,14 @@
 import moment from 'moment-timezone';
 
 export const extract_card_from_ref_async = async (card) => {
-  const card_data = card.data();
-  card_data.id = card.id;
-  const deck_data = await card_data.deck.get();
-  card_data.deckName = deck_data.data().subject;
-  card_data.eligible_for_smart_study = true;
+  const raw_card_data = card.data();
+  const deck_data = await raw_card_data.deck.get();
+  const card_data = {
+    ...raw_card_data,
+    id: card.id,
+    deck_name: deck_data.data().subject,
+    eligible_for_smart_study: true,
+  };
   if (card_data.last_studied && card_data.s_r_deck) {
     const timezone = moment.tz.guess();
     const {last_studied, s_r_deck} = card_data;

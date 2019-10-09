@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards-funcitons/functions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-overrides.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/study.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/SmartStudyCTA.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/SmartStudyCTA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/const/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -120,7 +121,7 @@
       <workItem from="1570110518770" duration="1950000" />
       <workItem from="1570398494843" duration="529000" />
       <workItem from="1570462524014" duration="8348000" />
-      <workItem from="1570566954747" duration="4441000" />
+      <workItem from="1570566954747" duration="9000000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -283,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570496289498</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Refactored smart study process">
+      <created>1570571766776</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1570571766776</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +339,8 @@
     <MESSAGE value="Updated animations" />
     <MESSAGE value="Removed redundant animation" />
     <MESSAGE value="Added CTA slide to jumbotron" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CTA slide to jumbotron" />
+    <MESSAGE value="Refactored smart study process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored smart study process" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

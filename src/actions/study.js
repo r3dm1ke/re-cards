@@ -5,6 +5,7 @@ import {add_loader, remove_loader, show_alert} from './mics';
 import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
 import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
+import {register_answer as register_answer_to_db} from '../utils/study';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,
@@ -32,15 +33,10 @@ export const start_study = (type=undefined) => async (dispatch, getState) => {
 };
 
 const load_cards_for_study = (study_mode, state) => {
-  try {
-    if (study_mode === SIMPLE_STUDY) {
-      return load_cards_for_simple_study(state);
-    } else if (study_mode === SMART_STUDY) {
-      return state.cards.cards_due_for_smart_study;
-    }
-  } catch (e) {
-    // eslint-disable-next-line fp/no-throw
-    throw e;
+  if (study_mode === SIMPLE_STUDY) {
+    return load_cards_for_simple_study(state);
+  } else if (study_mode === SMART_STUDY) {
+    return state.cards.cards_due_for_smart_study;
   }
 };
 
@@ -55,11 +51,6 @@ const load_cards_for_simple_study = (state) => {
   return cards.filter((card) =>
     simple_study_decks.indexOf(card.deck.id) > -1
   );
-};
-
-const load_cards_for_smart_study = async () => {
-  const get_smart_study_cards = functions.httpsCallable('get_smart_study_cards');
-  return (await get_smart_study_cards()).data;
 };
 
 const check_answer = (card, validation_value) => {
@@ -110,12 +101,11 @@ export const register_answer = () => async (dispatch, getState) => {
     study_mode,
     study_is_correct,
   } = state.study;
-  const register_answer = functions.httpsCallable('register_answer');
-  register_answer({
-    card: study_cards[study_index].id,
-    answer: study_is_correct,
-    smart: study_mode === SMART_STUDY,
-  })
+  register_answer_to_db(
+    study_cards[study_index],
+    study_is_correct,
+    study_mode === SMART_STUDY,
+  )
     .then(() => {})
     .catch((e) => {
       dispatch(error_happened('Error saving your answer to server. He is probably depressed.'));
