@@ -4,6 +4,7 @@
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/utils/study/sessions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/study/answers.js" afterDir="false" />
     </list>
@@ -115,7 +116,7 @@
       <workItem from="1570110518770" duration="1950000" />
       <workItem from="1570398494843" duration="529000" />
       <workItem from="1570462524014" duration="8348000" />
-      <workItem from="1570566954747" duration="10929000" />
+      <workItem from="1570566954747" duration="11088000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -292,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570583708268</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Refactored the session registration to client">
+      <created>1570585991134</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1570585991134</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +325,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added filters to decks, refactored edit/new dialog for cards" />
     <MESSAGE value="answer types and card edit form features" />
     <MESSAGE value="Validation for edit deck form and minor fixes" />
     <MESSAGE value="Resolved issue with color coding answers in multiple choice after confirming" />
@@ -342,7 +349,8 @@
     <MESSAGE value="Added CTA slide to jumbotron" />
     <MESSAGE value="Refactored smart study process" />
     <MESSAGE value="Refactored the answer registration from functions to client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored the answer registration from functions to client" />
+    <MESSAGE value="Refactored the session registration to client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored the session registration to client" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
