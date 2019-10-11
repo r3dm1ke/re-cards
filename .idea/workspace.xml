@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/widgets/quick_study.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/QuickStudyWidget.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/widgets/quick_study.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/quick_study_widget/Details.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/widgets/quick_study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/widgets/quick_study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/widget/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/widget/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/QuickStudyWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/quick_study_widget/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/widgets/quick_study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/widgets/quick_study.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +58,15 @@
     <property name="ts.external.directory.path" value="C:\Users\Michael Krasnov\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.2956.38\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\dashboard\widgets\quick_study_widget" />
       <recent name="C:\personal_projects\flashcards\src\utils\database_actions" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\utils\study" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\reducers\cards" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\actions\cards" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\reducers\decks" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">

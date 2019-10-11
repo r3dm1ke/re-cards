@@ -2,7 +2,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {makeStyles, useMediaQuery, useTheme} from '@material-ui/core';
 import CardsCountWidget from '../components/dashboard/widgets/CardsCountWidget';
-import QuickStudyWidget from '../components/dashboard/widgets/QuickStudyWidget';
+import QuickStudyWidget from '../components/dashboard/widgets/quick_study_widget';
 import MasonryLayout from '../components/common/MasonryLayout';
 import Jumbotron from '../components/dashboard/jumbotron';
 import {check_logged_in} from '../utils/auth';

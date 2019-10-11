@@ -77,4 +77,7 @@ export const IS_ONLINE = 'is_online';
 // ============== WIDGETS ===============
 // QUICK STUDY
 export const NUMBER_OF_CARDS_FOR_QUICK_STUDY_CHANGED = 'number_of_cards_changed';
+export const DECK_SELECTED_FOR_QUICK_STUDY = 'deck_selected_for_quick_study';
+export const DECK_UNSELECTED_FOR_QUICK_STUDY = 'deck_unselected_for_quick_study';
+export const MASTERED_CARDS_INCLUDED_FOR_QUICK_STUDY_TOGGLED = 'mastered_cards_included_for_quick_study_toggled';
 // ============= /WIDGETS ===============
