@@ -41,17 +41,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default (props) => {
   const classes = useStyles();
-  const total_cards_count = useSelector((state) => state.cards.cards ? state.cards.cards.length: null);
-  const selected_cards_count = useSelector((state) => state.widgets.quick_study.number_of_cards);
+  const number_of_eligible_cards = useSelector((state) => state.widgets.quick_study.number_of_eligible_cards);
+  const selected_cards_count = useSelector((state) => state.widgets.quick_study.number_of_cards_selected);
   const dispatch = useDispatch();
   const [expanded, set_expanded] = useState(false);
   const render_widget_content = () => {
-    if (total_cards_count > 3) return render_quick_study_controls();
-    return render_not_enough_cards();
+    return render_quick_study_controls();
   };
   const render_quick_study_controls = () => {
-    const min = 1;
-    const max = total_cards_count;
+    const min = Math.min(1, number_of_eligible_cards || 0);
+    const max = number_of_eligible_cards;
     const step = Math.floor(Math.sqrt(max));
     const marks = [
       {value: min, label: min},
@@ -117,7 +116,7 @@ export default (props) => {
       title={'Custom study'}
       containerClassName={classes.container}
     >
-      {total_cards_count ? (
+      {number_of_eligible_cards ? (
         render_widget_content()
       ) : <Skeleton variant='rectangle' width={'100%'} height={150} />}
     </Widget>
