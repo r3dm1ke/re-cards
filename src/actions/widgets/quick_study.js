@@ -10,8 +10,8 @@ export const number_of_cards_changed_for_quick_study = (value) => ({
 
 export const start_quick_study = () => async (dispatch, getState) => {
   const state = getState();
-  const {cards} = state.cards;
-  const {number_of_cards} = state.widgets.quick_study;
+  const cards = state.widgets.quick_study.eligible_cards;
+  const number_of_cards = state.widgets.quick_study.number_of_cards_selected;
   const shuffled_cards = shuffle([...cards]);
   const cards_for_study = shuffled_cards.slice(0, number_of_cards);
   dispatch(cards_for_simple_study_loaded(cards_for_study));

@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Firefox Debug" type="FirefoxRemoteDebugType" host="localhost:3000" port="6080">
+    <method v="2" />
+  </configuration>
+</component>

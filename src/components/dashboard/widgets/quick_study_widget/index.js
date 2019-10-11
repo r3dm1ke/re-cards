@@ -63,25 +63,28 @@ export default (props) => {
           Study {selected_cards_count} random card{selected_cards_count === 1 ? '' : 's'} from all your decks.
           It is going to take about {minutes} minute{minutes === 1 ? '' : 's'}.
         </Typography>
-        <Slider
-          value={selected_cards_count}
-          onChange={(_, value) =>
-            (value !== selected_cards_count ? dispatch(number_of_cards_changed_for_quick_study(value)) : null)}
-          min={min}
-          max={max}
-          step={step}
-          marks={marks}
-          valueLabelDisplay={'auto'}
-          className={classes.slider}
-        />
+        {max > 0 ? (
+          <Slider
+            value={selected_cards_count}
+            onChange={(_, value) =>
+              (value !== selected_cards_count ? dispatch(number_of_cards_changed_for_quick_study(value)) : null)}
+            min={min}
+            max={max}
+            step={step}
+            marks={marks}
+            valueLabelDisplay={'auto'}
+            className={classes.slider}
+          />
+        ) : null }
         <Button
           className={classes.start_button}
           size={'large'}
           variant={'contained'}
           color={'primary'}
           onClick={() => dispatch(start_quick_study())}
+          disabled={selected_cards_count === 0}
         >
-          Start
+          {selected_cards_count === 0 ? 'No cards to study' : 'Start'}
         </Button>
         <Collapse in={expanded}>
           <Details />
@@ -98,25 +101,12 @@ export default (props) => {
       </React.Fragment>
     );
   };
-  const render_not_enough_cards = () => {
-    return (
-      <React.Fragment>
-        <Typography variant={'subtitle1'} className={classes.subtitle}>
-          It would be better if you have at least 4 cards before you start studying.
-          Press the button below to add a new card.
-        </Typography>
-        <Button className={classes.start_button} size={'large'} variant={'contained'} color={'primary'}>
-          Add a new card
-        </Button>
-      </React.Fragment>
-    );
-  };
   return (
     <Widget
       title={'Custom study'}
       containerClassName={classes.container}
     >
-      {number_of_eligible_cards ? (
+      {number_of_eligible_cards !== undefined ? (
         render_widget_content()
       ) : <Skeleton variant='rectangle' width={'100%'} height={150} />}
     </Widget>

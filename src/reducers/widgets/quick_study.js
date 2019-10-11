@@ -13,11 +13,14 @@ export default (state=INITIAL_STATE, action) => {
   const reduced_state = reduce_state(state, action);
   const eligible_cards = get_eligible_cards(reduced_state);
   const number_of_eligible_cards = eligible_cards && eligible_cards.length;
-  let number_of_cards_selected;
-  if (reduced_state.number_of_cards_selected === 0 && number_of_eligible_cards > 0) {
+  let {number_of_cards_selected} = reduced_state;
+  if (
+    reduced_state.number_of_cards_selected === 0 &&
+    number_of_eligible_cards > 0
+  ) {
     // eslint-disable-next-line fp/no-mutation
     number_of_cards_selected = number_of_eligible_cards;
-  } else {
+  } else if (number_of_eligible_cards !== undefined) {
     // eslint-disable-next-line fp/no-mutation
     number_of_cards_selected = Math.min(reduced_state.number_of_cards_selected, number_of_eligible_cards);
   }
