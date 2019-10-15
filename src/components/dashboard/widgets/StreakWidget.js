@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 export default (props) => {
   const classes = useStyles();
   const last_progress = useSelector((state) => state.progress.last_progress);
+  const studied_today = useSelector((state) => state.progress.studied_today);
 
   const render_widget_content = () => {
     if (last_progress !== undefined) {
@@ -31,10 +32,7 @@ export default (props) => {
           <Typography variant={'overline'} className={classes.subtitle}>
             Day{last_progress.streak > 1 ? 's' : ''} studying in a row
           </Typography>
-          <Typography variant={'body1'} className={classes.description}>
-            You are doing {pick_random(['wonderful', 'great', 'awesome'])}.
-            Set a reminder so you will not forget to study tomorrow.
-          </Typography>
+          {render_subtitle()}
           <Button variant={'outlined'} color={'primary'}>Remind me</Button>
         </React.Fragment>
       );
@@ -43,6 +41,23 @@ export default (props) => {
       <React.Fragment>
         <Typography variant={'body1'}>Not enough data. Study some cards first.</Typography>
       </React.Fragment>
+    );
+  };
+
+  const render_subtitle = () => {
+    if (studied_today) {
+      return (
+        <Typography variant={'body1'} className={classes.description}>
+          You are doing {pick_random(['wonderful', 'great', 'awesome'])}.
+          Set a reminder so you will not forget to study tomorrow.
+        </Typography>
+      );
+    }
+    return (
+      <Typography variant={'body1'} className={classes.description}>
+        You are doing {pick_random(['wonderful', 'great', 'awesome'])}.
+        Keep going and study right now. Or, set a reminder to study later today.
+      </Typography>
     );
   };
 
