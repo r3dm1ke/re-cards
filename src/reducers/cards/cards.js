@@ -10,7 +10,7 @@ const INITIAL_STATE = {
   refresh_helper: false,
   sort_direction: true, // TRUE for desc, FALSE for asc
   mastered_cards: 0,
-  cards_due_for_smart_study: 0,
+  cards_due_for_smart_study: [],
   total_cards: 0,
   smart_study_advisable: false,
 };

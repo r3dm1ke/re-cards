@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/StreakWidget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/AdWidget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/DailyStudyWidget.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/widget/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/widget/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/random.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/random.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571164315838</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added streak widget">
+      <created>1571165704431</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1571165704431</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +381,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Full form validation for card edit dialog" />
     <MESSAGE value="moved tab management to redux for card edit dialog, added skipping to tab when error happens" />
     <MESSAGE value="added preview for math text fields" />
     <MESSAGE value="responsive edit card dialog, rewritten as functional" />
@@ -399,7 +405,8 @@
     <MESSAGE value="Fixes and refactoring for quick study widget reducer" />
     <MESSAGE value="Now writing streak to progress" />
     <MESSAGE value="refactoring last_progress in progress reducer" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring last_progress in progress reducer" />
+    <MESSAGE value="Added streak widget" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added streak widget" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" timestamp="1570804846674">
