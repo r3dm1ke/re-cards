@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 import {makeStyles, useMediaQuery, useTheme} from '@material-ui/core';
 import CardsCountWidget from '../components/dashboard/widgets/CardsCountWidget';
 import QuickStudyWidget from '../components/dashboard/widgets/quick_study_widget';
+import StreakWidget from '../components/dashboard/widgets/StreakWidget';
 import MasonryLayout from '../components/common/MasonryLayout';
 import Jumbotron from '../components/dashboard/jumbotron';
 import {check_logged_in} from '../utils/auth';
@@ -64,6 +65,7 @@ export default () => {
       <MasonryLayout className={classes.widgets} columns={cols} gap={24}>
         <CardsCountWidget/>
         <QuickStudyWidget/>
+        <StreakWidget/>
       </MasonryLayout>
     </div>
   );

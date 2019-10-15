@@ -8,4 +8,4 @@ export const shuffle = (a) => {
   return a;
 };
 
-export const pick_random = (a) => a[Math.floor(Math.random() * (a.length + 1))];
+export const pick_random = (a) => a[Math.floor(Math.random() * a.length)];

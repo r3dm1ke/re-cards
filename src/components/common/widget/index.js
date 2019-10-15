@@ -21,14 +21,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default (props) => {
-  const {title, children, actions, className, containerClassName} = props;
+  const {title, children, actions, className, containerClassName, noHeader} = props;
   const classes = useStyles();
 
   return (
     <Card className={`${classes.root} ${className}`}>
-      <CardHeader className={classes.header} title={
-        <Typography className={classes.title} variant={'h5'}>{title}</Typography>
-      }/>
+      {noHeader ? null : (
+        <CardHeader className={classes.header} title={
+          <Typography className={classes.title} variant={'h5'}>{title}</Typography>
+        }/>
+      )}
       <CardContent className={`${classes.content} ${containerClassName}`}>
         {children}
       </CardContent>
