@@ -122,11 +122,7 @@ export const register_answer = () => async (dispatch, getState) => {
 
 export const study_teardown = () => async (dispatch, getState) => {
   const state = getState();
-  const cards_count = state.cards.cards.length;
-  const decks_count = state.decks.decks.length;
-  const mastered_cards_count = state.cards.mastered_cards;
-  const study_mode = state.study.study_mode;
-  save_progress(cards_count, decks_count, mastered_cards_count, study_mode)
+  await save_progress(state)
     .then(() => {})
     .catch(() => dispatch(error_happened('Could not save progress. Something is definitely wrong.')));
   dispatch({type: types.STUDY_FINISHED});

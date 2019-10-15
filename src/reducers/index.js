@@ -8,6 +8,7 @@ import cardsFormReducer from './cards/cards_form';
 import dashboardReducer from './dashboard';
 import studyReducer from './study';
 import errorsReducer from './errors';
+import progressReducer from './progress';
 import offlineReducer from './offline';
 import quickStudyWidgetReducer from './widgets/quick_study';
 import {combineReducers} from 'redux';
@@ -25,8 +26,9 @@ export default (history) => combineReducers({
   study: studyReducer,
   errors: errorsReducer,
   offline: offlineReducer,
+  progress: progressReducer,
   widgets: combineReducers({
-    quick_study: quickStudyWidgetReducer
+    quick_study: quickStudyWidgetReducer,
   }),
   router: connectRouter(history),
 });

@@ -25,6 +25,9 @@ export const EDIT_DECK_DIALOG_ID_CHANGED = 'set_edit_deck_id';
 export const EDIT_DECK_DIALOG_ERROR_ADDED = 'edit_deck_dialog_error_added';
 export const EDIT_DECK_DIALOG_ERRORS_CLEARED = 'edit_deck_dialog_errors_cleared';
 
+// PROGRESS
+export const PROGRESS_LOADED = 'progress_loaded';
+
 // CARDS
 export const DECK_SELECTED = 'deck_selected';
 export const CARDS_LOADED = 'cards_loaded';
