@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/common/navigation/BottomNavbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/StreakWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/StreakWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/ProfileDropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/ProfileDropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/navigation/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +61,11 @@
       <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\layout" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\navigation" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\dashboard\widgets\quick_study_widget" />
       <recent name="C:\personal_projects\flashcards\src\utils\database_actions" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\utils\study" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\reducers\cards" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\actions\cards" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -361,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571177563550</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added more info to streak widget if user studied today or not">
+      <created>1571177987906</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1571177987906</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +397,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="added preview for math text fields" />
     <MESSAGE value="responsive edit card dialog, rewritten as functional" />
     <MESSAGE value="added error handling and messages" />
     <MESSAGE value="HMR for development" />
@@ -411,7 +421,8 @@
     <MESSAGE value="refactoring last_progress in progress reducer" />
     <MESSAGE value="Added streak widget" />
     <MESSAGE value="Added daily study widget" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added daily study widget" />
+    <MESSAGE value="Added more info to streak widget if user studied today or not" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more info to streak widget if user studied today or not" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" timestamp="1570804846674">

@@ -7,7 +7,7 @@ import {
   Avatar,
   Divider,
 } from '@material-ui/core';
-import {logout} from '../../actions/auth';
+import {logout} from '../../../actions/auth';
 
 const useStyles = makeStyles((theme) => ({
   root: {},

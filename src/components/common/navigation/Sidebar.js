@@ -16,11 +16,12 @@ import AboutIcon from '@material-ui/icons/Info';
 import HistoryIcon from '@material-ui/icons/History';
 import CardsIcon from '@material-ui/icons/FileCopy';
 import {connect} from 'react-redux';
-import {toggle_drawer} from '../../actions/layout';
-import {open_decks} from '../../actions/decks/decks';
-import {open_cards} from '../../actions/cards/cards';
-import {open_dashboard} from '../../actions/dashboard';
+import {toggle_drawer} from '../../../actions/layout';
+import {open_decks} from '../../../actions/decks/decks';
+import {open_cards} from '../../../actions/cards/cards';
+import {open_dashboard} from '../../../actions/dashboard';
 
+// TODO rewrite as functional
 class Sidebar extends Component {
   renderDrawer() {
     const {classes} = this.props;

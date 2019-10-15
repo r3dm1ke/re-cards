@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     left: '264px',
     right: '54px',
     zIndex: 0,
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('sm')]: {
       left: '24px',
     },
   },

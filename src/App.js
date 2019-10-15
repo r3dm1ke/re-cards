@@ -6,7 +6,7 @@ import DashboardPage from './pages/Dashboard';
 import DecksPage from './pages/Decks';
 import CardsPage from './pages/Cards';
 import StudyPage from './pages/Study';
-import Scaffold from './components/common/Scaffold';
+import Scaffold from './components/common/layout/Scaffold';
 import Alert from './components/common/Alert';
 import {Provider} from 'react-redux';
 import store, {history} from './store';
