@@ -8,6 +8,7 @@ import CardsPage from './pages/Cards';
 import StudyPage from './pages/Study';
 import Scaffold from './components/common/layout/Scaffold';
 import Alert from './components/common/Alert';
+import ScrollRestorer from './components/common/layout/ScrollRestorer';
 import {Provider} from 'react-redux';
 import store, {history} from './store';
 import {init} from './actions/auth';
@@ -22,6 +23,7 @@ class App extends Component {
       <Provider store={store}>
         <Alert />
         <ConnectedRouter history={history}>
+          <ScrollRestorer/>
           <Scaffold>
             <Route path={'/'} exact component={LoginPage}/>
             <Route path={'/dashboard'} exact component={DashboardPage}/>

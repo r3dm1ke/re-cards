@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/common/layout/ScrollRestorer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571180174859</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Refactored cards page to functional and added title to said page">
+      <created>1571182085529</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1571182085529</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +411,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="added error handling and messages" />
     <MESSAGE value="HMR for development" />
     <MESSAGE value="Offline switch (not working for localhost)" />
     <MESSAGE value="Offline switch working and handling" />
@@ -425,7 +435,8 @@
     <MESSAGE value="Added daily study widget" />
     <MESSAGE value="Added more info to streak widget if user studied today or not" />
     <MESSAGE value="Added bottom navbar for mobile users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added bottom navbar for mobile users" />
+    <MESSAGE value="Refactored cards page to functional and added title to said page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored cards page to functional and added title to said page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" timestamp="1570804846674">

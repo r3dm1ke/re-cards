@@ -18,7 +18,7 @@ const drawer_width = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    height: '100vh',
+    minHeight: '100vh',
     display: 'flex',
   },
   title: {
@@ -33,8 +33,10 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+    marginBottom: '4rem',
     [theme.breakpoints.up('md')]: {
       marginTop: theme.spacing(8),
+      marginBottom: 0,
     },
   },
   appBar: {

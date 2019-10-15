@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
   },
   widgets: {
-    transform: 'translateY(300px)',
+    transform: 'translateY(1px)',
+    marginTop: '299px', // Dont ask
     display: 'flex',
     justifyContent: 'space-between',
     width: '100%',
