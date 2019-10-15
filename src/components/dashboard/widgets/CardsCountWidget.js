@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   caption: {
     textAlign: 'center',
+    lineHeight: '1.5',
   },
 }));
 

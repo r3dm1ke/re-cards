@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/progress.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/progress.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/progress.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/database_actions/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/progress.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/listeners.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570804960534</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Now writing streak to progress">
+      <created>1571164084427</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1571164084427</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +366,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added validation for question in card form" />
     <MESSAGE value="Eslint fixes" />
     <MESSAGE value="Full form validation for card edit dialog" />
     <MESSAGE value="moved tab management to redux for card edit dialog, added skipping to tab when error happens" />
@@ -388,7 +390,8 @@
     <MESSAGE value="Added at a glance widget" />
     <MESSAGE value="refactored save study session into progress" />
     <MESSAGE value="Fixes and refactoring for quick study widget reducer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes and refactoring for quick study widget reducer" />
+    <MESSAGE value="Now writing streak to progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now writing streak to progress" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" timestamp="1570804846674">

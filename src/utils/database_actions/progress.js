@@ -26,8 +26,8 @@ export const save_progress =
   };
 
 const get_streak_count = (state) => {
-  if (state.progress.progress !== undefined) {
-    const last_progress = state.progress.progress[state.progress.progress.length - 1];
+  if (state.progress.last_progress !== undefined) {
+    const last_progress = state.progress.last_progress;
     const timezone = moment.tz.guess();
     const moment_last_progress_timestamp = moment.tz(last_progress.timestamp.seconds * 1000, timezone);
     const yesterday_timestamp = moment().subtract(1, 'days').hour(0).minute(0).second(0);
