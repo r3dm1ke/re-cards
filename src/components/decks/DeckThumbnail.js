@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
   Card,
   CardContent,
@@ -6,31 +6,10 @@ import {
   Typography,
   Button,
   Divider,
-  withStyles,
+  makeStyles,
 } from '@material-ui/core';
 
-class DeckThumbnail extends Component {
-  render() {
-    const {subject, onEdit, onStart, onCards, classes} = this.props;
-    return (
-      <Card className={classes.card} style={{...this.props.style}}>
-        <CardContent>
-          <Typography variant={'h5'}>{subject}</Typography>
-        </CardContent>
-        <div>
-          <Divider />
-          <CardActions>
-            <Button onClick={onStart} size={'small'}>Study</Button>
-            <Button onClick={onCards} size={'small'}>Cards</Button>
-            <Button onClick={onEdit} size={'small'}>Edit</Button>
-          </CardActions>
-        </div>
-      </Card>
-    );
-  }
-}
-
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     width: '100%',
     margin: theme.spacing(1),
@@ -41,5 +20,24 @@ const styles = (theme) => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
   },
-});
-export default withStyles(styles)(DeckThumbnail);
+}));
+
+export default (props) => {
+  const classes = useStyles();
+  const {subject, onEdit, onStart, onCards, style} = props;
+  return (
+    <Card className={classes.card} style={{...style}}>
+      <CardContent>
+        <Typography variant={'h5'}>{subject}</Typography>
+      </CardContent>
+      <div>
+        <Divider />
+        <CardActions>
+          <Button onClick={onStart} size={'small'}>Study</Button>
+          <Button onClick={onCards} size={'small'}>Cards</Button>
+          <Button onClick={onEdit} size={'small'}>Edit</Button>
+        </CardActions>
+      </div>
+    </Card>
+  );
+};

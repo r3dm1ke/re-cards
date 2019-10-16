@@ -26,13 +26,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// eslint-disable-next-line max-lines-per-function
 export default () => {
   const logged_in = useSelector((state) => state.auth.logged_in);
   if (!logged_in) return <Redirect to={'/'} />;
 
   const cards = useSelector((state) => state.cards.filtered_cards);
-  // eslint-disable-next-line no-unused-vars
-  const _ = useSelector((state) => state.cards.refresh_helper);
+  useSelector((state) => state.cards.refresh_helper);
   const classes = useStyles();
   const dispatch = useDispatch();
 

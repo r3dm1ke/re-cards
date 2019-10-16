@@ -19,6 +19,7 @@ const count_mastered_cards = (cards) => cards.filter((card) => card.mastered).le
 const count_cards_due_for_smart_study = (cards) =>
   cards.filter((card) => card.eligible_for_smart_study);
 
+// eslint-disable-next-line complexity
 export default (state=INITIAL_STATE, action) => {
   switch (action.type) {
   case types.CARDS_LOADED:
@@ -68,10 +69,12 @@ export default (state=INITIAL_STATE, action) => {
 const filter_cards = (state) => {
   let filtered = state.cards;
   if (state.selected_deck !== 'all') {
+    // eslint-disable-next-line fp/no-mutation
     filtered = filtered.filter((card) => card.deck.id === state.selected_deck);
   }
 
   if (state.search_term !== '') {
+    // eslint-disable-next-line fp/no-mutation
     filtered = filtered.filter((card) =>
       card.question
         .toLowerCase()
@@ -81,8 +84,10 @@ const filter_cards = (state) => {
         .includes(state.search_term.toLowerCase()));
   }
 
+  // eslint-disable-next-line fp/no-mutating-methods
   filtered.sort((card1, card2) => card1[state.sort_prop] > card2[state.sort_prop] ? -1 : 1);
 
+  // eslint-disable-next-line fp/no-mutating-methods
   if (state.sort_direction) filtered.reverse();
 
   return filtered;

@@ -1,15 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/layout/ScrollRestorer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/SortSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flashcards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flashcards.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardSearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardSearchBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardSortSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardSortSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/Filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/EditCardDialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/ErrorsRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/ErrorsRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/MasonryLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MasonryLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/NewItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/NewItemCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/SearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/SearchBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/layout/ProfileDropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/ProfileDropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/navigation/BottomNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/navigation/BottomNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/navigation/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/navigation/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/MasteryProgress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/MasteryProgress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/MotivationalQuotes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/MotivationalQuotes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/SmartStudyCTA.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/SmartStudyCTA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/AdWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/AdWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/DailyStudyWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/DailyStudyWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/StreakWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/StreakWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/quick_study_widget/Details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/quick_study_widget/Details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/quick_study_widget/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/quick_study_widget/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckSearchBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckSearchBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckSortSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckSortSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckThumbnail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/EditDeckDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/EditDeckDialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/decks/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/Filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/Study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/StudyResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/StudyResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/const/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/decks/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/decks/decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/decks/decks_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/decks/decks_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/widgets/quick_study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/widgets/quick_study.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,19 +110,20 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\personal_projects\flashcards\flashcards\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\Michael Krasnov\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.2956.38\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\layout" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\navigation" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\dashboard\widgets\quick_study_widget" />
       <recent name="C:\personal_projects\flashcards\src\utils\database_actions" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\utils\study" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -126,6 +184,9 @@
       <workItem from="1570462524014" duration="8348000" />
       <workItem from="1570566954747" duration="11088000" />
       <workItem from="1570807367862" duration="2312000" />
+      <workItem from="1571243289727" duration="616000" />
+      <workItem from="1571243959415" duration="778000" />
+      <workItem from="1571244765934" duration="321000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -450,6 +511,10 @@
     <state x="294" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.374.1536.832/0.0.1680.1010@0.0.1680.1010" timestamp="1570805704367" />
     <state x="504" y="194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1570803253562" />
     <state x="504" y="194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.1080/1680.1050" timestamp="1570803253562" />
+    <state x="665" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1571243377821">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="665" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1920.232.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1571243377821" />
     <state width="1652" height="390" key="GridCell.Tab.0.bottom" timestamp="1570805936710">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -536,7 +601,14 @@
     <state x="408" y="61" key="MultipleFileMergeDialog/-1920.374.1536.832/0.0.1680.1010@0.0.1680.1010" timestamp="1570803257817" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080" timestamp="1570803253562" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080/1680.1050" timestamp="1570803253562" />
-    <state x="254" y="40" key="SettingsEditor" timestamp="1570803253562" />
+    <state x="536" y="338" key="Performance.Activity.Monitor" timestamp="1571243829115">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="536" y="338" key="Performance.Activity.Monitor/-1920.232.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1571243829115" />
+    <state x="254" y="40" key="SettingsEditor" timestamp="1571245093460">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="254" y="40" key="SettingsEditor/-1920.232.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1571245093460" />
     <state x="254" y="40" key="SettingsEditor/1920.1080/1680.1050" timestamp="1570803253562" />
     <state x="332" y="168" key="Vcs.Push.Dialog.v2" timestamp="1570804963355">
       <screen x="0" y="0" width="1680" height="1010" />

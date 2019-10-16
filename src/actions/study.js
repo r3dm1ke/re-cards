@@ -5,9 +5,7 @@ import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
 import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
 import {register_answer as register_answer_to_db} from '../utils/database_actions/answers';
-import {register_study_session, save_progress} from '../utils/database_actions/progress';
-import {engage_exam_mode as engage_exam_mode_db} from '../utils/database_actions/meta';
-import cards from '../reducers/cards/cards';
+import {save_progress} from '../utils/database_actions/progress';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,
@@ -127,16 +125,6 @@ export const study_teardown = () => async (dispatch, getState) => {
     .catch(() => dispatch(error_happened('Could not save progress. Something is definitely wrong.')));
   dispatch({type: types.STUDY_FINISHED});
   dispatch(push('/dashboard'));
-};
-
-export const engage_exam_mode = () => async (dispatch) => {
-  dispatch(add_loader('exam', 'Clearing your past sins...'));
-  try {
-    await engage_exam_mode_db();
-  } catch {
-    dispatch(error_happened('Error while engaging exam mode. You probably don\'t have any exams'));
-  }
-  dispatch(remove_loader('exam'));
 };
 
 export const validation_value_changed = (value) => ({

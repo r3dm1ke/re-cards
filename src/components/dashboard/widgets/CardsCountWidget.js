@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default (props) => {
+export default () => {
   const cards_count = useSelector((state) => state.cards.cards ? state.cards.cards.length : null);
   const mastered_cards_count = useSelector((state) => state.cards.mastered_cards);
   const decks_count = useSelector((state) => state.decks.decks ? state.decks.decks.length : null);

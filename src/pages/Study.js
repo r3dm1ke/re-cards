@@ -1,31 +1,18 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {
-  withStyles,
-} from '@material-ui/core';
+import React from 'react';
+import {useSelector} from 'react-redux';
 import Study from '../components/study/Study';
 import StudyResults from '../components/study/StudyResults';
 
-class StudyPage extends Component {
-  renderStudy() {
-    const {study_status} = this.props;
+export default () => {
+  const study_status = useSelector((state) => state.study.study_status);
+  const render_study = () => {
     if (study_status === 'running') {
       return <Study />;
     } else if (study_status === 'results') {
-      return <StudyResults />;
+      return <StudyResults/>;
     }
     return null;
-  }
+  };
 
-  render() {
-    const {classes} = this.props;
-    return this.renderStudy();
-  }
-}
-
-const styles = (theme) => ({});
-const mapStateToProps = (state) => ({
-  study_status: state.study.study_status,
-});
-const mapDispatchToProps = (dispatch) => ({});
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(StudyPage));
+  return render_study();
+};

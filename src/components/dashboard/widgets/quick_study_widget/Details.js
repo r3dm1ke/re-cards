@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default (props) => {
+// eslint-disable-next-line max-lines-per-function
+export default () => {
   const classes = useStyles();
   const decks = useSelector((state) => state.decks.decks);
   const decks_selected = useSelector((state) => state.widgets.quick_study.decks_selected);

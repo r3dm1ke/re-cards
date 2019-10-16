@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 export default (props) => {
   const classes = useStyles();
   const quotes = getMotivationalQuotes();
-  let slides = [
+  const slides = [
     ...quotes,
     <MasteryProgress/>,
   ];
@@ -57,12 +57,12 @@ export default (props) => {
   const smart_study_advisable = useSelector((state) => state.cards.smart_study_advisable);
   // eslint-disable-next-line fp/no-mutating-methods
   if (smart_study_advisable) slides.push(<SmartStudyCTA/>);
-  slides = shuffle(slides);
+  const shuffled_slides = shuffle(slides);
 
   return (
     <div className={classes.container}>
       <Slider {...slider_settings} className={`${classes.root} ${props.className}`}>
-        {slides}
+        {shuffled_slides}
       </Slider>
     </div>
   );

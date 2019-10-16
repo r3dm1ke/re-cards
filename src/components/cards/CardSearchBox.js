@@ -1,24 +1,10 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import SearchBox from '../common/SearchBox';
 import {cards_search_term_updated} from '../../actions/cards/cards';
-import {withStyles} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core';
 
-class CardSearchBox extends Component {
-  render() {
-    const {search_term_updated, classes, search_term} = this.props;
-    return (
-      <SearchBox
-        value={search_term}
-        onChange={search_term_updated}
-        label={'Search cards...'}
-        className={classes.root}
-      />
-    );
-  }
-}
-
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginBottom: theme.spacing(2),
   },
@@ -27,11 +13,20 @@ const styles = (theme) => ({
       width: '100%',
     },
   },
-});
-const mapStateToProps = (state) => ({
-  search_term: state.cards.search_term,
-});
-const mapDispatchToProps = (dispatch) => ({
-  search_term_updated: (search_term) => dispatch(cards_search_term_updated(search_term)),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(CardSearchBox));
+}));
+
+export default () => {
+  const classes = useStyles();
+  const search_term = useSelector((state) => state.cards.search_term);
+  const dispatch = useDispatch();
+  const search_term_updated = (new_search_term) => dispatch(cards_search_term_updated(new_search_term));
+
+  return (
+    <SearchBox
+      value={search_term}
+      onChange={search_term_updated}
+      label={'Search cards...'}
+      className={classes.root}
+    />
+  );
+};

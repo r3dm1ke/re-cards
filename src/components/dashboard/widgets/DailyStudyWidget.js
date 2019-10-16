@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default (props) => {
+export default () => {
   const cards_due_for_smart_study = useSelector((state) => state.cards.cards_due_for_smart_study.length);
   const minutes = Math.ceil(cards_due_for_smart_study / 3);
   const smart_study_advisable = useSelector((state) => state.cards.smart_study_advisable);

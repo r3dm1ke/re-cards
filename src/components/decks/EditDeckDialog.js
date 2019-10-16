@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {
   Button,
   TextField,
@@ -8,7 +8,6 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  withStyles,
 } from '@material-ui/core';
 import {
   edit_deck_dialog_name_changed,
@@ -17,77 +16,57 @@ import {
   toggle_edit_deck_dialog,
 } from '../../actions/decks/decks_form';
 
-// TODO rewrite as functional
-// eslint-disable-next-line require-jsdoc
-class EditDeckDialog extends Component {
-  // eslint-disable-next-line max-lines-per-function,require-jsdoc
-  render() {
-    const {
-      edit_deck_dialog_opened,
-      edit_deck_dialog_errors,
-      edit_deck_dialog_name,
-      on_edit_deck_submit,
-      on_edit_deck_delete,
-      edit_deck_dialog_id,
-      edit_deck_name_changed,
-      toggle_edit_deck_dialog,
-    } = this.props;
-    return (
-      <Dialog open={edit_deck_dialog_opened}>
-        <DialogTitle>Edit deck</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Enter a name for your flashcard deck
-          </DialogContentText>
-          <TextField
-            autoFocus
-            label={'Name'}
-            error={edit_deck_dialog_errors.name}
-            helperText={edit_deck_dialog_errors.name}
-            type={'text'}
-            fullWidth
-            value={edit_deck_dialog_name}
-            onChange={(e) => edit_deck_name_changed(e.target.value)}
-          />
-        </DialogContent>
-        <DialogActions>
+// eslint-disable-next-line max-lines-per-function
+export default () => {
+  const dispatch = useDispatch();
+  const dialog_opened = useSelector((state) => state.decks_form.edit_deck_dialog_opened);
+  const dialog_name = useSelector((state) => state.decks_form.edit_deck_dialog_name);
+  const dialog_id = useSelector((state) => state.decks_form.edit_deck_dialog_id);
+  const dialog_errors = useSelector((state) => state.decks_form.edit_deck_dialog_errors);
+  const toggle_dialog = () => dispatch(toggle_edit_deck_dialog());
+  const on_delete = () => dispatch(on_edit_deck_dialog_delete());
+  const on_submit = () => dispatch(on_edit_deck_dialog_submit());
+  const dialog_name_changed = (name) => dispatch(edit_deck_dialog_name_changed(name));
+
+  return (
+    <Dialog open={dialog_opened}>
+      <DialogTitle>Edit deck</DialogTitle>
+      <DialogContent>
+        <DialogContentText>
+          Enter a name for your flashcard deck
+        </DialogContentText>
+        <TextField
+          autoFocus
+          label={'Name'}
+          error={dialog_errors.name}
+          helperText={dialog_errors.name}
+          type={'text'}
+          fullWidth
+          value={dialog_name}
+          onChange={(e) => dialog_name_changed(e.target.value)}
+        />
+      </DialogContent>
+      <DialogActions>
+        <Button
+          onClick={on_submit}
+          color={'primary'}
+        >Submit</Button>
+        {dialog_id !== '' ?
           <Button
-            onClick={on_edit_deck_submit}
+            onClick={on_delete}
             color={'primary'}
-          >Submit</Button>
-          {edit_deck_dialog_id !== '' ?
-            <Button
-              onClick={on_edit_deck_delete}
-              color={'primary'}
-            >
-              Delete
-            </Button> : null
-          }
-
-          <Button
-            onClick={toggle_edit_deck_dialog}
-            color={'secondary'}
           >
-            Cancel
-          </Button>
-        </DialogActions>
-      </Dialog>
-    );
-  }
-}
+            Delete
+          </Button> : null
+        }
 
-const styles = () => ({});
-const mapStateToProps = (state) => ({
-  edit_deck_dialog_opened: state.decks_form.edit_deck_dialog_opened,
-  edit_deck_dialog_name: state.decks_form.edit_deck_dialog_name,
-  edit_deck_dialog_id: state.decks_form.edit_deck_dialog_id,
-  edit_deck_dialog_errors: state.decks_form.edit_deck_dialog_errors,
-});
-const mapDispatchToProps = (dispatch) => ({
-  toggle_edit_deck_dialog: () => dispatch(toggle_edit_deck_dialog()),
-  on_edit_deck_delete: () => dispatch(on_edit_deck_dialog_delete()),
-  on_edit_deck_submit: () => dispatch(on_edit_deck_dialog_submit()),
-  edit_deck_name_changed: (event) => dispatch(edit_deck_dialog_name_changed(event)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(EditDeckDialog));
+        <Button
+          onClick={toggle_dialog}
+          color={'secondary'}
+        >
+          Cancel
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+};

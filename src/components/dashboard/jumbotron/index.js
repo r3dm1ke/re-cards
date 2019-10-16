@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  makeStyles, Typography, Card
+  makeStyles, Typography, Card,
 } from '@material-ui/core';
 import Showcase from './showcase';
 import {useSelector} from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  'root': {
     background: `linear-gradient(81deg, ${theme.palette.primary.light}, ${theme.palette.secondary.light})`,
     backgroundSize: '400% 400%',
     animation: '$JumbotronBackground 11s ease infinite',
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     '50%': {backgroundPosition: '2% 100%'},
     '100%': {backgroundPosition: '99% 0%'},
   },
-  greeting: {
+  'greeting': {
     color: 'white',
     textAlign: 'center',
     flex: 0,
