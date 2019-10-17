@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/QuestionRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/question_renderers/MathRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/question_renderers/TextRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/database_actions/answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/answers.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,6 +130,8 @@
       <workItem from="1570462524014" duration="8348000" />
       <workItem from="1570566954747" duration="11088000" />
       <workItem from="1570807367862" duration="2312000" />
+      <workItem from="1571274673227" duration="491000" />
+      <workItem from="1571327114907" duration="1452000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -390,7 +399,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571182580582</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Further fixing the eslint bugs">
+      <created>1571271713329</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1571271713329</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Fix">
+      <created>1571271770803</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1571271770803</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,8 +438,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Offline switch (not working for localhost)" />
-    <MESSAGE value="Offline switch working and handling" />
     <MESSAGE value="Dashboard refactored to functional" />
     <MESSAGE value="Minor fix" />
     <MESSAGE value="Minor refactor" />
@@ -440,7 +461,9 @@
     <MESSAGE value="Added bottom navbar for mobile users" />
     <MESSAGE value="Refactored cards page to functional and added title to said page" />
     <MESSAGE value="Scrolling to top on location change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scrolling to top on location change" />
+    <MESSAGE value="Further fixing the eslint bugs" />
+    <MESSAGE value="Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

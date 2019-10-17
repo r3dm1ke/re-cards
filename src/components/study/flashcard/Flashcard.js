@@ -7,9 +7,10 @@ import {
   Slide,
   makeStyles,
 } from '@material-ui/core';
-import Question from './Question';
+import QuestionRenderer from '../../cards/renderers/QuestionRenderer';
 import Answer from './Answer';
 import Actions from './Actions';
+import {useSelector} from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,11 +36,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default () => {
   const classes = useStyles();
+  const card = useSelector((state) => state.study.study_cards[state.study.study_index]);
+  const {question, question_type} = card;
   return (
     <Slide direction={'up'} in mountOnEnter unmountOnExit>
       <Card className={classes.root}>
         <CardContent className={classes.content}>
-          <Question />
+          <QuestionRenderer question={question} question_type={question_type} />
           <Answer />
         </CardContent>
         <Divider />

@@ -31,7 +31,7 @@ const recalculate_ratio = (card_data) => ({
 
 const check_mastery = (card_data) => ({
   ...card_data,
-  mastery: card_data.s_r_deck === 14,
+  mastered: card_data.s_r_deck === 14,
 });
 
 const set_last_studied_time = (card_data) => ({
