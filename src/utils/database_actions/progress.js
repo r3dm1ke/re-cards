@@ -36,6 +36,8 @@ const get_streak_count = (state) => {
         moment_last_progress_timestamp.isBefore(today_timestamp)
     ) {
       return last_progress.streak ? last_progress.streak + 1 : 1;
+    } else if (moment_last_progress_timestamp.isAfter(today_timestamp)) {
+      return last_progress.streak ? last_progress.streak : 1;
     }
   }
   return 1;
