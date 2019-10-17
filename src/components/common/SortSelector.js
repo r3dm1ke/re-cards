@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     marginBottom: theme.spacing(2),
+    width: '10rem',
   },
   formControl: {
     flex: '1',
@@ -36,6 +37,7 @@ export default (props) => {
     sort_prop_value_updated,
     sort_direction_value_toggled,
     sort_props,
+    className,
   } = props;
 
   const render_items = () => sort_props.map((prop) => (
@@ -49,7 +51,7 @@ export default (props) => {
   );
 
   return (
-    <div className={classes.root}>
+    <div className={`${classes.root} ${className}`}>
       <FormControl className={classes.formControl} variant={'outlined'}>
         <InputLabel htmlFor="sort-selector">Sort by</InputLabel>
         <Select

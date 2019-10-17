@@ -12,6 +12,7 @@ import {deck_selected} from '../../actions/cards/cards';
 const useStyles = makeStyles((theme) => ({
   formControl: {
     marginBottom: theme.spacing(2),
+    width: '10rem',
   },
   select: {
     paddingRight: theme.spacing(2),

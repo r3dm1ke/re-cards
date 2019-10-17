@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/utils/database_actions/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/NewCardFab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/ConfirmDelete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/DeckSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/SortSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/SortSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +54,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\personal_projects\flashcards\flashcards\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="ts.external.directory.path" value="C:\Users\Michael Krasnov\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.2956.38\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -123,7 +128,7 @@
       <workItem from="1570566954747" duration="11088000" />
       <workItem from="1570807367862" duration="2312000" />
       <workItem from="1571274673227" duration="491000" />
-      <workItem from="1571327114907" duration="8346000" />
+      <workItem from="1571327114907" duration="11410000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -419,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571336785910</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Minor fix in progress saving">
+      <created>1571337153310</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1571337153310</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +456,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Minor refactor" />
     <MESSAGE value="Added slider to jumbotron component" />
     <MESSAGE value="Scrolling effect on jumbotron working" />
     <MESSAGE value="Updated animations" />
@@ -469,7 +480,8 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="Refactored Question rendering to a separate component" />
     <MESSAGE value="Refactored card thumbnail and layout on Cards page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored card thumbnail and layout on Cards page" />
+    <MESSAGE value="Minor fix in progress saving" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fix in progress saving" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
