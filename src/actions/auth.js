@@ -10,26 +10,29 @@ const app_initialized = () => ({
   type: types.APP_INITIALIZED,
 });
 
-export const init = () => async (dispatch) => {
-  auth.onAuthStateChanged((user) => {
-    console.log(`auth state changed ${user}`);
-    dispatch(app_initialized());
-    if (user) {
-      dispatch(add_loader('loading', 'Loading...'));
-      const action = {
-        type: types.LOGGED_IN,
-        payload: user,
-      };
-      dispatch(action);
-      dispatch(open_dashboard());
-      dispatch(add_subscribers());
-      dispatch(remove_loader('loading'));
+export const init = () => async (dispatch, getState) => {
+  const state = getState();
+  if (!state.auth.app_initialized) {
+    auth.onAuthStateChanged((user) => {
+      console.log(`auth state changed ${user}`);
+      dispatch(app_initialized());
+      if (user) {
+        dispatch(add_loader('loading', 'Loading...'));
+        const action = {
+          type: types.LOGGED_IN,
+          payload: user,
+        };
+        dispatch(action);
+        dispatch(open_dashboard());
+        dispatch(add_subscribers());
+        dispatch(remove_loader('loading'));
+      }
+    });
+    try {
+      await set_persistence_async();
+    } catch {
+      dispatch(error_happened('Error initializing local storage. Are you a developer?'));
     }
-  });
-  try {
-    await set_persistence_async();
-  } catch {
-    dispatch(error_happened('Error initializing local storage. Are you a developer?'));
   }
 };
 

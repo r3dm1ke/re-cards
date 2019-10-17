@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/flashcards.iml" filepath="$PROJECT_DIR$/.idea/flashcards.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../flashcards-funcitons/.idea/flashcards-funcitons.iml" filepath="$PROJECT_DIR$/../flashcards-funcitons/.idea/flashcards-funcitons.iml" />
     </modules>
   </component>
 </project>
