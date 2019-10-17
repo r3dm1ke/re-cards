@@ -1,7 +1,7 @@
 import * as types from './types';
 import {push} from 'connected-react-router';
 
-export const open_dashboard = () => async (dispatch, getState) => {
+export const open_dashboard = () => async (dispatch) => {
   dispatch(push('/dashboard'));
 };
 

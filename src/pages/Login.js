@@ -1,44 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
   Container,
   Paper,
   Typography,
   Divider,
-  withStyles,
+  makeStyles,
   Button,
   CircularProgress,
 } from '@material-ui/core';
 import SchoolIcon from '@material-ui/icons/School';
-import {login} from '../actions/auth';
-import {connect} from 'react-redux';
-import {open_dashboard} from '../actions/dashboard';
+import {login as _login} from '../actions/auth';
+import {useSelector, useDispatch} from 'react-redux';
+import {open_dashboard as _open_dashboard} from '../actions/dashboard';
 
-// TODO rewrite as functional
-// eslint-disable-next-line require-jsdoc
-class LoginPage extends Component {
-  // eslint-disable-next-line require-jsdoc
-  render() {
-    if (this.props.logged_in) {
-      this.props.open_dashboard();
-    }
-
-    const {classes} = this.props;
-    return (
-      <Container className={classes.container}>
-        <Paper className={classes.root}>
-          <Typography variant={'h3'} className={classes.title}>Welcome to Flashcards</Typography>
-          <Divider className={classes.divider}/>
-          <SchoolIcon className={classes.icon}/>
-          {this.props.app_initialized ? (
-            <Button variant={'outlined'} color={'primary'} onClick={this.props.login}>Sign in</Button>
-          ) : (<CircularProgress color={'primary'} />)}
-        </Paper>
-      </Container>
-    );
-  }
-}
-
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     justifyContent: 'space-around',
@@ -62,14 +37,30 @@ const styles = (theme) => ({
   divider: {
     width: '100%',
   },
-});
+}));
 
-const mapStateToProps = (state) => ({
-  logged_in: state.auth.logged_in,
-  app_initialized: state.auth.app_initialized,
-});
-const mapDispatchToProps = (dispatch) => ({
-  login: () => dispatch(login()),
-  open_dashboard: () => dispatch(open_dashboard()),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(LoginPage));
+export default () => {
+  const classes = useStyles();
+  const dispatch = useDispatch();
+  const logged_in = useSelector((state) => state.auth.logged_in);
+  const app_initialized = useSelector((state) => state.auth.app_initialized);
+  const login = () => dispatch(_login());
+  const open_dashboard = () => dispatch(_open_dashboard());
+
+  if (logged_in) {
+    open_dashboard();
+  }
+
+  return (
+    <Container className={classes.container}>
+      <Paper className={classes.root}>
+        <Typography variant={'h3'} className={classes.title}>Welcome to Flashcards</Typography>
+        <Divider className={classes.divider}/>
+        <SchoolIcon className={classes.icon}/>
+        {app_initialized ? (
+          <Button variant={'outlined'} color={'primary'} onClick={login}>Sign in</Button>
+        ) : (<CircularProgress color={'primary'} />)}
+      </Paper>
+    </Container>
+  );
+};

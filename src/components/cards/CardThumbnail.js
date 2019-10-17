@@ -13,6 +13,7 @@ import {Skeleton} from '@material-ui/lab';
 import {Q_MATH, Q_TEXT} from '../../const/cards';
 import MathJaxRenderer from '../common/MathRenderer';
 
+// TODO REWRITE FROM SCRATCH
 class CardThumbnail extends Component {
   renderQuestion() {
     const {question, question_type} = this.props;

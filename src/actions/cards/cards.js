@@ -22,12 +22,12 @@ export const open_cards = () => async (dispatch) => {
   dispatch(push('/cards'));
 };
 
-export const open_cards_for_deck = (deckId) => async (dispatch, getState) => {
+export const open_cards_for_deck = (deckId) => async (dispatch) => {
   dispatch(deck_selected(deckId));
   dispatch(open_cards());
 };
 
-export const deck_selected = (deckId) => async (dispatch, getState) => {
+export const deck_selected = (deckId) => async (dispatch) => {
   dispatch({
     type: types.DECK_SELECTED,
     payload: deckId,
@@ -35,7 +35,7 @@ export const deck_selected = (deckId) => async (dispatch, getState) => {
 };
 
 
-export const delete_card = (card) => async (dispatch, getState) => {
+export const delete_card = (card) => async (dispatch) => {
   dispatch(add_loader('del_card', 'Deleting...'));
   const ref = firestore.collection('cards').doc(card.id);
   try {

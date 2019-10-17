@@ -32,6 +32,7 @@ export default (state=INITIAL_STATE, action) => {
   };
 };
 
+// eslint-disable-next-line complexity
 const reduce_state = (state=INITIAL_STATE, action) => {
   switch (action.type) {
   case types.CARDS_LOADED:

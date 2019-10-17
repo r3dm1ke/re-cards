@@ -38,8 +38,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(1),
   },
+  answerTypeSelect: {},
 }));
 
+// TODO refactor
+// eslint-disable-next-line max-lines-per-function
 export default () => {
   const classes = useStyles();
   const answer = useSelector((state) => state.cards_form.edit_dialog_answer);

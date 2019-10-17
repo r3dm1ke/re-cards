@@ -39,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default (props) => {
+// eslint-disable-next-line max-lines-per-function
+export default () => {
   const classes = useStyles();
   const number_of_eligible_cards = useSelector((state) => state.widgets.quick_study.number_of_eligible_cards);
   const selected_cards_count = useSelector((state) => state.widgets.quick_study.number_of_cards_selected);
@@ -48,6 +49,7 @@ export default (props) => {
   const render_widget_content = () => {
     return render_quick_study_controls();
   };
+  // eslint-disable-next-line complexity,max-lines-per-function
   const render_quick_study_controls = () => {
     const min = Math.min(1, number_of_eligible_cards || 0);
     const max = number_of_eligible_cards;

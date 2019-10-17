@@ -4,7 +4,7 @@ import {Typography, Button, makeStyles} from '@material-ui/core';
 import {start_study} from '../../../../actions/study';
 import {SMART_STUDY} from '../../../../const/study';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default (props) => {
+export default () => {
   const cards_count = useSelector((state) => state.cards.cards_due_for_smart_study).length;
   const classes = useStyles();
   const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {
   Dialog,
@@ -27,15 +27,17 @@ const TABS = [
   {label: 'Deck', component: <DeckTab />},
 ];
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   stepper: {
     flex: 1,
   },
   tab_header: {
     justifyContent: 'space-around',
   },
+  tabs: {},
 }));
 
+// eslint-disable-next-line max-lines-per-function
 export default () => {
   const edit_dialog_opened = useSelector((state) => state.cards_form.edit_dialog_opened);
   const tab_index = useSelector((state) => state.cards_form.edit_dialog_tab);

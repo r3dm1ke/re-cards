@@ -46,7 +46,9 @@ export default () => {
   const is_sm = useMediaQuery(theme.breakpoints.down('sm'));
   const is_md = useMediaQuery(theme.breakpoints.down('md'));
   let cols = 3;
+  // eslint-disable-next-line fp/no-mutation
   if (is_md) cols = 2;
+  // eslint-disable-next-line fp/no-mutation
   if (is_sm) cols = 1;
 
   return (

@@ -13,7 +13,7 @@ import {open_decks} from '../../../actions/decks/decks';
 import {open_cards} from '../../../actions/cards/cards';
 import {open_dashboard} from '../../../actions/dashboard';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     position: 'fixed',
     bottom: 0,

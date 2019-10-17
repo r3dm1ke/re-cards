@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 import {logout} from '../../../actions/auth';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {},
 }));
 

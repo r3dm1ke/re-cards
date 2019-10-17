@@ -24,18 +24,23 @@ import {
 } from '../../../../actions/cards/cards_form';
 import {A_LIST_ENTRY_MATH, A_LIST_TYPES} from '../../../../const/cards';
 
-const useStyles = makeStyles((theme) => ({
-  errors_table_container: {},
-  errors_table_text: {
-
-  },
+const useStyles = makeStyles(() => ({
+  table_errors_container: {},
+  table_errors_text: {},
+  answerTypeForEntrySelectFormControl: {},
+  answerTypeForEntrySelect: {},
   lower_table_container: {
     display: 'flex',
     alignItems: 'center',
   },
   root: {},
+  deleteEntryButton: {},
+  deleteEntryButtonIcon: {},
+  addNewEntryButton: {},
+  addNewEntryIcon: {},
 }));
 
+// eslint-disable-next-line max-lines-per-function
 export default () => {
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -89,7 +94,7 @@ export default () => {
     <Switch
       checked={entry.is_correct}
       value={'answer_entry_is_correct'}
-      onChange={(e) => {
+      onChange={() => {
         const newEntry = {...entry, is_correct: !entry.is_correct};
         dispatch(edit_card_dialog_answer_list_entry_modified(index, newEntry));
       }}

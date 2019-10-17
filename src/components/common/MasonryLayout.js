@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line max-lines-per-function
 export default (props) => {
   const column_wrapper = {};
   const result = [];

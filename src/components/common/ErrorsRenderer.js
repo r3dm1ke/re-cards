@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import ErrorSnackbar from './ErrorSnackbar';
 import {error_dismissed} from '../../actions/errors';
 
-export default (props) => {
+export default () => {
   const errors = useSelector((state) => state.errors.errors);
   const dispatch = useDispatch();
   const on_dismiss = (index) => () => dispatch(error_dismissed(index));

@@ -3,12 +3,12 @@ import {useSelector} from 'react-redux';
 import {Typography, makeStyles} from '@material-ui/core';
 import {pick_random} from '../../../../utils/random';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {},
   text: {
     color: 'white',
     textAlign: 'center',
-  }
+  },
 }));
 
 const MOTIVATIONAL_QUOTES = [
@@ -19,7 +19,7 @@ const MOTIVATIONAL_QUOTES = [
   'I am proud of you!',
 ];
 
-export default (props) => {
+export default () => {
   const cards_count = useSelector((state) => state.cards.cards ? state.cards.cards.length : null);
   const mastered_cards_count = useSelector((state) => state.cards.mastered_cards);
   const classes = useStyles();

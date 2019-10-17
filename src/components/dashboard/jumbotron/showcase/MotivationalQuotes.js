@@ -14,7 +14,7 @@ const QUOTES = [
 
 const QUOTE_COUNT = 3;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     textAlign: 'center',
     color: 'white',

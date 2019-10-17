@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {
   Dialog,
   DialogActions,
@@ -10,36 +10,27 @@ import {
 } from '@material-ui/core';
 import {hide_alert} from '../../actions/mics';
 
-class Alert extends Component {
-  render() {
-    const {open, title, description, onClose} = this.props;
-    return (
-      <Dialog
-        open={open}
-        onClose={onClose}
-      >
-        <DialogTitle>{title}</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            {description}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button color={'inherit'} onClick={onClose}>Ok</Button>
-        </DialogActions>
-      </Dialog>
-    );
-  }
-}
+export default () => {
+  const open = useSelector((state) => state.mics.alert);
+  const title = useSelector((state) => state.mics.alertTitle);
+  const description = useSelector((state) => state.mics.alertDescription);
+  const dispatch = useDispatch();
+  const on_close = () => dispatch(hide_alert());
 
-const mapStateToProps = (state) => ({
-  open: state.mics.alert,
-  title: state.mics.alertTitle,
-  description: state.mics.alertDescription,
-});
-const mapDispatchToProps = (dispatch) => ({
-  onClose: () => dispatch(hide_alert()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Alert);
-
+  return (
+    <Dialog
+      open={open}
+      onClose={on_close}
+    >
+      <DialogTitle>{title}</DialogTitle>
+      <DialogContent>
+        <DialogContentText>
+          {description}
+        </DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button color={'inherit'} onClick={on_close}>Ok</Button>
+      </DialogActions>
+    </Dialog>
+  );
+};

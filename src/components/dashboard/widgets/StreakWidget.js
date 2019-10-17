@@ -19,11 +19,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default (props) => {
+export default () => {
   const classes = useStyles();
   const last_progress = useSelector((state) => state.progress.last_progress);
   const studied_today = useSelector((state) => state.progress.studied_today);
-
   const render_widget_content = () => {
     if (last_progress !== undefined) {
       return (

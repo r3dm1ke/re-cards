@@ -1,46 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
   FormControl,
   Select,
   InputLabel,
   MenuItem,
-  withStyles,
+  makeStyles,
 } from '@material-ui/core';
-import {connect} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import {deck_selected} from '../../actions/cards/cards';
 
-class DeckSelector extends Component {
-  renderItems() {
-    const {decks} = this.props;
-    return decks.map((deck) => (
-      <MenuItem value={deck.id} key={deck.id}>{deck.name}</MenuItem>
-    ));
-  }
-
-  render() {
-    const {classes, selected_deck, deck_selected} = this.props;
-    return (
-      <FormControl className={classes.formControl} variant={'outlined'}>
-        <InputLabel htmlFor="deck-selector">Deck</InputLabel>
-        <Select
-          value={selected_deck}
-          onChange={(e) => deck_selected(e.target.value)}
-          inputProps={{
-            name: 'deck',
-            id: 'deck-selector',
-          }}
-          labelWidth={40}
-          className={classes.select}
-        >
-          {this.renderItems()}
-          <MenuItem value={'all'}>All</MenuItem>
-        </Select>
-      </FormControl>
-    );
-  }
-}
-
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   formControl: {
     marginBottom: theme.spacing(2),
   },
@@ -52,12 +21,35 @@ const styles = (theme) => ({
       width: '100%',
     },
   },
-});
-const mapStateToProps = (state) => ({
-  selected_deck: state.cards.selected_deck,
-  decks: state.decks.decks,
-});
-const mapDispatchToProps = (dispatch) => ({
-  deck_selected: (deck) => dispatch(deck_selected(deck)),
-});
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(DeckSelector));
+}));
+
+export default () => {
+  const classes = useStyles();
+  const decks = useSelector((state) => state.decks.decks);
+  const selected_deck = useSelector((state) => state.cards.selected_deck);
+  const dispatch = useDispatch();
+  const on_deck_selected = (deck) => dispatch(deck_selected(deck));
+
+  const render_items = () => decks.map((deck) => (
+    <MenuItem value={deck.id} key={deck.id}>{deck.name}</MenuItem>
+  ));
+
+  return (
+    <FormControl className={classes.formControl} variant={'outlined'}>
+      <InputLabel htmlFor="deck-selector">Deck</InputLabel>
+      <Select
+        value={selected_deck}
+        onChange={(e) => on_deck_selected(e.target.value)}
+        inputProps={{
+          name: 'deck',
+          id: 'deck-selector',
+        }}
+        labelWidth={40}
+        className={classes.select}
+      >
+        {render_items()}
+        <MenuItem value={'all'}>All</MenuItem>
+      </Select>
+    </FormControl>
+  );
+};
