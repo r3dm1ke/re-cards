@@ -6,8 +6,6 @@ import {makeStyles, Divider} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
     display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap',

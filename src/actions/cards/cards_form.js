@@ -154,9 +154,12 @@ export const edit_card_dialog_answer_type_changed = (answer_type) => ({
   payload: answer_type,
 });
 
-export const close_edit_card_dialog = () => ({
-  type: types.CLOSE_EDIT_CARD_DIALOG,
-});
+export const close_edit_card_dialog = () => async (dispatch) => {
+  dispatch({
+    type: types.CLOSE_EDIT_CARD_DIALOG,
+  });
+  dispatch(edit_card_dialog_tab_changed(0));
+};
 
 export const edit_card_dialog_answer_list_added_new_entry = () => ({
   type: types.EDIT_CARD_DIALOG_ANSWER_LIST_ADDED_NEW_ENTRY,

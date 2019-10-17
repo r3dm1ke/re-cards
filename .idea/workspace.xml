@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/database_actions/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/progress.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,15 +53,15 @@
     <property name="ts.external.directory.path" value="C:\Users\Michael Krasnov\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.2956.38\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\layout" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\cards\renderers\question_renderers" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\navigation" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\dashboard\widgets\quick_study_widget" />
       <recent name="C:\personal_projects\flashcards\src\utils\database_actions" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\utils\study" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -123,6 +122,8 @@
       <workItem from="1570462524014" duration="8348000" />
       <workItem from="1570566954747" duration="11088000" />
       <workItem from="1570807367862" duration="2312000" />
+      <workItem from="1571274673227" duration="491000" />
+      <workItem from="1571327114907" duration="8346000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -390,7 +391,35 @@
       <option name="project" value="LOCAL" />
       <updated>1571182580582</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Further fixing the eslint bugs">
+      <created>1571271713329</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1571271713329</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Fix">
+      <created>1571271770803</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1571271770803</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Refactored Question rendering to a separate component">
+      <created>1571328681725</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1571328681725</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Refactored card thumbnail and layout on Cards page">
+      <created>1571336785910</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1571336785910</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,10 +444,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Offline switch (not working for localhost)" />
-    <MESSAGE value="Offline switch working and handling" />
-    <MESSAGE value="Dashboard refactored to functional" />
-    <MESSAGE value="Minor fix" />
     <MESSAGE value="Minor refactor" />
     <MESSAGE value="Added slider to jumbotron component" />
     <MESSAGE value="Scrolling effect on jumbotron working" />
@@ -440,7 +465,11 @@
     <MESSAGE value="Added bottom navbar for mobile users" />
     <MESSAGE value="Refactored cards page to functional and added title to said page" />
     <MESSAGE value="Scrolling to top on location change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Scrolling to top on location change" />
+    <MESSAGE value="Further fixing the eslint bugs" />
+    <MESSAGE value="Fix" />
+    <MESSAGE value="Refactored Question rendering to a separate component" />
+    <MESSAGE value="Refactored card thumbnail and layout on Cards page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored card thumbnail and layout on Cards page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
