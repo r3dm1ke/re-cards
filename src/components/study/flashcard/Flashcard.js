@@ -7,7 +7,7 @@ import {
   Slide,
   makeStyles,
 } from '@material-ui/core';
-import QuestionRenderer from '../../cards/renderers/QuestionRenderer';
+import QuestionRenderer from '../../cards/renderers/question_renderers/QuestionRenderer';
 import Answer from './Answer';
 import Actions from './Actions';
 import {useSelector} from 'react-redux';

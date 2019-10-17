@@ -1,9 +1,10 @@
 import React from 'react';
-import {Grow, makeStyles, Typography} from '@material-ui/core';
+import {useTheme, makeStyles, Typography} from '@material-ui/core';
 import {useSelector, useDispatch} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import CardThumbnail from '../components/cards/CardThumbnail';
+import CardThumbnail from '../components/cards/thumbnail';
 import Filters from '../components/cards/Filters';
+import ResponsiveMasonryLayout from '../components/common/layout/ResponsiveMasonryLayout';
 import {
   delete_card,
 } from '../actions/cards/cards';
@@ -35,6 +36,7 @@ export default () => {
   useSelector((state) => state.cards.refresh_helper);
   const classes = useStyles();
   const dispatch = useDispatch();
+  const theme = useTheme();
 
   const render_cards = () => {
     if (cards === undefined) {
@@ -42,17 +44,15 @@ export default () => {
     }
     return cards
       .map((card, index) => (
-        <Grow timeout={index * 250} key={card.id} in>
-          <CardThumbnail
-            question={card.question}
-            question_type={card.question_type}
-            answer={card.answer}
-            deckName={card.deck_name}
-            ratio={card.ratio}
-            onEdit={() => dispatch(open_edit_card_dialog_for_existing_card(card))}
-            onDelete={() => dispatch(delete_card(card))}
-          />
-        </Grow>
+        <CardThumbnail
+          question={card.question}
+          question_type={card.question_type}
+          answer={card.answer}
+          deck_name={card.deck_name}
+          key={index}
+          on_edit={() => dispatch(open_edit_card_dialog_for_existing_card(card))}
+          on_delete={() => dispatch(delete_card(card))}
+        />
       ));
   };
 
@@ -62,18 +62,17 @@ export default () => {
     ));
   };
 
-  const final_delay = cards === undefined ? 0 : cards.length * 250;
-
   return (
     <div>
       <Typography variant={'h2'} className={classes.title}>Your cards</Typography>
       <Filters />
-      <div className={classes.cardContainer}>
+      <ResponsiveMasonryLayout
+        cols={{xs: 1, sm: 2, md: 3, lg: 4}}
+        gap={theme.spacing(2)}
+      >
         {render_cards()}
-        <Grow timeout={final_delay} in>
-          <NewItemCard onClick={() => dispatch(open_edit_card_dialog_for_new_card())}/>
-        </Grow>
-      </div>
+        {/*<NewItemCard onClick={() => dispatch(open_edit_card_dialog_for_new_card())}/>*/}
+      </ResponsiveMasonryLayout>
       <EditCardDialog />
     </div>
   );

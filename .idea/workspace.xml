@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/QuestionRenderer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/question_renderers/MathRenderer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/question_renderers/TextRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/DeckNameRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/FrontSide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/Skeleton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/layout/ResponsiveMasonryLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/CardThumbnail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/Filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/Filters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/QuestionRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/question_renderers/QuestionRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/MasonryLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/MasonryLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Question.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/database_actions/answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/answers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,15 +66,15 @@
     <property name="ts.external.directory.path" value="C:\Users\Michael Krasnov\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.2956.38\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\layout" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\cards\renderers\question_renderers" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\navigation" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\dashboard\widgets\quick_study_widget" />
       <recent name="C:\personal_projects\flashcards\src\utils\database_actions" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\utils\study" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -131,7 +136,7 @@
       <workItem from="1570566954747" duration="11088000" />
       <workItem from="1570807367862" duration="2312000" />
       <workItem from="1571274673227" duration="491000" />
-      <workItem from="1571327114907" duration="1452000" />
+      <workItem from="1571327114907" duration="8026000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -413,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571271770803</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Refactored Question rendering to a separate component">
+      <created>1571328681725</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1571328681725</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +450,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Dashboard refactored to functional" />
     <MESSAGE value="Minor fix" />
     <MESSAGE value="Minor refactor" />
     <MESSAGE value="Added slider to jumbotron component" />
@@ -463,7 +474,8 @@
     <MESSAGE value="Scrolling to top on location change" />
     <MESSAGE value="Further fixing the eslint bugs" />
     <MESSAGE value="Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
+    <MESSAGE value="Refactored Question rendering to a separate component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Question rendering to a separate component" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
