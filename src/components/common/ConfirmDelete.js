@@ -9,7 +9,26 @@ import {
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
-
+  root: {},
+  actions: {
+    padding: 0,
+    justifyContent: 'space-around',
+  },
+  ok_button: {
+    'flex': 1,
+    'backgroundColor': theme.palette.error.main,
+    'color': 'white',
+    'borderRadius': 0,
+    'borderBottomLeftRadius': theme.spacing(0.5),
+    '&:hover': {
+      backgroundColor: theme.palette.error.dark,
+    },
+  },
+  cancel_button: {
+    flex: 1,
+    margin: 0,
+    borderBottomRightRadius: theme.spacing(0.5),
+  },
 }));
 
 export default (props) => {
@@ -19,10 +38,10 @@ export default (props) => {
     <Dialog className={classes.root} open onClose={on_cancel}>
       <DialogTitle>{title}</DialogTitle>
       <Divider />
-      <DialogActions>
-        <Button color={'danger'} onClick={on_ok}>{ok_text}</Button>
+      <DialogActions className={classes.actions}>
+        <Button className={classes.ok_button} onClick={on_ok}>{ok_text}</Button>
         <Divider orientation={'vertical'}/>
-        <Button onClick={on_cancel}>{cancel_text}</Button>
+        <Button className={classes.cancel_button} onClick={on_cancel}>{cancel_text}</Button>
       </DialogActions>
     </Dialog>
   );
