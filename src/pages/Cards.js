@@ -96,7 +96,7 @@ export default () => {
       <Typography variant={'h2'} className={classes.title}>Your cards</Typography>
       <Filters />
       <ResponsiveMasonryLayout
-        cols={{xs: 1, sm: 2, md: 3, lg: 4}}
+        cols={{xs: 1, sm: 2, md: 3, lg: 4, xl: 5}}
         gap={theme.spacing(2)}
       >
         {render_cards()}

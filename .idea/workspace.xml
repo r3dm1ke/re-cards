@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/ConfirmDelete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/ConfirmDelete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/layout/ResponsiveMasonryLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/ResponsiveMasonryLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +125,7 @@
       <workItem from="1570566954747" duration="11088000" />
       <workItem from="1570807367862" duration="2312000" />
       <workItem from="1571274673227" duration="491000" />
-      <workItem from="1571327114907" duration="12247000" />
+      <workItem from="1571327114907" duration="13305000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -435,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571351785246</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Minor fixes">
+      <created>1571352587952</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1571352587952</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +467,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Scrolling effect on jumbotron working" />
     <MESSAGE value="Updated animations" />
     <MESSAGE value="Removed redundant animation" />
     <MESSAGE value="Added CTA slide to jumbotron" />
@@ -485,7 +491,8 @@
     <MESSAGE value="Refactored card thumbnail and layout on Cards page" />
     <MESSAGE value="Minor fix in progress saving" />
     <MESSAGE value="Added delete confirmation and a fab to create cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added delete confirmation and a fab to create cards" />
+    <MESSAGE value="Minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
