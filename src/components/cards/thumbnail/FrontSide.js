@@ -7,12 +7,13 @@ import {
   makeStyles,
 } from '@material-ui/core';
 import DeckNameRenderer from '../renderers/DeckNameRenderer';
-import QuestionRenderer from '../renderers/question_renderers/QuestionRenderer';
+import QuestionRenderer from '../renderers/question';
 
 const useStyles = makeStyles((theme) => ({
   content: {
     paddingTop: theme.spacing(6),
     paddingBottom: theme.spacing(4),
+    flex: 1,
   },
   deck_name: {
     position: 'absolute',

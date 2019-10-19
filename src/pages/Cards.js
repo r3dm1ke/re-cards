@@ -49,6 +49,7 @@ export default () => {
           question={card.question}
           question_type={card.question_type}
           answer={card.answer}
+          answer_type={card.answer_type}
           deck_name={card.deck_name}
           key={index}
           on_edit={() => dispatch(open_edit_card_dialog_for_existing_card(card))}
