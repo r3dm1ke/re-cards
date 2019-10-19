@@ -21,15 +21,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default () => {
   const classes = useStyles();
-  const last_progress = useSelector((state) => state.progress.last_progress);
+  const streak = useSelector((state) => state.progress.streak);
   const studied_today = useSelector((state) => state.progress.studied_today);
   const render_widget_content = () => {
-    if (last_progress !== undefined) {
+    if (streak !== undefined) {
       return (
         <React.Fragment>
-          <Typography variant={'h2'}>{last_progress.streak}</Typography>
+          <Typography variant={'h2'}>{streak}</Typography>
           <Typography variant={'overline'} className={classes.subtitle}>
-            Day{last_progress.streak > 1 ? 's' : ''} studying in a row
+            Day{streak > 1 ? 's' : ''} studying in a row
           </Typography>
           {render_subtitle()}
           <Button variant={'outlined'} color={'primary'}>Remind me</Button>
@@ -49,6 +49,13 @@ export default () => {
         <Typography variant={'body1'} className={classes.description}>
           You are doing {pick_random(['wonderful', 'great', 'awesome'])}.
           Set a reminder so you will not forget to study tomorrow.
+        </Typography>
+      );
+    }
+    if (streak === 0) {
+      return (
+        <Typography variant={'body1'} className={classes.description}>
+          Those cards are not going to study themselves. Go get them. Or, set a reminder and do it later today.
         </Typography>
       );
     }
