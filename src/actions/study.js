@@ -2,7 +2,7 @@ import * as types from './types';
 import {push} from 'connected-react-router';
 import {add_loader, remove_loader, show_alert} from './mics';
 import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
-import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../const/cards';
+import {A_MULTIPLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
 import {register_answer as register_answer_to_db} from '../utils/database_actions/answers';
 import {save_progress} from '../utils/database_actions/progress';
@@ -53,7 +53,7 @@ export const cards_for_simple_study_loaded = (cards) => ({
 const check_answer = (card, validation_value) => {
   if (card.answer_type === A_TEXT) {
     return check_answer_for_text(card.answer, validation_value);
-  } else if (card.answer_type === A_MULTIPLE_CHOICE || card.answer_type === A_SINGLE_CHOICE) {
+  } else if (card.answer_type === A_MULTIPLE_CHOICE) {
     return check_answer_for_multiple_choice(card.answer_list, validation_value);
   }
 };

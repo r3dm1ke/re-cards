@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/StreakWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/StreakWidget.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/progress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/Answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/const/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validators/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/cards.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +129,7 @@
       <workItem from="1570807367862" duration="2312000" />
       <workItem from="1571274673227" duration="491000" />
       <workItem from="1571327114907" duration="13305000" />
-      <workItem from="1571498391928" duration="600000" />
+      <workItem from="1571498391928" duration="902000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -443,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571352587952</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="A fix in streak calculation">
+      <created>1571499008475</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1571499008475</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +478,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Updated animations" />
     <MESSAGE value="Removed redundant animation" />
     <MESSAGE value="Added CTA slide to jumbotron" />
     <MESSAGE value="Refactored smart study process" />
@@ -493,7 +502,8 @@
     <MESSAGE value="Minor fix in progress saving" />
     <MESSAGE value="Added delete confirmation and a fab to create cards" />
     <MESSAGE value="Minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
+    <MESSAGE value="A fix in streak calculation" />
+    <option name="LAST_COMMIT_MESSAGE" value="A fix in streak calculation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

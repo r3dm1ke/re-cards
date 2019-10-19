@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 import {useSelector, useDispatch} from 'react-redux';
 import {validation_value_changed} from '../../../actions/study';
-import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../../../const/cards';
+import {A_MULTIPLE_CHOICE, A_TEXT} from '../../../const/cards';
 
 const useStyles = makeStyles((theme) => ({
   answer: {
@@ -107,7 +107,7 @@ export default () => {
     if (answer_type === A_TEXT) {
       if (validation_required) return renderTextAnswerWithValidation();
       return renderTextAnswerNoValidation();
-    } else if (answer_type === A_MULTIPLE_CHOICE || answer_type === A_SINGLE_CHOICE) {
+    } else if (answer_type === A_MULTIPLE_CHOICE) {
       if (validation_required) return renderMultipleAnswerWithValidation();
       return renderMultipleAnswerNoValidation();
     }

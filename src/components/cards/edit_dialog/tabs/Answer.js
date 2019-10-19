@@ -17,7 +17,7 @@ import {
   edit_card_dialog_answer_changed,
   edit_card_dialog_answer_type_changed,
 } from '../../../../actions/cards/cards_form';
-import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT, A_TYPES} from '../../../../const/cards';
+import {A_MULTIPLE_CHOICE, A_TEXT, A_TYPES} from '../../../../const/cards';
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -82,8 +82,7 @@ export default () => {
 
   const renderAnswerField = () => {
     if (answer_type === A_TEXT) return renderAnswerTextField();
-    else if (answer_type === A_MULTIPLE_CHOICE ||
-             answer_type === A_SINGLE_CHOICE) {
+    else if (answer_type === A_MULTIPLE_CHOICE) {
       return <AnswerListTable/>;
     }
   };
