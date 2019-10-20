@@ -1,5 +1,5 @@
 import React from 'react';
-import AnswerDeltaRenderer from './renderers/answer/Delta';
+import AnswerDeltaRenderer from './renderers/answer/delta';
 import AnswerPreviewRenderer from '../../cards/renderers/answer_preview';
 import Button from '@material-ui/core/Button';
 
@@ -15,19 +15,18 @@ const FlashcardBack = (props) => {
 
   return (
     <React.Fragment>
-      {validation_required ?
+      {validation_required || is_correct ?
         <AnswerDeltaRenderer
           answer={answer}
           answer_type={answer_type}
           validation_value={validation_value}
-          is_correct={is_correct}
         /> :
         <AnswerPreviewRenderer
           answer={answer}
           answer_type={answer_type}
         />
       }
-      <Button onPress={on_finalize}>Next card</Button>
+      <Button onClick={on_finalize}>Next card</Button>
     </React.Fragment>
   );
 };

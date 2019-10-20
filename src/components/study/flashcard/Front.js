@@ -2,6 +2,7 @@ import React from 'react';
 import QuestionRenderer from '../../cards/renderers/question';
 import AnswerPromptRenderer from './renderers/answer/prompt';
 import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
 
 const FlashcardFront = (props) => {
   const {
@@ -17,6 +18,7 @@ const FlashcardFront = (props) => {
   return (
     <React.Fragment>
       <QuestionRenderer question={question} question_type={question_type}/>
+      <Divider />
       {validation_required ?
         <AnswerPromptRenderer
           answer={answer}
@@ -25,7 +27,7 @@ const FlashcardFront = (props) => {
           on_validation_value_changed={on_validation_value_changed}
         /> : null
       }
-      <Button onPress={on_confirmed}>{validation_required ? 'Confirm' : 'Show answer'}</Button>
+      <Button onClick={on_confirmed}>{validation_required ? 'Confirm' : 'Show answer'}</Button>
     </React.Fragment>
   );
 };

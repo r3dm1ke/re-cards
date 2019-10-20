@@ -4,7 +4,8 @@ import {
   LinearProgress,
 } from '@material-ui/core';
 import {useSelector, useDispatch} from 'react-redux';
-import {register_answer} from '../../actions/study';
+import {confirm_answer, register_answer, validation_value_changed} from '../../actions/study';
+import Flashcard from './flashcard';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -28,21 +29,30 @@ export default () => {
   const study_length = useSelector((state) => state.study.study_length);
   const study_index = useSelector((state) => state.study.study_index);
   const study_cards = useSelector((state) => state.study.study_cards);
+  const is_confirmed = useSelector((state) => state.study.study_is_confirmed);
+  const is_correct = useSelector((state) => state.study.study_is_correct);
+  const validation_value = useSelector((state) => state.study.study_validation_value);
+  const on_validation_value_changed = (new_value) => dispatch(validation_value_changed(new_value));
   const dispatch_register_answer = (is_incorrect) => dispatch((register_answer(is_incorrect)));
+  const on_confirmed = () => dispatch(confirm_answer());
 
   const render_card = () => {
     const card = study_cards[study_index];
-    /*return (
+    return (
       <Flashcard
         question={card.question}
         question_type={card.question_type}
         answer={card.answer}
         answer_type={card.answer_type}
         validation_required={card.validation_required}
-        onSuccess={() => dispatch_register_answer(false)}
-        onFail={() => dispatch_register_answer(true)}
+        validation_value={validation_value}
+        on_validation_value_changed={on_validation_value_changed}
+        confirmed={is_confirmed}
+        on_confirmed={on_confirmed}
+        is_correct={is_correct}
+        on_finalize={() => dispatch_register_answer(!is_correct)}
       />
-    );*/
+    );
     return null;
   };
 
