@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/answer_common/MultipleChoiceItemRenderer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/MultipleChoiceRenderer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/TextRenderer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/question_renderers/MathRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/question/MathRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/question_renderers/QuestionRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/question/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/question_renderers/TextRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/question/TextRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/FrontSide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/FrontSide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/edit_dialog/tabs/AnswerListTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validators/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/validators/cards.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +129,8 @@
       <workItem from="1571274673227" duration="491000" />
       <workItem from="1571327114907" duration="13305000" />
       <workItem from="1571498391928" duration="1527000" />
-      <workItem from="1571499935315" duration="2480000" />
+      <workItem from="1571499935315" duration="2575000" />
+      <workItem from="1571600281126" duration="1142000" />
     </task>
     <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
       <created>1568657460460</created>
@@ -468,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571499343752</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]">
+      <created>1571502472902</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1571502472902</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +493,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added CTA slide to jumbotron" />
     <MESSAGE value="Refactored smart study process" />
     <MESSAGE value="Refactored the answer registration from functions to client" />
     <MESSAGE value="Refactored the session registration to client" />
@@ -518,7 +517,8 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="A fix in streak calculation" />
     <MESSAGE value="Removed A_SINGLE_CHOICE from answer types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed A_SINGLE_CHOICE from answer types" />
+    <MESSAGE value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

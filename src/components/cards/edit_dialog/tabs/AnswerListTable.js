@@ -18,11 +18,9 @@ import TextFieldMathPreview from '../../../common/TextFieldMathPreview';
 import ClearIcon from '@material-ui/icons/Clear';
 import AddIcon from '@material-ui/icons/Add';
 import {
-  edit_card_dialog_answer_list_added_new_entry,
-  edit_card_dialog_answer_list_entry_modified,
-  edit_card_dialog_answer_list_removed_entry,
+  edit_card_dialog_answer_changed,
 } from '../../../../actions/cards/cards_form';
-import {A_LIST_ENTRY_MATH, A_LIST_TYPES} from '../../../../const/cards';
+import {A_LIST_DEFAULT_ENTRY, A_LIST_ENTRY_MATH, A_LIST_TYPES} from '../../../../const/cards';
 
 const useStyles = makeStyles(() => ({
   table_errors_container: {},
@@ -44,17 +42,27 @@ const useStyles = makeStyles(() => ({
 export default () => {
   const dispatch = useDispatch();
   const classes = useStyles();
-  const entries = useSelector((state) => state.cards_form.edit_dialog_answer_list);
+  const entries = useSelector((state) => state.cards_form.edit_dialog_answer);
   const errors = useSelector((state) => state.cards_form.edit_dialog_errors);
+  const entry_modified = (index, new_entry) => {
+    const new_entries = entries.map((entry, i) => i === index ? new_entry : entry);
+    dispatch(edit_card_dialog_answer_changed(new_entries));
+  };
+  const entry_removed = (index) => {
+    const new_entries = entries.filter((_, i) => i !== index);
+    dispatch(edit_card_dialog_answer_changed(new_entries));
+  };
+  const entry_added = () => {
+    const new_entries = [...entries, A_LIST_DEFAULT_ENTRY];
+    dispatch(edit_card_dialog_answer_changed(new_entries));
+  };
 
   const renderAnswerFieldForEntry = (entry, index) => (
     <TextFieldMathPreview
       value={entry.value}
       onChange={(e) => {
         const newEntry = {...entry, value: e.target.value};
-        dispatch(
-          edit_card_dialog_answer_list_entry_modified(index, newEntry)
-        );
+        entry_modified(index, newEntry);
       }}
       math={entry.type === A_LIST_ENTRY_MATH}
       variant={'outlined'}
@@ -73,7 +81,7 @@ export default () => {
         value={entry.type}
         onChange={(e) => {
           const newEntry = {...entry, type: e.target.value};
-          dispatch(edit_card_dialog_answer_list_entry_modified(index, newEntry));
+          entry_modified(index, newEntry);
         }}
         inputProps={{
           name: 'answer-type-for-entry',
@@ -96,7 +104,7 @@ export default () => {
       value={'answer_entry_is_correct'}
       onChange={() => {
         const newEntry = {...entry, is_correct: !entry.is_correct};
-        dispatch(edit_card_dialog_answer_list_entry_modified(index, newEntry));
+        entry_modified(index, newEntry);
       }}
       color={'primary'}
     />
@@ -104,9 +112,7 @@ export default () => {
 
   const renderDeleteButtonForEntry = (index) => (
     <IconButton
-      onClick={() =>
-        dispatch(edit_card_dialog_answer_list_removed_entry(index))
-      }
+      onClick={() => entry_removed(index)}
       className={classes.deleteEntryButton}
     >
       <ClearIcon className={classes.deleteEntryButtonIcon}/>
@@ -115,9 +121,7 @@ export default () => {
 
   const renderAddNewEntryButton = () => (
     <IconButton
-      onClick={() => dispatch(
-        edit_card_dialog_answer_list_added_new_entry()
-      )}
+      onClick={() => entry_added()}
       className={classes.addNewEntryButton}
     >
       <AddIcon className={classes.addNewEntryIcon}/>

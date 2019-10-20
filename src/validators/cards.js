@@ -27,7 +27,7 @@ export const validate_card = async (card, decks) => {
   }
 
   if (card.answer_type === A_MULTIPLE_CHOICE) {
-    card.answer_list.forEach((entry, index) => {
+    card.answer.forEach((entry, index) => {
       if (!validate_multiple_choice_entry_type(entry)) {
         errors[`answer_list_${index}_type`] = 'Please select a type';
       }
@@ -37,11 +37,11 @@ export const validate_card = async (card, decks) => {
       }
     });
 
-    if (!validate_multiple_choice_at_least_one_is_correct(card.answer_list)) {
+    if (!validate_multiple_choice_at_least_one_is_correct(card.answer)) {
       errors['answer_list'] = 'Please mark at least one of the answers as correct';
     }
 
-    if (!validate_multiple_choice_at_least_two_entries(card.answer_list)) {
+    if (!validate_multiple_choice_at_least_two_entries(card.answer)) {
       errors['answer_list'] = 'Please create at least 2 answers';
     }
   }
