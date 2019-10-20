@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/FlipCard.js" afterDir="false" />
+    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="Refactored card flipping into separate component, commented out study functions to test BREAKING">
+      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/Front.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/study/flashcard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/Study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Actions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Answer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Flashcard.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,14 +129,7 @@
       <workItem from="1571327114907" duration="13305000" />
       <workItem from="1571498391928" duration="1527000" />
       <workItem from="1571499935315" duration="2575000" />
-      <workItem from="1571600281126" duration="2320000" />
-    </task>
-    <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
-      <created>1568657460460</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1568657460461</updated>
+      <workItem from="1571600281126" duration="4835000" />
     </task>
     <task id="LOCAL-00002" summary="answer types and card edit form features">
       <created>1568677854596</created>
@@ -477,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571601656425</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Refactored card flipping into separate component, commented out study functions to test BREAKING">
+      <created>1571602718702</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1571602718702</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +499,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactored the answer registration from functions to client" />
     <MESSAGE value="Refactored the session registration to client" />
     <MESSAGE value="Refactored engage_exam_mode to client. Deleted all firebase functions" />
     <MESSAGE value="Added at a glance widget" />
@@ -527,7 +523,8 @@
     <MESSAGE value="Removed A_SINGLE_CHOICE from answer types" />
     <MESSAGE value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
     <MESSAGE value="Moved answer_list to answer in db and presentation BREAKING" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved answer_list to answer in db and presentation BREAKING" />
+    <MESSAGE value="Refactored card flipping into separate component, commented out study functions to test BREAKING" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored card flipping into separate component, commented out study functions to test BREAKING" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
