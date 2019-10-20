@@ -3,7 +3,6 @@ import {
   makeStyles,
   LinearProgress,
 } from '@material-ui/core';
-import Flashcard from './flashcard/Flashcard';
 import {useSelector, useDispatch} from 'react-redux';
 import {register_answer} from '../../actions/study';
 
@@ -33,18 +32,18 @@ export default () => {
 
   const render_card = () => {
     const card = study_cards[study_index];
-    return (
+    /*return (
       <Flashcard
         question={card.question}
-        answer={card.answer}
-        validation_required={card.validation_required}
         question_type={card.question_type}
+        answer={card.answer}
+        answer_type={card.answer_type}
+        validation_required={card.validation_required}
         onSuccess={() => dispatch_register_answer(false)}
         onFail={() => dispatch_register_answer(true)}
-        answer_list={card.answer_list}
-        answer_type={card.answer_type}
       />
-    );
+    );*/
+    return null;
   };
 
   const render_progress = () => {
