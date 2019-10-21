@@ -8,6 +8,7 @@ const TextPrompt = (props) => {
   } = props;
   return (
     <TextField
+      style={{width: '100%'}}
       margin={'normal'}
       variant={'outlined'}
       label={'Your answer'}

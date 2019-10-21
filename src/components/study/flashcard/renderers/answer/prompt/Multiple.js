@@ -4,9 +4,18 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  makeStyles,
 } from '@material-ui/core';
 import CheckIcon from '@material-ui/icons/Check';
 import ItemRenderer from '../../../../../cards/renderers/answer_common/MultipleChoiceItemRenderer';
+
+const useStyles = makeStyles((theme) => ({
+  list: {
+    width: '100%',
+    border: '1px solid lightgray',
+    borderRadius: theme.spacing(0.5),
+  },
+}))
 
 const MultipleRenderer = (props) => {
   const {
@@ -14,9 +23,10 @@ const MultipleRenderer = (props) => {
     validation_value,
     on_validation_value_changed,
   } = props;
+  const classes = useStyles();
   const sanitized_validation_value = validation_value instanceof Set ?
-    validation_value : new Set();
-
+    new Set(validation_value) : new Set();
+  console.log(sanitized_validation_value);
   const render_items = () => answer.map((item, index) => (
     <ListItem
       key={index}
@@ -39,7 +49,7 @@ const MultipleRenderer = (props) => {
   ));
 
   return (
-    <List>
+    <List className={classes.list}>
       {render_items()}
     </List>
   );

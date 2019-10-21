@@ -7,7 +7,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {confirm_answer, register_answer, validation_value_changed} from '../../actions/study';
 import Flashcard from './flashcard';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%',
     display: 'flex',
@@ -19,6 +19,19 @@ const useStyles = makeStyles(() => ({
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  [theme.breakpoints.up('md')]: {
+    flashcard: {
+      width: '30rem !important',
+      height: '35rem !important',
+    },
+  },
+  progress: {
+    marginTop: theme.spacing(1),
+  },
+  flashcard: {
+    width: '100%',
+    height: '80vh',
   },
 }));
 
@@ -40,6 +53,7 @@ export default () => {
     const card = study_cards[study_index];
     return (
       <Flashcard
+        className={classes.flashcard}
         question={card.question}
         question_type={card.question_type}
         answer={card.answer}

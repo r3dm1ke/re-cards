@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   front: {
     width: '100%',
+    height: '100%',
     backfaceVisibility: 'hidden',
     display: 'flex',
     flexDirection: 'column',
@@ -26,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     top: 0,
     width: '100%',
+    height: '100%',
     backfaceVisibility: 'hidden',
     transform: 'rotateY(180deg)',
   },

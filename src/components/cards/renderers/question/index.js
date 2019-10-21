@@ -4,12 +4,13 @@ import TextRenderer from './TextRenderer';
 import {Q_MATH, Q_TEXT} from '../../../../const/cards';
 
 export default (props) => {
-  switch (props.question_type) {
+  const {question, question_type, ...rest} = props;
+  switch (question_type) {
   case Q_MATH:
-    return <MathRenderer>{props.question}</MathRenderer>;
+    return <MathRenderer {...rest}>{question}</MathRenderer>;
   case Q_TEXT:
-    return <TextRenderer>{props.question}</TextRenderer>;
+    return <TextRenderer {...rest}>{question}</TextRenderer>;
   default:
-    return <TextRenderer>{props.question}</TextRenderer>;
+    return <TextRenderer {...rest}>{question}</TextRenderer>;
   }
 };
