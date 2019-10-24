@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FlipCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FlipCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,13 +133,6 @@
       <workItem from="1571498391928" duration="1527000" />
       <workItem from="1571499935315" duration="2575000" />
       <workItem from="1571600281126" duration="8139000" />
-    </task>
-    <task id="LOCAL-00003" summary="Validation for edit deck form and minor fixes">
-      <created>1569602591638</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1569602591638</updated>
     </task>
     <task id="LOCAL-00004" summary="Resolved issue with color coding answers in multiple choice after confirming">
       <created>1569604160068</created>
@@ -478,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571598364189</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Minor fixes">
+      <created>1571958134941</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1571958134942</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,14 +520,14 @@
     <MESSAGE value="Refactored card thumbnail and layout on Cards page" />
     <MESSAGE value="Minor fix in progress saving" />
     <MESSAGE value="Added delete confirmation and a fab to create cards" />
-    <MESSAGE value="Minor fixes" />
     <MESSAGE value="A fix in streak calculation" />
     <MESSAGE value="Removed A_SINGLE_CHOICE from answer types" />
     <MESSAGE value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
     <MESSAGE value="Moved answer_list to answer in db and presentation BREAKING" />
     <MESSAGE value="Refactored card flipping into separate component, commented out study functions to test BREAKING" />
     <MESSAGE value="Refactored flashcard BREAKING" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored flashcard BREAKING" />
+    <MESSAGE value="Minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
