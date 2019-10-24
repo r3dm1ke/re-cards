@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/question/MathRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/question/MathRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/question/TextRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/question/TextRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/question/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/question/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/FlipCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FlipCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/MathRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/MathRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/Study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Front.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Front.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Multiple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Text.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
