@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/utils/database_actions/progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/system.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/MultipleChoiceRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/MultipleChoiceRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/FlipCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FlipCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Multiple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Multiple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Text.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +31,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -49,19 +67,19 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\personal_projects\flashcards\flashcards\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
-    <property name="ts.external.directory.path" value="C:\Users\Michael Krasnov\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\193.2956.38\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\layout" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\cards\renderers\question_renderers" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\navigation" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\dashboard\widgets\quick_study_widget" />
       <recent name="C:\personal_projects\flashcards\src\utils\database_actions" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -123,35 +141,10 @@
       <workItem from="1570566954747" duration="11088000" />
       <workItem from="1570807367862" duration="2312000" />
       <workItem from="1571274673227" duration="491000" />
-      <workItem from="1571327114907" duration="8346000" />
-    </task>
-    <task id="LOCAL-00001" summary="Added filters to decks, refactored edit/new dialog for cards">
-      <created>1568657460460</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1568657460461</updated>
-    </task>
-    <task id="LOCAL-00002" summary="answer types and card edit form features">
-      <created>1568677854596</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1568677854596</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Validation for edit deck form and minor fixes">
-      <created>1569602591638</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1569602591638</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Resolved issue with color coding answers in multiple choice after confirming">
-      <created>1569604160068</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1569604160068</updated>
+      <workItem from="1571327114907" duration="13305000" />
+      <workItem from="1571498391928" duration="1527000" />
+      <workItem from="1571499935315" duration="2575000" />
+      <workItem from="1571600281126" duration="8139000" />
     </task>
     <task id="LOCAL-00005" summary="Spinner on login button until auth state is loaded from local">
       <created>1569605120453</created>
@@ -419,7 +412,84 @@
       <option name="project" value="LOCAL" />
       <updated>1571336785910</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Minor fix in progress saving">
+      <created>1571337153310</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1571337153310</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added delete confirmation and a fab to create cards">
+      <created>1571351785246</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1571351785246</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Minor fixes">
+      <created>1571352587952</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1571352587952</updated>
+    </task>
+    <task id="LOCAL-00046" summary="A fix in streak calculation">
+      <created>1571499008475</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1571499008475</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Removed A_SINGLE_CHOICE from answer types">
+      <created>1571499343752</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1571499343752</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]">
+      <created>1571502472902</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1571502472902</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Moved answer_list to answer in db and presentation BREAKING">
+      <created>1571601656425</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1571601656425</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Refactored card flipping into separate component, commented out study functions to test BREAKING">
+      <created>1571602718702</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1571602718702</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Refactored flashcard BREAKING">
+      <created>1571598364189</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1571598364189</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Minor fixes">
+      <created>1571958134941</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1571958134942</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Layout fixes">
+      <created>1571958542904</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1571958542904</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,16 +514,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Minor refactor" />
-    <MESSAGE value="Added slider to jumbotron component" />
-    <MESSAGE value="Scrolling effect on jumbotron working" />
-    <MESSAGE value="Updated animations" />
-    <MESSAGE value="Removed redundant animation" />
-    <MESSAGE value="Added CTA slide to jumbotron" />
-    <MESSAGE value="Refactored smart study process" />
-    <MESSAGE value="Refactored the answer registration from functions to client" />
-    <MESSAGE value="Refactored the session registration to client" />
-    <MESSAGE value="Refactored engage_exam_mode to client. Deleted all firebase functions" />
     <MESSAGE value="Added at a glance widget" />
     <MESSAGE value="refactored save study session into progress" />
     <MESSAGE value="Fixes and refactoring for quick study widget reducer" />
@@ -469,7 +529,17 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="Refactored Question rendering to a separate component" />
     <MESSAGE value="Refactored card thumbnail and layout on Cards page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored card thumbnail and layout on Cards page" />
+    <MESSAGE value="Minor fix in progress saving" />
+    <MESSAGE value="Added delete confirmation and a fab to create cards" />
+    <MESSAGE value="A fix in streak calculation" />
+    <MESSAGE value="Removed A_SINGLE_CHOICE from answer types" />
+    <MESSAGE value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
+    <MESSAGE value="Moved answer_list to answer in db and presentation BREAKING" />
+    <MESSAGE value="Refactored card flipping into separate component, commented out study functions to test BREAKING" />
+    <MESSAGE value="Refactored flashcard BREAKING" />
+    <MESSAGE value="Minor fixes" />
+    <MESSAGE value="Layout fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

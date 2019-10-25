@@ -8,7 +8,10 @@ export default (props) => {
   const isSm = useMediaQuery(theme.breakpoints.down('sm'));
   const isMd = useMediaQuery(theme.breakpoints.down('md'));
   const isLg = useMediaQuery(theme.breakpoints.down('lg'));
+  const isXl = useMediaQuery(theme.breakpoints.down('xl'));
   let cols = 1;
+  // eslint-disable-next-line fp/no-mutation
+  if (isXl) cols = props.cols.xl;
   // eslint-disable-next-line fp/no-mutation
   if (isLg) cols = props.cols.lg;
   // eslint-disable-next-line fp/no-mutation

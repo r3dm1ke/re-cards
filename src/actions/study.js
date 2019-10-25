@@ -2,10 +2,12 @@ import * as types from './types';
 import {push} from 'connected-react-router';
 import {add_loader, remove_loader, show_alert} from './mics';
 import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
-import {A_MULTIPLE_CHOICE, A_SINGLE_CHOICE, A_TEXT} from '../const/cards';
+import {A_MULTIPLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
 import {register_answer as register_answer_to_db} from '../utils/database_actions/answers';
 import {save_progress} from '../utils/database_actions/progress';
+import study from '../reducers/study';
+import {sleep} from '../utils/system';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,
@@ -53,8 +55,8 @@ export const cards_for_simple_study_loaded = (cards) => ({
 const check_answer = (card, validation_value) => {
   if (card.answer_type === A_TEXT) {
     return check_answer_for_text(card.answer, validation_value);
-  } else if (card.answer_type === A_MULTIPLE_CHOICE || card.answer_type === A_SINGLE_CHOICE) {
-    return check_answer_for_multiple_choice(card.answer_list, validation_value);
+  } else if (card.answer_type === A_MULTIPLE_CHOICE) {
+    return check_answer_for_multiple_choice(card.answer, validation_value);
   }
 };
 
@@ -74,19 +76,12 @@ const check_answer_for_multiple_choice = (answer_list, validation_value) => {
 export const confirm_answer = () => async (dispatch, getState) => {
   const state = getState();
   const {study_index, study_cards, study_validation_value} = state.study;
-  const is_correct = check_answer(study_cards[study_index], study_validation_value);
+  const card = study_cards[study_index];
+  if (card.validation_required) {
+    const is_correct = check_answer(study_cards[study_index], study_validation_value);
+    dispatch(is_correct_changed(is_correct));
+  }
   dispatch(is_confirmed_changed(true));
-  dispatch(is_correct_changed(is_correct));
-};
-
-export const register_fail = () => async (dispatch) => {
-  dispatch(is_correct_changed(false));
-  dispatch(register_answer());
-};
-
-export const register_success = () => async (dispatch) => {
-  dispatch(is_correct_changed(true));
-  dispatch(register_answer());
 };
 
 export const register_answer = () => async (dispatch, getState) => {

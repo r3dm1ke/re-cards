@@ -2,7 +2,6 @@ import {
   A_LIST_ENTRY_MATH,
   A_LIST_ENTRY_TEXT,
   A_MULTIPLE_CHOICE,
-  A_SINGLE_CHOICE,
   A_TEXT,
   Q_MATH,
   Q_TEXT,
@@ -27,8 +26,8 @@ export const validate_card = async (card, decks) => {
     errors['answer'] = 'Answer cannot be empty';
   }
 
-  if (card.answer_type === A_MULTIPLE_CHOICE || card.answer_type === A_SINGLE_CHOICE) {
-    card.answer_list.forEach((entry, index) => {
+  if (card.answer_type === A_MULTIPLE_CHOICE) {
+    card.answer.forEach((entry, index) => {
       if (!validate_multiple_choice_entry_type(entry)) {
         errors[`answer_list_${index}_type`] = 'Please select a type';
       }
@@ -38,11 +37,11 @@ export const validate_card = async (card, decks) => {
       }
     });
 
-    if (!validate_multiple_choice_at_least_one_is_correct(card.answer_list)) {
+    if (!validate_multiple_choice_at_least_one_is_correct(card.answer)) {
       errors['answer_list'] = 'Please mark at least one of the answers as correct';
     }
 
-    if (!validate_multiple_choice_at_least_two_entries(card.answer_list)) {
+    if (!validate_multiple_choice_at_least_two_entries(card.answer)) {
       errors['answer_list'] = 'Please create at least 2 answers';
     }
   }
@@ -59,7 +58,7 @@ export const validate_question_type = (card) =>
   card.question_type === Q_TEXT || card.question_type === Q_MATH;
 
 export const validate_answer_type = (card) =>
-  card.answer_type === A_TEXT || card.answer_type === A_MULTIPLE_CHOICE || card.answer_type === A_SINGLE_CHOICE;
+  card.answer_type === A_TEXT || card.answer_type === A_MULTIPLE_CHOICE;
 export const validate_text_answer = (card) =>
   card.answer !== '';
 export const validate_multiple_choice_entry_type = (entry) =>

@@ -1,5 +1,5 @@
 import * as types from '../types';
-import {A_TEXT, Q_TEXT} from '../../const/cards';
+import {A_LIST_DEFAULT_ENTRY, A_MULTIPLE_CHOICE, A_TEXT, Q_TEXT} from '../../const/cards';
 import {add_loader, remove_loader} from '../mics';
 import {firestore} from '../../firebase';
 import {validate_card} from '../../validators/cards';
@@ -23,10 +23,9 @@ const set_defaults_for_new_card_dialog = () => async (dispatch, getState) => {
 
   dispatch(edit_card_dialog_deck_changed(
     selected_deck === 'all' ? '' : selected_deck));
-  dispatch(edit_card_dialog_answer_changed(''));
   dispatch(edit_card_dialog_answer_type_changed(A_TEXT));
+  dispatch(edit_card_dialog_answer_changed(''));
   dispatch(edit_card_dialog_question_type_changed(Q_TEXT));
-  dispatch(edit_card_dialog_answer_list_changed([]));
   dispatch(edit_card_dialog_question_changed(''));
   dispatch(open_edit_card_dialog());
 };
@@ -49,14 +48,7 @@ const populate_edit_card_dialog = (card) => async (dispatch) => {
   dispatch(
     edit_card_dialog_validation_required_changed(card.validation_required));
   dispatch(edit_card_dialog_question_type_changed(card.question_type));
-  dispatch(edit_card_dialog_answer_list_changed(
-    card.answer_list ? card.answer_list: []));
 };
-
-export const edit_card_dialog_answer_list_changed = (answer_list) => ({
-  type: types.EDIT_CARD_DIALOG_ANSWER_LIST_CHANGED,
-  payload: answer_list,
-});
 
 export const edit_card_dialog_question_changed = (question) => ({
   type: types.EDIT_CARD_DIALOG_QUESTION_CHANGED,
@@ -124,7 +116,6 @@ const validate_card_data = async (card_data, decks) => {
 const load_edited_card_from_state = (state) => ({
   answer: state.cards_form.edit_dialog_answer,
   answer_type: state.cards_form.edit_dialog_answer_type,
-  answer_list: state.cards_form.edit_dialog_answer_list,
   question: state.cards_form.edit_dialog_question,
   question_type: state.cards_form.edit_dialog_question_type,
   uid: state.auth.user.uid,
@@ -149,10 +140,23 @@ export const edit_card_dialog_validation_required_changed =
     payload: validation_required,
   });
 
-export const edit_card_dialog_answer_type_changed = (answer_type) => ({
-  type: types.EDIT_CARD_DIALOG_ANSWER_TYPE_CHANGED,
-  payload: answer_type,
-});
+export const edit_card_dialog_answer_type_changed = (answer_type) => async (dispatch) => {
+  switch (answer_type) {
+  case A_TEXT:
+    dispatch(edit_card_dialog_answer_changed(''));
+    break;
+  case A_MULTIPLE_CHOICE:
+    dispatch(edit_card_dialog_answer_changed([A_LIST_DEFAULT_ENTRY, A_LIST_DEFAULT_ENTRY]));
+    break;
+  default:
+    dispatch(edit_card_dialog_answer_changed(''));
+  }
+
+  dispatch({
+    type: types.EDIT_CARD_DIALOG_ANSWER_TYPE_CHANGED,
+    payload: answer_type,
+  });
+};
 
 export const close_edit_card_dialog = () => async (dispatch) => {
   dispatch({
@@ -160,21 +164,6 @@ export const close_edit_card_dialog = () => async (dispatch) => {
   });
   dispatch(edit_card_dialog_tab_changed(0));
 };
-
-export const edit_card_dialog_answer_list_added_new_entry = () => ({
-  type: types.EDIT_CARD_DIALOG_ANSWER_LIST_ADDED_NEW_ENTRY,
-});
-
-export const edit_card_dialog_answer_list_entry_modified =
-  (index, newEntry) => ({
-    type: types.EDIT_CARD_DIALOG_ANSWER_LIST_ENTRY_MODIFIED,
-    payload: [index, newEntry],
-  });
-
-export const edit_card_dialog_answer_list_removed_entry = (index) => ({
-  type: types.EDIT_CARD_DIALOG_ANSWER_LIST_REMOVED_ENTRY,
-  payload: index,
-});
 
 export const edit_card_dialog_tab_changed = (index) => ({
   type: types.EDIT_CARD_DIALOG_TAB_CHANGED,

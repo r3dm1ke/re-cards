@@ -18,7 +18,6 @@ const drawer_width = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    minHeight: '100vh',
     display: 'flex',
   },
   title: {

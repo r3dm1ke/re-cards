@@ -7,7 +7,6 @@ const INITIAL_STATE = {
   edit_dialog_answer: '',
   edit_dialog_deck: '',
   edit_dialog_id: '',
-  edit_dialog_answer_list: [],
   edit_dialog_answer_type: A_TEXT,
   edit_dialog_question_type: Q_TEXT,
   edit_dialog_validation_required: false,
@@ -36,30 +35,6 @@ export default (state=INITIAL_STATE, action) => {
     return {...state, edit_dialog_question_type: action.payload};
   case types.EDIT_CARD_DIALOG_VALIDATION_REQUIRED_CHANGED:
     return {...state, edit_dialog_validation_required: action.payload};
-  case types.EDIT_CARD_DIALOG_ANSWER_LIST_ADDED_NEW_ENTRY:
-    return {
-      ...state,
-      edit_dialog_answer_list:
-        [...state.edit_dialog_answer_list, A_LIST_DEFAULT_ENTRY],
-    };
-  case types.EDIT_CARD_DIALOG_ANSWER_LIST_REMOVED_ENTRY:
-    return {
-      ...state,
-      edit_dialog_answer_list: state.edit_dialog_answer_list
-        .filter((elem, index) => index !== action.payload),
-    };
-  case types.EDIT_CARD_DIALOG_ANSWER_LIST_ENTRY_MODIFIED:
-    const newEntries = state.edit_dialog_answer_list
-      .map((elem, index) => (index === action.payload[0] ? action.payload[1] : elem));
-    return {
-      ...state,
-      edit_dialog_answer_list: newEntries,
-    };
-  case types.EDIT_CARD_DIALOG_ANSWER_LIST_CHANGED:
-    return {
-      ...state,
-      edit_dialog_answer_list: action.payload,
-    };
   case types.EDIT_CARD_DIALOG_ERRORS_CHANGED:
     return {
       ...state,
