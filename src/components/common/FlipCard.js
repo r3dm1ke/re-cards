@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import {
-  Card, makeStyles,
+  Card, Fade, makeStyles,
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({

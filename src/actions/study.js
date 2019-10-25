@@ -7,6 +7,7 @@ import {error_happened} from './errors';
 import {register_answer as register_answer_to_db} from '../utils/database_actions/answers';
 import {save_progress} from '../utils/database_actions/progress';
 import study from '../reducers/study';
+import {sleep} from '../utils/system';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,

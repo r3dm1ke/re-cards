@@ -18,7 +18,7 @@ const TextDelta = (props) => {
   return (
     <div className={classes.root}>
       <Typography variant={'h4'}>{validation_value}</Typography>
-      <ArrowDownwardIcon/>
+      <ArrowDownwardIcon style={{marginTop: '8px'}}/>
       <Typography variant={'h3'}>{answer}</Typography>
     </div>
   );

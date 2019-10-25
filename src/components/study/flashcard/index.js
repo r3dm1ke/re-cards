@@ -41,6 +41,7 @@ const Flashcard = (props) => {
           validation_required={validation_required}
           validation_value={validation_value}
           is_correct={is_correct}
+          confirmed={confirmed}
           on_finalize={on_finalize}
         />
       }

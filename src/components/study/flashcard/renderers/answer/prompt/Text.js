@@ -14,6 +14,11 @@ const TextPrompt = (props) => {
       label={'Your answer'}
       value={validation_value}
       onChange={(e) => on_validation_value_changed(e.target.value)}
+      InputLabelProps={{
+        style: {
+          backfaceVisibility: 'hidden',
+        },
+      }}
     />
   );
 };
