@@ -6,7 +6,13 @@ import {
 import AnswerPreviewRenderer from '../renderers/answer_preview';
 
 const useStyles = makeStyles((theme) => ({
-  content: {},
+  content: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    height: '100%',
+    flex: 1,
+  },
 }));
 
 export default (props) => {

@@ -10,11 +10,23 @@ import IncorrectIcon from '@material-ui/icons/Clear';
 import MultipleChoiceItemRenderer from '../answer_common/MultipleChoiceItemRenderer';
 
 const useStyles = makeStyles((theme) => ({
-
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: 1,
+  },
+  block: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: theme.spacing(8),
+    border: '1px solid lightgrey',
+    borderRadius: theme.spacing(0.5),
+  },
 }));
 
 export default (props) => {
   const classes = useStyles();
+  const {block} = props;
 
   const render_items = () => props.answer.map((item, index) => (
     <ListItem key={index} className={classes.item}>
@@ -26,7 +38,7 @@ export default (props) => {
   ));
 
   return (
-    <List className={classes.list}>
+    <List className={block ? classes.block : classes.root}>
       {render_items()}
     </List>
   );

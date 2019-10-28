@@ -40,10 +40,12 @@ const MultipleRenderer = (props) => {
         on_validation_value_changed(sanitized_validation_value);
       }}
     >
-      {sanitized_validation_value.has(index) ?
-        <ListItemIcon><CheckIcon /></ListItemIcon> :
-        null
-      }
+      <ListItemIcon>
+        {sanitized_validation_value.has(index) ?
+          <CheckIcon /> :
+          null
+        }
+      </ListItemIcon>
       <ListItemText><ItemRenderer value={item.value} type={item.type}/></ListItemText>
     </ListItem>
   ));
