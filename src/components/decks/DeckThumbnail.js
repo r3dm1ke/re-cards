@@ -2,12 +2,12 @@ import React from 'react';
 import {
   Card,
   CardContent,
-  CardActions,
   Typography,
   Button,
   Divider,
   makeStyles,
 } from '@material-ui/core';
+import CardActions from '../common/CardActions';
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
   },
+  title: {
+    textAlign: 'center',
+    marginTop: theme.spacing(2),
+  },
 }));
 
 export default (props) => {
@@ -28,15 +32,16 @@ export default (props) => {
   return (
     <Card className={classes.card} style={{...style}}>
       <CardContent>
-        <Typography variant={'h5'}>{subject}</Typography>
+        <Typography variant={'h5'} className={classes.title}>{subject}</Typography>
       </CardContent>
       <div>
-        <Divider />
-        <CardActions>
-          <Button onClick={onStart} size={'small'}>Study</Button>
-          <Button onClick={onCards} size={'small'}>Cards</Button>
-          <Button onClick={onEdit} size={'small'}>Edit</Button>
-        </CardActions>
+        <CardActions
+          buttons={[
+            {on_click: onStart, text: 'Study'},
+            {on_click: onCards, text: 'Cards'},
+            {on_click: onEdit, text: 'Edit'},
+          ]}
+        />
       </div>
     </Card>
   );
