@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/common/CardActions.js" afterDir="false" />
+    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="Created a custom CardActions component, refactored thumbnails and flashcards to use it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/FrontSide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/FrontSide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckThumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Front.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Front.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,14 +133,10 @@
       <workItem from="1571498391928" duration="1527000" />
       <workItem from="1571499935315" duration="2575000" />
       <workItem from="1571600281126" duration="8139000" />
-      <workItem from="1572352978140" duration="2431000" />
-    </task>
-    <task id="LOCAL-00006" summary="Added validation for question in card form">
-      <created>1569607674707</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1569607674707</updated>
+      <workItem from="1572352978140" duration="3119000" />
+      <workItem from="1572398400220" duration="2660000" />
+      <workItem from="1572536538096" duration="7000" />
+      <workItem from="1572549075757" duration="206000" />
     </task>
     <task id="LOCAL-00007" summary="Eslint fixes">
       <created>1569630317315</created>
@@ -482,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571961833315</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Created a custom CardActions component, refactored thumbnails and flashcards to use it">
+      <created>1572390943820</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1572390943820</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +506,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="refactored save study session into progress" />
     <MESSAGE value="Fixes and refactoring for quick study widget reducer" />
     <MESSAGE value="Now writing streak to progress" />
     <MESSAGE value="refactoring last_progress in progress reducer" />
@@ -532,7 +530,8 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Layout fixes" />
     <MESSAGE value="Styling fixes for study session" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styling fixes for study session" />
+    <MESSAGE value="Created a custom CardActions component, refactored thumbnails and flashcards to use it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a custom CardActions component, refactored thumbnails and flashcards to use it" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
