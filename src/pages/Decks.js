@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import {makeStyles, Grow} from '@material-ui/core';
+import {makeStyles, Grow, Typography} from '@material-ui/core';
 import DeckThumbnail from '../components/decks/DeckThumbnail';
 import NewDeckCard from '../components/common/NewItemCard';
 import EditDeckDialog from '../components/decks/EditDeckDialog';
@@ -9,10 +9,15 @@ import Filters from '../components/decks/Filters';
 import {open_cards_for_deck as _open_cards_for_deck} from '../actions/cards/cards';
 import {open_edit_dialog as _open_edit_dialog} from '../actions/decks/decks_form';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   deckContainer: {
     display: 'flex',
     flexWrap: 'wrap',
+  },
+  title: {
+    textAlign: 'center',
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(4),
   },
 }));
 
@@ -46,6 +51,7 @@ export default () => {
 
   return (
     <div>
+      <Typography variant={'h2'} className={classes.title}>Your decks</Typography>
       <Filters/>
       <div className={classes.deckContainer}>
         {render_decks()}

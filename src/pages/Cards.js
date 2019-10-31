@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useTheme, makeStyles, Typography, Fab} from '@material-ui/core';
+import {useTheme, makeStyles, Typography} from '@material-ui/core';
 import {useSelector, useDispatch} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import CardThumbnail from '../components/cards/thumbnail';
