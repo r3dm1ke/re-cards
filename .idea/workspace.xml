@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/Scaffold.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/navigation/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/navigation/Sidebar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,14 +137,7 @@
       <workItem from="1572352978140" duration="3119000" />
       <workItem from="1572398400220" duration="2660000" />
       <workItem from="1572536538096" duration="7000" />
-      <workItem from="1572549075757" duration="467000" />
-    </task>
-    <task id="LOCAL-00008" summary="Full form validation for card edit dialog">
-      <created>1569634837712</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1569634837712</updated>
+      <workItem from="1572549075757" duration="1867000" />
     </task>
     <task id="LOCAL-00009" summary="moved tab management to redux for card edit dialog, added skipping to tab when error happens">
       <created>1569636746748</created>
@@ -482,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572549314828</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Added title to Decks page">
+      <created>1572549578294</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1572549578294</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +507,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Now writing streak to progress" />
     <MESSAGE value="refactoring last_progress in progress reducer" />
     <MESSAGE value="Added streak widget" />
     <MESSAGE value="Added daily study widget" />
@@ -532,7 +531,8 @@
     <MESSAGE value="Styling fixes for study session" />
     <MESSAGE value="Created a custom CardActions component, refactored thumbnails and flashcards to use it" />
     <MESSAGE value="Reviewed obsolete deps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reviewed obsolete deps" />
+    <MESSAGE value="Added title to Decks page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added title to Decks page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

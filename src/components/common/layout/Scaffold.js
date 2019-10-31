@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     marginBottom: '4rem',
     [theme.breakpoints.up('md')]: {
-      marginTop: theme.spacing(8),
       marginBottom: 0,
     },
   },
@@ -58,8 +57,6 @@ export default (props) => {
   const theme = useTheme();
   const is_mobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const render_title = () => ('Flashcards');
-
   const render_sidebar = () => logged_in ? <Sidebar /> : null;
 
   const render_bottom_navbar = () => logged_in ? <BottomNavbar /> : null;
@@ -68,19 +65,9 @@ export default (props) => {
 
   const render_offline_bar = () => offline && logged_in ? <OfflineBar/> : null;
 
-  const render_app_bar = () => (
-    <AppBar position={'fixed'} className={logged_in ? classes.appBar : null}>
-      <Toolbar disableGutters className={classes.toolbar}>
-        <Typography variant={'h6'} className={classes.title}>{render_title()}</Typography>
-        <ProfileDropdown />
-      </Toolbar>
-    </AppBar>
-  );
-
   return (
     <div className={classes.root}>
       <ErrorsRenderer/>
-      {is_mobile ? null : render_app_bar()}
       {is_mobile ? render_bottom_navbar() : render_sidebar()}
       <div className={classes.content}>
         {render_content()}
