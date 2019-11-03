@@ -2,6 +2,7 @@
 export const LOGGED_IN = 'logged_in';
 export const LOGGED_OUT = 'logged_out';
 export const APP_INITIALIZED = 'app_initialized';
+export const USER_METADATA_LOADED = 'user_metadata_loaded';
 
 // LAYOUT
 export const TOGGLE_DRAWER = 'toggle_drawer';

@@ -1,13 +1,10 @@
 import React from 'react';
 import {
-  AppBar,
-  Toolbar,
-  Typography,
   makeStyles, useTheme, useMediaQuery,
 } from '@material-ui/core';
 import Sidebar from '../navigation/Sidebar';
-import ProfileDropdown from './ProfileDropdown';
 import OfflineBar from '../OfflineBar';
+import OnboardingModal from '../../onboarding/modal';
 import BottomNavbar from '../navigation/BottomNavbar';
 import {useSelector} from 'react-redux';
 import ErrorsRenderer from '../ErrorsRenderer';
@@ -68,6 +65,7 @@ export default (props) => {
   return (
     <div className={classes.root}>
       <ErrorsRenderer/>
+      <OnboardingModal/>
       {is_mobile ? render_bottom_navbar() : render_sidebar()}
       <div className={classes.content}>
         {render_content()}
