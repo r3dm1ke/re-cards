@@ -35,7 +35,12 @@ const CardActions = (props) => {
       <MaterialCardActions className={classes.root} {...rest}>
         {buttons.map((button, index) => (
           <>
-            <Button size={size} className={classes.button} onClick={button.on_click}>
+            <Button
+              size={size}
+              disabled={button.disabled}
+              className={classes.button}
+              onClick={button.on_click}
+            >
               {button.text}
             </Button>
             {index !== (buttons.length - 1) ?
