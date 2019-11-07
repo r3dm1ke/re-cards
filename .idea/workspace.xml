@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/onboarding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/onboarding.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/onboarding/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/onboarding/modal/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,15 +61,15 @@
     <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\onboarding\modal\slides" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\common" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\layout" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\cards\renderers\question_renderers" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\navigation" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\components\dashboard\widgets\quick_study_widget" />
-      <recent name="C:\personal_projects\flashcards\src\utils\database_actions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -137,49 +138,10 @@
       <workItem from="1572352978140" duration="3119000" />
       <workItem from="1572398400220" duration="2660000" />
       <workItem from="1572536538096" duration="7000" />
-      <workItem from="1572549075757" duration="2202000" />
-    </task>
-    <task id="LOCAL-00010" summary="added preview for math text fields">
-      <created>1569684862707</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1569684862707</updated>
-    </task>
-    <task id="LOCAL-00011" summary="responsive edit card dialog, rewritten as functional">
-      <created>1569685560508</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1569685560508</updated>
-    </task>
-    <task id="LOCAL-00012" summary="added error handling and messages">
-      <created>1569708395016</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1569708395016</updated>
-    </task>
-    <task id="LOCAL-00013" summary="HMR for development">
-      <created>1569708753118</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1569708753118</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Offline switch (not working for localhost)">
-      <created>1569710362301</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1569710362301</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Offline switch working and handling">
-      <created>1569981234709</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1569981234709</updated>
+      <workItem from="1572549075757" duration="2706000" />
+      <workItem from="1572795272462" duration="7063000" />
+      <workItem from="1573089413994" duration="1870000" />
+      <workItem from="1573165452408" duration="884000" />
     </task>
     <task id="LOCAL-00016" summary="Dashboard refactored to functional">
       <created>1569982135007</created>
@@ -482,7 +444,49 @@
       <option name="project" value="LOCAL" />
       <updated>1572550991461</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="updated @material-ui version">
+      <created>1572551290912</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1572551290912</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Consistent ui for creating cards &amp; decks">
+      <created>1572795638012</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1572795638012</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Added onboarding modal">
+      <created>1572797314729</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1572797314729</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Added onboarding slides">
+      <created>1572995378772</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1572995378772</updated>
+    </task>
+    <task id="LOCAL-00063" summary="added a deck creation onboarding slide">
+      <created>1573090500420</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1573090500420</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Added deck creation functionality and final slide to onboarding procedure">
+      <created>1573091309788</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1573091309788</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,12 +511,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added streak widget" />
-    <MESSAGE value="Added daily study widget" />
-    <MESSAGE value="Added more info to streak widget if user studied today or not" />
-    <MESSAGE value="Added bottom navbar for mobile users" />
-    <MESSAGE value="Refactored cards page to functional and added title to said page" />
-    <MESSAGE value="Scrolling to top on location change" />
     <MESSAGE value="Further fixing the eslint bugs" />
     <MESSAGE value="Fix" />
     <MESSAGE value="Refactored Question rendering to a separate component" />
@@ -532,7 +530,13 @@
     <MESSAGE value="Reviewed obsolete deps" />
     <MESSAGE value="Added title to Decks page" />
     <MESSAGE value="Removed top bar as it was unnecessary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed top bar as it was unnecessary" />
+    <MESSAGE value="updated @material-ui version" />
+    <MESSAGE value="Consistent ui for creating cards &amp; decks" />
+    <MESSAGE value="Added onboarding modal" />
+    <MESSAGE value="Added onboarding slides" />
+    <MESSAGE value="added a deck creation onboarding slide" />
+    <MESSAGE value="Added deck creation functionality and final slide to onboarding procedure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added deck creation functionality and final slide to onboarding procedure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

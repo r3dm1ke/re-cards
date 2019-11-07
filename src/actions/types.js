@@ -2,6 +2,7 @@
 export const LOGGED_IN = 'logged_in';
 export const LOGGED_OUT = 'logged_out';
 export const APP_INITIALIZED = 'app_initialized';
+export const USER_METADATA_LOADED = 'user_metadata_loaded';
 
 // LAYOUT
 export const TOGGLE_DRAWER = 'toggle_drawer';
@@ -11,6 +12,9 @@ export const ADD_LOADER = 'add_loader';
 export const REMOVE_LOADER = 'remove_loader';
 export const SHOW_ALERT = 'show_alert';
 export const HIDE_ALERT = 'hide_alert';
+
+// ONBOARDING
+export const ONBOARDING_DECK_NAME_CHANGED = 'onboarding_deck_name_changed';
 
 // DECKS
 export const DECKS_LOADED = 'decks_loaded';
@@ -45,10 +49,6 @@ export const EDIT_CARD_DIALOG_VALIDATION_REQUIRED_CHANGED = 'edit_card_dialog_va
 export const EDIT_CARD_DIALOG_QUESTION_TYPE_CHANGED = 'edit_card_dialog_question_type_changed';
 export const CLOSE_EDIT_CARD_DIALOG = 'close_edit_card_dialog';
 export const EDIT_CARD_DIALOG_ANSWER_TYPE_CHANGED = 'edit_card_dialog_answer_type_changed';
-export const EDIT_CARD_DIALOG_ANSWER_LIST_ADDED_NEW_ENTRY = 'edit_card_dialog_answer_list_added_new_entry';
-export const EDIT_CARD_DIALOG_ANSWER_LIST_ENTRY_MODIFIED = 'edit_card_dialog_answer_list_entry_modified';
-export const EDIT_CARD_DIALOG_ANSWER_LIST_REMOVED_ENTRY = 'edit_card_dialog_answer_list_removed_entry';
-export const EDIT_CARD_DIALOG_ANSWER_LIST_CHANGED = 'edit_card_dialog_answer_list_changed';
 export const EDIT_CARD_DIALOG_ERRORS_CHANGED = 'edit_card_dialog_errors_changed';
 export const EDIT_CARD_DIALOG_ERRORS_CLEARED = 'edit_card_dialog_errors_cleared';
 export const EDIT_CARD_DIALOG_TAB_CHANGED = 'edit_card_dialog_tab_changed';
