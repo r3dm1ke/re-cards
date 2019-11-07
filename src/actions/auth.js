@@ -34,7 +34,7 @@ export const init = () => async (dispatch, getState) => {
   }
 };
 
-const load_user_info = (uid) => async (dispatch) => {
+export const load_user_info = (uid) => async (dispatch) => {
   console.log(`Loading_user_info for user ${uid}`);
   dispatch(add_loader('user_meta', 'Loading your information...'));
   try {

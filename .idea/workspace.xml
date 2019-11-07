@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/done.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/onboarding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/onboarding.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/onboarding/modal/slides/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/onboarding/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/onboarding/modal/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -140,14 +140,8 @@
       <workItem from="1572536538096" duration="7000" />
       <workItem from="1572549075757" duration="2706000" />
       <workItem from="1572795272462" duration="7063000" />
-      <workItem from="1573089413994" duration="1831000" />
-    </task>
-    <task id="LOCAL-00015" summary="Offline switch working and handling">
-      <created>1569981234709</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1569981234709</updated>
+      <workItem from="1573089413994" duration="1870000" />
+      <workItem from="1573165452408" duration="884000" />
     </task>
     <task id="LOCAL-00016" summary="Dashboard refactored to functional">
       <created>1569982135007</created>
@@ -485,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573090500420</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Added deck creation functionality and final slide to onboarding procedure">
+      <created>1573091309788</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1573091309788</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +511,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Scrolling to top on location change" />
     <MESSAGE value="Further fixing the eslint bugs" />
     <MESSAGE value="Fix" />
     <MESSAGE value="Refactored Question rendering to a separate component" />
@@ -535,7 +535,8 @@
     <MESSAGE value="Added onboarding modal" />
     <MESSAGE value="Added onboarding slides" />
     <MESSAGE value="added a deck creation onboarding slide" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a deck creation onboarding slide" />
+    <MESSAGE value="Added deck creation functionality and final slide to onboarding procedure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added deck creation functionality and final slide to onboarding procedure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
