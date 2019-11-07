@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import Slide from '@material-ui/core/Slide';
 import DialogContent from '@material-ui/core/DialogContent';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Terms from './terms';
 import Intro from './intro';
+import Decks from './decks';
 import CardActions from '../../../common/CardActions';
 
-const NUMBER_OF_SLIDES = 2;
+const NUMBER_OF_SLIDES = 3;
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -23,6 +23,7 @@ const Slides = (props) => {
       <DialogContent className={classes.content}>
         <Terms visible={slide === 0}/>
         <Intro visible={slide === 1}/>
+        <Decks visible={slide === 2}/>
       </DialogContent>
       <CardActions
         size={'large'}

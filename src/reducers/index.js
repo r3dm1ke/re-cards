@@ -10,6 +10,7 @@ import studyReducer from './study';
 import errorsReducer from './errors';
 import progressReducer from './progress';
 import offlineReducer from './offline';
+import onboardingReducer from './onboarding';
 import quickStudyWidgetReducer from './widgets/quick_study';
 import {combineReducers} from 'redux';
 import {connectRouter} from 'connected-react-router';
@@ -27,6 +28,7 @@ export default (history) => combineReducers({
   errors: errorsReducer,
   offline: offlineReducer,
   progress: progressReducer,
+  onboarding: onboardingReducer,
   widgets: combineReducers({
     quick_study: quickStudyWidgetReducer,
   }),

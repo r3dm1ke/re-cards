@@ -8,7 +8,7 @@ const Intro = (props) => {
       {...props}
       Icon={SchoolIcon}
       text={'This app is designed to help students study flashcards. ' +
-            'It employs scientifically proven technique called spaced repetition.'}
+            'It employs a scientifically proven technique called spaced repetition.'}
     />
   );
 };

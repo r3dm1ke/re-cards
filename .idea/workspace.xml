@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/base_slide.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/intro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/terms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/onboarding.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/decks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/onboarding.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/CardActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CardActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/onboarding/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/onboarding/modal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/onboarding/modal/slides/base_slide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/base_slide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/onboarding/modal/slides/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/onboarding/modal/slides/intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/onboarding/modal/slides/intro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,14 +144,8 @@
       <workItem from="1572398400220" duration="2660000" />
       <workItem from="1572536538096" duration="7000" />
       <workItem from="1572549075757" duration="2706000" />
-      <workItem from="1572795272462" duration="6396000" />
-    </task>
-    <task id="LOCAL-00013" summary="HMR for development">
-      <created>1569708753118</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1569708753118</updated>
+      <workItem from="1572795272462" duration="7063000" />
+      <workItem from="1573089413994" duration="1055000" />
     </task>
     <task id="LOCAL-00014" summary="Offline switch (not working for localhost)">
       <created>1569710362301</created>
@@ -487,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572797314729</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Added onboarding slides">
+      <created>1572995378772</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1572995378772</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +515,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added bottom navbar for mobile users" />
     <MESSAGE value="Refactored cards page to functional and added title to said page" />
     <MESSAGE value="Scrolling to top on location change" />
     <MESSAGE value="Further fixing the eslint bugs" />
@@ -537,7 +539,8 @@
     <MESSAGE value="updated @material-ui version" />
     <MESSAGE value="Consistent ui for creating cards &amp; decks" />
     <MESSAGE value="Added onboarding modal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added onboarding modal" />
+    <MESSAGE value="Added onboarding slides" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added onboarding slides" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

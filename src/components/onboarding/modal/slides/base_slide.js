@@ -26,6 +26,7 @@ const BaseSlide = (props) => {
     Icon,
     text,
     visible,
+    children,
   } = props;
   return (
     <Fade
@@ -39,6 +40,7 @@ const BaseSlide = (props) => {
         <Typography variant={'h6'} className={classes.text}>
           {text}
         </Typography>
+        {children}
       </div>
     </Fade>
   );
