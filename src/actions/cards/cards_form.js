@@ -4,6 +4,7 @@ import {add_loader, remove_loader} from '../mics';
 import {firestore} from '../../firebase';
 import {validate_card} from '../../validators/cards';
 import {error_happened} from '../errors';
+import {create_card, update_card} from '../../utils/database_actions/cards';
 
 export const open_edit_card_dialog = () => ({
   type: types.OPEN_EDIT_CARD_DIALOG,
@@ -71,8 +72,6 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
   const decks = state.decks.decks;
   dispatch(clear_errors());
   const errors = await validate_card_data(data, decks);
-  console.log('errors');
-  console.log(errors);
   if (Object.keys(errors).length === 0) {
     dispatch(add_loader('add_card', 'Saving...'));
     dispatch(close_edit_card_dialog());
@@ -83,11 +82,9 @@ export const save_card_from_dialog = () => async (dispatch, getState) => {
         edit_dialog_id === '' ||
         edit_dialog_id === null ||
         edit_dialog_id === undefined) {
-        const ref = firestore.collection('cards');
-        await ref.add(data);
+        await create_card(data);
       } else {
-        const ref = firestore.collection('cards').doc(edit_dialog_id);
-        await ref.set(data, {merge: true});
+        await update_card(edit_dialog_id, data);
       }
     } catch {
       dispatch(error_happened('Some troubles saving the card. Probably you don\'t really need it.'));

@@ -1,4 +1,28 @@
 import moment from 'moment-timezone';
+import {firestore} from '../../firebase';
+
+export const create_card = async (card_data) => {
+  return await firestore.collection('cards').add(card_data);
+};
+
+export const update_card = async (card_id, card_data) => {
+  const ref = firestore.collection('cards').doc(card_id);
+  return await ref.set(card_data, {merge: true});
+};
+
+export const delete_card = async (card_id) => {
+  const ref = firestore.collection('cards').doc(card_id);
+  return await ref.delete();
+};
+
+export const listen_to_cards = (uid, callback) => {
+  return firestore.collection('cards')
+    .where('uid', '==', uid)
+    .onSnapshot(async (query) => {
+      const data = await extract_cards_from_docs_async(query);
+      callback(data);
+    });
+};
 
 export const extract_card_from_ref_async = async (card) => {
   const raw_card_data = card.data();

@@ -3,6 +3,7 @@ import {A_TEXT, Q_MATH} from '../const/cards';
 import {firestore} from '../firebase';
 import {load_user_info} from './auth';
 import {add_loader, remove_loader} from './mics';
+import {create_card} from '../utils/database_actions/cards';
 
 const SAMPLE_CARD = {
   question_type: Q_MATH,
@@ -46,8 +47,7 @@ const create_default_deck = async (new_deck_name, uid) => {
 };
 
 const create_default_card = async (deck, uid) => {
-  const ref = firestore.collection('cards');
-  return await ref.add({
+  return await create_card({
     ...SAMPLE_CARD,
     uid,
     deck,
