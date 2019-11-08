@@ -4,8 +4,8 @@ import {add_loader, remove_loader, show_alert} from './mics';
 import {SIMPLE_STUDY, SMART_STUDY} from '../const/study';
 import {A_MULTIPLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
-import {register_answer as register_answer_to_db} from '../utils/database_actions/answers';
-import {save_progress} from '../utils/database_actions/progress';
+import {register_answer as register_answer_to_db} from '../utils/db/answers';
+import {save_progress} from '../utils/db/progress';
 import study from '../reducers/study';
 import {sleep} from '../utils/system';
 

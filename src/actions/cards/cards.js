@@ -1,7 +1,7 @@
 import * as types from '../types';
 import {push} from 'connected-react-router';
 import {add_loader, remove_loader} from '../mics';
-import {delete_card as delete_card_from_db, listen_to_cards} from '../../utils/database_actions/cards';
+import {delete_card as delete_card_from_db, listen_to_cards} from '../../utils/db/cards';
 import {error_happened} from '../errors';
 
 export const subscribe_to_cards = () => async (dispatch, getState) => {

@@ -4,7 +4,7 @@ import {add_loader, remove_loader} from '../mics';
 import {firestore} from '../../firebase';
 import {validate_card} from '../../validators/cards';
 import {error_happened} from '../errors';
-import {create_card, update_card} from '../../utils/database_actions/cards';
+import {create_card, update_card} from '../../utils/db/cards';
 
 export const open_edit_card_dialog = () => ({
   type: types.OPEN_EDIT_CARD_DIALOG,

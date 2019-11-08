@@ -3,7 +3,7 @@ import {A_TEXT, Q_MATH} from '../const/cards';
 import {firestore} from '../firebase';
 import {load_user_info} from './auth';
 import {add_loader, remove_loader} from './mics';
-import {create_card} from '../utils/database_actions/cards';
+import {create_card} from '../utils/db/cards';
 
 const SAMPLE_CARD = {
   question_type: Q_MATH,
