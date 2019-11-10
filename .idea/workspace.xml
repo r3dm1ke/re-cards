@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/db/decks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/onboarding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/onboarding.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/database_actions/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/database_actions/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/db/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/cards.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +56,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\personal_projects\flashcards\flashcards\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -144,6 +142,8 @@
       <workItem from="1573089413994" duration="1870000" />
       <workItem from="1573165452408" duration="1300000" />
       <workItem from="1573250077142" duration="627000" />
+      <workItem from="1573392505422" duration="66000" />
+      <workItem from="1573392591170" duration="180000" />
     </task>
     <task id="LOCAL-00017" summary="Minor fix">
       <created>1569982351831</created>

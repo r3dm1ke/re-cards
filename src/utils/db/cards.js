@@ -2,18 +2,24 @@ import moment from 'moment-timezone';
 import {firestore} from '../../firebase';
 
 export const create_card = async (card_data) => {
-  return await firestore.collection('cards').add(card_data);
+  return await get_cards_collection().add(card_data);
 };
 
 export const update_card = async (card_id, card_data) => {
-  const ref = firestore.collection('cards').doc(card_id);
+  const ref = get_card_ref('card_id');
   return await ref.set(card_data, {merge: true});
 };
 
 export const delete_card = async (card_id) => {
-  const ref = firestore.collection('cards').doc(card_id);
+  const ref = get_card_ref(card_id);
   return await ref.delete();
 };
+
+export const get_card_ref = (card_id) => {
+  return get_cards_collection().doc(card_id);
+};
+
+const get_cards_collection = () => firestore.collection('cards');
 
 export const listen_to_cards = (uid, callback) => {
   return firestore.collection('cards')
@@ -24,7 +30,7 @@ export const listen_to_cards = (uid, callback) => {
     });
 };
 
-export const extract_card_from_ref_async = async (card) => {
+const extract_card_from_ref_async = async (card) => {
   const raw_card_data = card.data();
   const deck_data = await raw_card_data.deck.get();
   const card_data = {
@@ -51,6 +57,6 @@ export const extract_card_from_ref_async = async (card) => {
   return card_data;
 };
 
-export const extract_cards_from_docs_async = async (cards) => {
+const extract_cards_from_docs_async = async (cards) => {
   return await Promise.all(cards.docs.map(async (q) => ({...(await extract_card_from_ref_async(q))})));
 };
