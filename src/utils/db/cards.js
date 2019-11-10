@@ -21,14 +21,13 @@ export const get_card_ref = (card_id) => {
 
 const get_cards_collection = () => firestore.collection('cards');
 
-export const listen_to_cards = (uid, callback) => {
-  return firestore.collection('cards')
+export const listen_to_cards = (uid, callback) =>
+  get_cards_collection()
     .where('uid', '==', uid)
     .onSnapshot(async (query) => {
       const data = await extract_cards_from_docs_async(query);
       callback(data);
     });
-};
 
 const extract_card_from_ref_async = async (card) => {
   const raw_card_data = card.data();
