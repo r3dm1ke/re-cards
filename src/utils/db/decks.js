@@ -2,7 +2,7 @@ import {firestore} from '../../firebase';
 
 const get_decks_collection = () => firestore.collection('decks');
 
-export const get_decks_ref = (deck_id) => get_decks_collection().doc(deck_id);
+export const get_deck_ref = (deck_id) => get_decks_collection().doc(deck_id);
 
 export const listen_to_decks = (uid, callback) =>
   get_decks_collection()
@@ -18,12 +18,12 @@ export const create_deck = async (data) => {
 };
 
 export const update_deck = async (id, data) => {
-  const ref = get_decks_ref(id);
+  const ref = get_deck_ref(id);
   return await ref.set(data, {merge: true});
 };
 
 export const delete_deck = async (id) => {
-  const ref = get_decks_ref(id);
+  const ref = get_deck_ref(id);
   return await ref.delete();
 };
 

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/decks/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/decks/decks_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks_form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/db/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/db/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/decks.js" afterDir="false" />
@@ -145,14 +145,7 @@
       <workItem from="1573165452408" duration="1300000" />
       <workItem from="1573250077142" duration="627000" />
       <workItem from="1573392505422" duration="66000" />
-      <workItem from="1573392591170" duration="898000" />
-    </task>
-    <task id="LOCAL-00018" summary="Minor refactor">
-      <created>1569982521298</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1569982521298</updated>
+      <workItem from="1573392591170" duration="1788000" />
     </task>
     <task id="LOCAL-00019" summary="Added slider to jumbotron component">
       <created>1570055957758</created>
@@ -490,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573392782142</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Refactored decks db actions into separate file">
+      <created>1573393547093</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1573393547093</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +515,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactored Question rendering to a separate component" />
     <MESSAGE value="Refactored card thumbnail and layout on Cards page" />
     <MESSAGE value="Minor fix in progress saving" />
     <MESSAGE value="Added delete confirmation and a fab to create cards" />
@@ -540,7 +539,8 @@
     <MESSAGE value="Added deck creation functionality and final slide to onboarding procedure" />
     <MESSAGE value="Finished onboaring feature" />
     <MESSAGE value="Minor refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor refactor" />
+    <MESSAGE value="Refactored decks db actions into separate file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored decks db actions into separate file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
@@ -619,5 +619,17 @@
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080" />
     <state x="419" y="-1" width="840" height="1034" key="search.everywhere.popup/1920.1080/1680.1050" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/utils/db/cards.js</url>
+          <line>40</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

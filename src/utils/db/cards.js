@@ -15,6 +15,22 @@ export const delete_card = async (card_id) => {
   return await ref.delete();
 };
 
+export const delete_cards_by_deck = async (uid, deck_ref) => {
+  const cardRefs = get_cards_collection()
+    .where('deck', '==', deck_ref)
+    .where('uid', '==', uid);
+
+  return await delete_cards(await cardRefs.get());
+};
+
+const delete_cards = async (card_refs) => {
+  const batch = firestore.batch();
+  card_refs.docs.forEach((card) =>
+    batch.delete(get_card_ref(card.id))
+  );
+  return await batch.commit();
+};
+
 export const get_card_ref = (card_id) => {
   return get_cards_collection().doc(card_id);
 };

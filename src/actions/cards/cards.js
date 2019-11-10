@@ -35,7 +35,8 @@ export const delete_card = (card) => async (dispatch) => {
   dispatch(add_loader('del_card', 'Deleting...'));
   try {
     await delete_card_from_db(card.id);
-  } catch {
+  } catch (e) {
+    console.error(e);
     dispatch(error_happened('Error deleting card. Is it really there?'));
   }
   dispatch(remove_loader('del_card'));

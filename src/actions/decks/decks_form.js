@@ -3,7 +3,8 @@ import {firestore} from '../../firebase';
 import {add_loader, remove_loader} from '../mics';
 import {validate_deck_name} from '../../validators/decks';
 import {error_happened} from '../errors';
-import {create_deck, update_deck, delete_deck as delete_deck_from_db} from '../../utils/db/decks';
+import {create_deck, update_deck, delete_deck as delete_deck_from_db, get_deck_ref} from '../../utils/db/decks';
+import {delete_cards_by_deck} from '../../utils/db/cards';
 
 export const toggle_edit_deck_dialog = () => ({
   type: types.EDIT_DECK_DIALOG_TOGGLED,
@@ -90,19 +91,12 @@ const delete_deck = (id) => async (dispatch, getState) => {
 
   if (confirmed) {
     const {uid} = getState().auth.user;
-    await delete_deck_from_db(id);
-    const batch = firestore.batch();
-    const cardsRef = firestore.collection('cards')
-      .where('deck', '==', firestore.collection('decks').doc(id))
-      .where('uid', '==', uid);
-
-    const cards = await cardsRef.get();
-    cards.docs.forEach((card) => {
-      batch.delete(firestore.collection('cards').doc(card.id));
-    });
+    const deck_ref = get_deck_ref(id);
     try {
-      await batch.commit();
-    } catch {
+      await delete_deck_from_db(id);
+      await delete_cards_by_deck(uid, deck_ref);
+    } catch (e) {
+      console.error(e);
       dispatch(error_happened('Error deleting stuff. Maybe it\'s a sign.'));
     }
   }
