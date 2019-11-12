@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/db/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/onboarding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/onboarding.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/listeners.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/db/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/cards.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,14 +144,7 @@
       <workItem from="1573250077142" duration="627000" />
       <workItem from="1573392505422" duration="66000" />
       <workItem from="1573392591170" duration="2259000" />
-      <workItem from="1573569744122" duration="1235000" />
-    </task>
-    <task id="LOCAL-00021" summary="Updated animations">
-      <created>1570464484735</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1570464484735</updated>
+      <workItem from="1573569744122" duration="1692000" />
     </task>
     <task id="LOCAL-00022" summary="Removed redundant animation">
       <created>1570465140252</created>
@@ -491,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573570005662</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Refactored db actions for user metadata">
+      <created>1573571155352</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1573571155352</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +514,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added delete confirmation and a fab to create cards" />
     <MESSAGE value="A fix in streak calculation" />
     <MESSAGE value="Removed A_SINGLE_CHOICE from answer types" />
     <MESSAGE value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
@@ -541,7 +538,8 @@
     <MESSAGE value="Refactored decks db actions into separate file" />
     <MESSAGE value="Refactored cards/decks deletion" />
     <MESSAGE value="Refactored UID getter in db actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored UID getter in db actions" />
+    <MESSAGE value="Refactored db actions for user metadata" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored db actions for user metadata" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

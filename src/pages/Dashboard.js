@@ -72,7 +72,6 @@ export default () => {
         <CardsCountWidget/>
         <QuickStudyWidget/>
         <StreakWidget/>
-        <AdWidget/>
       </MasonryLayout>
     </div>
   );

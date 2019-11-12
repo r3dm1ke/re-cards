@@ -7,7 +7,7 @@ export const create_card = async (card_data) => {
 };
 
 export const update_card = async (card_id, card_data) => {
-  const ref = get_card_ref('card_id');
+  const ref = get_card_ref(card_id);
   return await ref.set(card_data, {merge: true});
 };
 
