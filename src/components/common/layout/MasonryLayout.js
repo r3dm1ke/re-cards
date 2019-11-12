@@ -21,7 +21,7 @@ export default (props) => {
     const column_index = i % props.columns;
     // eslint-disable-next-line fp/no-mutating-methods
     column_wrapper[`column${column_index}`].push(
-      <div style={{marginTop: `${props.gap}px`}}>
+      <div key={i} style={{marginTop: `${props.gap}px`}}>
         {children[i]}
       </div>
     );
@@ -32,6 +32,7 @@ export default (props) => {
     // eslint-disable-next-line fp/no-mutating-methods
     result.push(
       <div
+        key={i * 100}
         style={{
           marginLeft: `${i > 0 ? props.gap : 0}px`,
           flex: 1,

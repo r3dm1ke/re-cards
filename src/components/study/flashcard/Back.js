@@ -1,7 +1,6 @@
 import React from 'react';
 import AnswerDeltaRenderer from './renderers/answer/delta';
 import AnswerPreviewRenderer from '../../cards/renderers/answer_preview';
-import Button from '@material-ui/core/Button';
 import CardActions from '../../common/CardActions';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import {Typography} from '@material-ui/core';

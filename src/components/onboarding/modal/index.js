@@ -2,9 +2,6 @@ import React from 'react';
 import {
   Dialog,
   DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
   makeStyles,
 } from '@material-ui/core';
 import Slides from './slides';

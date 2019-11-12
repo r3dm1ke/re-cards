@@ -6,8 +6,6 @@ import {A_MULTIPLE_CHOICE, A_TEXT} from '../const/cards';
 import {error_happened} from './errors';
 import {register_answer as register_answer_to_db} from '../utils/db/answers';
 import {save_progress} from '../utils/db/progress';
-import study from '../reducers/study';
-import {sleep} from '../utils/system';
 
 export const set_study_mode = (study_mode) => ({
   type: types.SET_STUDY_MODE,

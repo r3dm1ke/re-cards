@@ -14,7 +14,9 @@ import store, {history} from './store';
 import {init} from './actions/auth';
 
 export default () => {
-  useEffect(() => store.dispatch(init()));
+  useEffect(() => {
+    store.dispatch(init());
+  }, []);
 
   return (
     <Provider store={store}>

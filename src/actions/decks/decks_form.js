@@ -1,5 +1,4 @@
 import * as types from '../types';
-import {firestore} from '../../firebase';
 import {add_loader, remove_loader} from '../mics';
 import {validate_deck_name} from '../../validators/decks';
 import {error_happened} from '../errors';
@@ -80,7 +79,7 @@ const save_existing_deck = async (id, name) => {
   }
 };
 
-const delete_deck = (id) => async (dispatch, getState) => {
+const delete_deck = (id) => async (dispatch) => {
   dispatch(add_loader('delete', 'Deleting...'));
 
   // eslint-disable-next-line no-restricted-globals

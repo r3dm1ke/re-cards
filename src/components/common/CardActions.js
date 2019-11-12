@@ -34,7 +34,7 @@ const CardActions = (props) => {
       <Divider />
       <MaterialCardActions className={classes.root} {...rest}>
         {buttons.map((button, index) => (
-          <>
+          <React.Fragment key={index}>
             <Button
               size={size}
               disabled={button.disabled}
@@ -45,7 +45,7 @@ const CardActions = (props) => {
             </Button>
             {index !== (buttons.length - 1) ?
               <Divider orientation={'vertical'} className={classes.divider}/> : null}
-          </>
+          </React.Fragment>
         ))}
       </MaterialCardActions>
     </>
