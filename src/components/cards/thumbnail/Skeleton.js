@@ -3,7 +3,7 @@ import {
   CardContent,
   Divider,
   CardActions,
-  makeStyles, Card,
+  makeStyles,
 } from '@material-ui/core';
 import {Skeleton} from '@material-ui/lab';
 

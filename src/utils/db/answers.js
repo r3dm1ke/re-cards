@@ -1,5 +1,6 @@
-import firebase, {firestore} from '../../firebase';
+import firebase from '../../firebase';
 import {SPACED_REPETITION_MAPPING} from '../../const/study';
+import {update_card} from './cards';
 
 const increment_total = (card_data) => ({
   ...card_data,
@@ -41,7 +42,6 @@ const set_last_studied_time = (card_data) => ({
 
 const sanitize_for_db = (card_data) => ({
   answer: card_data.answer,
-  answer_list: card_data.answer_list ? card_data.answer_list : [],
   answer_type: card_data.answer_type,
   deck: card_data.deck,
   last_studied: card_data.last_studied,
@@ -58,7 +58,6 @@ const do_nothing = (card_data) => card_data;
 
 // eslint-disable-next-line complexity
 export const register_answer = async (card, answer, smart) => {
-  const card_ref = firestore.collection('cards').doc(card.id);
   const new_card_data = card |>
     increment_total |>
     (answer ? increment_score : do_nothing) |>
@@ -69,5 +68,5 @@ export const register_answer = async (card, answer, smart) => {
     set_last_studied_time |>
     sanitize_for_db;
 
-  await card_ref.update(new_card_data);
+  await update_card(card.id, new_card_data);
 };

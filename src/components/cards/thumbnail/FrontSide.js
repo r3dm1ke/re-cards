@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   CardContent,
-  Divider,
   makeStyles,
 } from '@material-ui/core';
 import CardActions from '../../common/CardActions';

@@ -110,7 +110,7 @@ export default () => {
     >
       {number_of_eligible_cards !== undefined ? (
         render_widget_content()
-      ) : <Skeleton variant='rectangle' width={'100%'} height={150} />}
+      ) : <Skeleton variant='rect' width={'100%'} height={150} />}
     </Widget>
   );
 };

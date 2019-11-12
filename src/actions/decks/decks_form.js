@@ -1,8 +1,9 @@
 import * as types from '../types';
-import {firestore} from '../../firebase';
 import {add_loader, remove_loader} from '../mics';
 import {validate_deck_name} from '../../validators/decks';
 import {error_happened} from '../errors';
+import {create_deck, update_deck, delete_deck as delete_deck_from_db, get_deck_ref} from '../../utils/db/decks';
+import {delete_cards_by_deck} from '../../utils/db/cards';
 
 export const toggle_edit_deck_dialog = () => ({
   type: types.EDIT_DECK_DIALOG_TOGGLED,
@@ -58,9 +59,8 @@ export const on_edit_deck_dialog_submit = () => async (dispatch, getState) => {
 };
 
 const create_new_deck = async (name, uid) => {
-  const ref = firestore.collection('decks');
   try {
-    await ref.add({subject: name, uid});
+    await create_deck({subject: name, uid});
   } catch (e) {
     // eslint-disable-next-line fp/no-throw
     throw e;
@@ -68,18 +68,18 @@ const create_new_deck = async (name, uid) => {
 };
 
 const save_existing_deck = async (id, name) => {
-  const ref = firestore.collection('decks').doc(id);
   try {
-    await ref.set({
-      subject: name,
-    }, {merge: true});
+    await update_deck(id,
+      {
+        subject: name,
+      });
   } catch (e) {
     // eslint-disable-next-line fp/no-throw
     throw e;
   }
 };
 
-const delete_deck = (id) => async (dispatch, getState) => {
+const delete_deck = (id) => async (dispatch) => {
   dispatch(add_loader('delete', 'Deleting...'));
 
   // eslint-disable-next-line no-restricted-globals
@@ -89,21 +89,12 @@ const delete_deck = (id) => async (dispatch, getState) => {
   );
 
   if (confirmed) {
-    const {uid} = getState().auth.user;
-    const batch = firestore.batch();
-    const ref = firestore.collection('decks').doc(id);
-    batch.delete(ref);
-    const cardsRef = firestore.collection('cards')
-      .where('deck', '==', ref)
-      .where('uid', '==', uid);
-
-    const cards = await cardsRef.get();
-    cards.docs.forEach((card) => {
-      batch.delete(firestore.collection('cards').doc(card.id));
-    });
+    const deck_ref = get_deck_ref(id);
     try {
-      await batch.commit();
-    } catch {
+      await delete_deck_from_db(id);
+      await delete_cards_by_deck(deck_ref);
+    } catch (e) {
+      console.error(e);
       dispatch(error_happened('Error deleting stuff. Maybe it\'s a sign.'));
     }
   }

@@ -51,12 +51,12 @@ export default (props) => {
   const quotes = getMotivationalQuotes();
   const slides = [
     ...quotes,
-    <MasteryProgress/>,
+    <MasteryProgress key={'mastery'}/>,
   ];
 
   const smart_study_advisable = useSelector((state) => state.cards.smart_study_advisable);
   // eslint-disable-next-line fp/no-mutating-methods
-  if (smart_study_advisable) slides.push(<SmartStudyCTA/>);
+  if (smart_study_advisable) slides.push(<SmartStudyCTA key={'smart_s'}/>);
   const shuffled_slides = shuffle(slides);
 
   return (

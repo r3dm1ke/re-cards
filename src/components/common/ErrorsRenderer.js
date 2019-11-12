@@ -11,6 +11,7 @@ export default () => {
     <React.Fragment>
       {errors.map((error, index) => (
         <ErrorSnackbar
+          key={index}
           content={error.description}
           on_dismiss={on_dismiss(index)}
         />

@@ -3,8 +3,6 @@ import {
   Card,
   CardContent,
   Typography,
-  Button,
-  Divider,
   makeStyles,
 } from '@material-ui/core';
 import CardActions from '../common/CardActions';
