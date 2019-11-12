@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/db/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/db/answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/answers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,14 +142,7 @@
       <workItem from="1573250077142" duration="627000" />
       <workItem from="1573392505422" duration="66000" />
       <workItem from="1573392591170" duration="2259000" />
-      <workItem from="1573569744122" duration="1692000" />
-    </task>
-    <task id="LOCAL-00022" summary="Removed redundant animation">
-      <created>1570465140252</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1570465140252</updated>
+      <workItem from="1573569744122" duration="1749000" />
     </task>
     <task id="LOCAL-00023" summary="Added CTA slide to jumbotron">
       <created>1570496289498</created>
@@ -489,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573571155352</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Fix for cards not updating">
+      <created>1573571488560</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1573571488560</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +512,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="A fix in streak calculation" />
     <MESSAGE value="Removed A_SINGLE_CHOICE from answer types" />
     <MESSAGE value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
     <MESSAGE value="Moved answer_list to answer in db and presentation BREAKING" />
@@ -539,7 +536,8 @@
     <MESSAGE value="Refactored cards/decks deletion" />
     <MESSAGE value="Refactored UID getter in db actions" />
     <MESSAGE value="Refactored db actions for user metadata" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored db actions for user metadata" />
+    <MESSAGE value="Fix for cards not updating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix for cards not updating" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
