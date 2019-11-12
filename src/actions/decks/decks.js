@@ -2,9 +2,8 @@ import * as types from '../types';
 import {push} from 'connected-react-router';
 import {listen_to_decks} from '../../utils/db/decks';
 
-export const subscribe_to_decks = () => async (dispatch, getState) => {
-  const {uid} = getState().auth.user;
-  listen_to_decks(uid, (data) =>
+export const subscribe_to_decks = () => async (dispatch) => {
+  listen_to_decks((data) =>
     dispatch({
       type: types.DECKS_LOADED,
       payload: data,

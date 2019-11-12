@@ -90,11 +90,10 @@ const delete_deck = (id) => async (dispatch, getState) => {
   );
 
   if (confirmed) {
-    const {uid} = getState().auth.user;
     const deck_ref = get_deck_ref(id);
     try {
       await delete_deck_from_db(id);
-      await delete_cards_by_deck(uid, deck_ref);
+      await delete_cards_by_deck(deck_ref);
     } catch (e) {
       console.error(e);
       dispatch(error_happened('Error deleting stuff. Maybe it\'s a sign.'));

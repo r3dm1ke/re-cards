@@ -1,5 +1,6 @@
 import moment from 'moment-timezone';
 import {firestore} from '../../firebase';
+import {get_uid} from '../auth';
 
 export const create_card = async (card_data) => {
   return await get_cards_collection().add(card_data);
@@ -15,7 +16,8 @@ export const delete_card = async (card_id) => {
   return await ref.delete();
 };
 
-export const delete_cards_by_deck = async (uid, deck_ref) => {
+export const delete_cards_by_deck = async (deck_ref) => {
+  const uid = get_uid();
   const cardRefs = get_cards_collection()
     .where('deck', '==', deck_ref)
     .where('uid', '==', uid);
@@ -37,9 +39,9 @@ export const get_card_ref = (card_id) => {
 
 const get_cards_collection = () => firestore.collection('cards');
 
-export const listen_to_cards = (uid, callback) =>
+export const listen_to_cards = (callback) =>
   get_cards_collection()
-    .where('uid', '==', uid)
+    .where('uid', '==', get_uid())
     .onSnapshot(async (query) => {
       const data = await extract_cards_from_docs_async(query);
       callback(data);

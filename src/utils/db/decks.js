@@ -1,12 +1,13 @@
 import {firestore} from '../../firebase';
+import {get_uid} from '../auth';
 
 const get_decks_collection = () => firestore.collection('decks');
 
 export const get_deck_ref = (deck_id) => get_decks_collection().doc(deck_id);
 
-export const listen_to_decks = (uid, callback) =>
+export const listen_to_decks = (callback) =>
   get_decks_collection()
-    .where('uid', '==', uid)
+    .where('uid', '==', get_uid())
     .onSnapshot(async (query) => {
       const data = extract_decks_from_docs(query);
       callback(data);
