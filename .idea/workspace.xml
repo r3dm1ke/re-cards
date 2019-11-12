@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/db/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/cards/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/cards/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/decks/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/decks/decks_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/db/answers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/answers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/db/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/db/decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/onboarding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/onboarding.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/listeners.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,14 +146,7 @@
       <workItem from="1573250077142" duration="627000" />
       <workItem from="1573392505422" duration="66000" />
       <workItem from="1573392591170" duration="2259000" />
-      <workItem from="1573569744122" duration="242000" />
-    </task>
-    <task id="LOCAL-00020" summary="Scrolling effect on jumbotron working">
-      <created>1570205897216</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1570205897216</updated>
+      <workItem from="1573569744122" duration="1235000" />
     </task>
     <task id="LOCAL-00021" summary="Updated animations">
       <created>1570464484735</created>
@@ -493,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573394479502</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Refactored UID getter in db actions">
+      <created>1573570005661</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1573570005662</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +516,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Minor fix in progress saving" />
     <MESSAGE value="Added delete confirmation and a fab to create cards" />
     <MESSAGE value="A fix in streak calculation" />
     <MESSAGE value="Removed A_SINGLE_CHOICE from answer types" />
@@ -543,7 +540,8 @@
     <MESSAGE value="Minor refactor" />
     <MESSAGE value="Refactored decks db actions into separate file" />
     <MESSAGE value="Refactored cards/decks deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored cards/decks deletion" />
+    <MESSAGE value="Refactored UID getter in db actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored UID getter in db actions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

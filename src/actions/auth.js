@@ -5,11 +5,17 @@ import {open_dashboard} from './dashboard';
 import {add_subscribers} from '../utils/listeners';
 import {add_loader, remove_loader} from './mics';
 import {error_happened} from './errors';
-import {DEFAULT_USER_METADATA} from '../const/user';
+import {create_user_meta, get_user_meta, listen_to_user_meta} from '../utils/db/user';
 
 const app_initialized = () => ({
   type: types.APP_INITIALIZED,
 });
+
+export const subscribe_to_user_meta = () => async (dispatch) => {
+  listen_to_user_meta((data) => {
+    dispatch({type: types.USER_METADATA_LOADED, payload: data});
+  });
+};
 
 export const init = () => async (dispatch, getState) => {
   const state = getState();
@@ -20,7 +26,7 @@ export const init = () => async (dispatch, getState) => {
       if (user) {
         dispatch(add_loader('loading', 'Loading...'));
         dispatch({type: types.LOGGED_IN, payload: user});
-        dispatch(load_user_info(user.uid));
+        dispatch(load_user_info());
         dispatch(open_dashboard());
         dispatch(add_subscribers());
         dispatch(remove_loader('loading'));
@@ -34,25 +40,15 @@ export const init = () => async (dispatch, getState) => {
   }
 };
 
-export const load_user_info = (uid) => async (dispatch) => {
-  console.log(`Loading_user_info for user ${uid}`);
+export const load_user_info = () => async (dispatch) => {
   dispatch(add_loader('user_meta', 'Loading your information...'));
+  // Making sure user meta exists
   try {
-    const ref = firestore.collection('users');
-    const doc = await ref.doc(uid).get();
-    const data = doc.data();
-    dispatch({type: types.USER_METADATA_LOADED, payload: data});
+    await get_user_meta();
   } catch {
-    dispatch(create_user_info(uid));
+    await create_user_meta();
   }
   dispatch(remove_loader('user_meta'));
-};
-
-const create_user_info = (uid) => async (dispatch) => {
-  const ref = firestore.collection('users');
-  const doc = ref.doc(uid);
-  doc.set(DEFAULT_USER_METADATA).then(() => {});
-  dispatch({type: types.USER_METADATA_LOADED, payload: DEFAULT_USER_METADATA});
 };
 
 const set_persistence_async = async () => {
