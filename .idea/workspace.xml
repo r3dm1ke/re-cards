@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/system.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/MultipleChoiceRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/MultipleChoiceRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/renderers/answer_preview/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/BackSide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FlipCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FlipCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Multiple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Multiple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/prompt/Text.js" afterDir="false" />
-    </list>
+    <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
