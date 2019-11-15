@@ -1,5 +1,5 @@
 import * as types from '../../actions/types';
-import {A_LIST_DEFAULT_ENTRY, A_TEXT, Q_TEXT} from '../../const/cards';
+import {A_TEXT, Q_TEXT} from '../../const/cards';
 
 const INITIAL_STATE = {
   edit_dialog_opened: false,

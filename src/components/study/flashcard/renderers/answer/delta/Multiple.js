@@ -31,12 +31,10 @@ const MultipleDelta = (props) => {
 
   const render_items = () => answer.map((item, index) => (
     <ListItem key={index}>
-      <ListItemIcon>
-        {item.is_correct ? <CheckIcon /> : null}
-        {(!item.is_correct && sanitized_validation_value.has(index)) ?
-          <ClearIcon/> : null
-        }
-      </ListItemIcon>
+      {item.is_correct ? <ListItemIcon><CheckIcon /></ListItemIcon> : null}
+      {(!item.is_correct && sanitized_validation_value.has(index)) ?
+        <ListItemIcon><ClearIcon/></ListItemIcon> : null
+      }
       <ListItemText>
         <ItemRenderer value={item.value} type={item.type}/>
       </ListItemText>

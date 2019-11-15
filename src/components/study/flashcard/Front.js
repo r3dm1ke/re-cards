@@ -1,7 +1,8 @@
 import React from 'react';
 import QuestionRenderer from '../../cards/renderers/question';
 import AnswerPromptRenderer from './renderers/answer/prompt';
-import Button from '@material-ui/core/Button';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '../../common/CardActions';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Divider from '@material-ui/core/Divider';
 
@@ -17,13 +18,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
-  button: {
-    'height': theme.spacing(6),
-    'borderTopLeftRadius': 0,
-    'borderTopRightRadius': 0,
-    '&:hover': {
-      backgroundColor: 'lightgrey',
-    },
+  card_content: {
+    flex: 1,
   },
 }));
 
@@ -41,22 +37,29 @@ const FlashcardFront = (props) => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <QuestionRenderer
-        className={classes.question_renderer}
-        question={question}
-        question_type={question_type}/>
-      <Divider />
-      <div className={classes.mid_container}>
-        {validation_required ?
-          <AnswerPromptRenderer
-            answer={answer}
-            answer_type={answer_type}
-            validation_value={validation_value}
-            on_validation_value_changed={on_validation_value_changed}
-          /> : null
-        }
-      </div>
-      <Button className={classes.button} onClick={on_confirmed}>{validation_required ? 'Confirm' : 'Show answer'}</Button>
+      <CardContent className={classes.card_content}>
+        <QuestionRenderer
+          className={classes.question_renderer}
+          question={question}
+          question_type={question_type}/>
+        <Divider />
+        <div className={classes.mid_container}>
+          {validation_required ?
+            <AnswerPromptRenderer
+              answer={answer}
+              answer_type={answer_type}
+              validation_value={validation_value}
+              on_validation_value_changed={on_validation_value_changed}
+            /> : null
+          }
+        </div>
+      </CardContent>
+      <CardActions
+        size={'large'}
+        buttons={[
+          {on_click: on_confirmed, text: validation_required ? 'Confirm' : 'Show answer'}
+        ]}
+      />
     </React.Fragment>
   );
 };

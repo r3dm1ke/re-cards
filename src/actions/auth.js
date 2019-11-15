@@ -5,10 +5,17 @@ import {open_dashboard} from './dashboard';
 import {add_subscribers} from '../utils/listeners';
 import {add_loader, remove_loader} from './mics';
 import {error_happened} from './errors';
+import {create_user_meta, get_user_meta, listen_to_user_meta} from '../utils/db/user';
 
 const app_initialized = () => ({
   type: types.APP_INITIALIZED,
 });
+
+export const subscribe_to_user_meta = () => async (dispatch) => {
+  listen_to_user_meta((data) => {
+    dispatch({type: types.USER_METADATA_LOADED, payload: data});
+  });
+};
 
 export const init = () => async (dispatch, getState) => {
   const state = getState();
@@ -18,11 +25,8 @@ export const init = () => async (dispatch, getState) => {
       dispatch(app_initialized());
       if (user) {
         dispatch(add_loader('loading', 'Loading...'));
-        const action = {
-          type: types.LOGGED_IN,
-          payload: user,
-        };
-        dispatch(action);
+        dispatch({type: types.LOGGED_IN, payload: user});
+        dispatch(load_user_info());
         dispatch(open_dashboard());
         dispatch(add_subscribers());
         dispatch(remove_loader('loading'));
@@ -34,6 +38,17 @@ export const init = () => async (dispatch, getState) => {
       dispatch(error_happened('Error initializing local storage. Are you a developer?'));
     }
   }
+};
+
+export const load_user_info = () => async (dispatch) => {
+  dispatch(add_loader('user_meta', 'Loading your information...'));
+  // Making sure user meta exists
+  try {
+    await get_user_meta();
+  } catch {
+    await create_user_meta();
+  }
+  dispatch(remove_loader('user_meta'));
 };
 
 const set_persistence_async = async () => {

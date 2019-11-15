@@ -67,7 +67,6 @@ export default () => {
         on_finalize={() => dispatch_register_answer(!is_correct)}
       />
     );
-    return null;
   };
 
   const render_progress = () => {

@@ -5,6 +5,7 @@ const INITIAL_STATE = {
   user: null,
   logged_in: false,
   app_initialized: false,
+  user_meta: null,
 };
 
 export default (state=INITIAL_STATE, action) => {
@@ -15,6 +16,8 @@ export default (state=INITIAL_STATE, action) => {
     return {...state, user: null, username: '', logged_in: false};
   case types.APP_INITIALIZED:
     return {...state, app_initialized: true};
+  case types.USER_METADATA_LOADED:
+    return {...state, user_meta: action.payload};
   default:
     return state;
   }

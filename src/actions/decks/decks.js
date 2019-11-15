@@ -1,21 +1,14 @@
 import * as types from '../types';
 import {push} from 'connected-react-router';
-import {firestore} from '../../firebase';
+import {listen_to_decks} from '../../utils/db/decks';
 
-export const subscribe_to_decks = () => async (dispatch, getState) => {
-  const {uid} = getState().auth.user;
-  firestore.collection('decks')
-    .where('uid', '==', uid)
-    .onSnapshot(async (query) => {
-      const data = query.docs.map((q) => {
-        const deck_data = q.data();
-        return {id: q.id, name: deck_data.subject, uid: deck_data.uid};
-      });
-      dispatch({
-        type: types.DECKS_LOADED,
-        payload: data,
-      });
-    });
+export const subscribe_to_decks = () => async (dispatch) => {
+  listen_to_decks((data) =>
+    dispatch({
+      type: types.DECKS_LOADED,
+      payload: data,
+    })
+  );
 };
 
 export const open_decks = () => async (dispatch) => {

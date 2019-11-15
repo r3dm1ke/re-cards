@@ -40,7 +40,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/libs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -52,19 +52,19 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\personal_projects\flashcards\flashcards\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\onboarding\modal\slides" />
+      <recent name="C:\personal_projects\flashcards\flashcards\src\components\common" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\layout" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\cards\renderers\question_renderers" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\navigation" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\components\dashboard\widgets\quick_study_widget" />
-      <recent name="C:\personal_projects\flashcards\src\utils\database_actions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -130,139 +130,17 @@
       <workItem from="1571498391928" duration="1527000" />
       <workItem from="1571499935315" duration="2575000" />
       <workItem from="1571600281126" duration="8139000" />
-    </task>
-    <task id="LOCAL-00005" summary="Spinner on login button until auth state is loaded from local">
-      <created>1569605120453</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1569605120453</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Added validation for question in card form">
-      <created>1569607674707</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1569607674707</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Eslint fixes">
-      <created>1569630317315</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1569630317315</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Full form validation for card edit dialog">
-      <created>1569634837712</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1569634837712</updated>
-    </task>
-    <task id="LOCAL-00009" summary="moved tab management to redux for card edit dialog, added skipping to tab when error happens">
-      <created>1569636746748</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1569636746748</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added preview for math text fields">
-      <created>1569684862707</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1569684862707</updated>
-    </task>
-    <task id="LOCAL-00011" summary="responsive edit card dialog, rewritten as functional">
-      <created>1569685560508</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1569685560508</updated>
-    </task>
-    <task id="LOCAL-00012" summary="added error handling and messages">
-      <created>1569708395016</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1569708395016</updated>
-    </task>
-    <task id="LOCAL-00013" summary="HMR for development">
-      <created>1569708753118</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1569708753118</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Offline switch (not working for localhost)">
-      <created>1569710362301</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1569710362301</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Offline switch working and handling">
-      <created>1569981234709</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1569981234709</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Dashboard refactored to functional">
-      <created>1569982135007</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1569982135007</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Minor fix">
-      <created>1569982351831</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1569982351831</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Minor refactor">
-      <created>1569982521298</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1569982521298</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Added slider to jumbotron component">
-      <created>1570055957758</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1570055957758</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Scrolling effect on jumbotron working">
-      <created>1570205897216</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1570205897216</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Updated animations">
-      <created>1570464484735</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1570464484735</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Removed redundant animation">
-      <created>1570465140252</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1570465140252</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Added CTA slide to jumbotron">
-      <created>1570496289498</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1570496289498</updated>
+      <workItem from="1572352978140" duration="3119000" />
+      <workItem from="1572398400220" duration="2660000" />
+      <workItem from="1572536538096" duration="7000" />
+      <workItem from="1572549075757" duration="2706000" />
+      <workItem from="1572795272462" duration="7063000" />
+      <workItem from="1573089413994" duration="1870000" />
+      <workItem from="1573165452408" duration="1300000" />
+      <workItem from="1573250077142" duration="627000" />
+      <workItem from="1573392505422" duration="66000" />
+      <workItem from="1573392591170" duration="2259000" />
+      <workItem from="1573569744122" duration="3318000" />
     </task>
     <task id="LOCAL-00024" summary="Refactored smart study process">
       <created>1570571766776</created>
@@ -474,7 +352,140 @@
       <option name="project" value="LOCAL" />
       <updated>1571958542904</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Styling fixes for study session">
+      <created>1571961833315</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1571961833315</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Created a custom CardActions component, refactored thumbnails and flashcards to use it">
+      <created>1572390943820</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1572390943820</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Reviewed obsolete deps">
+      <created>1572549314827</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1572549314828</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Added title to Decks page">
+      <created>1572549578294</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1572549578294</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Removed top bar as it was unnecessary">
+      <created>1572550991461</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1572550991461</updated>
+    </task>
+    <task id="LOCAL-00059" summary="updated @material-ui version">
+      <created>1572551290912</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1572551290912</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Consistent ui for creating cards &amp; decks">
+      <created>1572795638012</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1572795638012</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Added onboarding modal">
+      <created>1572797314729</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1572797314729</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Added onboarding slides">
+      <created>1572995378772</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1572995378772</updated>
+    </task>
+    <task id="LOCAL-00063" summary="added a deck creation onboarding slide">
+      <created>1573090500420</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1573090500420</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Added deck creation functionality and final slide to onboarding procedure">
+      <created>1573091309788</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1573091309788</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Finished onboaring feature">
+      <created>1573166544155</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1573166544155</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Minor refactor">
+      <created>1573392782142</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1573392782142</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Refactored decks db actions into separate file">
+      <created>1573393547093</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1573393547093</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Refactored cards/decks deletion">
+      <created>1573394479502</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1573394479502</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Refactored UID getter in db actions">
+      <created>1573570005661</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1573570005662</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Refactored db actions for user metadata">
+      <created>1573571155352</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1573571155352</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Fix for cards not updating">
+      <created>1573571488560</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1573571488560</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Fix for removing redundant answer_list">
+      <created>1573571506068</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1573571506068</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,32 +510,32 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added at a glance widget" />
-    <MESSAGE value="refactored save study session into progress" />
-    <MESSAGE value="Fixes and refactoring for quick study widget reducer" />
-    <MESSAGE value="Now writing streak to progress" />
-    <MESSAGE value="refactoring last_progress in progress reducer" />
-    <MESSAGE value="Added streak widget" />
-    <MESSAGE value="Added daily study widget" />
-    <MESSAGE value="Added more info to streak widget if user studied today or not" />
-    <MESSAGE value="Added bottom navbar for mobile users" />
-    <MESSAGE value="Refactored cards page to functional and added title to said page" />
-    <MESSAGE value="Scrolling to top on location change" />
-    <MESSAGE value="Further fixing the eslint bugs" />
-    <MESSAGE value="Fix" />
-    <MESSAGE value="Refactored Question rendering to a separate component" />
-    <MESSAGE value="Refactored card thumbnail and layout on Cards page" />
-    <MESSAGE value="Minor fix in progress saving" />
-    <MESSAGE value="Added delete confirmation and a fab to create cards" />
-    <MESSAGE value="A fix in streak calculation" />
-    <MESSAGE value="Removed A_SINGLE_CHOICE from answer types" />
     <MESSAGE value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
     <MESSAGE value="Moved answer_list to answer in db and presentation BREAKING" />
     <MESSAGE value="Refactored card flipping into separate component, commented out study functions to test BREAKING" />
     <MESSAGE value="Refactored flashcard BREAKING" />
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Layout fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout fixes" />
+    <MESSAGE value="Styling fixes for study session" />
+    <MESSAGE value="Created a custom CardActions component, refactored thumbnails and flashcards to use it" />
+    <MESSAGE value="Reviewed obsolete deps" />
+    <MESSAGE value="Added title to Decks page" />
+    <MESSAGE value="Removed top bar as it was unnecessary" />
+    <MESSAGE value="updated @material-ui version" />
+    <MESSAGE value="Consistent ui for creating cards &amp; decks" />
+    <MESSAGE value="Added onboarding modal" />
+    <MESSAGE value="Added onboarding slides" />
+    <MESSAGE value="added a deck creation onboarding slide" />
+    <MESSAGE value="Added deck creation functionality and final slide to onboarding procedure" />
+    <MESSAGE value="Finished onboaring feature" />
+    <MESSAGE value="Minor refactor" />
+    <MESSAGE value="Refactored decks db actions into separate file" />
+    <MESSAGE value="Refactored cards/decks deletion" />
+    <MESSAGE value="Refactored UID getter in db actions" />
+    <MESSAGE value="Refactored db actions for user metadata" />
+    <MESSAGE value="Fix for cards not updating" />
+    <MESSAGE value="Fix for removing redundant answer_list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix for removing redundant answer_list" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />

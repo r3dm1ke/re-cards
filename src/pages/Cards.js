@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useTheme, makeStyles, Typography, Fab} from '@material-ui/core';
+import {useTheme, makeStyles, Typography} from '@material-ui/core';
 import {useSelector, useDispatch} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 import CardThumbnail from '../components/cards/thumbnail';
@@ -9,11 +9,11 @@ import {
   delete_card,
 } from '../actions/cards/cards';
 import {
-  open_edit_card_dialog_for_existing_card,
+  open_edit_card_dialog_for_existing_card, open_edit_card_dialog_for_new_card,
 } from '../actions/cards/cards_form';
 import EditCardDialog from '../components/cards/edit_dialog/EditCardDialog';
 import ConfirmDelete from '../components/common/ConfirmDelete';
-import NewCardFab from '../components/cards/NewCardFab';
+import CreateNewFab from '../components/common/CreateNewFab';
 
 const useStyles = makeStyles((theme) => ({
   cardContainer: {
@@ -36,6 +36,7 @@ export default () => {
   useSelector((state) => state.cards.refresh_helper);
   const classes = useStyles();
   const dispatch = useDispatch();
+  const on_create_click = () => dispatch(open_edit_card_dialog_for_new_card());
   const [card_to_be_deleted, set_card_to_be_deleted] = useState(null);
   const theme = useTheme();
 
@@ -104,7 +105,7 @@ export default () => {
       </ResponsiveMasonryLayout>
       <EditCardDialog />
       {render_delete_dialog()}
-      <NewCardFab/>
+      <CreateNewFab label={'Create new card'} on_click={on_create_click}/>
     </div>
   );
 };

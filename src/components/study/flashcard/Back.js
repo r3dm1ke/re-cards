@@ -1,10 +1,11 @@
 import React from 'react';
 import AnswerDeltaRenderer from './renderers/answer/delta';
 import AnswerPreviewRenderer from '../../cards/renderers/answer_preview';
-import Button from '@material-ui/core/Button';
+import CardActions from '../../common/CardActions';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import {Typography} from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
+import CardContent from '@material-ui/core/CardContent';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,13 +22,8 @@ const useStyles = makeStyles((theme) => ({
   hidden: {
     visibility: 'hidden',
   },
-  button: {
-    'height': theme.spacing(6),
-    'borderTopLeftRadius': 0,
-    'borderTopRightRadius': 0,
-    '&:hover': {
-      backgroundColor: 'lightgrey',
-    },
+  card_content: {
+    flex: 1,
   },
 }));
 
@@ -47,29 +43,35 @@ const FlashcardBack = (props) => {
     <>{children}</>;
   return (
     <Wrapper>
-      {validation_required && is_correct ? (
-        <Typography className={classes.correctness_title} variant={'h4'}>You are correct!</Typography>
-      ) : null}
-      {validation_required && !is_correct ? (
-        <Typography className={classes.correctness_title} variant={'h4'}>Try again :)</Typography>
-      ) : null}
-      <Divider className={classes.divider} />
-      <div className={classes.root}>
-        {validation_required ?
-          <AnswerDeltaRenderer
-            answer={answer}
-            answer_type={answer_type}
-            validation_value={validation_value}
-          /> :
-          <AnswerPreviewRenderer
-            answer={answer}
-            answer_type={answer_type}
-            block
-          />
-        }
-      </div>
-      <Divider className={classes.divider} />
-      <Button onClick={on_finalize} className={classes.button}>Next card</Button>
+      <CardContent className={classes.card_content}>
+        {validation_required && is_correct ? (
+          <Typography className={classes.correctness_title} variant={'h4'}>You are correct!</Typography>
+        ) : null}
+        {validation_required && !is_correct ? (
+          <Typography className={classes.correctness_title} variant={'h4'}>Try again :)</Typography>
+        ) : null}
+        <Divider className={classes.divider} />
+        <div className={classes.root}>
+          {validation_required ?
+            <AnswerDeltaRenderer
+              answer={answer}
+              answer_type={answer_type}
+              validation_value={validation_value}
+            /> :
+            <AnswerPreviewRenderer
+              answer={answer}
+              answer_type={answer_type}
+              block
+            />
+          }
+        </div>
+      </CardContent>
+      <CardActions
+        buttons={[
+          {on_click: on_finalize, text: 'Next card'},
+        ]}
+        size={'large'}
+      />
     </Wrapper>
   );
 };

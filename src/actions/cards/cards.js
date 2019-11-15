@@ -1,21 +1,16 @@
 import * as types from '../types';
-import {firestore} from '../../firebase';
 import {push} from 'connected-react-router';
 import {add_loader, remove_loader} from '../mics';
-import {extract_cards_from_docs_async} from '../../utils/database_actions/cards';
+import {delete_card as delete_card_from_db, listen_to_cards} from '../../utils/db/cards';
 import {error_happened} from '../errors';
 
-export const subscribe_to_cards = () => async (dispatch, getState) => {
-  const {uid} = getState().auth.user;
-  firestore.collection('cards')
-    .where('uid', '==', uid)
-    .onSnapshot(async (query) => {
-      const data = await extract_cards_from_docs_async(query);
-      dispatch({
-        type: types.CARDS_LOADED,
-        payload: data,
-      });
+export const subscribe_to_cards = () => async (dispatch) => {
+  listen_to_cards((data) => {
+    dispatch({
+      type: types.CARDS_LOADED,
+      payload: data,
     });
+  });
 };
 
 export const open_cards = () => async (dispatch) => {
@@ -37,10 +32,10 @@ export const deck_selected = (deckId) => async (dispatch) => {
 
 export const delete_card = (card) => async (dispatch) => {
   dispatch(add_loader('del_card', 'Deleting...'));
-  const ref = firestore.collection('cards').doc(card.id);
   try {
-    await ref.delete();
-  } catch {
+    await delete_card_from_db(card.id);
+  } catch (e) {
+    console.error(e);
     dispatch(error_happened('Error deleting card. Is it really there?'));
   }
   dispatch(remove_loader('del_card'));
