@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default () => {
   const cards_count = useSelector((state) => state.cards.cards ? state.cards.cards.length : null);
-  const mastered_cards_count = useSelector((state) => state.cards.mastered_cards);
+  const mastered_cards_count = useSelector((state) => state.cards.cards ? state.cards.mastered_cards : null);
   const decks_count = useSelector((state) => state.decks.decks ? state.decks.decks.length : null);
   const classes = useStyles();
   return (
@@ -36,7 +36,7 @@ export default () => {
     >
       <div className={classes.root}>
         <div className={classes.column}>
-          {cards_count ? (
+          {cards_count !== null ? (
             <Typography variant={'h2'} className={classes.numbers}>{cards_count}</Typography>
           ) : (
             <Skeleton variant={'rect'} width={50} height={50} />
@@ -48,7 +48,7 @@ export default () => {
           >Total cards</Typography>
         </div>
         <div className={classes.column}>
-          {cards_count ? (
+          {mastered_cards_count !== null ? (
             <Typography variant={'h2'} className={classes.numbers}>{mastered_cards_count}</Typography>
           ) : (
             <Skeleton variant={'rect'} width={50} height={50} />
@@ -60,7 +60,7 @@ export default () => {
           >Mastered cards</Typography>
         </div>
         <div className={classes.column}>
-          {decks_count ? (
+          {decks_count !== null ? (
             <Typography variant={'h2'} className={classes.numbers}>{decks_count}</Typography>
           ) : (
             <Skeleton variant={'rect'} width={50} height={50} />

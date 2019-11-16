@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Study.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,14 +146,7 @@
       <workItem from="1573569744122" duration="3655000" />
       <workItem from="1573693924680" duration="643000" />
       <workItem from="1573744584371" duration="15000" />
-      <workItem from="1573933285725" duration="469000" />
-    </task>
-    <task id="LOCAL-00025" summary="Refactored the answer registration from functions to client">
-      <created>1570583708268</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1570583708268</updated>
+      <workItem from="1573933285725" duration="795000" />
     </task>
     <task id="LOCAL-00026" summary="Refactored the session registration to client">
       <created>1570585991134</created>
@@ -494,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573573141319</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Fixed logout issue">
+      <created>1573933773952</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1573933773953</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +516,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Moved answer_list to answer in db and presentation BREAKING" />
     <MESSAGE value="Refactored card flipping into separate component, commented out study functions to test BREAKING" />
     <MESSAGE value="Refactored flashcard BREAKING" />
     <MESSAGE value="Minor fixes" />
@@ -544,7 +540,8 @@
     <MESSAGE value="Fix for cards not updating" />
     <MESSAGE value="Fix for removing redundant answer_list" />
     <MESSAGE value="Fixing warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing warnings" />
+    <MESSAGE value="Fixed logout issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed logout issue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
