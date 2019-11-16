@@ -26,12 +26,12 @@ export default () => {
   const dispatch = useDispatch();
 
   const logged_in = useSelector((state) => state.auth.logged_in);
-  if (!logged_in) return <Redirect to={'/'} />;
-
   const decks = useSelector((state) => state.decks.filtered_decks);
   const open_new_dialog = () => dispatch(_open_edit_dialog());
   const open_edit_dialog = (id) => dispatch(_open_edit_dialog(id));
   const open_cards_for_deck = (id) => dispatch(_open_cards_for_deck(id));
+
+  if (!logged_in) return <Redirect to={'/'} />;
 
   const render_decks = () => decks.map((deck, index) => (
     <Grow timeout={index * 250} in key={deck.id}>

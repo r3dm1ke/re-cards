@@ -3,26 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/decks/decks_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/decks/decks_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/onboarding.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/onboarding.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/FrontSide.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/FrontSide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/Skeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/Skeleton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cards/thumbnail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/thumbnail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/CardActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/CardActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/ErrorsRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/ErrorsRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FlipCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FlipCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/layout/MasonryLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/layout/MasonryLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/quick_study_widget/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/quick_study_widget/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/decks/DeckThumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/decks/DeckThumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/onboarding/modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/onboarding/modal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/Study.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/Back.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Multiple.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/study/flashcard/renderers/answer/delta/Multiple.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/cards/cards_form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Decks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Decks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Study.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Study.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +46,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../promised-sql" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -162,14 +146,10 @@
       <workItem from="1573250077142" duration="627000" />
       <workItem from="1573392505422" duration="66000" />
       <workItem from="1573392591170" duration="2259000" />
-      <workItem from="1573569744122" duration="3318000" />
-    </task>
-    <task id="LOCAL-00024" summary="Refactored smart study process">
-      <created>1570571766776</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1570571766776</updated>
+      <workItem from="1573569744122" duration="3655000" />
+      <workItem from="1573693924680" duration="643000" />
+      <workItem from="1573744584371" duration="15000" />
+      <workItem from="1573933285725" duration="469000" />
     </task>
     <task id="LOCAL-00025" summary="Refactored the answer registration from functions to client">
       <created>1570583708268</created>
@@ -507,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573571506068</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Fixing warnings">
+      <created>1573573141319</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1573573141319</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +519,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added answer preview renderers and fixed height issues on&#10;card thumbnails. [BREAKING]" />
     <MESSAGE value="Moved answer_list to answer in db and presentation BREAKING" />
     <MESSAGE value="Refactored card flipping into separate component, commented out study functions to test BREAKING" />
     <MESSAGE value="Refactored flashcard BREAKING" />
@@ -557,7 +543,8 @@
     <MESSAGE value="Refactored db actions for user metadata" />
     <MESSAGE value="Fix for cards not updating" />
     <MESSAGE value="Fix for removing redundant answer_list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix for removing redundant answer_list" />
+    <MESSAGE value="Fixing warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing warnings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
