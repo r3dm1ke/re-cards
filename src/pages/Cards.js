@@ -30,8 +30,6 @@ const useStyles = makeStyles((theme) => ({
 // eslint-disable-next-line max-lines-per-function
 export default () => {
   const logged_in = useSelector((state) => state.auth.logged_in);
-  if (!logged_in) return <Redirect to={'/'} />;
-
   const cards = useSelector((state) => state.cards.filtered_cards);
   useSelector((state) => state.cards.refresh_helper);
   const classes = useStyles();
@@ -39,6 +37,8 @@ export default () => {
   const on_create_click = () => dispatch(open_edit_card_dialog_for_new_card());
   const [card_to_be_deleted, set_card_to_be_deleted] = useState(null);
   const theme = useTheme();
+
+  if (!logged_in) return <Redirect to={'/'} />;
 
   const render_cards = () => {
     if (cards === undefined) {
