@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/CardsCountWidget.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,14 +147,7 @@
       <workItem from="1573569744122" duration="3655000" />
       <workItem from="1573693924680" duration="643000" />
       <workItem from="1573744584371" duration="15000" />
-      <workItem from="1573933285725" duration="795000" />
-    </task>
-    <task id="LOCAL-00026" summary="Refactored the session registration to client">
-      <created>1570585991134</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1570585991134</updated>
+      <workItem from="1573933285725" duration="2465000" />
     </task>
     <task id="LOCAL-00027" summary="Refactored engage_exam_mode to client. Deleted all firebase functions">
       <created>1570632667226</created>
@@ -491,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573933773953</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Fixed issue with card stats not diplaying">
+      <created>1573934107745</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1573934107745</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +517,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactored card flipping into separate component, commented out study functions to test BREAKING" />
     <MESSAGE value="Refactored flashcard BREAKING" />
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Layout fixes" />
@@ -541,7 +541,8 @@
     <MESSAGE value="Fix for removing redundant answer_list" />
     <MESSAGE value="Fixing warnings" />
     <MESSAGE value="Fixed logout issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed logout issue" />
+    <MESSAGE value="Fixed issue with card stats not diplaying" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with card stats not diplaying" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
