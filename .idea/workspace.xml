@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,14 +147,9 @@
       <workItem from="1573569744122" duration="3655000" />
       <workItem from="1573693924680" duration="643000" />
       <workItem from="1573744584371" duration="15000" />
-      <workItem from="1573933285725" duration="2465000" />
-    </task>
-    <task id="LOCAL-00027" summary="Refactored engage_exam_mode to client. Deleted all firebase functions">
-      <created>1570632667226</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1570632667226</updated>
+      <workItem from="1573933285725" duration="2861000" />
+      <workItem from="1574211714336" duration="8000" />
+      <workItem from="1574529482948" duration="1250000" />
     </task>
     <task id="LOCAL-00028" summary="Added at a glance widget">
       <created>1570635785512</created>
@@ -492,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573934107745</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Added readme and license, making ready for going public">
+      <created>1573935876166</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1573935876166</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +519,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactored flashcard BREAKING" />
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Layout fixes" />
     <MESSAGE value="Styling fixes for study session" />
@@ -542,7 +543,8 @@
     <MESSAGE value="Fixing warnings" />
     <MESSAGE value="Fixed logout issue" />
     <MESSAGE value="Fixed issue with card stats not diplaying" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with card stats not diplaying" />
+    <MESSAGE value="Added readme and license, making ready for going public" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added readme and license, making ready for going public" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
