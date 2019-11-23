@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,14 +149,7 @@
       <workItem from="1573744584371" duration="15000" />
       <workItem from="1573933285725" duration="2861000" />
       <workItem from="1574211714336" duration="8000" />
-      <workItem from="1574529482948" duration="1250000" />
-    </task>
-    <task id="LOCAL-00028" summary="Added at a glance widget">
-      <created>1570635785512</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1570635785512</updated>
+      <workItem from="1574529482948" duration="2177000" />
     </task>
     <task id="LOCAL-00029" summary="refactored save study session into progress">
       <created>1570640865374</created>
@@ -494,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573935876166</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Added dev keys and related section in readme">
+      <created>1574530750456</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1574530750456</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +519,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Minor fixes" />
     <MESSAGE value="Layout fixes" />
     <MESSAGE value="Styling fixes for study session" />
     <MESSAGE value="Created a custom CardActions component, refactored thumbnails and flashcards to use it" />
@@ -544,7 +543,8 @@
     <MESSAGE value="Fixed logout issue" />
     <MESSAGE value="Fixed issue with card stats not diplaying" />
     <MESSAGE value="Added readme and license, making ready for going public" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added readme and license, making ready for going public" />
+    <MESSAGE value="Added dev keys and related section in readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added dev keys and related section in readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="332" y="79" key="#ESLint" />
