@@ -48,6 +48,13 @@ algorithm.
 - [ ] AI-assisted spaced repetition algorithm
 - [ ] ???
 
+### Keys & Development
+You will note that the `firestore.js` file contains keys to access the Firestore API.
+This is not a mistake, there is no point in concealing them as anyone can access them
+if you open the live website and look in the developer console. There are 2 sets of keys there:
+for production and development. Production is only allowed to operate on live domain,
+development only allowed to operate on `localhost`.
+
 ### Contributions
 This is an open-source project and any contributions are welcome. Feel free
 to open an issue is you find a bug, or a pull request to fix it. For feature requests,
