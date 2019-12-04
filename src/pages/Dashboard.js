@@ -39,11 +39,12 @@ export default () => {
   const classes = useStyles();
   const logged_in = useSelector((state) => state.auth.logged_in);
 
-  if (!logged_in) return check_logged_in(logged_in);
-
   const theme = useTheme();
   const is_sm = useMediaQuery(theme.breakpoints.down('sm'));
   const is_md = useMediaQuery(theme.breakpoints.down('md'));
+
+  if (!logged_in) return check_logged_in(logged_in);
+
   let cols = 3;
   // eslint-disable-next-line fp/no-mutation
   if (is_md) cols = 2;
