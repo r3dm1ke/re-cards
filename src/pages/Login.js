@@ -54,7 +54,7 @@ export default () => {
   return (
     <Container className={classes.container}>
       <Paper className={classes.root}>
-        <Typography variant={'h3'} className={classes.title}>Welcome to Flashcards</Typography>
+        <Typography variant={'h3'} className={classes.title}>Welcome to RE:Cards</Typography>
         <Divider className={classes.divider}/>
         <SchoolIcon className={classes.icon}/>
         {app_initialized ? (
