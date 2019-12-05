@@ -1,26 +1,16 @@
 import firebase from 'firebase';
-import {is_dev} from './utils/env';
-const prod_config = {
-  apiKey: 'AIzaSyDF_7xgM8nZoOSu4YNYWR-yaIibWKrHRrA',
-  authDomain: 'flashcards-94116.firebaseapp.com',
-  databaseURL: 'https://flashcards-94116.firebaseio.com',
-  projectId: 'flashcards-94116',
-  storageBucket: '',
-  messagingSenderId: '644108685857',
-  appId: '1:644108685857:web:3b20d30255704b06',
+
+const config = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
-const dev_config = {
-  apiKey: 'AIzaSyA64UEeRiG4vrdh_kGvm07vcdLL1kPPs5Y',
-  authDomain: 're-cards-dev.firebaseapp.com',
-  databaseURL: 'https://re-cards-dev.firebaseio.com',
-  projectId: 're-cards-dev',
-  storageBucket: 're-cards-dev.appspot.com',
-  messagingSenderId: '230766994083',
-  appId: '1:230766994083:web:2fd6e98544517d6bbf9516',
-};
-
-firebase.initializeApp(is_dev() ? dev_config : prod_config);
+firebase.initializeApp(config);
 export const provider = new firebase.auth.GoogleAuthProvider();
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
