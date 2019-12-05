@@ -21,6 +21,6 @@
     "semi": ["error", "always"],
     "camelcase": [0, {"properties": "never"}],
     "max-len": ["error", 120],
-    "linebreak-style": ["error", "windows"]
+    "linebreak-style": ["error", "unix"]
   }
 }
