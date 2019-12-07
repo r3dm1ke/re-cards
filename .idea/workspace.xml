@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="Added dev keys and related section in readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/functions/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +58,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\personal_projects\flashcards\flashcards\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Users\mihal\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\192.5728.87\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -609,7 +612,10 @@
     <state x="408" y="61" key="MultipleFileMergeDialog/-1920.374.1536.832/0.0.1680.1010@0.0.1680.1010" timestamp="1575489866441" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080" timestamp="1575489866441" />
     <state x="408" y="61" key="MultipleFileMergeDialog/1920.1080/1680.1050" timestamp="1575489866441" />
-    <state x="254" y="40" key="SettingsEditor" timestamp="1575489866441" />
+    <state x="719" y="1523" key="SettingsEditor" timestamp="1575754276436">
+      <screen x="0" y="1080" width="2560" height="1440" />
+    </state>
+    <state x="719" y="1523" key="SettingsEditor/0.1080.2560.1440/512.0.1920.1080@0.1080.2560.1440" timestamp="1575754276436" />
     <state x="254" y="40" key="SettingsEditor/1920.1080/1680.1050" timestamp="1575489866441" />
     <state x="332" y="168" key="Vcs.Push.Dialog.v2" timestamp="1575489866441" />
     <state x="332" y="168" key="Vcs.Push.Dialog.v2/-1920.374.1536.832/0.0.1680.1010@0.0.1680.1010" timestamp="1575489866441" />

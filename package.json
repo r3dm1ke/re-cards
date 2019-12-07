@@ -10,6 +10,7 @@
     "babel-eslint": "^10.0.3",
     "connected-react-router": "^6.5.2",
     "customize-cra": "^0.8.0",
+    "firebase-tools": "^7.9.0",
     "moment-timezone": "^0.5.26",
     "rc-scroll-anim": "^2.6.2",
     "react": "^16.9.0",
