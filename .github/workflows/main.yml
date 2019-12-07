@@ -45,9 +45,15 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: build
+      - name: Set Firebase Function Config
+        uses: w9jds/firebase-action@master
+        with:
+          args: functions:config:set notifications_scheduler.auth_token="${{ secrets.FIREBASE_FUNCTIONS_AUTH_TOKEN }}"
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting
+          args: deploy
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
