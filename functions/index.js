@@ -26,7 +26,7 @@ const security_check = (req) => req.get('Authorization') === get_auth_token();
 const get_auth_token = () => (
   functions.config() &&
   functions.config().notifications_scheduler &&
-  functions.config().notifications_scheduler.token
+  functions.config().notifications_scheduler.auth_token
 );
 
 const get_users_to_be_notified = async () => {
