@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="Added dev keys and related section in readme">
+      <change afterPath="$PROJECT_DIR$/src/actions/widgets/streak.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/streak_widget/NotificationTimeDialog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/widgets/streak.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/StreakWidget.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/streak_widget/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +68,15 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\personal_projects\flashcards\src\libs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/dashboard/widgets/streak_widget" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\onboarding\modal\slides" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\layout" />
       <recent name="C:\personal_projects\flashcards\flashcards\src\components\cards\renderers\question_renderers" />
-      <recent name="C:\personal_projects\flashcards\flashcards\src\components\common\navigation" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\personal_projects\flashcards\src\libs" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Debug App">
