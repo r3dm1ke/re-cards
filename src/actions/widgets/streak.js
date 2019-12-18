@@ -12,3 +12,7 @@ export const time_for_notification_changed = (time_for_notification) => ({
   type: types.TIME_FOR_NOTIFICATION_CHANGED,
   payload: time_for_notification,
 });
+
+export const time_for_notification_submitted = () => async (dispatch, getState) => {
+
+}
