@@ -4,6 +4,7 @@ const admin = require('firebase-admin');
 
 admin.initializeApp();
 const firestore = admin.firestore();
+const messaging = admin.messaging();
 
 module.exports.reminder = functions.https.onRequest(async (req, resp) => {
   if (security_check(req)) {
@@ -40,14 +41,14 @@ const is_notification_required = (user) => {
   return moment().isAfter(user_time);
 };
 
-const send_notification = (user) => {
+const send_notification = async (user) => {
   const {notification_registration_token} = user.data();
   if (notification_registration_token) {
     const message = {
       notification: create_notification(),
       token: notification_registration_token,
     };
-    admin.messaging().send(message);
+    await messaging.send(message);
   }
 };
 
