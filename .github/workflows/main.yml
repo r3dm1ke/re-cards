@@ -28,6 +28,7 @@ jobs:
         REACT_APP_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
         REACT_APP_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
         REACT_APP_MEASUREMENT_ID: ${{ secrets.FIREBASE_MEASUREMENT_ID }}
+        REACT_APP_VAPID_KEY: ${{ secrets.FIREBASE_VAPID_KEY }}
       run: npm run build
     - name: Archive Production Artifact
       uses: actions/upload-artifact@master
@@ -45,10 +46,16 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: build
-      - name: Set Firebase Function Config
+      - name: Set Firebase Function Config for Function auth token
         uses: w9jds/firebase-action@master
         with:
           args: functions:config:set notifications_scheduler.auth_token="${{ secrets.FIREBASE_FUNCTIONS_AUTH_TOKEN }}"
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Set Firebase Function Config for Messaging VAPID key
+        uses: w9jds/firebase-action@master
+        with:
+          args: functions:config:set notifications_scheduler.vapid_key="${{ secrets.FIREBASE_VAPID_KEY }}"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Use node.js 10 to install Firebase Functions dependencies
