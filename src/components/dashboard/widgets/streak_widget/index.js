@@ -1,8 +1,11 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import Widget from '../../common/widget';
+import {useDispatch, useSelector} from 'react-redux';
+import Widget from '../../../common/widget';
+import NotificationTimeDialog from './NotificationTimeDialog';
 import {makeStyles, Typography, Button} from '@material-ui/core';
-import {pick_random} from '../../../utils/random';
+import {pick_random} from '../../../../utils/random';
+import {notification_requested, open_time_for_notification_dialog} from '../../../../actions/widgets/streak';
+import NotificationPermissionDialog from './NotificationPermissionDialog';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,8 +24,12 @@ const useStyles = makeStyles((theme) => ({
 
 export default () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const streak = useSelector((state) => state.progress.streak);
   const studied_today = useSelector((state) => state.progress.studied_today);
+  const notification_enabled = useSelector((state) =>
+    state.auth.user_meta.notification_time && state.auth.user_meta.notification_registration_token,
+  );
   const render_widget_content = () => {
     if (streak !== undefined) {
       return (
@@ -32,7 +39,11 @@ export default () => {
             Day{streak > 1 ? 's' : ''} studying in a row
           </Typography>
           {render_subtitle()}
-          <Button variant={'outlined'} color={'primary'}>Remind me</Button>
+          <Button
+            variant={'outlined'}
+            color={'primary'}
+            disabled={notification_enabled}
+            onClick={() => dispatch(notification_requested())}>Remind me</Button>
         </React.Fragment>
       );
     }
@@ -68,12 +79,16 @@ export default () => {
   };
 
   return (
-    <Widget
-      title={'Shaping your study habits'}
-      containerClassName={classes.root}
-    >
-      {render_widget_content()}
-    </Widget>
+    <>
+      <NotificationTimeDialog />
+      <NotificationPermissionDialog />
+      <Widget
+        title={'Shaping your study habits'}
+        containerClassName={classes.root}
+      >
+        {render_widget_content()}
+      </Widget>
+    </>
   );
 };
 

@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import {Route} from 'react-router-dom';
 import {ConnectedRouter} from 'connected-react-router';
+import {MuiPickersUtilsProvider} from '@material-ui/pickers';
+import MomentUtils from '@date-io/moment';
 import LoginPage from './pages/Login';
 import DashboardPage from './pages/Dashboard';
 import DecksPage from './pages/Decks';
@@ -20,17 +22,19 @@ export default () => {
 
   return (
     <Provider store={store}>
-      <Alert />
-      <ConnectedRouter history={history}>
-        <ScrollRestorer/>
-        <Scaffold>
-          <Route path={'/'} exact component={LoginPage}/>
-          <Route path={'/dashboard'} exact component={DashboardPage}/>
-          <Route path={'/decks'} exact component={DecksPage}/>
-          <Route path={'/cards'} exact component={CardsPage}/>
-          <Route path={'/study'} exact component={StudyPage} />
-        </Scaffold>
-      </ConnectedRouter>
+      <MuiPickersUtilsProvider utils={MomentUtils}>
+        <Alert />
+        <ConnectedRouter history={history}>
+          <ScrollRestorer/>
+          <Scaffold>
+            <Route path={'/'} exact component={LoginPage}/>
+            <Route path={'/dashboard'} exact component={DashboardPage}/>
+            <Route path={'/decks'} exact component={DecksPage}/>
+            <Route path={'/cards'} exact component={CardsPage}/>
+            <Route path={'/study'} exact component={StudyPage} />
+          </Scaffold>
+        </ConnectedRouter>
+      </MuiPickersUtilsProvider>
     </Provider>
   );
 };

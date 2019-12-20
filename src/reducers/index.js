@@ -10,6 +10,7 @@ import studyReducer from './study';
 import errorsReducer from './errors';
 import progressReducer from './progress';
 import offlineReducer from './offline';
+import streakReducer from './widgets/streak';
 import onboardingReducer from './onboarding';
 import quickStudyWidgetReducer from './widgets/quick_study';
 import {combineReducers} from 'redux';
@@ -31,6 +32,7 @@ export default (history) => combineReducers({
   onboarding: onboardingReducer,
   widgets: combineReducers({
     quick_study: quickStudyWidgetReducer,
+    streak: streakReducer,
   }),
   router: connectRouter(history),
 });

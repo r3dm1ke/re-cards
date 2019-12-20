@@ -83,4 +83,11 @@ export const NUMBER_OF_CARDS_FOR_QUICK_STUDY_CHANGED = 'number_of_cards_changed'
 export const DECK_SELECTED_FOR_QUICK_STUDY = 'deck_selected_for_quick_study';
 export const DECK_UNSELECTED_FOR_QUICK_STUDY = 'deck_unselected_for_quick_study';
 export const MASTERED_CARDS_INCLUDED_FOR_QUICK_STUDY_TOGGLED = 'mastered_cards_included_for_quick_study_toggled';
+
+// STREAK
+export const TIME_FOR_NOTIFICATION_DIALOG_OPENED = 'time_for_notification_dialog_opened';
+export const TIME_FOR_NOTIFICATION_DIALOG_CLOSED = 'time_for_notification_dialog_closed';
+export const NOTIFICATION_PERMISSION_DIALOG_OPENED = 'notification_permission_dialog_opened';
+export const NOTIFICATION_PERMISSION_DIALOG_CLOSED = 'notification_permission_dialog_closed';
+export const TIME_FOR_NOTIFICATION_CHANGED = 'time_for_notification_changed';
 // ============= /WIDGETS ===============
