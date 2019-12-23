@@ -1,18 +1,6 @@
 import * as types from '../types';
 import firebase, {messaging} from '../../firebase';
 import {update_user_meta} from '../../utils/db/user';
-import {error_happened} from '../errors';
-
-export const subscribe_to_notification_key = () => async (dispatch) => {
-  messaging.onTokenRefresh(() => {
-    messaging.getToken().then((token) => {
-      console.log(`Got notification token: ${token}`);
-      update_user_meta({notification_registration_token: token})
-        .then(() => {})
-        .catch((e) => dispatch(error_happened('Could not enable notifications')));
-    });
-  });
-};
 
 export const notification_requested = () => async (dispatch) => {
   if (!are_notifications_allowed()) {
@@ -26,6 +14,8 @@ const are_notifications_allowed = () => Notification.permission === 'granted';
 
 export const request_notification_permission = () => async (dispatch) => {
   if (await Notification.requestPermission() === 'granted') {
+    const token = await messaging.getToken();
+    await update_user_meta({notification_registration_token: token});
     dispatch(close_notification_permission_dialog());
     dispatch(open_time_for_notification_dialog());
   }

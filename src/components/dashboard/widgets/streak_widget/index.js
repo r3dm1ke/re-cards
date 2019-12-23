@@ -4,8 +4,9 @@ import Widget from '../../../common/widget';
 import NotificationTimeDialog from './NotificationTimeDialog';
 import {makeStyles, Typography, Button} from '@material-ui/core';
 import {pick_random} from '../../../../utils/random';
-import {notification_requested, open_time_for_notification_dialog} from '../../../../actions/widgets/streak';
+import {notification_requested} from '../../../../actions/widgets/streak';
 import NotificationPermissionDialog from './NotificationPermissionDialog';
+import {messaging_supported} from '../../../../utils/env';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,7 +28,7 @@ export default () => {
   const dispatch = useDispatch();
   const streak = useSelector((state) => state.progress.streak);
   const studied_today = useSelector((state) => state.progress.studied_today);
-  const notification_enabled = useSelector((state) =>
+  const notification_enabled = useSelector((state) => state.auth.user_meta &&
     state.auth.user_meta.notification_time && state.auth.user_meta.notification_registration_token,
   );
   const render_widget_content = () => {
@@ -42,8 +43,10 @@ export default () => {
           <Button
             variant={'outlined'}
             color={'primary'}
-            disabled={notification_enabled}
-            onClick={() => dispatch(notification_requested())}>Remind me</Button>
+            disabled={notification_enabled || !messaging_supported()}
+            onClick={() => dispatch(notification_requested())}>
+            {messaging_supported() ? 'Remind me' : 'Notifications are not supported in your browser'}
+          </Button>
         </React.Fragment>
       );
     }

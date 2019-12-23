@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="Added dev keys and related section in readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/widgets/streak.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/widgets/streak.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/streak_widget/NotificationPermissionDialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/streak_widget/NotificationPermissionDialog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/dashboard/widgets/streak_widget/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/widgets/streak_widget/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/env.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/listeners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/listeners.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -628,10 +627,11 @@
     <state x="469" y="272" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/1920.1080/1680.1050" timestamp="1575489866441" />
     <state x="292" y="77" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1575489866441" />
     <state x="292" y="77" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/1920.1080/1680.1050" timestamp="1575489866441" />
-    <state x="957" y="1549" width="645" height="528" key="find.popup" timestamp="1576811892313">
+    <state x="957" y="1549" width="645" height="528" key="find.popup" timestamp="1577139234126">
       <screen x="0" y="1080" width="2560" height="1440" />
     </state>
     <state x="957" y="1549" width="645" height="528" key="find.popup/0.1080.2560.1440/512.0.1920.1080@0.1080.2560.1440" timestamp="1576811892313" />
+    <state x="957" y="1549" width="645" height="528" key="find.popup/0.1080.2560.1440/544.0.1920.1080@0.1080.2560.1440" timestamp="1577139234126" />
     <state x="412" y="229" key="run.anything.popup" timestamp="1575489866441" />
     <state x="412" y="229" key="run.anything.popup/-1920.374.1536.832/0.0.1680.1010@0.0.1680.1010" timestamp="1575489866441" />
     <state x="412" y="229" key="run.anything.popup/1920.1080/1680.1050" timestamp="1575489866441" />
