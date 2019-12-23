@@ -46,6 +46,7 @@ export const time_for_notification_submitted = () => async (dispatch, getState) 
   const {time_to_notify} = getState().widgets.streak;
   await update_user_meta({
     notification_time: new firebase.firestore.Timestamp(time_to_notify.unix()),
+    notification: true,
   });
   dispatch(close_time_for_notification_dialog());
 };
