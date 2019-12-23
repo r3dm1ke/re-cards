@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import {messaging_supported} from './utils/env';
 
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -12,8 +13,17 @@ const config = {
 };
 
 firebase.initializeApp(config);
+
 export const provider = new firebase.auth.GoogleAuthProvider();
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
-export const messaging = firebase.messaging();
+
+let messaging = undefined;
+if (messaging_supported()) {
+  // eslint-disable-next-line fp/no-mutation
+  messaging = firebase.messaging();
+  messaging.usePublicVapidKey(process.env.REACT_APP_VAPID_KEY);
+}
+export {messaging};
+
 export default firebase;
