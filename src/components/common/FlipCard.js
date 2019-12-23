@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     backfaceVisibility: 'hidden',
     transform: 'rotateY(180deg)',
+    zIndex: 2,
   },
 }));
 
