@@ -24,21 +24,13 @@ const slider_settings = {
 };
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '350px',
-    [theme.breakpoints.up('md')]: {
-      width: '500px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      width: '750px',
-    },
-  },
   container: {
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-around',
     paddingBottom: theme.spacing(4),
+    maxWidth: '100%',
   },
   text: {
     color: 'white',
