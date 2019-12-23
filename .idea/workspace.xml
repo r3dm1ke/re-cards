@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19083d66-71b0-4043-b7eb-26471dbbc6ce" name="Default Changelist" comment="Added dev keys and related section in readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/jumbotron/showcase/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/widgets/streak.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/widgets/streak.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
