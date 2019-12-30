@@ -1,6 +1,7 @@
 import * as types from '../types';
 import firebase, {messaging} from '../../firebase';
 import {update_user_meta} from '../../utils/db/user';
+import {error_happened} from '../errors';
 
 export const notification_requested = () => async (dispatch) => {
   if (!are_notifications_allowed()) {
@@ -14,8 +15,6 @@ const are_notifications_allowed = () => Notification.permission === 'granted';
 
 export const request_notification_permission = () => async (dispatch) => {
   if (await Notification.requestPermission() === 'granted') {
-    const token = await messaging.getToken();
-    await update_user_meta({notification_registration_token: token});
     dispatch(close_notification_permission_dialog());
     dispatch(open_time_for_notification_dialog());
   }
@@ -43,10 +42,23 @@ export const time_for_notification_changed = (time_for_notification) => ({
 });
 
 export const time_for_notification_submitted = () => async (dispatch, getState) => {
-  const {time_to_notify} = getState().widgets.streak;
-  await update_user_meta({
-    notification_time: new firebase.firestore.Timestamp(time_to_notify.unix()),
-    notification: true,
-  });
+  try {
+    const {time_to_notify} = getState().widgets.streak;
+    const token = await get_token_with_timeout();
+    await update_user_meta({
+      notification_registration_token: token,
+      notification_time: new firebase.firestore.Timestamp(time_to_notify.unix()),
+      notification: true,
+    });
+  } catch (e) {
+    dispatch(error_happened('Cannot schedule a notification. Nothing I can do at the moment.'));
+  }
   dispatch(close_time_for_notification_dialog());
+};
+
+const get_token_with_timeout = async () => {
+  return await Promise.any(
+    new Promise((_, reject) => setTimeout(reject, 3000)),
+    messaging.getToken()
+  );
 };
